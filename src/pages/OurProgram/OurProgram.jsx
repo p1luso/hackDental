@@ -3,7 +3,7 @@ import styles from "./ourProgram.module.css";
 import Nav from "../../components/organisms/Nav/Nav";
 import Text from "../../components/atoms/Text/Text";
 import Icon from "../../components/atoms/Icon/Icon";
-import imgVideo from "@assets/Foto video.gif";
+import imgVideo from "@assets/videoOurProgram.svg";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
 import Link from "../../components/atoms/Link/Link";
 import Input from "../../components/atoms/Input/Input";
@@ -93,6 +93,7 @@ const OurProgram = () => {
     <div className={styles.page}>
       <Nav />
       <header className={styles.banner}>
+        <div className={styles.bgTransparent}>
         <img
           src={FlechaNuestroPrograma}
           className={`${styles.flecha} ${styles.nuestroPrograma}`}
@@ -110,12 +111,7 @@ const OurProgram = () => {
               letterSpacing: "-0.5px",
             }}
           >
-            Desbloquea el potencial de tu <br />
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <Mark color="primary-bg-triangular-light" bold="extra-bold">
-                Consultorio
-              </Mark>
-            </div>
+            Aprende cómo vender tu <br></br><s className={styles.crossLine}>Consultorio</s> <span className={styles.betterTreatment}>Mejor Tratamiento</span>
           </Text>
 
           <div className={styles.videoContainer}>
@@ -146,10 +142,10 @@ const OurProgram = () => {
               </div>
             </div>
             <form className={styles.formContacto}>
-              <Text size="sm" textAlign="center" color="white">
-                <Mark color="primary-darker-bg">
-                  **DUEÑO DE CONSULTORIO DENTAL**
-                </Mark>
+              <Text size="sm" textAlign="center">
+                <div className={styles.dentalOwner}>
+                  *DUEÑO DE CONSULTORIO DENTAL*
+                </div>
               </Text>
               <Text
                 type="subtitle"
@@ -215,6 +211,7 @@ const OurProgram = () => {
               </div>
             </form>
           </div>
+        </div>
         </div>
       </header>
       <main className={styles.main}>

@@ -1212,6 +1212,9 @@ body:has(.popupContainer.show) {
   .bannerImg {
     width: 400px;
   }
+  .desc{
+    flex-direction: column;
+  }
   .contactBannerSection {
     flex-direction: column;
     width: 100%;
