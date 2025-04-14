@@ -331,8 +331,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 64px;
-  padding-bottom: 0px;
+  padding: 50px 80px 120px 80px;
+  height: 100%;
   position: relative;
   padding-left: var(--width-unit);
   padding-right: var(--width-unit);
@@ -802,7 +802,7 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
-  .banner {
+  .bgTransparent {
     padding: 64px;
   }
   .contact {
@@ -810,6 +810,11 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .banner{
+    padding: 0;
+  }
+
   .contact {
     padding: 64px;
   }
@@ -817,6 +822,9 @@
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .main {
     padding-top: 44px;
+  }
+  .banner{
+    padding: 0;
   }
   .cardMeet {
     width: 100%;
@@ -837,6 +845,10 @@
     width: 100%;
     top: 0;
   }
+  .banner{
+    padding: 0;
+  }
+
   .main {
     padding-top: 44px;
   }
@@ -867,7 +879,17 @@
     align-self: flex-start;
     width: 100%;
   }
+  .cardMeet > :first-child{
+    font-size: 28px;
+  }
+  .comoFunciona__desc > :first-child {
+    font-size: 28px;
+  }
+
   .comoFunciona .subsection {
     width: 100%;
+  }
+  .comoFunciona img{
+    display: none;
   }
 }

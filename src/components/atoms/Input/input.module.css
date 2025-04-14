@@ -52,7 +52,7 @@
 }
 
 .primary .input::placeholder {
-  color: var(--gray);
+  color: #bfbdbc;
   font-size: 1rem;
 }
 
@@ -85,6 +85,7 @@
   color: var(--white);
   background-color: #0000001e;
   font-size: 0.875rem;
+  font-family: 'lexend';
 }
 .white .label {
   margin-bottom: 4px;
@@ -100,7 +101,7 @@
   color: gray;
 }
 .white .input::placeholder {
-  color: var(--gray);
+  color: #797979;
 }
 
 .white.error .input {

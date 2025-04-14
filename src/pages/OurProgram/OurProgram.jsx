@@ -164,7 +164,7 @@ const OurProgram = () => {
                     label="Nombre*"
                     variant="white"
                     placeholder="Nombre*"
-                    labelColor="white"
+                    labelColor="#ebeced"
                     onChange={handleChange}
                     value={formData.firstName}
                     onError={() => {}}
@@ -174,7 +174,7 @@ const OurProgram = () => {
                     label="Apellido*"
                     variant="white"
                     placeholder="Apellido*"
-                    labelColor="white"
+                    labelColor="#ebeced"
                     onChange={handleChange}
                     value={formData.lastName}
                     onError={() => {}}
@@ -185,7 +185,7 @@ const OurProgram = () => {
                   label="Email*"
                   variant="white"
                   placeholder="Email*"
-                  labelColor="white"
+                  labelColor="#ebeced"
                   onChange={handleChange}
                   value={formData.email}
                   onError={() => {}}
@@ -195,7 +195,7 @@ const OurProgram = () => {
                   label="Teléfono*"
                   variant="white"
                   placeholder="Teléfono*"
-                  labelColor="white"
+                  labelColor="#ebeced"
                   onChange={handleChange}
                   value={formData.phone}
                   onError={() => {}}
@@ -237,125 +237,7 @@ const OurProgram = () => {
             <img src={Nene} className={styles.neneArio} />
           </div>
         </div>
-        <div className={styles.detalleNuestroPrograma}>
-          <div className={styles.detalle__content}>
-            <Text type="title" color="white">
-              ¿Qué incluye nuestro programa? 🧐
-            </Text>
-            <section className={styles.seccionDetalle}>
-              <img src={imagenDetalle1} className={styles.img__detalle1} />
-              <div className={styles.detalleSeccion}>
-                <Text color="white">
-                  Usemos el método HackDental en tu Consultorio
-                </Text>
-                <Text color="white" bold="font-light">
-                  Puedes ponerte en contacto con nosotros por correo electrónico
-                  a jaka@ .design y te responderemos en un plazo de 24 horas
-                </Text>
-                <div className={styles.detailCards}>
-                  <div className={styles.detailCard}>
-                    <Icon
-                      type={"check"}
-                      size={"1.5rem"}
-                      color="var(--primary)"
-                    />
-                    <Text color="white" bold="regular">
-                      Puedes ponerte en contacto con nosotros por correo
-                    </Text>
-                  </div>
-                  <div className={styles.detailCard}>
-                    <Icon
-                      type={"check"}
-                      size={"1.5rem"}
-                      color="var(--primary)"
-                    />
-                    <Text s={{ color: "#ebeced" }} bold="font-light">
-                      Puedes ponerte en contacto con nosotros por correo
-                    </Text>
-                  </div>
-                  <div className={styles.detailCard}>
-                    <Icon
-                      type={"check"}
-                      size={"1.5rem"}
-                      color="var(--primary)"
-                    />
-                    <Text s={{ color: "#ebeced" }} bold="font-light">
-                      Puedes ponerte en contacto con nosotros por correo
-                    </Text>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section className={`${styles.seccionDetalle} ${styles.dos}`}>
-              <div className={`${styles.detalleSeccion} ${styles.dos}`}>
-                <Text color="white">
-                  Usemos el método HackDental en tu Consultorio
-                </Text>
-                <Text color="white" bold="font-light">
-                  Puedes ponerte en contacto con nosotros por correo electrónico
-                  a jaka@ .design y te responderemos en un plazo de 24 horas
-                </Text>
-                <div className={styles.detailCards}>
-                  <div className={styles.detailCard}>
-                    <Icon
-                      type={"check"}
-                      size={"1.5rem"}
-                      color="var(--primary)"
-                    />
-                    <Text color="white" bold="regular">
-                      Puedes ponerte en contacto con nosotros por correo
-                    </Text>
-                  </div>
-                  <div className={styles.detailCard}>
-                    <Icon
-                      type={"check"}
-                      size={"1.5rem"}
-                      color="var(--primary)"
-                    />
-                    <Text color="white" bold="font-light">
-                      Puedes ponerte en contacto con nosotros por correo
-                    </Text>
-                  </div>
-                  <div className={styles.detailCard}>
-                    <Icon
-                      type={"check"}
-                      size={"1.5rem"}
-                      color="var(--primary)"
-                    />
-                    <Text color="white" bold="font-light">
-                      Puedes ponerte en contacto con nosotros por correo
-                    </Text>
-                  </div>
-                </div>
-              </div>
-              <img src={imagenDetalle2} className={styles.img__detalle1} />
-            </section>
-            <div className={styles.detalle__footer}>
-              <div className={styles.aplicarProgramaBtn}>
-                <IconTextButton colorVariant="white" size="100%">
-                  Aplicar al Programa
-                </IconTextButton>
-              </div>
-              <div className={styles.footer__card}>
-                <img src={Medicos} className={styles.footer__img} />
-                <div className={styles.footer__desc}>
-                  <Text s={{ color: "#ebeced", lineHeight: "1.33" }}>
-                    Únete a los dentistas
-                  </Text>
-                  <Text
-                    bold="font-light"
-                    s={{ color: "#ebeced", lineHeight: "1.33" }}
-                  >
-                    que quieren crecer sus consultorios.{" "}
-                    <Mark bold="regular" color="primary-light">
-                      Cupos limitados.
-                    </Mark>
-                  </Text>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
         <div className={styles.sectionHorrible}>
           <div className={styles.contenido}>
             <div className={styles.seccionnes}>
@@ -485,176 +367,6 @@ const OurProgram = () => {
             </Text>
           </div>
         </div>
-        <section className={styles.beneficiosScroll}>
-          <div className={styles.beneficiosScroll__contents}>
-            <Text color="white" s={{ lineHeight: "1.1", textAlign: "center" }}>
-              Aprende de Nuestro Metodo <br /> Especializado de Marketing
-              Dental🔬
-            </Text>
-            <div className={styles.beneficiosScroll__card}>
-              <img src={Nene} className={styles.beneficiosScroll__img} />
-
-              <div className={styles.beneficiosScroll__scrollBarNumero}>
-                <Text color="white">01</Text>
-                <div className={styles.beneficiosScroll__barraScrolling}>
-                  <div
-                    className={`${styles.beneficiosScroll__barraScrolling__scroll} scroll`}
-                  ></div>
-                </div>
-              </div>
-
-              <div className={styles.beneficiosScroll__descripcion}>
-                <Text color="white">
-                  Recibe una auditoría de marketing gratuita
-                </Text>
-                <Text color="light" bold="font-light">
-                  Aprende más sobre nuestro programa de 180 días y cómo puede
-                  cambiar tu práctica dental
-                </Text>
-                <div className={styles.beneficiosScroll__descripcion__cards}>
-                  <div className={styles.detailCard}>
-                    <Icon
-                      type={"check"}
-                      size={"1.5rem"}
-                      color="var(--primary)"
-                    />
-                    <Text color="white" bold="regular">
-                      Puedes ponerte en contacto con nosotros por correo
-                    </Text>
-                  </div>
-                  <div className={styles.detailCard}>
-                    <Icon
-                      type={"check"}
-                      size={"1.5rem"}
-                      color="var(--primary)"
-                    />
-                    <Text color="white" bold="regular">
-                      Puedes ponerte en contacto con nosotros por correo
-                    </Text>
-                  </div>
-                  <div className={styles.detailCard}>
-                    <Icon
-                      type={"check"}
-                      size={"1.5rem"}
-                      color="var(--primary)"
-                    />
-                    <Text color="white" bold="regular">
-                      Puedes ponerte en contacto con nosotros por correo
-                    </Text>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.beneficiosScroll__card}>
-              <img src={Nene} className={styles.beneficiosScroll__img} />
-
-              <div className={styles.beneficiosScroll__scrollBarNumero}>
-                <Text color="white">01</Text>
-                <div className={styles.beneficiosScroll__barraScrolling}>
-                  <div
-                    className={`${styles.beneficiosScroll__barraScrolling__scroll} scroll`}
-                  ></div>
-                </div>
-              </div>
-
-              <div className={styles.beneficiosScroll__descripcion}>
-                <Text color="white">
-                  Recibe una auditoría de marketing gratuita
-                </Text>
-                <Text color="light" bold="font-light">
-                  Aprende más sobre nuestro programa de 180 días y cómo puede
-                  cambiar tu práctica dental
-                </Text>
-                <div className={styles.beneficiosScroll__descripcion__cards}>
-                  <div className={styles.detailCard}>
-                    <Icon
-                      type={"check"}
-                      size={"1.5rem"}
-                      color="var(--primary)"
-                    />
-                    <Text color="white" bold="regular">
-                      Puedes ponerte en contacto con nosotros por correo
-                    </Text>
-                  </div>
-                  <div className={styles.detailCard}>
-                    <Icon
-                      type={"check"}
-                      size={"1.5rem"}
-                      color="var(--primary)"
-                    />
-                    <Text color="white" bold="regular">
-                      Puedes ponerte en contacto con nosotros por correo
-                    </Text>
-                  </div>
-                  <div className={styles.detailCard}>
-                    <Icon
-                      type={"check"}
-                      size={"1.5rem"}
-                      color="var(--primary)"
-                    />
-                    <Text color="white" bold="regular">
-                      Puedes ponerte en contacto con nosotros por correo
-                    </Text>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.beneficiosScroll__card}>
-              <img src={Nene} className={styles.beneficiosScroll__img} />
-
-              <div className={styles.beneficiosScroll__scrollBarNumero}>
-                <Text color="white">01</Text>
-                <div className={styles.beneficiosScroll__barraScrolling}>
-                  <div
-                    className={`${styles.beneficiosScroll__barraScrolling__scroll} scroll`}
-                  ></div>
-                </div>
-              </div>
-
-              <div className={styles.beneficiosScroll__descripcion}>
-                <Text color="white">
-                  Recibe una auditoría de marketing gratuita
-                </Text>
-                <Text color="light" bold="font-light">
-                  Aprende más sobre nuestro programa de 180 días y cómo puede
-                  cambiar tu práctica dental
-                </Text>
-                <div className={styles.beneficiosScroll__descripcion__cards}>
-                  <div className={styles.detailCard}>
-                    <Icon
-                      type={"check"}
-                      size={"1.5rem"}
-                      color="var(--primary)"
-                    />
-                    <Text color="white" bold="regular">
-                      Puedes ponerte en contacto con nosotros por correo
-                    </Text>
-                  </div>
-                  <div className={styles.detailCard}>
-                    <Icon
-                      type={"check"}
-                      size={"1.5rem"}
-                      color="var(--primary)"
-                    />
-                    <Text color="white" bold="regular">
-                      Puedes ponerte en contacto con nosotros por correo
-                    </Text>
-                  </div>
-                  <div className={styles.detailCard}>
-                    <Icon
-                      type={"check"}
-                      size={"1.5rem"}
-                      color="var(--primary)"
-                    />
-                    <Text color="white" bold="regular">
-                      Puedes ponerte en contacto con nosotros por correo
-                    </Text>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
         <section id="contact" className={styles.contact}>
           {/*  <img src={Flecha2} className={`${styles.flecha} ${styles.flecha3}`} /> */}
           <div className={styles.desc}>

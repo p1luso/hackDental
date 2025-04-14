@@ -320,8 +320,8 @@
 
 /* white */
 .white.iconTextButton.full {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: #21917b;
+  color: var(--white);
   border-radius: 8px;
   padding: 8px 16px;
 }
@@ -335,6 +335,9 @@
 }
 
 .white.iconTextButton.full:hover {
+  background-color: #30ad94;
+  color: var(--white);
+  transition: all 0.3s ease-in;
 }
 
 .white.iconTextButton.bordered:hover {
