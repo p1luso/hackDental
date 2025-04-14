@@ -79,7 +79,7 @@
 /*white*/
 
 .white .input {
-  border: 2px solid #006a43;
+  border: 3px solid #006a43;
   border-radius: 4px;
   padding: 12px;
   color: var(--black);
@@ -90,7 +90,7 @@
   margin-bottom: 4px;
 }
 .white .input:focus {
-  outline: 1px solid var(--blue);
+  outline: 2px solid #25c19b;
 }
 .white .icon {
   color: gray;
