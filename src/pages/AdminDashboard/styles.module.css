@@ -1,0 +1,43 @@
+.page {
+  background-color: var(--background);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+.form {
+  padding: 16px;
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+.show {
+  display: flex;
+}
+
+.upload {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: self-start;
+}
+
+.uploadBtn {
+  background-color: var(--primary);
+  border-radius: 8px;
+  color: var(--white);
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  min-width: 160px;
+}
+.uploadBtn > :first-child {
+  color: var(--white);
+}

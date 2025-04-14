@@ -1,0 +1,27 @@
+.preefooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 44px 26px;
+  background-color: var(--primary-transparent-25);
+  border-radius: 80px 80px 0 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .preefooter {
+    gap: 0;
+  }
+  .preefooter * {
+    text-align: center !important;
+  }
+
+  .preefooter > :nth-child(1) {
+    font-size: 19px;
+    margin-bottom: 8px;
+  }
+  .preefooter > :nth-child(2) {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+}

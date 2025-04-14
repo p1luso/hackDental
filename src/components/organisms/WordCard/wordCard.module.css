@@ -1,0 +1,17 @@
+.wordCard {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 450px;
+    justify-content: center;
+    gap: 16px;
+    border: 1px solid var(--primary);
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+}
+.hint {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}

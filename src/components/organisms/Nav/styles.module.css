@@ -1,0 +1,542 @@
+@keyframes hide-top {
+  0% {
+    transform: translateY(0);
+  }
+  5% {
+    transform: translateY(-45%);
+  }
+  100% {
+    transform: translateY(-45%);
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.nav.ajust {
+  height: auto;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  animation: none;
+}
+.elements {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 1px 0 4px var(--gray-light);
+}
+
+.elements:has(.bottomMenu.changeColor) {
+  box-shadow: none;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.topMenu,
+.bottomMenu {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.topMenu {
+  width: 100%;
+  gap: 16px;
+  justify-content: center;
+  background-color: var(--primary-darker);
+  padding: 12px;
+  position: relative;
+  border-bottom: 1px solid var(--primary-transparent);
+  cursor: pointer;
+}
+.country {
+  position: relative;
+  top: 4px;
+}
+.closeBtn {
+  position: absolute;
+  right: 2.5%;
+}
+.bottomMenu {
+  justify-content: space-between;
+  padding-left: var(--width-unit);
+  padding-right: var(--width-unit);
+  background-color: #eef5f4;
+  height: 84px;
+}
+.bottomMenu.changeColor {
+  background-color: var(--light-green);
+}
+
+.linkContainer {
+  position: relative;
+  top: 8px;
+}
+.newTag {
+  position: absolute;
+  background-color: var(--primary-darker);
+  padding: 0 4px;
+  right: -10%;
+  top: -22%;
+}
+.logo {
+  cursor: pointer;
+  z-index: 0;
+}
+.left {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  flex-shrink: 0;
+}
+.btnDropdown {
+  display: none;
+}
+
+.nav .separator {
+  width: 2px;
+  height: 2rem;
+  margin: 0 16px;
+  background-color: var(--light-gray);
+}
+
+.formBtn {
+}
+.iconWS {
+  display: inline;
+  position: relative;
+  top: 4px;
+}
+.resoursesDropDown {
+  top: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--gray-dark);
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  z-index: 0;
+}
+
+.resoursesDropDown.show {
+  visibility: visible;
+  opacity: 1;
+  z-index: 0;
+}
+
+body:has(.resoursesDropDown.show) {
+  overflow-y: hidden;
+}
+
+.resoursesDropDown .cardsBanner {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  background-color: var(--light-green);
+  justify-content: center;
+  transform: translateY(-100%);
+  visibility: hidden;
+  transform-origin: top;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: -5;
+  border-radius: 0 0 48px 48px;
+}
+
+.resoursesDropDown.show .cardsBanner.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+.resoursesDropDown .contactBanner,
+.resoursesDropDown .aboutUs {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: var(--light-green);
+  height: fit-content;
+
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  top: -100%;
+  transition: all 0.5s ease-in-out;
+  z-index: 1000;
+  border-radius: 0 0 40px 40px;
+}
+.resoursesDropDown .contactBanner .content,
+.resoursesDropDown .aboutUs .content {
+  width: fit-content;
+  position: relative;
+  left: 25%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 45px;
+  padding-bottom: 60px;
+  gap: 0px;
+}
+
+.aboutUs .links,
+.contactBanner .links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contactBanner .contactBtn,
+.aboutUs .contactBtn {
+  border-radius: 8px;
+  width: fit-content;
+  display: flex;
+  align-items: end;
+  gap: 8px;
+  cursor: pointer;
+}
+.mobileContact {
+  background-color: #eef5f4;
+  height: 100%;
+}
+.mobileContact .contactBtn {
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resoursesDropDown.show .contactBanner.show,
+.resoursesDropDown.show .aboutUs.show {
+  top: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+.resoursesDropDown .contactBanner .content > * {
+  transition: all 0.3s ease-in;
+
+  border-radius: 16px;
+}
+
+.resoursesDropDown .content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 45px;
+  padding-bottom: 32px;
+}
+.resoursesDropDown .content > :nth-child(1) {
+}
+
+.resoursesDropDown .separator {
+  width: 1px;
+  height: 100%;
+  background-color: var(--light-gray);
+}
+.resoursesDropDown .cards {
+  display: flex;
+  gap: 32px;
+}
+.resoursesDropDown .card {
+  width: 220px;
+  background-color: var(--white);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid var(--light-gray);
+}
+.descargarGratis {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.descargarGratis > :nth-child(2) {
+  position: relative;
+  top: 4px;
+}
+.resoursesDropDown .card:hover {
+  background-color: var(--gray-blue-dark);
+  transform: scale(1.1);
+}
+.resoursesDropDown .card:hover > :nth-child(3) {
+  color: var(--primary-dark);
+}
+
+.resoursesDropDown .cardImgContainer {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  background-color: var(--black);
+}
+.resoursesDropDown .cardImg {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.resoursesDropDown .developText {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  cursor: pointer;
+}
+.contactBtn:hover > * {
+  color: #006a5a;
+  text-decoration: underline;
+}
+.resoursesDropDown.show .developText:hover {
+  overflow: hidden;
+  background-color: var(--gray-blue-dark);
+  transition: all 0.3s ease-in-out;
+}
+
+.resoursesDropDown .cardsBanner .developText > * {
+  transition: all 0.3s ease-in-out;
+}
+.resoursesDropDown .cardsBanner.show .developText:hover > * {
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+.resoursesDropDown .cardsBanner .seeEbooksBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  padding-top: 4px;
+  padding-bottom: 8px;
+  border-radius: 4px;
+}
+.resoursesDropDown .cardsBanner .seeEbooksBtn:hover {
+  background-color: var(--primary-transparent-2);
+  padding-left: 8px;
+}
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #eef5f4;
+  padding-top: 48px;
+}
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  padding-bottom: 60px;
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-light);
+}
+.btns > :nth-child(1) {
+  font-size: 16px !important;
+}
+.btns > :nth-child(2) {
+  font-size: 15px !important;
+}
+.dropdownMenus {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.dropdownMenu {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.dropMenuBtn :last-child {
+  position: relative;
+  top: 2px;
+}
+.dropMenuBtn {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+  cursor: pointer;
+  justify-content: space-between;
+}
+.dropdownTitleDesc {
+  display: flex;
+  flex-direction: column;
+}
+.dropdownTitle > :last-child {
+  position: relative;
+  top: 2px;
+}
+.dropdownTitle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.resourcesContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-top: 48px;
+}
+.resourcesContainer .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.whiteMark {
+  background-color: var(--white);
+  padding: 0 8px;
+  border-radius: 32px;
+}
+
+.dropElements {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  background-color: #eef5f4;
+  transform-origin: top;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  height: 100% !important;
+}
+.dropElements.resources {
+  justify-content: space-between;
+}
+.mobileCard {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid var(--primary);
+  padding: 16px;
+  border-radius: 8px;
+  gap: 16px;
+  cursor: pointer;
+  height: 112px;
+}
+.mobileCardContainer {
+  background-color: var(--black);
+}
+.mobileCard .mobileImg {
+  width: 120px;
+  height: 75px;
+  border-radius: 8px;
+  object-fit: fill;
+  object-position: 0 5px;
+}
+.mobileCard .mobileDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.seeGuides {
+  align-self: flex-end;
+}
+.mobileContact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 8px 20px;
+  padding-top: 48px;
+}
+.mobileContact > :nth-child(1) {
+  margin-bottom: 4px;
+}
+.mobileContact > :nth-child(2) {
+  margin-bottom: 24px;
+}
+.mobileContact .links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.recursosDesc {
+  margin-bottom: 24px;
+}
+.recursosDesc > :nth-child(1) {
+  margin-bottom: 4px;
+}
+@media screen and (max-width: 1024px) {
+  .elements {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .logo > :first-child {
+    width: 180px;
+  }
+  .nav {
+    height: auto;
+  }
+
+  .right > :nth-child(1),
+  .right > :nth-child(2),
+  .right > :nth-child(3),
+  .right > :nth-child(4),
+  .right > :nth-child(5) {
+    display: none;
+  }
+  .topMenu {
+    gap: 12px;
+  }
+  .topMenu > :nth-child(2) {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  .topMenu .whiteMark {
+    align-self: self-start;
+    position: relative;
+    top: 3px;
+  }
+  .topMenu .whiteMark > :first-child {
+    font-size: 10px !important;
+  }
+
+  .btnDropdown {
+    display: flex;
+  }
+  .bottomMenu {
+    padding: 0 16px 0 4px;
+    height: 76px;
+  }
+  .formBtn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav {
+    padding: 0;
+    height: auto;
+    animation: none;
+  }
+
+  .resoursesDropDown {
+    display: none;
+  }
+
+  .elements {
+    justify-content: space-between;
+    padding: 0;
+  }
+}

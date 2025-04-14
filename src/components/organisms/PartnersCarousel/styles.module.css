@@ -1,0 +1,64 @@
+@keyframes move {
+  0% {
+    transform: translateX(-100%);
+  }
+  99.999% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  overflow-x: hidden;
+  --img-width: 140px;
+  max-width: calc(var(--img-width) * 5.3);
+  position: relative;
+  flex-wrap: nowrap;
+}
+/* .carousel::before {
+  content: "";
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 10vw;
+  background-image: linear-gradient(
+    90deg,
+    var(--primary-very-transparent),
+    hsla(0, 0%, 93%, 0)
+  );
+} */
+
+/* .carousel::after {
+  content: "";
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  width: 10vw;
+  background-color: rgba(255, 0, 0, 0.342);
+} */
+.list {
+  display: flex;
+  gap: 8px;
+  animation: move 20s linear infinite;
+}
+.img {
+  width: var(--img-width);
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel {
+    width: 80vw;
+  }
+}

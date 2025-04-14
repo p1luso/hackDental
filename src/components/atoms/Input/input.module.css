@@ -1,0 +1,188 @@
+.primary.container,
+.secondary.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.primary.container .label,
+.secondary.container .label,
+.plain.container .label {
+  font-size: 0.77rem;
+}
+.primary .icon,
+.secondary .icon,
+.plain .icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.primary .icon + .input,
+.secondary .icon + .input,
+.plain .icon + .input {
+}
+
+.primary.container {
+  outline: 1px solid var(--light-gray);
+  border-radius: 8px;
+  background-color: var(--background-light);
+}
+.primary.container:hover,
+.primary.container:has(.input:focus) {
+  outline: 1px solid var(--secondary);
+}
+
+.primary.container.error {
+  outline: 1px solid var(--error) !important;
+}
+.primary .icon {
+  color: var(--blue);
+}
+.primary .input {
+  border-radius: 8px;
+  color: var(--gray);
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.primary .input:focus {
+  outline: none;
+}
+
+.primary .input::placeholder {
+  color: var(--gray);
+  font-size: 1rem;
+}
+
+/*secondary*/
+
+.secondary .input {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 12px;
+  color: var(--black);
+  background-color: var(--light-white);
+  font-size: 0.7rem;
+}
+.secondary .input:focus {
+  outline: 1px solid var(--blue);
+}
+.secondary .icon {
+  color: gray;
+}
+.secondary .input::placeholder {
+  color: var(--gray);
+}
+
+/*white*/
+
+.white .input {
+  border: 2px solid #006a43;
+  border-radius: 4px;
+  padding: 12px;
+  color: var(--black);
+  background-color: #ebeced;
+  font-size: 0.7rem;
+}
+.white .label {
+  margin-bottom: 4px;
+}
+.white .input:focus {
+  outline: 1px solid var(--blue);
+}
+.white .icon {
+  color: gray;
+}
+.white .input::placeholder {
+  color: var(--gray);
+}
+
+.white.error .input {
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+@media screen and (max-width: 1024px) {
+  .white .input {
+    font-size: 14px;
+  }
+}
+
+/* black */
+
+.black .input {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 12px;
+  color: var(--white);
+  background-color: var(--dark-gray);
+  font-size: 0.7rem;
+}
+.black .input:focus {
+  outline: 1px solid var(--blue);
+}
+.black .icon {
+  color: gray;
+}
+.black .input::placeholder {
+  color: var(--very-dark-white);
+}
+
+/* primary-bordered */
+
+.primary-bordered .input {
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+  padding: 12px;
+  color: var(--black);
+  background-color: #ebeced;
+  font-size: 0.7rem;
+}
+.primary-bordered .input:focus {
+  outline: 1px solid var(--blue);
+}
+.primary-bordered .icon {
+  color: gray;
+}
+.primary-bordered .input::placeholder {
+  color: gray;
+}
+
+.primary-bordered.error .input {
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+
+/* plain*/
+.plain.container {
+  outline: none;
+  background-color: transparent;
+}
+.plain.container:hover,
+.plain.container:has(.input:focus) {
+  outline: transparent;
+}
+
+.plain .icon {
+  color: inherit;
+}
+.plain .input {
+  border-radius: 8px;
+  color: inherit;
+  background-color: transparent;
+  font-weight: inherit;
+  font-size: 1rem;
+}
+
+.plain .input:focus {
+  outline: none;
+}
+
+.plain .input::placeholder {
+  color: inherit;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1024) {
+}

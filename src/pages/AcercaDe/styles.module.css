@@ -1,0 +1,81 @@
+.page {
+  position: relative;
+  background-color: var(--light-green);
+  min-height: 100vh;
+  width: 100%;
+  --banner-height: calc(var(--width-unit) * 2);
+  --yellow-line: calc(var(--width-unit) * 0.375);
+  --green-line: calc(var(--width-unit) * 0.25);
+  --mobile-margin: 32px;
+}
+
+.banner {
+  background-color: var(--primary-darker);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+.imgAcerca {
+  width: 340px;
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.desc > :nth-child(1) {
+  margin-bottom: 0px;
+}
+.desc > :nth-child(2) {
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+.contactBtn > :first-child {
+  width: 216px !important;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 44px;
+  padding-bottom: 44px;
+  background-color: var(--light-green);
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 40%;
+  flex-shrink: 0;
+  align-items: center;
+}
+.texts > * {
+  align-self: center;
+  flex-shrink: 0 !important;
+}
+@media screen and (max-width: 1024px) {
+  .banner {
+    flex-direction: column-reverse;
+    padding-top: 52px;
+    gap: 16px;
+  }
+  .desc > :nth-child(1) {
+    margin-bottom: 0px;
+    font-size: 36px;
+  }
+  .desc > :nth-child(2) {
+    font-size: 17px;
+  }
+  .imgAcerca {
+    width: 225px;
+  }
+  .main {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .texts {
+    width: 100%;
+    left: 0;
+  }
+}

@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "queens";
+  src: url("./assets/fonts/QueensTrial-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "queens";
+  src: url("./assets/fonts/QueensTrial-ExtraBold.ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "ibm plex serif";
+  src: url("./assets/fonts/IBMPlexSerif-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "ibm plex serif";
+  src: url("./assets/fonts/Lexend-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "ibm plex serif";
+  src: url("./assets/fonts/IBMPlexSerif-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "ibm plex serif";
+  src: url("./assets/fonts/IBMPlexSerif-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "ms serif display";
+  src: url("./assets/fonts/DMSerifDisplay-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "lexend";
+  src: url("./assets/fonts/Lexend-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "lexend";
+  src: url("./assets/fonts/Lexend-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "lexend";
+  src: url("./assets/fonts/Lexend-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "lexend";
+  src: url("./assets/fonts/Lexend-ExtraBold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "lexend";
+  src: url("./assets/fonts/Lexend-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "lexend";
+  src: url("./assets/fonts/Lexend-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "bree serif";
+  src: url("./assets/fonts/BreeSerif-Regular.ttf");
+  font-weight: 400;
+}
+
+:root {
+  --dark-white: #d9d9d9;
+  --white: white;
+  --very-light-white: #fafafa;
+  --light-white: #f1f6fa;
+  --dark-white: #e3eaf1;
+  --very-dark-white: #bcccdc;
+  --white-transparent: #d9d9d96b;
+  --yellow-cream: #f6f4eb;
+  --black: #000;
+  --dark-gray: #33475b;
+  --black-horrible: #1c1c2e;
+  --text: #565f65;
+  --very-light-black: #486581;
+  --light-black: #213343;
+  --dark-black: #1b1b1b;
+  --black-transparent: #1e22265e;
+  --light-blue: #749bc2;
+  --dark-blue: #3d5a98;
+  --light-gray: rgba(97, 97, 97, 0.26);
+  --gray: #455a64;
+  --gray-transparent-50: rgba(69, 90, 100, 0.5);
+  --gray-blue: #dce7f1;
+  --gray-blue-dark: #d4e1ee;
+  --gray-light: #92a3a371;
+  --gray-dark: rgba(34, 33, 33, 0.74);
+  --light-blue-transparent: #ccd6dd;
+  --blue: #4681a96e;
+  --green: #11b474;
+  --lemon-green: #76cc91;
+  --light-green: #eef5f4;
+  --light-green-transparent: #eff6f526;
+  --dark-green: #1e2226;
+
+  --primary-light: #25c19b;
+  --primary: #006a43;
+  --primary-transparent-50: rgba(45, 104, 82, 0.5);
+  --primary-transparent: #006a4326;
+  --primary-transparent-25: rgba(0, 107, 68, 0.25);
+  --primary-very-transparent: hsla(158, 100%, 21%, 0.047);
+  --primary-transparent-2: rgba(0, 107, 68, 0.15);
+  --secondary: #1a4789;
+  --error: #a80821;
+  --primary-dark: #206767;
+  --primary-darker: #006a5a;
+  --background: #eff0f2;
+  /*--celeste: #25c1b826;*/
+  --celeste: #aee2e0;
+  --banner-bg: #e3eaf1;
+  --yellow: rgb(248, 236, 182);
+  --yellow-dark: rgb(236, 205, 166);
+  --oragen-light: rgba(255, 81, 0, 0.205);
+  --gradient-banner: #d8e8e6;
+  --background-light: #18181b;
+  --background-dark: rgb(21, 26, 43);
+  --background-container: var(--white-transparent);
+  --container-border: var(--light-gray);
+  --width-unit: calc(100vw / 6.2);
+  --linea-amarilla: calc(100vw / 13);
+  --linea-verde: calc(100vw / 24.5);
+  --linea-rosa: calc(100vw / 6.67);
+  --linea-roja: calc(100vw / 14.2);
+  --gradient: linear-gradient(var(--gradient-banner) 50%, white);
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol {
+  list-style: none;
+}
+html,
+body {
+  font-size: 18px;
+}
+
+img {
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media screen and (max-width: 1024px) {
+  html,
+  body {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    font-size: 12px !important;
+  }
+}

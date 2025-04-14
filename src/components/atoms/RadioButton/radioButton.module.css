@@ -1,0 +1,46 @@
+.radioContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  --radio-w: 1rem;
+  --radio-h: 1rem;
+}
+
+.radio {
+  position: relative;
+  display: flex;
+  outline: 1px solid var(--white);
+  width: var(--radio-w);
+  height: var(--radio-h);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.radioInput {
+  width: var(--radio-w);
+  height: var(--radio-h);
+  opacity: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  position: absolute;
+}
+.radioInput:checked + .checked {
+  display: block;
+}
+
+.checked {
+  background-color: var(--white);
+  width: calc(var(--radio-w) - 8px);
+  height: calc(var(--radio-h) - 8px);
+  border-radius: 50%;
+  display: none;
+}
+
+.label {
+  font-size: 0.77rem;
+}

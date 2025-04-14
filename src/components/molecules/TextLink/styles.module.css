@@ -1,0 +1,98 @@
+.primary.textLink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+}
+
+.primary.textLink > *:hover,
+.primary.textLink.marked > * {
+  color: var(--primary) !important;
+  text-decoration: underline;
+}
+
+/* secondary */
+.secondary.textLink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.secondary.textLink > *:hover,
+.secondary.textLink.marked > * {
+  color: var(--black) !important;
+  text-decoration: underline;
+}
+
+/* white */
+.white.textLink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.white.textLink > *:hover,
+.white.textLink.marked > * {
+  color: var(--white) !important;
+  text-decoration: underline;
+}
+
+/* primary-dark */
+.primary-dark.textLink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.primary-dark.textLink > *:hover,
+.primary-dark.textLink.marked > * {
+  color: var(--primary-dark) !important;
+  text-decoration: underline;
+}
+
+/* black */
+.black.textLink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.black.textLink.marked > * {
+  color: var(--dark-black) !important;
+  text-decoration: underline;
+}
+
+.black.textLink > * {
+  transition: all 0.2s ease-in;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 20px;
+  color: var(--dark-black) !important;
+}
+.black.textLink > *:hover {
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--gray-light);
+}
+
+/* rounded */
+
+.rounded.textLink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.rounded.textLink.marked > * {
+  background-color: var(--very-light-black);
+}
+.rounded.textLink > * {
+  transition: all 0.2s ease-in;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.rounded.textLink > *:hover {
+  background-color: var(--very-light-black);
+}

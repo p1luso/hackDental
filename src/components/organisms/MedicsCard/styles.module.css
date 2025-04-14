@@ -1,0 +1,18 @@
+.card {
+  display: flex;
+  gap: 16px;
+  background-color: var(--primary-transparent);
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 32px;
+  align-items: center;
+}
+.card .medicos {
+  width: 120px;
+}
+
+@media screen and (max-width: 1024px) {
+  .desc {
+    margin-left: 32px;
+  }
+}

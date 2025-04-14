@@ -1,0 +1,39 @@
+.iconButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.primary {
+  padding: 6px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  transition: all 0.3s ease-in;
+}
+.primary:hover {
+  background-color: var(--primary-transparent);
+}
+
+.primary > * {
+  color: var(--primary);
+}
+
+.secondary {
+  padding: 6px;
+  border: none;
+}
+
+.secondary > * {
+  color: var(--black);
+}
+
+.terciary {
+  padding: 6px;
+  border: none;
+}
+
+.terciary > * {
+  color: var(--white);
+}

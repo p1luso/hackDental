@@ -1,0 +1,162 @@
+.mark {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.primary-bg {
+  color: var(--white);
+  background-color: var(--primary);
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.primary-light {
+  color: #0ecb81;
+}
+.primary-dark {
+  color: #006a5a;
+}
+.primary-darker-bg {
+  color: var(--white);
+  background-color: #21917b;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.primary-bg-triangular {
+  color: var(--black);
+  position: relative;
+  padding: 0 4px;
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  z-index: 1;
+}
+.primary-bg-triangular::before {
+  content: "";
+  width: 100%;
+  height: 75%;
+  background-color: #76cc91;
+  position: absolute;
+  top: 8px;
+  z-index: -1;
+  transform: rotateZ(-2deg) skewX(24deg);
+}
+
+.primary-bg-triangular-light {
+  color: white;
+  position: relative;
+  padding: 0 1px;
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  z-index: 1;
+}
+
+.primary-bg-triangular-light::before {
+  content: "";
+  width: 100%;
+  height: 85%;
+  background-color: #21917b;
+  position: absolute;
+  z-index: -1;
+  top: 1px;
+  transform: rotateZ(-1deg) skewX(20deg);
+}
+
+.error-bg-triangular {
+  color: var(--white);
+  position: relative;
+  padding: 0 4px;
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  z-index: 1;
+}
+.error-bg-triangular::before {
+  content: "";
+  width: 100%;
+  height: 75%;
+  background-color: rgba(236, 27, 27, 0.719);
+  position: absolute;
+  top: 8px;
+  z-index: -1;
+  transform: rotateZ(-2deg) skewX(24deg);
+}
+
+.mark.soft {
+  color: var(--gray);
+  font-weight: bold;
+}
+
+.mark.error {
+  color: var(--error);
+  font-weight: bold;
+}
+
+.mark.dark {
+  color: var(--black);
+  font-weight: bold;
+}
+.mark.dark-bg {
+  color: var(--white);
+  background-color: var(--black);
+  font-weight: bold;
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+.mark.submarked-blue {
+  color: var(--black);
+  background-color: #bcccdc;
+}
+.mark.mark.submarked-blue-light {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+.mark.submarked-yellow {
+  color: var(--black);
+  background-color: #e0ddd3;
+}
+
+.mark.underline {
+  text-decoration: underline;
+  color: var(--dark-black);
+}
+.mark.primary-underline {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.mark.underline-blue {
+  text-decoration: underline;
+  color: var(--very-light-black);
+}
+
+.mark.error {
+  text-decoration: underline;
+  color: red;
+}
+.mark.marked {
+  color: var(--white);
+  text-decoration: underline;
+}
+.medium {
+  font-weight: 500;
+}
+.regular {
+  font-weight: 400;
+}
+.font-light {
+  font-weight: 300;
+}
+.semibold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: bold;
+}
+
+.extra-bold {
+  font-weight: 800;
+}

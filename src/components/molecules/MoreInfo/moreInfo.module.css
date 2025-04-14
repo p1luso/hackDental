@@ -1,0 +1,25 @@
+.moreInfo {
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+}
+.content {
+  position: absolute;
+  display: none;
+  left: 100%;
+  top: 50%;
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+  background-color: var(--background);
+  transform: translateY(-50%);
+  min-width: 100px;
+  max-height: 200px;
+  overflow: auto;
+  padding: 8px;
+}
+
+.moreInfo:hover .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
