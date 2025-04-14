@@ -222,6 +222,7 @@ body:has(.popupContainer.show) {
 }
 .banner {
   position: relative;
+  background-color: var(--dark-transparent-45);
   width: 100%;
   flex-grow: 1;
   padding-right: var(--width-unit);

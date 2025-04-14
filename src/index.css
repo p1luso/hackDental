@@ -117,7 +117,7 @@
   --light-green: #eef5f4;
   --light-green-transparent: #eff6f526;
   --dark-green: #1e2226;
-
+  --dark-transparent-45: rgba(0,0,0,0.45);
   --primary-light: #25c19b;
   --primary: #006a43;
   --primary-transparent-50: rgba(45, 104, 82, 0.5);
