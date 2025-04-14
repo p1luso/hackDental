@@ -79,18 +79,22 @@
 /*white*/
 
 .white .input {
-  border: 3px solid #006a43;
+  border: 1px solid #006a43;
   border-radius: 4px;
   padding: 12px;
-  color: var(--black);
-  background-color: #ebeced;
-  font-size: 0.7rem;
+  color: var(--white);
+  background-color: #0000001e;
+  font-size: 0.875rem;
 }
 .white .label {
   margin-bottom: 4px;
+  color: #ebeced;
+
 }
 .white .input:focus {
-  outline: 2px solid #25c19b;
+  border: 1px solid #FFFF;
+
+  outline: 2.2px solid #25c19b;
 }
 .white .icon {
   color: gray;
