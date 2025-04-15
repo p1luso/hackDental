@@ -13,6 +13,7 @@ const Section = ({
   steps = [],
   paso,
   className = "",
+  textLeft = false,
   lastSection = false,
 }) => {
   const { progress, ref } = useScrollProgress();
@@ -33,7 +34,7 @@ const Section = ({
       </div>
 
       <div className={styles.container}>
-        <div className={styles.grid}>
+        <div className={`${styles.grid} ${textLeft ? styles.reverse : ""}`}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

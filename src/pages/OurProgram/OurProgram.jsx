@@ -241,6 +241,7 @@ const OurProgram = () => {
                 paso={"PASO #2"}
                 number="02"
                 title="Recibe una auditoría gratuita"
+                textLeft={true}
                 steps={[
                   <strong>Puedes ponerte en contacto con nosotros por correo</strong>,
                   "Puedes ponerte en contacto con nosotros por correo",
@@ -261,6 +262,7 @@ const OurProgram = () => {
                 paso={"PASO #4"}
                 number="04"
                 title="Recibe una auditoría gratuita"
+                textLeft={true}
                 steps={[
                   <strong>Puedes ponerte en contacto con nosotros por correo</strong>,
                   "Puedes ponerte en contacto con nosotros por correo",

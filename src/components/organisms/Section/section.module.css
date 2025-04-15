@@ -66,10 +66,19 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .reverse {
+    direction: rtl;
+  }
+  
+  .reverse > * {
+    direction: ltr;
+  }
 
 @media (min-width: 768px) {
   .verticalLine {
