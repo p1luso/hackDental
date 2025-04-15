@@ -65,7 +65,7 @@ const Section = ({
                 {steps.map((step, index) => (
                   <div key={index} className={styles.stepItem}>
                     <div className={styles.checkIcon}>
-                      <Check className={styles.check} />
+                      <img src={} className={styles.check} />
                     </div>
                     <p className={styles.stepText}>{step}</p>
                   </div>
