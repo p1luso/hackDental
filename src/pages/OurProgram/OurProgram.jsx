@@ -247,6 +247,26 @@ const OurProgram = () => {
                   "Puedes ponerte en contacto con nosotros por correo",
                 ]}
               />
+              <Section
+                paso={"PASO #3"}
+                number="03"
+                title="Recibe una auditoría gratuita"
+                steps={[
+                  <strong>Puedes ponerte en contacto con nosotros por correo</strong>,
+                  "Puedes ponerte en contacto con nosotros por correo",
+                  "Puedes ponerte en contacto con nosotros por correo",
+                ]}
+              />
+              <Section
+                paso={"PASO #4"}
+                number="04"
+                title="Recibe una auditoría gratuita"
+                steps={[
+                  <strong>Puedes ponerte en contacto con nosotros por correo</strong>,
+                  "Puedes ponerte en contacto con nosotros por correo",
+                  "Puedes ponerte en contacto con nosotros por correo",
+                ]}
+              />
             </div>
           </div>
         </div>
