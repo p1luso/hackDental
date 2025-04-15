@@ -3,6 +3,7 @@ import { useScrollProgress } from "../../../hooks/useScrollProgress";
 import { Check } from "lucide-react";
 import { motion } from "framer-motion";
 import styles from "./section.module.css";
+import Check from "@assets/check.svg";
 
 const Section = ({
   number,
