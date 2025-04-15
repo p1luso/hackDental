@@ -9,6 +9,7 @@
 .primary-rounded,
 .very-light-black.iconTextButton,
 .dark-green.iconTextButton,
+.light-green.iconTextButton,
 .primary-bordered.iconTextButton {
   display: flex;
   outline: none;
@@ -398,4 +399,16 @@
 .dark-green.iconTextButton.bordered {
   border: 1px solid var(--very-light-black);
   color: var(--very-light-black);
+}
+
+.light-green.iconTextButton.full {
+  background-color: var(--primary-light);
+  color: var(--black);
+  border-radius: 4px;
+}
+
+.light-green.iconTextButton.full:hover {
+  background-color: var(--primary-light2);
+  transition: all 0.3s ease-in;
+
 }

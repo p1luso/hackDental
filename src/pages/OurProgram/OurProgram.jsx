@@ -20,6 +20,8 @@ import imagenDetalle2 from "@assets/imagenDetalle2.svg";
 import Medicos from "@assets/Medicos.svg";
 import ImgFlechas from "@assets/imgFlechas.svg";
 import Section from "../../components/organisms/Section/Section";
+import LeftArrow from "@assets/flechaizquierda.svg";
+import RightArrow from "@assets/flechaderecha.svg";
 
 const OurProgram = () => {
   const [showModalVideo, setShowModalVideo] = useState(false);
@@ -225,8 +227,12 @@ const OurProgram = () => {
                 y cómo puede <br></br>cambiar tu{" "}
                 <strong>práctica dental</strong>
               </p>
-              <div>
-              <IconTextButton >Solicita una reunión</IconTextButton>
+              <div className={styles.progressBarButton}>
+                <img className={styles.arrows} src={LeftArrow} />
+                <IconTextButton colorVariant="light-green" size="20%">
+                  Aplicar Ahora
+                </IconTextButton>
+                <img className={styles.arrows} src={RightArrow} />
               </div>
             </div>
             <div className={styles.progressBar}>

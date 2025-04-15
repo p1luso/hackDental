@@ -75,6 +75,20 @@
 
 }
 
+.progressBarButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.arrows{
+  width: 150px;
+  padding: 10px;
+}
+
+
 .progressTitle{
   margin-bottom: 20px;
   font-family: Lexend;
@@ -85,7 +99,7 @@
 }
 
 .progressText{
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   font-family: Lexend;
   font-weight: 300;
   font-size: 18px;
