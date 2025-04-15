@@ -20,12 +20,15 @@ const Section = ({
 
   return (
     <section ref={ref} className={`${styles.section} ${className}`}>
-      <div className={styles.verticalLine}>
-        <div
-          className={styles.progressLine}
-          style={{ height: `${progress * 100}%` }}
-        />
-      </div>
+
+     {!lastSection && (
+        <div className={styles.verticalLine}>
+          <div
+            className={styles.progressLine}
+            style={{ height: `${progress * 100}%` }}
+          />
+        </div>
+      )}
 
       <div className={styles.numberCircle}>
         <div className={styles.numberCircleBG}>

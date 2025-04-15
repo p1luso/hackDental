@@ -225,6 +225,8 @@ const OurProgram = () => {
                 y cómo puede <br></br>cambiar tu{" "}
                 <strong>práctica dental</strong>
               </p>
+              <IconTextButton >Solicita una reunión</IconTextButton>
+
             </div>
             <div className={styles.progressBar}>
               <Section
@@ -232,18 +234,22 @@ const OurProgram = () => {
                 number="01"
                 title="Recibe una auditoría gratuita"
                 steps={[
-                  <strong>Puedes ponerte en contacto con nosotros por correo</strong>,
+                  <strong>
+                    Puedes ponerte en contacto con nosotros por correo
+                  </strong>,
                   "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
                 ]}
               />
-               <Section
+              <Section
                 paso={"PASO #2"}
                 number="02"
                 title="Recibe una auditoría gratuita"
                 textLeft={true}
                 steps={[
-                  <strong>Puedes ponerte en contacto con nosotros por correo</strong>,
+                  <strong>
+                    Puedes ponerte en contacto con nosotros por correo
+                  </strong>,
                   "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
                 ]}
@@ -253,18 +259,23 @@ const OurProgram = () => {
                 number="03"
                 title="Recibe una auditoría gratuita"
                 steps={[
-                  <strong>Puedes ponerte en contacto con nosotros por correo</strong>,
+                  <strong>
+                    Puedes ponerte en contacto con nosotros por correo
+                  </strong>,
                   "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
                 ]}
               />
               <Section
                 paso={"PASO #4"}
+                lastSection={true}
                 number="04"
                 title="Recibe una auditoría gratuita"
                 textLeft={true}
                 steps={[
-                  <strong>Puedes ponerte en contacto con nosotros por correo</strong>,
+                  <strong>
+                    Puedes ponerte en contacto con nosotros por correo
+                  </strong>,
                   "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
                 ]}
