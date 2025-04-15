@@ -49,7 +49,7 @@
   border-radius: 9999px;
   background: var(--dark-transparent-45);
   color: white;
-  font-size: 42px;
+  font-size: 52px;
   font-weight: bold;
   font-family: "DM Sans", sans-serif;
   display: flex;
@@ -185,18 +185,23 @@
 
 @media (max-width: 767px) {
     .title{
-        
+        font-size: 24px;
     }
+
+    .stepText{
+        font-size: 14px;
+    }
+
     .section {
         margin: 0px 30px;
       }
       .container {
-        margin-left: 2.5rem;
+        margin-left: 5rem;
         margin-top: 4%;
       }
   .verticalLine {
     display: block;
-    left: 0.5rem;
+    left: 1rem;
     transform: none; 
   }
 
@@ -206,8 +211,8 @@
     transform: none;
   } 
   .circle {
-    font-size: 20px;
-    height: 40px;
-    width: 40px;
+    font-size: 52px;
+    height: 55px;
+    width: 55px;
   }
 }
