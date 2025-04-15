@@ -1,6 +1,5 @@
 import React from "react";
 import { useScrollProgress } from "../../../hooks/useScrollProgress";
-import { Check } from "lucide-react";
 import { motion } from "framer-motion";
 import styles from "./section.module.css";
 import Check from "@assets/check.svg";
@@ -66,7 +65,7 @@ const Section = ({
                 {steps.map((step, index) => (
                   <div key={index} className={styles.stepItem}>
                     <div className={styles.checkIcon}>
-                      <img src={} className={styles.check} />
+                      <img src={Check} className={styles.check} />
                     </div>
                     <p className={styles.stepText}>{step}</p>
                   </div>
