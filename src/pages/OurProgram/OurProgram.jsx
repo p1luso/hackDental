@@ -19,6 +19,7 @@ import imagenDetalle1 from "@assets/imagenDetalle1.svg";
 import imagenDetalle2 from "@assets/imagenDetalle2.svg";
 import Medicos from "@assets/Medicos.svg";
 import ImgFlechas from "@assets/imgFlechas.svg";
+import Section from "../../components/organisms/Section/Section";
 
 const OurProgram = () => {
   const [showModalVideo, setShowModalVideo] = useState(false);
@@ -94,124 +95,160 @@ const OurProgram = () => {
       <Nav />
       <header className={styles.banner}>
         <div className={styles.bgTransparent}>
-        <img
-          src={FlechaNuestroPrograma}
-          className={`${styles.flecha} ${styles.nuestroPrograma}`}
-        />
-        <div className={styles.elements}>
-          <Text
-            type="bigtitle"
-            color="white"
-            bold="semibold"
-            textAlign="center"
-            s={{
-              lineHeight: "0.95",
-              fontFamily: "queens",
-              fontWeight: "800",
-              letterSpacing: "-0.5px",
-            }}
-          >
-            Aprende cómo vender tu <br></br><s className={styles.crossLine}>Consultorio</s> <span className={styles.betterTreatment}>Mejor Tratamiento</span>
-          </Text>
+          <img
+            src={FlechaNuestroPrograma}
+            className={`${styles.flecha} ${styles.nuestroPrograma}`}
+          />
+          <div className={styles.elements}>
+            <Text
+              type="bigtitle"
+              color="white"
+              bold="semibold"
+              textAlign="center"
+              s={{
+                lineHeight: "0.95",
+                fontFamily: "queens",
+                fontWeight: "800",
+                letterSpacing: "-0.5px",
+              }}
+            >
+              Aprende cómo vender tu <br></br>
+              <s className={styles.crossLine}>Consultorio</s>{" "}
+              <span className={styles.betterTreatment}>Mejor Tratamiento</span>
+            </Text>
 
-          <div className={styles.videoContainer}>
-            <div className={styles.videoDrawer}>
-              <img className={styles.videoImg} src={imgVideo} />
-              <button
-                className={styles.videoPlayBtn}
-                onClick={() => setShowModalVideo(true)}
-              >
-                <Icon size={"1.5rem"} color="var(--white)" type={"play"} />
-              </button>
-              <div
-                id="bg-video-modal"
-                className={`${styles.modalVideo} ${
-                  showModalVideo && styles.show
-                }`}
-                onClick={handleHideModalVideo}
-              >
-                <iframe
-                  className={styles.video}
-                  src="https://www.youtube.com/embed/Fu4GHmyvDk8?si=-ugwjpi28KLqfGSM?controls=0&showinfo=0"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; modestbranding; encrypted-media; gyroscope; picture-in-picture"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                ></iframe>
+            <div className={styles.videoContainer}>
+              <div className={styles.videoDrawer}>
+                <img className={styles.videoImg} src={imgVideo} />
+                <button
+                  className={styles.videoPlayBtn}
+                  onClick={() => setShowModalVideo(true)}
+                >
+                  <Icon size={"1.5rem"} color="var(--white)" type={"play"} />
+                </button>
+                <div
+                  id="bg-video-modal"
+                  className={`${styles.modalVideo} ${
+                    showModalVideo && styles.show
+                  }`}
+                  onClick={handleHideModalVideo}
+                >
+                  <iframe
+                    className={styles.video}
+                    src="https://www.youtube.com/embed/Fu4GHmyvDk8?si=-ugwjpi28KLqfGSM?controls=0&showinfo=0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; modestbranding; encrypted-media; gyroscope; picture-in-picture"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </div>
+              <form className={styles.formContacto}>
+                <Text size="sm" textAlign="center">
+                  <div className={styles.dentalOwner}>
+                    *DUEÑO DE CONSULTORIO DENTAL*
+                  </div>
+                </Text>
+                <Text
+                  type="subtitle"
+                  color="white"
+                  bold="semibold"
+                  textAlign="center"
+                  s={{ lineHeight: "1.15" }}
+                >
+                  Reunete con nosotros y <br />
+                  comentanos tus necesidades
+                </Text>
+                <div className={styles.inputs}>
+                  <div className={styles.inputLine}>
+                    <Input
+                      id={"firstName"}
+                      label="Nombre*"
+                      variant="white"
+                      placeholder="Nombre*"
+                      labelColor="#ebeced"
+                      onChange={handleChange}
+                      value={formData.firstName}
+                      onError={() => {}}
+                    />
+                    <Input
+                      id={"lastName"}
+                      label="Apellido*"
+                      variant="white"
+                      placeholder="Apellido*"
+                      labelColor="#ebeced"
+                      onChange={handleChange}
+                      value={formData.lastName}
+                      onError={() => {}}
+                    />
+                  </div>
+                  <Input
+                    id={"email"}
+                    label="Email*"
+                    variant="white"
+                    placeholder="Email*"
+                    labelColor="#ebeced"
+                    onChange={handleChange}
+                    value={formData.email}
+                    onError={() => {}}
+                  />
+                  <Input
+                    id={"phone"}
+                    label="Teléfono*"
+                    variant="white"
+                    placeholder="Teléfono*"
+                    labelColor="#ebeced"
+                    onChange={handleChange}
+                    value={formData.phone}
+                    onError={() => {}}
+                  />
+                  <div className={styles.nextStepBtn}>
+                    <IconTextButton
+                      colorVariant="white"
+                      textProps={{ size: "sm" }}
+                    >
+                      Siguiente Paso
+                    </IconTextButton>
+                  </div>
+                </div>
+              </form>
             </div>
-            <form className={styles.formContacto}>
-              <Text size="sm" textAlign="center">
-                <div className={styles.dentalOwner}>
-                  *DUEÑO DE CONSULTORIO DENTAL*
-                </div>
-              </Text>
-              <Text
-                type="subtitle"
-                color="white"
-                bold="semibold"
-                textAlign="center"
-                s={{ lineHeight: "1.15" }}
-              >
-                Reunete con nosotros y <br />
-                comentanos tus necesidades
-              </Text>
-              <div className={styles.inputs}>
-                <div className={styles.inputLine}>
-                  <Input
-                    id={"firstName"}
-                    label="Nombre*"
-                    variant="white"
-                    placeholder="Nombre*"
-                    labelColor="#ebeced"
-                    onChange={handleChange}
-                    value={formData.firstName}
-                    onError={() => {}}
-                  />
-                  <Input
-                    id={"lastName"}
-                    label="Apellido*"
-                    variant="white"
-                    placeholder="Apellido*"
-                    labelColor="#ebeced"
-                    onChange={handleChange}
-                    value={formData.lastName}
-                    onError={() => {}}
-                  />
-                </div>
-                <Input
-                  id={"email"}
-                  label="Email*"
-                  variant="white"
-                  placeholder="Email*"
-                  labelColor="#ebeced"
-                  onChange={handleChange}
-                  value={formData.email}
-                  onError={() => {}}
-                />
-                <Input
-                  id={"phone"}
-                  label="Teléfono*"
-                  variant="white"
-                  placeholder="Teléfono*"
-                  labelColor="#ebeced"
-                  onChange={handleChange}
-                  value={formData.phone}
-                  onError={() => {}}
-                />
-                <div className={styles.nextStepBtn}>
-                  <IconTextButton
-                    colorVariant="white"
-                    textProps={{ size: "sm" }}
-                  >
-                    Siguiente Paso
-                  </IconTextButton>
-                </div>
-              </div>
-            </form>
           </div>
-        </div>
+          <div className={styles.progressBarSection}>
+            <div className={styles.progressTexts}>
+              <h2 className={styles.progressTitle}>
+                Pasos Para Aplicar a Nuestro <br></br>Programa de Marketing 🔬
+              </h2>
+              <p className={styles.progressText}>
+                Aprende más sobre nuestro <strong>programa de 180 días</strong>{" "}
+                y cómo puede <br></br>cambiar tu{" "}
+                <strong>práctica dental</strong>
+              </p>
+            </div>
+            <div className={styles.progressBar}>
+              <Section
+                paso={"PASO #1"}
+                number="01"
+                title="Recibe una auditoría gratuita"
+                steps={[
+                  <strong>Puedes ponerte en contacto con nosotros por correo</strong>,
+                  "Puedes ponerte en contacto con nosotros por correo",
+                  "Puedes ponerte en contacto con nosotros por correo",
+                ]}
+              />
+               <Section
+                paso={"PASO #2"}
+                number="02"
+                title="Recibe una auditoría gratuita"
+                steps={[
+                  <strong>Puedes ponerte en contacto con nosotros por correo</strong>,
+                  "Puedes ponerte en contacto con nosotros por correo",
+                  "Puedes ponerte en contacto con nosotros por correo",
+                ]}
+              />
+            </div>
+          </div>
         </div>
       </header>
       <main className={styles.main}>
@@ -237,7 +274,7 @@ const OurProgram = () => {
             <img src={Nene} className={styles.neneArio} />
           </div>
         </div>
-        
+
         <div className={styles.sectionHorrible}>
           <div className={styles.contenido}>
             <div className={styles.seccionnes}>

@@ -44,7 +44,6 @@
   background: var(--primary-darker);
   border-top: 1px solid var(--blue);
   position: relative;
-  
 }
 
 .banner .elements {
@@ -54,13 +53,45 @@
   gap: 16px;
   position: relative;
   top: 25%;
+  margin-bottom: 20%;
+
 }
 .banner .elements > :first-child {
   margin-bottom: 44px;
   font-size: 52px;
 }
 
-.bgTransparent{
+.progressBarSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.progressTexts{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.progressTitle{
+  margin-bottom: 20px;
+  font-family: Lexend;
+  font-weight: 500;
+  font-size: 32px;
+  color: #ffff;
+}
+
+.progressText{
+  margin-bottom: 50px;
+  font-family: Lexend;
+  font-weight: 300;
+  font-size: 16px;
+  color: #ebeced;
+}
+
+.bgTransparent {
   background-color: var(--dark-transparent-45);
   width: 100%;
   height: 100%;
@@ -68,17 +99,16 @@
   padding-bottom: 80px;
 }
 
-.dentalOwner{
-  color:#25c19b;
+.dentalOwner {
+  color: #25c19b;
 }
 
-.crossLine{
+.crossLine {
   color: #21917b;
-
 }
 
-.betterTreatment{
-  color:#25c19b;
+.betterTreatment {
+  color: #25c19b;
 }
 
 .videoContainer {
@@ -145,7 +175,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  gap: 16px; 
+  gap: 16px;
 }
 
 .inputLine > * {
@@ -827,9 +857,11 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-
-  .banner{
+  .banner {
     padding: 0;
+  }
+  .elements {
+    margin: 28px;
   }
 
   .contact {
@@ -840,9 +872,14 @@
   .main {
     padding-top: 44px;
   }
-  .banner{
+  .banner {
     padding: 0;
   }
+
+  .elements {
+    margin: 28px;
+  }
+
   .cardMeet {
     width: 100%;
     border-radius: 0;
@@ -862,10 +899,12 @@
     width: 100%;
     top: 0;
   }
-  .banner{
+  .banner {
     padding: 0;
   }
-
+  .elements {
+    margin: 28px;
+  }
   .main {
     padding-top: 44px;
   }
@@ -896,7 +935,7 @@
     align-self: flex-start;
     width: 100%;
   }
-  .cardMeet > :first-child{
+  .cardMeet > :first-child {
     font-size: 28px;
   }
   .comoFunciona__desc > :first-child {
@@ -906,7 +945,16 @@
   .comoFunciona .subsection {
     width: 100%;
   }
-  .comoFunciona img{
+
+  .progressTexts{
+    margin: 30px;
+  }
+
+  .progressText{
+    margin-bottom: 10px;
+  }
+
+  .comoFunciona img {
     display: none;
   }
 }
