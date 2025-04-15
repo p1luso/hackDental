@@ -225,8 +225,9 @@ const OurProgram = () => {
                 y cómo puede <br></br>cambiar tu{" "}
                 <strong>práctica dental</strong>
               </p>
+              <div>
               <IconTextButton >Solicita una reunión</IconTextButton>
-
+              </div>
             </div>
             <div className={styles.progressBar}>
               <Section
