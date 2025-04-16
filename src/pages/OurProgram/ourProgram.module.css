@@ -919,6 +919,10 @@
     width: 100%;
     top: 0;
   }
+
+  .arrows{
+    width: 100px;
+  }
   .banner {
     padding: 0;
   }
