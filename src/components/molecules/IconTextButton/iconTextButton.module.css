@@ -377,15 +377,13 @@
 
 /* dark-green */
 .dark-green.iconTextButton.full {
-  background-color: var(--primary-transparent-50);
-  color: var(--black);
+  background-color: #206767;
+  color: var(--white);
+  font-family: Lexend;
   border-radius: 4px;
 }
 .dark-green.iconTextButton:disabled {
-  background-color: #2d4356;
-  cursor: auto;
-  color: var(--white);
-  cursor: no-drop;
+
 }
 .dark-green.iconTextButton:disabled:hover {
 }

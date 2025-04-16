@@ -1,0 +1,74 @@
+.preefooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 44px 26px;
+  background-color: var(--primary-transparent-25);
+  border-radius: 80px 80px 0 0;
+}
+
+.spainLocation {
+  background: #eef5f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.founderText span{
+    color: rgb(65, 65, 65);
+}
+
+.founderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* <-- cambio clave */
+    flex-direction: row;
+    padding: 0;
+    width: 60%;
+    margin-top: 30px;
+    line-height: 0;
+    gap: 24px; /* podés ajustar este valor si querés más o menos separación */
+  }
+
+.contentContainer img {
+    width: 260px;
+    border-radius: 10%;
+    border: 3px solid #21917b;
+    display: block;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    vertical-align: top; /* Este elimina espacio que algunas veces se genera por inline-block */
+  }
+  
+
+.founderText {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: Lexend;
+  gap: 24px;
+}
+
+.founderButton {
+  justify-self: left;
+  margin-top: 10px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  
+}

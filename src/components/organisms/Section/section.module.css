@@ -229,7 +229,7 @@
 
   .numberCircle {
     display: block;
-    left: -1rem; /* también a la izquierda */
+    left: -1rem;
     transform: none;
   }
   .circle {

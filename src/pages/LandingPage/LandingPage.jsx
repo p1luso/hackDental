@@ -30,6 +30,7 @@ import ImgBtnWS from "@assets/imgBtnWS.svg";
 import PartnersCarousel from "../../components/organisms/PartnersCarousel/PartnersCarousel";
 import Medicos from "@assets/Medicos.svg";
 import { useConfigStore } from "../../stores/useConfig";
+import Founder from "../../components/organisms/Founder/Founder";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -579,6 +580,7 @@ que quieren llevar su consultorio al siguiente nivel."
         </div>
       </section>
       <section className={styles.prefooter}>
+        <Founder/>
         <PreFooter />
       </section>
       <Footer />
