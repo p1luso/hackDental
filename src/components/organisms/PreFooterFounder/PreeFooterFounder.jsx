@@ -17,7 +17,7 @@ const PreFooterFounder = () => {
       Cuéntanos sobre tu consultorio y demos el siguiente paso juntos.
       </Text>
       </div>
-      <IconTextButton size="300px">Pedir auditoría</IconTextButton>
+      <IconTextButton colorVariant="primary-optional" size="300px">Pedir auditoría</IconTextButton>
     </div>
   );
 };

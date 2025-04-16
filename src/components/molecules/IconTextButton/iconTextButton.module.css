@@ -1,6 +1,7 @@
 .primary.iconTextButton,
 .secondary.iconTextButton,
 .primary-dark.iconTextButton,
+.primary-optional.iconTextButton,
 .yellow.iconTextButton,
 .black.iconTextButton,
 .white.iconTextButton,
@@ -24,6 +25,17 @@
   font-weight: 700;
   gap: 16px;
   box-shadow: 1px 1px 2px var(--gray-dark);
+}
+
+.primary-optional.iconTextButton.full {
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 8px;
+}
+
+.primary-optional.iconTextButton.full:hover {
+  background-color: #05a56a;
+  transition: all 0.1s ease-in-out;
 }
 
 /* Primary */
@@ -389,6 +401,9 @@
 }
 
 .dark-green.iconTextButton.full:hover {
+  background-color: #318f8f;
+  transition: all 0.1s ease-in;
+
 }
 
 .dark-green.iconTextButton.bordered:hover {
