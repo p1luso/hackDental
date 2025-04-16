@@ -33,13 +33,13 @@
 .contentContainer {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* <-- cambio clave */
+    align-items: flex-start;
     flex-direction: row;
     padding: 0;
-    width: 60%;
+    width: 70%;
     margin-top: 30px;
     line-height: 0;
-    gap: 24px; /* podés ajustar este valor si querés más o menos separación */
+    gap: 24px;
   }
 
 .contentContainer img {
@@ -69,6 +69,21 @@
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   
+    .contentContainer img {
+        width: 40%;
+        max-width: 200px;
+      }
+      .contentContainer{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .founderText {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+      }
 }

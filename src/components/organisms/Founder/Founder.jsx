@@ -38,7 +38,7 @@ const Founder = () => {
             </Text>
           <div className={styles.founderButton}>
           <IconTextButton colorVariant="dark-green" >
-            Solicita una reunión
+          Contactar a José →
           </IconTextButton>{" "}
           </div>
         </div>
