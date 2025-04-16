@@ -580,8 +580,7 @@ que quieren llevar su consultorio al siguiente nivel."
         </div>
       </section>
       <section className={styles.prefooter}>
-        <Founder/>
-        <PreFooter />
+        <Founder />
       </section>
       <Footer />
     </div>
