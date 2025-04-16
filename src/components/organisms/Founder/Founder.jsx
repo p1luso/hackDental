@@ -4,7 +4,9 @@ import IconTextButton from "../../molecules/IconTextButton/IconTextButton";
 import styles from "./founder.module.css";
 import PreefooterSimple from "../PreefooterSimple/PreefooterSimple";
 import FounderImage from "@assets/FounderImage.svg";
+import FounderImageMobile from "@assets/FounderImageMobile.svg";
 import PreFooter from "../PreFooter/PreFooter";
+import { px } from "framer-motion";
 
 
 
@@ -17,13 +19,14 @@ const Founder = () => {
           type="bigtitle"
           textAlign="center"
           color="black"
-          fontFamily="Lexend"
-          s={{ lineHeight: "1.3" }}
+          fontFamily="Lexend Medium"
+          s={{ lineHeight: "1.3", fontSize: "28px" }}
         >
           Sobre nuestro fundador
         </Text>
         <div className={styles.contentContainer}>
-        <img src={FounderImage}/>
+        <img id={styles.founderImg} src={FounderImage}/>
+        <img id={styles.founderImgMobile} src={FounderImageMobile}/>
         <div className={styles.founderText}>
             <Text fontFamily="Lexend" color="black" bold="font-light">
               Hola, soy <span><strong>Jose Whittembury</strong></span>, marketero digital y fundador de
