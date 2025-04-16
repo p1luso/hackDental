@@ -116,6 +116,11 @@
 .black {
   color: var(--black);
 }
+
+.white-secondary{
+  color:#213343;
+}
+
 .primary {
   color: var(--primary);
 }

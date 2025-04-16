@@ -184,12 +184,14 @@ que quieren llevar su consultorio al siguiente nivel."
                   letterSpacing: "-0.5px",
                 }}
               >
-                Somos una Agencia de Marketing <s className={styles.crossLine}>genérico</s> <span className={styles.dentalWord}>Dental</span>
+                Somos una Agencia de Marketing{" "}
+                <s className={styles.crossLine}>genérico</s>{" "}
+                <span className={styles.dentalWord}>Dental</span>
               </Text>
               <Text
                 fontFamily="lexend"
                 size="lg"
-                s={{ lineHeight: "1.1", color: "#e9e9e9", fontWeight: '300' }}
+                s={{ lineHeight: "1.1", color: "#e9e9e9", fontWeight: "300" }}
               >
                 Convertimos tu clínica en autoridad local
               </Text>
@@ -221,22 +223,13 @@ que quieren llevar su consultorio al siguiente nivel."
           <PartnersCarousel />
         </div>
         <div className={styles.whoAreWe__contents}>
-          <Text color="black">¿Quienes Somos?</Text>
-          <Text color="black" bold="font-light">
-            Puedes ponerte en contacto con nosotros por correo electrónico a
-            jaka@ .design y te responderemos en un plazo de 24 horas.
+          <Text color="black">¿Quienes Somos?🧐</Text>
+          <Text color="white-secondary" bold="font-light">
+            Somos una <strong>agencia de marketing dental</strong> que se dedica a ayudar a <strong>
+            clínicas dentales en España</strong> a conseguir <strong>más pacientes</strong> de manera
+            efectiva y confiable a largo plazo.
           </Text>
-          <Text color="black" bold="font-light">
-            No olvides incluir algunas palabras sobre ti y tu negocio. Puedes
-            ponerte en contacto con nosotros por correo electrónico a jaka@
-            .design y te responderemos en un plazo de 24 horas.
-          </Text>
-          <img className={styles.neneArio} src={NeneArio} alt="Nene ario" />
-          <img
-            className={`${styles.neneArio} ${styles.mobile}`}
-            src={NeneArioMobile}
-            alt="Nene ario"
-          />
+          
           <hr className={styles.separator} />
           <Text
             color="black"
@@ -246,54 +239,13 @@ que quieren llevar su consultorio al siguiente nivel."
           >
             ¿Qué nos diferencia de otras agencias? 🧐
           </Text>
-          <div className={styles.listDiferences}>
-            <div className={styles.line}>
-              <Icon
-                type={"check"}
-                color="var(--primary-darker)"
-                size={"1rem"}
-              />
-              <Text color="black" bold="font-light">
-                Enfocamos TODO nuestro tiempo al Marketing de Clínicas Dentales.
-              </Text>
-            </div>
-            <div className={styles.line}>
-              <Icon
-                type={"check"}
-                color="var(--primary-darker)"
-                size={"1rem"}
-              />
-              <Text color="black" bold="font-light">
-                Trabajamos con un numero limitado de consultorio.
-              </Text>
-            </div>
-            <div className={styles.line}>
-              <Icon
-                type={"check"}
-                color="var(--primary-darker)"
-                size={"1rem"}
-              />
-              <Text color="black" bold="font-light">
-                Traemos pacientes de tus tratamientos más rentables.
-              </Text>
-            </div>
-            <div className={styles.line}>
-              <Icon
-                type={"check"}
-                color="var(--primary-darker)"
-                size={"1rem"}
-              />
-              <Text color="black" bold="font-light">
-                Trabajamos con un numero limitado de consultorio.
-              </Text>
-            </div>
-          </div>
+          
           {/*  <Text color="black">
             Puedes ponerte en contacto con nosotros por correo electrónico a
             <br />
             jaka@ .design y te responderemos en un plazo de 24 horas.
           </Text> */}
-          <div className={styles.cardMetodo}>
+          {/* <div className={styles.cardMetodo}>
             <Text color="black" s={{ lineHeight: "1.5" }}>
               ¿Eres un excelente dentista, pero atraer nuevos pacientes sigue
               siendo un desafío? 🦷
@@ -301,7 +253,7 @@ que quieren llevar su consultorio al siguiente nivel."
             <IconTextButton textProps={{ textAlign: "center" }}>
               Ver el Método HackDental
             </IconTextButton>
-          </div>
+          </div> */}
         </div>
       </section>
       <section className={styles.contactBannerSection}>
