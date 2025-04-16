@@ -227,14 +227,14 @@ const OurProgram = () => {
                 y cómo puede <br></br>cambiar tu{" "}
                 <strong>práctica dental</strong>
               </p>
-              <div className={styles.progressBarButton}>
+            </div>
+            <div className={styles.progressBarButton}>
                 <img className={styles.arrows} src={LeftArrow} />
-                <IconTextButton colorVariant="light-green" size="20%">
+                <IconTextButton colorVariant="light-green" >
                   Aplicar Ahora
                 </IconTextButton>
                 <img className={styles.arrows} src={RightArrow} />
               </div>
-            </div>
             <div className={styles.progressBar}>
               <Section
                 paso={"PASO #1"}
