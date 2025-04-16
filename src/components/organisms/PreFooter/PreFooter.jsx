@@ -5,7 +5,7 @@ import IconTextButton from "../../molecules/IconTextButton/IconTextButton";
 import { useNavigate } from "react-router-dom";
 import { CONTACT_FORM } from "../../../constants/routes";
 import PartnersCarousel from "../PartnersCarousel/PartnersCarousel";
-import PreefooterSimple from "../PreefooterSimple/PreefooterSimple";
+import PreFooterFounder from "../PreFooterFounder/PreeFooterFounder";
 const PreFooter = () => {
   const navigate = useNavigate();
 
@@ -32,7 +32,7 @@ const PreFooter = () => {
         </div>
       </section>
       <section className={styles.prefooterContainer}>
-        <PreefooterSimple/>
+        <PreFooterFounder/>
       </section>
     </div>
   );

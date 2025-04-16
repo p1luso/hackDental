@@ -20,7 +20,7 @@ const Founder = () => {
           textAlign="center"
           color="black"
           fontFamily="Lexend Medium"
-          s={{ lineHeight: "1.3", fontSize: "28px" }}
+          s={{ lineHeight: "1.3", fontSize: "32px" }}
         >
           Sobre nuestro fundador
         </Text>
