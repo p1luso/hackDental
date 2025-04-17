@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import Nav from "../../components/organisms/Nav/Nav";
-import NeneArio from "@assets/MarketingGenerico.svg";
-import NeneArioMobile from "@assets/MarketingGenerico.svg";
+import wwaDifferences from "@assets/wwaDifferences.svg";
+import wwaDifferencesMobile from "@assets/wwaDifferencesMobile.svg";
 import Text from "../../components/atoms/Text/Text";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
 import IconButton from "../../components/molecules/IconButton/IconButton";
@@ -223,8 +223,8 @@ que quieren llevar su consultorio al siguiente nivel."
           <PartnersCarousel />
         </div>
         <div className={styles.whoAreWe__contents}>
-          <Text color="black">¿Quienes Somos?🧐</Text>
-          <Text color="white-secondary" bold="font-light">
+          <Text color="black" fontSize="32px">¿Quienes Somos?🧐</Text>
+          <Text color="white-secondary" bold="">
             Somos una <strong>agencia de marketing dental</strong> que se dedica a ayudar a <strong>
             clínicas dentales en España</strong> a conseguir <strong>más pacientes</strong> de manera
             efectiva y confiable a largo plazo.
@@ -233,13 +233,17 @@ que quieren llevar su consultorio al siguiente nivel."
           <hr className={styles.separator} />
           <Text
             color="black"
-            size="xxxlg"
             textAlign="center"
-            s={{ lineHeight: "1.3" }}
+            s={{ lineHeight: "1.3", fontSize: "32px" }}
           >
             ¿Qué nos diferencia de otras agencias? 🧐
           </Text>
-          
+          <img className={styles.neneArio} src={wwaDifferences} alt="Differences" />
+          <img
+            className={`${styles.neneArio} ${styles.mobile}`}
+            src={wwaDifferencesMobile}
+            alt="Differences"
+          />
           {/*  <Text color="black">
             Puedes ponerte en contacto con nosotros por correo electrónico a
             <br />
