@@ -475,7 +475,25 @@ algunas palabras sobre ti y tu negocio.
                 </IconTextButton>
               </div>
             </div>
+            <div className={styles.spainLocation_footer__card}>
+                <img src={Medicos} className={styles.spainLocation_footer__img} />
+                <div className={styles.footer__desc}>
+                  <Text s={{ color: "black", lineHeight: "1.33" }}>
+                    Únete a los dentistas
+                  </Text>
+                  <Text
+                    bold="font-light"
+                    s={{ color: "black", lineHeight: "1.33" }}
+                  >
+                    que usan nuestro método.{" "}
+                    <Mark bold="regular" color="primary-light">
+                      Cupos limitados.
+                    </Mark>
+                  </Text>
+                </div>
+              </div>
           </div>
+          
         </div>
       </section>
       <section className={styles.mainContent}>

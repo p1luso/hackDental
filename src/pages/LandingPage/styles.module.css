@@ -567,6 +567,15 @@ body:has(.popupContainer.show) {
   height: auto;
 }
 
+.spainLocation_footer__card {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+  align-items: center;
+}
+.spainLocation_footer__img {
+  width: 102px;
+}
 .spainLocation {
   background: linear-gradient(90deg, var(--primary-transparent-2), white);
   padding-left: var(--width-unit);
