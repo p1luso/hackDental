@@ -1164,7 +1164,6 @@ body:has(.popupContainer.show) {
     margin-bottom: 8px;
   }
   .spanishLocation__card_container {
-    padding: 0 28px;
     width: 100%;
   }
 
@@ -1182,6 +1181,7 @@ body:has(.popupContainer.show) {
   }
   .spainLocation__card__elements {
     gap: 16px;
+    width: 90%;
   }
   .spainLocation__btn {
     width: 100%;

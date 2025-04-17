@@ -418,6 +418,7 @@ que quieren llevar su consultorio al siguiente nivel."
           color="black"
           bold="medium"
           fontSize="32px"
+          fontSizeMobile="28px"
           s={{ lineHeight: "1", fontWeight: "500" }}
         >
           ¿Eres el mejor en lo que haces,
@@ -428,6 +429,7 @@ que quieren llevar su consultorio al siguiente nivel."
           color="black"
           bold="semi-bold"
           fontSize="36px"
+          fontSizeMobile="32px"
           s={{ lineHeight: "1" }}
         >
           déjanos a nosotros el Marketing
@@ -486,7 +488,7 @@ algunas palabras sobre ti y tu negocio.
                     s={{ color: "black", lineHeight: "1.33" }}
                   >
                     que usan nuestro método.{" "}
-                    <Mark bold="regular" color="primary-light">
+                    <Mark bold="regular" color="darker-green">
                       Cupos limitados.
                     </Mark>
                   </Text>
