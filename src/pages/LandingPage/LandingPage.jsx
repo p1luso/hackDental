@@ -416,7 +416,8 @@ que quieren llevar su consultorio al siguiente nivel."
           type="bigtitle"
           textAlign="center"
           color="black"
-          bold="medium"
+          fontFamily="lexend"
+          bold="font-light"
           fontSize="32px"
           fontSizeMobile="28px"
           s={{ lineHeight: "1", fontWeight: "500" }}
@@ -425,12 +426,13 @@ que quieren llevar su consultorio al siguiente nivel."
         </Text>
         <Text
           type="bigtitle"
+          fontFamily="lexend"
           textAlign="center"
           color="black"
           bold="semi-bold"
           fontSize="36px"
           fontSizeMobile="32px"
-          s={{ lineHeight: "1" }}
+          s={{ lineHeight: "1", fontWeight: "600"  }}
         >
           déjanos a nosotros el Marketing
         </Text>
