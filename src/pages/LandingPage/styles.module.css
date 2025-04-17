@@ -1149,8 +1149,10 @@ body:has(.popupContainer.show) {
   }
   .spainLocation {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 52px 0px;
+    gap: 0;
+    width: 99%;
   }
 
   .spainLocation__btn {

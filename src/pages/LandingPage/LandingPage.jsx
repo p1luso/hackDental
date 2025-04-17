@@ -270,7 +270,7 @@ que quieren llevar su consultorio al siguiente nivel."
           </div> */}
         </div>
       </section>
-      <section className={styles.contactBannerSection}>
+     {/*  <section className={styles.contactBannerSection}>
         <div className={styles.contactBanner__contents}>
           <div className={styles.desc}>
             <div className={styles.stickyContainer}>
@@ -410,7 +410,7 @@ que quieren llevar su consultorio al siguiente nivel."
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className={styles.spainLocation}>
         <Text
           type="bigtitle"
@@ -422,7 +422,7 @@ que quieren llevar su consultorio al siguiente nivel."
           fontSizeMobile="24px"
           s={{ lineHeight: "1", fontWeight: "500" }}
         >
-          ¿Eres el mejor en lo que haces,
+          Eres el mejor en lo que haces,
         </Text>
         <Text
           type="bigtitle"
