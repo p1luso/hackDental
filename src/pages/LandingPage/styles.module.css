@@ -1151,7 +1151,6 @@ body:has(.popupContainer.show) {
     flex-direction: column;
     align-items: flex-start;
     padding: 52px 0px;
-    gap: 20px;
   }
 
   .spainLocation__btn {
