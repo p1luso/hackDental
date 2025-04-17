@@ -465,7 +465,7 @@ algunas palabras sobre ti y tu negocio.
                 <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
 
                   <Text color="dark" bold="font-light">
-                    Quiere crecer rápidamente en el <strong>2025</strong>.
+                  Quiere crecer rápidamente en el <strong>2025</strong>.
                   </Text>
                 </div>
               </div>

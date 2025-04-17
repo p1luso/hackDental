@@ -599,7 +599,7 @@ body:has(.popupContainer.show) {
   background-color: var(--very-light-white);
   border: 8px solid var(--primary-darker);
   padding: 60px;
-  width: 75%;
+  width: 80%;
   border-radius: 32px;
   align-items: center;
   position: relative;
@@ -621,7 +621,7 @@ body:has(.popupContainer.show) {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  width: 80%;
+  width: 100%;
   align-items: center;
 }
 
@@ -643,13 +643,13 @@ body:has(.popupContainer.show) {
   justify-content: flex-start;
   align-items: center;
   gap: 16px;
+  width: 100%;
   background-color: #006a5a29;
   padding: 15px;
   border-radius: 10px;
 }
 
 .spainLocation__btn {
-  margin-top: 32px;
   width: 400px;
 }
 
