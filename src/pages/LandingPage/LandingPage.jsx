@@ -454,21 +454,21 @@ algunas palabras sobre ti y tu negocio.
                 <div className={styles.spainLocation__items__item}>
                 <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
 
-                  <Text color="dark" bold="font-light">
+                  <Text color="black" bold="font-light">
                     Está ubicado en <strong>España.</strong>
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
                 <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
 
-                  <Text color="dark" bold="font-light">
+                  <Text color="black" bold="font-light">
                     Factura <strong>10,000 euros</strong> o más al mes
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
                 <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
 
-                  <Text color="dark" bold="font-light">
+                  <Text color="black" bold="font-light">
                   Quiere crecer rápidamente en el <strong>2025</strong>.
                   </Text>
                 </div>
