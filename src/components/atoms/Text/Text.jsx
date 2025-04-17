@@ -1,34 +1,5 @@
 import styles from "./text.module.css";
 
-/* const getSize = (size) => {
-  switch (size) {
-    case "ultrabig":
-      return "3.33334rem";
-    case "big":
-      return "2.334rem";
-    case "xxxlg":
-      return "1.77778rem";
-    case "xxlg":
-      return "1.5rem";
-    case "xlg":
-      return "1.3334rem";
-    case "lg":
-      return "1.16667rem";
-    case "md":
-      return "1rem";
-    case "sm":
-      return "0.88888889rem";
-    case "ty":
-      return "0.7778rem";
-    case "xty":
-      return "0.666667rem";
-    case "xxty":
-      return "0.566667rem";
-    default:
-      return "1rem";
-  }
-}; */
-
 const Text = ({
   type = "text",
   bold = "normal",
@@ -37,45 +8,80 @@ const Text = ({
   size = "md",
   textAlign = "start",
   fontFamily = "font-primary",
-  fontSize = "",
+  fontSize = "",          // Desktop font size (inline style)
+  fontSizeMobile = "",    // Mobile font size (via media query)
   s = {},
   ...otherProps
 }) => {
+  // Genera clase única para el fontSizeMobile (para evitar colisiones)
+  const classNameMobile = fontSizeMobile
+    ? `custom-font-size-${fontSizeMobile.replace(".", "-").replace("rem", "")}`
+    : "";
+
+  // Inyecta la media query para mobile si está definido fontSizeMobile
+  const mobileFontStyle = fontSizeMobile ? (
+    <style>
+      {`
+        @media screen and (max-width: 768px) {
+          .${classNameMobile} {
+            font-size: ${fontSizeMobile} !important;
+          }
+        }
+      `}
+    </style>
+  ) : null;
+
+  // Define las clases comunes
+  const commonClasses = `${styles[color]} ${styles[bold]} ${styles[fontFamily]} ${
+    fontSizeMobile ? classNameMobile : ""
+  }`;
+
+  // Renderiza según el tipo
   if (
     type === "title" ||
-    type == "bigtitle" ||
-    type == "smalltitle" ||
-    type == "smallsubtitle" ||
-    type == "ultrabigtitle"
+    type === "bigtitle" ||
+    type === "smalltitle" ||
+    type === "smallsubtitle" ||
+    type === "ultrabigtitle"
   ) {
     return (
-      <h1
-        className={`${styles[type]} ${styles[color]} ${styles[bold]} ${styles[fontFamily]}`}
-        style={{ textAlign, fontSize, ...s }}
-        {...otherProps}
-      >
-        {children}
-      </h1>
+      <>
+        {mobileFontStyle}
+        <h1
+          className={`${styles[type]} ${commonClasses}`}
+          style={{ textAlign, fontSize, ...s }}
+          {...otherProps}
+        >
+          {children}
+        </h1>
+      </>
     );
   } else if (type === "subtitle") {
     return (
-      <h3
-        className={`${styles.subtitle} ${styles[color]} ${styles[bold]} ${styles[fontFamily]}`}
+      <>
+        {mobileFontStyle}
+        <h3
+          className={`${styles.subtitle} ${commonClasses}`}
+          style={{ textAlign, fontSize, ...s }}
+          {...otherProps}
+        >
+          {children}
+        </h3>
+      </>
+    );
+  }
+
+  return (
+    <>
+      {mobileFontStyle}
+      <p
+        className={`${styles.text} ${styles[size]} ${commonClasses}`}
         style={{ textAlign, fontSize, ...s }}
         {...otherProps}
       >
         {children}
-      </h3>
-    );
-  }
-  return (
-    <p
-      className={`${styles.text} ${styles[color]} ${styles[bold]} ${styles[fontFamily]} ${styles[size]}`}
-      style={{ textAlign, fontSize: fontSize ?? "", ...s }}
-      {...otherProps}
-    >
-      {children}
-    </p>
+      </p>
+    </>
   );
 };
 

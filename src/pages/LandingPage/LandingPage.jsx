@@ -31,6 +31,8 @@ import PartnersCarousel from "../../components/organisms/PartnersCarousel/Partne
 import Medicos from "@assets/Medicos.svg";
 import { useConfigStore } from "../../stores/useConfig";
 import Founder from "../../components/organisms/Founder/Founder";
+import LeftArrow from "@assets/flechaizquierda.svg";
+import RightArrow from "@assets/flechaderecha.svg";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -223,7 +225,7 @@ que quieren llevar su consultorio al siguiente nivel."
           <PartnersCarousel />
         </div>
         <div className={styles.whoAreWe__contents}>
-          <Text color="black" fontSize="32px">¿Quienes Somos?🧐</Text>
+          <Text color="black" fontSizeMobile="28px" fontSize="32px">¿Quienes Somos?🧐</Text>
           <Text color="white-secondary" bold="font-light">
             Somos una <strong>agencia de marketing dental</strong> que se dedica a ayudar a <strong>
             clínicas dentales en España</strong> a conseguir <strong>más pacientes</strong> de manera
@@ -234,6 +236,7 @@ que quieren llevar su consultorio al siguiente nivel."
           <Text
             color="black"
             textAlign="center"
+            fontSizeMobile="28px"
             s={{ lineHeight: "1.3", fontSize: "32px" }}
           >
             ¿Qué nos diferencia de otras agencias? 🧐
@@ -244,6 +247,13 @@ que quieren llevar su consultorio al siguiente nivel."
             src={wwaDifferences}
             alt="Differences"
           />
+           <div className={styles.progressBarButton}>
+                <img className={styles.arrows} src={LeftArrow} />
+                <IconTextButton colorVariant="light-green" >
+                  Aplicar Ahora
+                </IconTextButton>
+                <img className={styles.arrows} src={RightArrow} />
+              </div>
           {/*  <Text color="black">
             Puedes ponerte en contacto con nosotros por correo electrónico a
             <br />

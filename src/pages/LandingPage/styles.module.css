@@ -766,6 +766,11 @@ body:has(.popupContainer.show) {
   width: 100%;
   height: auto;
 }
+.arrows{
+  width: 150px;
+  padding: 10px;
+}
+
 .videoPlayBtn {
   position: absolute;
   top: 50%;
@@ -858,6 +863,14 @@ body:has(.popupContainer.show) {
 .prefooter {
   background-color: var(--primary-transparent);
 }
+.progressBarButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
 @media screen and (max-width: 1400px) {
   .mainContent {
     padding: 0;
@@ -1207,6 +1220,9 @@ body:has(.popupContainer.show) {
     flex-direction: column;
     gap: 0px;
     height: auto;
+  }
+  .arrows{
+    width: 100px;
   }
 
   .partners {
