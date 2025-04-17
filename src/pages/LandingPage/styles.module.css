@@ -374,7 +374,7 @@ body:has(.popupContainer.show) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 72%;
+  width: 60%;
 }
 .whoAreWe__contents > :nth-child(1) {
   margin-bottom: 8px;
@@ -384,8 +384,8 @@ body:has(.popupContainer.show) {
   margin-bottom: 32px;
 }
 .neneArio {
-  width: 900px;
-  margin-top: 8px;
+  width: 1500px;
+  margin-top: 24px;
   margin-bottom: 8px;
 }
 .neneArio.mobile {
@@ -862,6 +862,11 @@ body:has(.popupContainer.show) {
   .mainContent {
     padding: 0;
   }
+  .neneArio {
+    width: 1200px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
   .contents {
     height: auto;
     justify-content: center;
@@ -882,6 +887,8 @@ body:has(.popupContainer.show) {
         (var(--linea-roja) + var(--linea-amarilla)) * 0.3
     );
   }
+
+ 
 
   .bannerImg {
     width: 75%;

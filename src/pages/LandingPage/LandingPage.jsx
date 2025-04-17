@@ -223,7 +223,7 @@ que quieren llevar su consultorio al siguiente nivel."
           <PartnersCarousel />
         </div>
         <div className={styles.whoAreWe__contents}>
-          <Text color="black" fontSize="32px" s={{fontSize:"28px"}}>¿Quienes Somos?🧐</Text>
+          <Text color="black" fontSize="32px">¿Quienes Somos?🧐</Text>
           <Text color="white-secondary" bold="font-light">
             Somos una <strong>agencia de marketing dental</strong> que se dedica a ayudar a <strong>
             clínicas dentales en España</strong> a conseguir <strong>más pacientes</strong> de manera
