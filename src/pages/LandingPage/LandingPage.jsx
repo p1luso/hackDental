@@ -223,8 +223,8 @@ que quieren llevar su consultorio al siguiente nivel."
           <PartnersCarousel />
         </div>
         <div className={styles.whoAreWe__contents}>
-          <Text color="black" fontSize="32px">¿Quienes Somos?🧐</Text>
-          <Text color="white-secondary" bold="">
+          <Text color="black" fontSize="32px" s={{fontSize:"28px"}}>¿Quienes Somos?🧐</Text>
+          <Text color="white-secondary" bold="font-light">
             Somos una <strong>agencia de marketing dental</strong> que se dedica a ayudar a <strong>
             clínicas dentales en España</strong> a conseguir <strong>más pacientes</strong> de manera
             efectiva y confiable a largo plazo.
@@ -238,10 +238,10 @@ que quieren llevar su consultorio al siguiente nivel."
           >
             ¿Qué nos diferencia de otras agencias? 🧐
           </Text>
-          <img className={styles.neneArio} src={wwaDifferences} alt="Differences" />
+          <img className={styles.neneArio} src={wwaDifferencesMobile} alt="Differences" />
           <img
             className={`${styles.neneArio} ${styles.mobile}`}
-            src={wwaDifferencesMobile}
+            src={wwaDifferences}
             alt="Differences"
           />
           {/*  <Text color="black">

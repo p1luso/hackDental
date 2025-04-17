@@ -384,7 +384,7 @@ body:has(.popupContainer.show) {
   margin-bottom: 32px;
 }
 .neneArio {
-  width: 100%;
+  width: 900px;
   margin-top: 8px;
   margin-bottom: 8px;
 }
@@ -1070,6 +1070,7 @@ body:has(.popupContainer.show) {
     top: 4px;
   }
   .neneArio {
+    width: 100%;
     margin-top: 16px;
     margin-bottom: 16px;
     display: none;
