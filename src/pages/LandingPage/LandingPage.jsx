@@ -416,66 +416,61 @@ que quieren llevar su consultorio al siguiente nivel."
           type="bigtitle"
           textAlign="center"
           color="black"
-          s={{ lineHeight: "1.3" }}
+          bold="medium"
+          fontSize="32px"
+          s={{ lineHeight: "1", fontWeight: "500" }}
         >
-          ¿Necesitas una Agencia especializada <br />
-          en Marketing{" "}
-          <Mark color="primary-bg-triangular" bold="medium">
-            Dental?
-          </Mark>
+          ¿Eres el mejor en lo que haces,
+        </Text>
+        <Text
+          type="bigtitle"
+          textAlign="center"
+          color="black"
+          bold="semi-bold"
+          fontSize="36px"
+          s={{ lineHeight: "1" }}
+        >
+          déjanos a nosotros el Marketing
         </Text>
         <div className={styles.spainLocation__desc}>
-          <Text color="black" bold="font-light">
-            Puedes ponerte en contacto con nosotros por correo electrónico a
-            jaka@ .design y te responderemos en un plazo de 24 horas.
-          </Text>
-          <Text color="black" bold="font-light">
-            No olvides incluir algunas palabras sobre ti y tu negocio. Puedes
-            ponerte en contacto con nosotros por correo electrónico a jaka@
-            .design.
+          
+          <Text color="black" fontFamily="Lexend" bold="font-light">
+          Puedes ponerte en contacto con nosotros por correo electrónico a <strong><u>jaka@
+.design</u></strong> y te responderemos en un plazo de 24 horas. No olvides incluir
+algunas palabras sobre ti y tu negocio.
           </Text>
         </div>
         <div className={styles.spanishLocation__card_container}>
           <div className={styles.spainLocation__card}>
             <div className={styles.spainLocation__card__elements}>
               <Text size="xxxlg" color="dark">
-                Si tu consultorio dental:
+                Si tu consultorio:
               </Text>
-              <hr className={styles.spainLocation__card__separator} />
               <div className={styles.spainLocation__items}>
                 <div className={styles.spainLocation__items__item}>
-                  <Icon
-                    type={"rightArrow"}
-                    size={"1.4rem"}
-                    color="var(--primary)"
-                  />
-                  <Text color="dark" bold="regular">
+                <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+
+                  <Text color="dark" bold="font-light">
                     Está ubicado en España.
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
-                  <Icon
-                    type={"rightArrow"}
-                    size={"1.4rem"}
-                    color="var(--primary)"
-                  />
-                  <Text color="dark" bold="regular">
-                    Factura 10,000 euros o más al mes
+                <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+
+                  <Text color="dark" bold="font-light">
+                    Factura <strong>10,000 euros</strong> o más al mes
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
-                  <Icon
-                    type={"rightArrow"}
-                    size={"1.4rem"}
-                    color="var(--primary)"
-                  />
-                  <Text color="dark" bold="regular">
-                    Quiere crecer rápidamente en el 2025.
+                <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+
+                  <Text color="dark" bold="font-light">
+                    Quiere crecer rápidamente en el <strong>2025</strong>.
                   </Text>
                 </div>
               </div>
               <div className={styles.spainLocation__btn}>
-                <IconTextButton colorVariant="primary" size="100%">
+                <IconTextButton colorVariant="darker-green" size="100%">
                   Solicita una reunión
                 </IconTextButton>
               </div>

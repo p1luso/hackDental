@@ -572,7 +572,7 @@ body:has(.popupContainer.show) {
   padding-left: var(--width-unit);
   padding-right: var(--width-unit);
   display: flex;
-  gap: 44px;
+  gap: 10px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -584,7 +584,8 @@ body:has(.popupContainer.show) {
 .spainLocation__desc {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
+  margin: 30px 0px;
   gap: 32px;
 }
 .spanishLocation__card_container {
@@ -596,7 +597,7 @@ body:has(.popupContainer.show) {
   display: flex;
   flex-direction: column;
   background-color: var(--very-light-white);
-  border: 1px solid var(--gray-light);
+  border: 8px solid var(--primary-darker);
   padding: 60px;
   width: 75%;
   border-radius: 32px;
@@ -614,8 +615,6 @@ body:has(.popupContainer.show) {
   left: -7px;
   top: -7px;
   padding: 6px;
-  background-color: var(--primary-transparent-50);
-  border: 2px solid var(--primary);
 }
 
 .spainLocation__card__elements {
@@ -641,7 +640,12 @@ body:has(.popupContainer.show) {
 
 .spainLocation__items__item {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 16px;
+  background-color: #006a5a29;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .spainLocation__btn {
