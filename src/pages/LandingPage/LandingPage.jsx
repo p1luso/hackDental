@@ -419,7 +419,7 @@ que quieren llevar su consultorio al siguiente nivel."
           fontFamily="lexend"
           bold="font-light"
           fontSize="32px"
-          fontSizeMobile="24px"
+          fontSizeMobile="21px"
           s={{ lineHeight: "1", fontWeight: "500" }}
         >
           Eres el mejor en lo que haces,
@@ -431,7 +431,7 @@ que quieren llevar su consultorio al siguiente nivel."
           color="black"
           bold="semi-bold"
           fontSize="36px"
-          fontSizeMobile="28px"
+          fontSizeMobile="24px"
           s={{ lineHeight: "1", fontWeight: "600"  }}
         >
           déjanos a nosotros el Marketing
