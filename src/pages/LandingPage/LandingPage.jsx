@@ -453,7 +453,7 @@ algunas palabras sobre ti y tu negocio.
                 <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
 
                   <Text color="dark" bold="font-light">
-                    Está ubicado en España.
+                    Está ubicado en <strong>España.</strong>
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
