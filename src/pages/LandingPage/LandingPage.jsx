@@ -70,11 +70,11 @@ const LandingPage = () => {
     };
   }, []);
 
- /*  useEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       setShowPopup(true);
     }, 13 * 1000);
-  }, []); */
+  }, []);
 
   const [page, setPage] = useState(0);
   const totalPages = Math.ceil(books.length / cardsPerPage);

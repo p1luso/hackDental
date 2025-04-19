@@ -1471,4 +1471,7 @@ body:has(.popupContainer.show) {
   }
 }
 @media screen and (max-width: 400px) {
+  .paginationLine{
+    width: 50px;
+  }
 }
