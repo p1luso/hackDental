@@ -79,6 +79,7 @@
   bottom: 100%;
   width: 80px;
 }
+
 .closeBtn {
   position: absolute;
   right: 3%;
@@ -175,6 +176,17 @@ body:has(.popupContainer.show) {
   position: relative;
   background-color: #ecf1f4;
 }
+
+.popUp_footer_card{
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+  align-items: center;
+}
+.popUp_footer_img{
+  width: 102px;
+}
+
 .popupDesc > .title,
 .popupDesc > .desc {
   width: 100% !important;
@@ -1085,9 +1097,7 @@ body:has(.popupContainer.show) {
   }
 
   .popupDesc {
-    padding: 20px;
     padding-top: 60px;
-    padding-bottom: 20px;
     gap: 24px;
   }
 
@@ -1107,6 +1117,8 @@ body:has(.popupContainer.show) {
   .cardMetodo > :first-child {
     font-size: 17px;
   }
+
+
 
   .popupDesc > .title,
   .popupDesc > .desc {
@@ -1147,9 +1159,42 @@ body:has(.popupContainer.show) {
     width: 100%;
   }
   .popupcard {
-    width: 100%;
+    width: 95%;
     height: auto;
     flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .popupDesc {
+    padding-top: 40px;
+    gap: 16px;
+  }
+
+  .popupBtns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .popupBtns > :first-child {
+    height: 60px !important;
+  }
+
+  .popUp_footer_card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .popupMobileCloseBtn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .popupCloseBtn {
+    display: none;
   }
 
   .notification {
@@ -1311,13 +1356,32 @@ body:has(.popupContainer.show) {
     text-align: center;
   }
 
+  .popUp_footer_card{
+    display: flex;
+    background-color: var(--primary-transparent);
+    border-radius: 32px;
+    width: fit-content;
+    padding: 8px 16px;
+    gap: 16px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
   .spainLocation_footer__img{
     width: 150px;
+  }
+
+  .popUp_footer_img{
+    width: 150px;
+
   }
 
   .footer__desc{
     text-align: center;
   }
+  
 
   .spainLocation__btn {
     width: 100%;
@@ -1450,6 +1514,14 @@ body:has(.popupContainer.show) {
   }
 
   .spainLocation_footer__card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .popUp_footer_card{
     display: flex;
     align-items: center;
     flex-direction: column;

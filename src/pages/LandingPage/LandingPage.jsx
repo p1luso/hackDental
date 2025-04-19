@@ -197,16 +197,18 @@ const LandingPage = () => {
                   No gracias
                 </IconTextButton> */}
             </div>
-            <div className={styles.spainLocation_footer__card}>
-              <img src={Medicos} className={styles.spainLocation_footer__img} />
+            <div className={styles.popUp_footer_card}>
+              <img src={Medicos} className={styles.popUp_footer_img} />
               <div className={styles.footer__desc}>
                 <Text
                   textAlignMobile="center"
+                  fontSizeMobile="15px"
                   s={{ color: "black", lineHeight: "1.33" }}
                 >
                   Únete a los dentistas
                 </Text>
                 <Text
+                fontSizeMobile="15px"
                   textAlignMobile="center"
                   bold="font-light"
                   s={{ color: "black", lineHeight: "1.33" }}
