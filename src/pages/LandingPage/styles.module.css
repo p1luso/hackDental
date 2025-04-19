@@ -79,14 +79,15 @@
   bottom: 100%;
   width: 80px;
 }
-
 .closeBtn {
   position: absolute;
   right: 3%;
   top: -25%;
 }
 
-
+body:has(.popupContainer.show) {
+  overflow: hidden;
+}
 
 .popupContainer {
   position: fixed;
@@ -94,11 +95,12 @@
   width: 100%;
   height: 100%;
   background-color: var(--gray-dark);
-  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
-  overflow-y: auto;
+  display: flex;
+  transition: all 0.5s linear;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .popupContainer.show {
@@ -108,18 +110,13 @@
 
 .popupcard {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 95%;
-  max-height: 90vh;
-  overflow-y: auto;
   background-color: #ecf1f4;
   position: relative;
+  width: 1000px;
+  height: 700px;
   transition: all 0.5s ease-out;
   transform: translateY(150%);
-  border-radius: 16px;
 }
-
 .popupContainer.show .popupcard {
   transform: translateY(0);
 }
@@ -178,17 +175,6 @@
   position: relative;
   background-color: #ecf1f4;
 }
-
-.popUp_footer_card{
-  display: flex;
-  gap: 16px;
-  margin-top: 10px;
-  align-items: center;
-}
-.popUp_footer_img{
-  width: 102px;
-}
-
 .popupDesc > .title,
 .popupDesc > .desc {
   width: 100% !important;
@@ -1099,7 +1085,9 @@
   }
 
   .popupDesc {
+    padding: 20px;
     padding-top: 60px;
+    padding-bottom: 20px;
     gap: 24px;
   }
 
@@ -1119,8 +1107,6 @@
   .cardMetodo > :first-child {
     font-size: 17px;
   }
-
-
 
   .popupDesc > .title,
   .popupDesc > .desc {
@@ -1161,42 +1147,9 @@
     width: 100%;
   }
   .popupcard {
-    width: 95%;
+    width: 100%;
     height: auto;
     flex-direction: column;
-    padding: 20px;
-    overflow-y: auto;
-  }
-
-  .popupDesc {
-    padding-top: 40px;
-    gap: 16px;
-  }
-
-  .popupBtns {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .popupBtns > :first-child {
-    height: 60px !important;
-  }
-
-  .popUp_footer_card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .popupMobileCloseBtn {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-
-  .popupCloseBtn {
-    display: none;
   }
 
   .notification {
@@ -1358,32 +1311,13 @@
     text-align: center;
   }
 
-  .popUp_footer_card{
-    display: flex;
-    background-color: var(--primary-transparent);
-    border-radius: 32px;
-    width: fit-content;
-    padding: 8px 16px;
-    gap: 16px;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-
   .spainLocation_footer__img{
     width: 150px;
-  }
-
-  .popUp_footer_img{
-    width: 150px;
-
   }
 
   .footer__desc{
     text-align: center;
   }
-  
 
   .spainLocation__btn {
     width: 100%;
@@ -1437,45 +1371,9 @@
     display: none; /* ocultamos las flechas laterales en mobile */
   }
 }
-@media (min-width: 801px) {
-  body:has(.popupContainer.show) {
-    overflow: hidden;
-  }
-}
 
 
 @media screen and (max-width: 800px) {
-  .popupcard {
-    padding: 16px;
-    transform: translateY(0);
-  }
-
-  .popupDesc {
-    padding-top: 20px;
-  }
-
-  .popupBtns {
-    flex-direction: column;
-    width: 100%;
-    gap: 12px;
-  }
-
-  .popupMobileCloseBtn {
-    display: block;
-    position: absolute;
-    top: 12px;
-    right: 12px;
-  }
-
-  .popupCloseBtn {
-    display: none;
-  }
-
-  .popUp_footer_card {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .banner {
     display: flex;
     justify-content: center;
@@ -1552,14 +1450,6 @@
   }
 
   .spainLocation_footer__card{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .popUp_footer_card{
     display: flex;
     align-items: center;
     flex-direction: column;
