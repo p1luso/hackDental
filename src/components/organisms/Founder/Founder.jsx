@@ -14,8 +14,33 @@ const Founder = () => {
     <div>
       <section className={styles.spainLocation}>
         <div className={styles.founderContainer}>
-          
           <div className={styles.contentContainer}>
+          <div className={styles.mobileTitles}>
+                <Text
+                  type="bigtitle"
+                  textAlign="center"
+                  color="black"
+                  fontFamily="lexend"
+                  bold="font-light"
+                  fontSize="28px"
+                  fontSizeMobile="21px"
+                  s={{ lineHeight: "1", fontWeight: "500" }}
+                >
+                  Conoce a Jose Whittembury
+                </Text>
+                <Text
+                  type="bigtitle"
+                  fontFamily="lexend"
+                  textAlign="center"
+                  color="black"
+                  bold="semi-bold"
+                  fontSize="32px"
+                  fontSizeMobile="24px"
+                  s={{ lineHeight: "1", fontWeight: "600" }}
+                >
+                  Fundador y CEO de HackDental
+                </Text>
+              </div>
             <div className={styles.imageWrapper}>
               <img id={styles.founderImg} src={FounderImage} />
               <img id={styles.founderImgMobile} src={FounderImageMobile} />
@@ -30,30 +55,32 @@ const Founder = () => {
               </div>
             </div>
             <div className={styles.founderText}>
-            <Text
-            type="bigtitle"
-            textAlign="start"
-            color="black"
-            fontFamily="lexend"
-            bold="font-light"
-            fontSize="28px"
-            fontSizeMobile="21px"
-            s={{ lineHeight: "1", fontWeight: "500" }}
-          >
-            Conoce a Jose Whittembury
-          </Text>
-          <Text
-            type="bigtitle"
-            fontFamily="lexend"
-            textAlign="start"
-            color="black"
-            bold="semi-bold"
-            fontSize="32px"
-            fontSizeMobile="24px"
-            s={{ lineHeight: "1", fontWeight: "600" }}
-          >
-            Fundador y CEO de HackDental
-          </Text>
+              <div className={styles.desktopTitles}>
+                <Text
+                  type="bigtitle"
+                  textAlign="start"
+                  color="black"
+                  fontFamily="lexend"
+                  bold="font-light"
+                  fontSize="28px"
+                  fontSizeMobile="21px"
+                  s={{ lineHeight: "1", fontWeight: "500" }}
+                >
+                  Conoce a Jose Whittembury
+                </Text>
+                <Text
+                  type="bigtitle"
+                  fontFamily="lexend"
+                  textAlign="start"
+                  color="black"
+                  bold="semi-bold"
+                  fontSize="32px"
+                  fontSizeMobile="24px"
+                  s={{ lineHeight: "1", fontWeight: "600" }}
+                >
+                  Fundador y CEO de HackDental
+                </Text>
+              </div>
               <Text fontFamily="Lexend" color="black" bold="font-light">
                 <i>
                   "Me dedico única y exclusivamente al marketing de servicios
@@ -64,7 +91,11 @@ const Founder = () => {
                 <strong>Contáctame</strong> si te interesa lo siguiente:
               </Text>
               <div className={styles.beneficios}>
-                <Icon size={"1.3rem"} color="var(--primary-greenDark)" type={"check"} />
+                <Icon
+                  size={"1.3rem"}
+                  color="var(--primary-greenDark)"
+                  type={"check"}
+                />
                 <Text color="black" fontSize="18px" bold="font-light">
                   <strong>
                     Reuniones semanales contigo y tu personal del consultorio.
@@ -72,19 +103,26 @@ const Founder = () => {
                 </Text>
               </div>
               <div className={styles.beneficios}>
-                <Icon size={"1.3rem"} color="var(--primary-greenDark)" type={"check"} />
+                <Icon
+                  size={"1.3rem"}
+                  color="var(--primary-greenDark)"
+                  type={"check"}
+                />
                 <Text color="black" fontSize="18px" bold="font-light">
                   <strong>
-                    Reuniones semanales contigo y tu personal del consultorio.
+                    Mi disponibilidad los 7 días de la semana para tus
+                    consultas.{" "}
                   </strong>
                 </Text>
               </div>
               <div className={styles.beneficios}>
-                <Icon size={"1.3rem"} color="var(--primary-greenDark)" type={"check"} />
+                <Icon
+                  size={"1.3rem"}
+                  color="var(--primary-greenDark)"
+                  type={"check"}
+                />
                 <Text color="black" fontSize="18px" bold="font-light">
-                  <strong>
-                    Reuniones semanales contigo y tu personal del consultorio.
-                  </strong>
+                Que trabaje 6 meses en el crecimiento de tu consultorio.
                 </Text>
               </div>
               <div className={styles.founderButton}>

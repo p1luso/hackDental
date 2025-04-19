@@ -54,6 +54,10 @@
   vertical-align: top;
 }
 
+.mobileTitles{
+  display: none;
+}
+
 .founderText {
   display: flex;
   justify-content: flex-start;
@@ -121,6 +125,17 @@
 @media screen and (max-width: 768px) {
   #founderImgMobile {
     display: flex;
+  }
+
+  .mobileTitles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .desktopTitles{
+    display: none;
   }
 
   #founderImg {
