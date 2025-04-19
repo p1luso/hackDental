@@ -300,17 +300,17 @@ const OurProgram = () => {
               <Text
                 type="title"
                 fontSize="28px"
-                color="white-cream"
+                color="white"
                 bold="medium"
               >
                 Para dueños de Consultorios
               </Text>
-              <Text type="title" fontSize="32px" color="white-cream" bold="semi-bold">
+              <Text type="title" fontSize="32px" color="white" bold="semi-bold">
                 Aplica a nuestra auditoría gratis.
               </Text>
               <div className={styles.desc_text}>
                 <Text
-                  color="white-cream"
+                  color="white"
                   bold="font-light"
                   fontSize="18px"
                   s={{ fontWeight: 300 }}
@@ -348,7 +348,7 @@ const OurProgram = () => {
                 <div className={styles.formLine}>
                   <Input
                     label="Nombre y Apellido*"
-                    variant="white"
+                    variant="grey"
                     labelColor="black"
                     id={"firstName"}
                     placeholder="Nombre"
@@ -360,7 +360,7 @@ const OurProgram = () => {
                 <div className={styles.formLine}>
                   <Input
                     label="Email*"
-                    variant="white"
+                    variant="grey"
                     labelColor="black"
                     placeholder="Email"
                     id={"email"}
@@ -372,7 +372,7 @@ const OurProgram = () => {
                 <div className={styles.formLine}>
                   <Input
                     label="Pais*"
-                    variant="white"
+                    variant="grey"
                     placeholder="Pais"
                     labelColor="black"
                     id={"location"}
@@ -385,7 +385,7 @@ const OurProgram = () => {
                     label="Teléfono*"
                     placeholder="Teléfono"
                     id={"phone"}
-                    variant="white"
+                    variant="grey"
                     labelColor="black"
                     onChange={handleChange}
                     value={formData.phone}
@@ -396,7 +396,7 @@ const OurProgram = () => {
                     label="Sitio Web*"
                     placeholder="Sitio Web"
                     id={"phone"}
-                    variant="white"
+                    variant="grey"
                     labelColor="black"
                     onChange={handleChange}
                     value={formData.phone}
@@ -408,7 +408,7 @@ const OurProgram = () => {
                     size="100%"
                     textProps={{ size: "sm" }}
                   >
-                    Quiero ser Contactado
+                    Quiero una auditoría gratuita
                   </IconTextButton>
                 </div>
               </div>

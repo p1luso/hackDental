@@ -97,6 +97,27 @@
 
   outline: 2.2px solid #25c19b;
 }
+
+.grey .input {
+  border: 1px solid #006a43;
+  border-radius: 4px;
+  padding: 12px;
+  color: var(--black);
+  background-color: #0000001e;
+  font-size: 0.875rem;
+  font-family: 'lexend';
+}
+.grey .label {
+  margin-bottom: 4px;
+  color: #ebeced;
+
+}
+
+.grey .input:focus{
+  border: 1px solid #FFFF;
+  outline: 2.2px solid #006a43;
+}
+
 .white .icon {
   color: gray;
 }
@@ -104,7 +125,19 @@
   color: #797979;
 }
 
+
+.grey .icon {
+  color: gray;
+}
+.grey .input::placeholder {
+  color: #797979;
+}
+
 .white.error .input {
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+.grey.error .input {
   border: 1px solid var(--error);
   color: var(--error);
 }
