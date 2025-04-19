@@ -81,13 +81,13 @@ const Founder = () => {
                   Fundador y CEO de HackDental
                 </Text>
               </div>
-              <Text fontFamily="Lexend" color="black" bold="font-light">
+              <Text fontFamily="Lexend" color="black-lighter" bold="font-light">
                 <i>
                   "Me dedico única y exclusivamente al marketing de servicios
                   dentales en España."
                 </i>
               </Text>
-              <Text fontFamily="Lexend" color="black" bold="font-light">
+              <Text fontFamily="Lexend" color="black-lighter" bold="font-light">
                 <strong>Contáctame</strong> si te interesa lo siguiente:
               </Text>
               <div className={styles.beneficios}>
@@ -96,7 +96,7 @@ const Founder = () => {
                   color="var(--primary-greenDark)"
                   type={"check"}
                 />
-                <Text color="black" fontSize="18px" bold="font-light">
+                <Text color="black-lighter" fontSize="18px" bold="font-light">
                   <strong>
                     Reuniones semanales contigo y tu personal del consultorio.
                   </strong>
@@ -108,7 +108,7 @@ const Founder = () => {
                   color="var(--primary-greenDark)"
                   type={"check"}
                 />
-                <Text color="black" fontSize="18px" bold="font-light">
+                <Text color="black-lighter" fontSize="18px" bold="font-light">
                   <strong>
                     Mi disponibilidad los 7 días de la semana para tus
                     consultas.{" "}
@@ -121,7 +121,7 @@ const Founder = () => {
                   color="var(--primary-greenDark)"
                   type={"check"}
                 />
-                <Text color="black" fontSize="18px" bold="font-light">
+                <Text color="black-lighter" fontSize="18px" bold="font-light">
                 Que trabaje 6 meses en el crecimiento de tu consultorio.
                 </Text>
               </div>

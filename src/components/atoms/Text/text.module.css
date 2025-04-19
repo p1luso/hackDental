@@ -121,6 +121,10 @@
   color:#213343;
 }
 
+.black-lighter{
+  color:#333333;
+}
+
 .primary {
   color: var(--primary);
 }
