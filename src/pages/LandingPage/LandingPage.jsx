@@ -597,8 +597,8 @@ const LandingPage = () => {
             color="black"
             fontFamily="lexend"
             bold="font-light"
-            fontSize="24px"
-            fontSizeMobile="18px"
+            fontSize="28px"
+            fontSizeMobile="21px"
             s={{ lineHeight: "1", fontWeight: "500" }}
           >
             Aprende a cómo crecer tu consultorio
@@ -609,8 +609,8 @@ const LandingPage = () => {
             textAlign="center"
             color="black"
             bold="semi-bold"
-            fontSize="28px"
-            fontSizeMobile="21px"
+            fontSize="32px"
+            fontSizeMobile="24px"
             s={{ lineHeight: "1", fontWeight: "600" }}
           >
             Descarga nuestros ebooks gratuitos
