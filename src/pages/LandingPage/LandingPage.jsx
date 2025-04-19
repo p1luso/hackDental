@@ -300,7 +300,7 @@ const LandingPage = () => {
           </div>
         </section>
       </header>
-      <section className={styles.whoAreWe}>
+     {/*  <section className={styles.whoAreWe}>
         <div className={styles.partners}>
           <Text
             textAlign="center"
@@ -362,9 +362,9 @@ const LandingPage = () => {
             <IconTextButton textProps={{ textAlign: "center" }}>
               Ver el Método HackDental
             </IconTextButton>
-          </div> */}
+          </div> 
         </div>
-      </section>
+      </section>*/}
       {/*  <section className={styles.contactBannerSection}>
         <div className={styles.contactBanner__contents}>
           <div className={styles.desc}>
@@ -686,7 +686,7 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-      <section className={styles.consultorClass}>
+      {/* <section className={styles.consultorClass}>
         <div className={styles.consultorClass_contents}>
           <div className={styles.consultorContent}>
             <Text
@@ -715,7 +715,7 @@ const LandingPage = () => {
             </Text>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className={styles.prefooter}>
         <Founder />
       </section>

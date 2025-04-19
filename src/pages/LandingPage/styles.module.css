@@ -214,7 +214,6 @@ body:has(.popupContainer.show) {
   flex-direction: column;
   position: relative;
   background: var(--primary-darker);
-  border-radius: 0 0 120px 0;
 }
 .banner {
   position: relative;
