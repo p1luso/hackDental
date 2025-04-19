@@ -482,10 +482,10 @@ algunas palabras sobre ti y tu negocio.
             <div className={styles.spainLocation_footer__card}>
                 <img src={Medicos} className={styles.spainLocation_footer__img} />
                 <div className={styles.footer__desc}>
-                  <Text s={{ color: "black", lineHeight: "1.33" }}>
+                  <Text textAlignMobile="center" s={{ color: "black", lineHeight: "1.33" }}>
                     Únete a los dentistas
                   </Text>
-                  <Text
+                  <Text textAlignMobile="center"
                     bold="font-light"
                     s={{ color: "black", lineHeight: "1.33" }}
                   >
