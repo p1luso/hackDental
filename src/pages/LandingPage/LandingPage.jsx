@@ -48,7 +48,8 @@ const LandingPage = () => {
   const [showWSMsg, setShowWSMsg] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const [cardsPerPage, setCardsPerPage] = useState(3);
-
+  const [isFading, setIsFading] = useState(false);
+  const fadeDuration = 300;
   const navMobileMenuIsShow = useConfigStore(
     (state) => state.navMobileMenuIsShow
   );
@@ -70,7 +71,7 @@ const LandingPage = () => {
     };
   }, []);
 
- /*  useEffect(() => {
+  /*  useEffect(() => {
     setTimeout(() => {
       setShowPopup(true);
     }, 13 * 1000);
@@ -84,11 +85,21 @@ const LandingPage = () => {
   const currentBooks = books.slice(startIndex, endIndex);
 
   const handleNext = () => {
-    if (page < maxPage) setPage((prev) => prev + 1);
+    if (page === maxPage) return;
+    setIsFading(true);
+    setTimeout(() => {
+      setPage((prev) => prev + 1);
+      setIsFading(false);
+    }, fadeDuration);
   };
 
   const handlePrev = () => {
-    if (page > 0) setPage((prev) => prev - 1);
+    if (page === 0) return;
+    setIsFading(true);
+    setTimeout(() => {
+      setPage((prev) => prev - 1);
+      setIsFading(false);
+    }, fadeDuration);
   };
 
   return (
@@ -208,7 +219,7 @@ const LandingPage = () => {
                   Únete a los dentistas
                 </Text>
                 <Text
-                fontSizeMobile="15px"
+                  fontSizeMobile="15px"
                   textAlignMobile="center"
                   bold="font-light"
                   s={{ color: "black", lineHeight: "1.33" }}
@@ -569,14 +580,16 @@ const LandingPage = () => {
               <img src={Medicos} className={styles.spainLocation_footer__img} />
               <div className={styles.footer__desc}>
                 <Text
-                  textAlignMobile="center" fontSizeMobile="14px"
+                  textAlignMobile="center"
+                  fontSizeMobile="14px"
                   s={{ color: "black", lineHeight: "1.33" }}
                 >
                   Únete a los dentistas
                 </Text>
                 <Text
                   textAlignMobile="center"
-                  bold="font-light"  fontSizeMobile="14px"
+                  bold="font-light"
+                  fontSizeMobile="14px"
                   s={{ color: "black", lineHeight: "1.33" }}
                 >
                   que usan nuestro método.{" "}
@@ -626,7 +639,11 @@ const LandingPage = () => {
             >
               ←
             </button>
-            <div className={styles.mainContent__card__desc}>
+            <div
+              className={`${styles.mainContent__card__desc} ${
+                isFading ? styles.fadeOut : styles.fadeIn
+              }`}
+            >
               {currentBooks.map((book, i) => (
                 <EBookCard bookType={false} key={i} {...book} />
               ))}

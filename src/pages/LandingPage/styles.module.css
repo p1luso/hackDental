@@ -850,6 +850,36 @@ body:has(.popupContainer.show) {
   width: 300px;
   border-radius: 16px;
 }
+.fadeIn {
+  animation: fadeInAnim 0.3s ease forwards;
+}
+
+.fadeOut {
+  animation: fadeOutAnim 0.3s ease forwards;
+}
+
+@keyframes fadeInAnim {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutAnim {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
 
 .mainContent__card__desc > :nth-child(1) {
 }
