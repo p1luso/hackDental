@@ -1,6 +1,7 @@
 .primary.iconTextButton,
 .secondary.iconTextButton,
 .primary-dark.iconTextButton,
+.primary-darker.iconTextButton,
 .primary-optional.iconTextButton,
 .yellow.iconTextButton,
 .black.iconTextButton,
@@ -189,6 +190,17 @@
 .primary-bordered.iconTextButton.bordered {
   border: 1px solid var(--black);
   color: var(--black);
+}
+
+.primary-darker.iconTextButton.full {
+  background-color: var(--primary-darker);
+  color: var(--white);
+  border-radius: 8px;
+}
+
+.primary-darker.iconTextButton.full:hover {
+  background-color: #029982;
+
 }
 
 /*primary-dark*/
