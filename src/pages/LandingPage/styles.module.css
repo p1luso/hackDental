@@ -1011,7 +1011,7 @@ body:has(.popupContainer.show) {
   align-self: self-start;
 }
 .prefooter {
-  background-color: var(--primary-transparent);
+  background-color: #eef5f4;
 }
 .progressBarButton{
   display: flex;

@@ -16,28 +16,39 @@ const Founder = () => {
       <section className={styles.spainLocation}>
         <div className={styles.founderContainer}>
         <Text
-          type="bigtitle"
-          textAlign="center"
-          color="black"
-          fontFamily="Lexend Medium"
-          s={{ lineHeight: "1.3", fontSize: "32px" }}
-        >
-          Sobre nuestro fundador
-        </Text>
+            type="bigtitle"
+            textAlign="start"
+            color="black"
+            fontFamily="lexend"
+            bold="font-light"
+            fontSize="28px"
+            fontSizeMobile="21px"
+            s={{ lineHeight: "1", fontWeight: "500" }}
+          >
+            Conoce a Jose Whittembury
+          </Text>
+          <Text
+            type="bigtitle"
+            fontFamily="lexend"
+            textAlign="start"
+            color="black"
+            bold="semi-bold"
+            fontSize="32px"
+            fontSizeMobile="24px"
+            s={{ lineHeight: "1", fontWeight: "600" }}
+          >
+            Fundador y CEO de HackDental
+          </Text>
         <div className={styles.contentContainer}>
         <img id={styles.founderImg} src={FounderImage}/>
         <img id={styles.founderImgMobile} src={FounderImageMobile}/>
         <div className={styles.founderText}>
             <Text fontFamily="Lexend" color="black" bold="font-light">
-              Hola, soy <span><strong>Jose Whittembury</strong></span>, marketero digital y fundador de
-              HackDental. <strong>Me dedico única y exclusivamente al marketing de
-              servicios dentales en España.</strong> Mi rol en esta agencia es crear y
-              hacer seguimiento a distintas estrategias de adquisición de
-              pacientes para tu clínica dental.
+            <i>"Me dedico única y exclusivamente al marketing de servicios
+            dentales en España."</i>
             </Text>
             <Text fontFamily="Lexend" color="black" bold="font-light">
-              Si te interesa reunirte conmigo o aplicar a uno de nuestros
-              servicios, no dudes en contactarme.
+              <strong>Contáctame</strong> si te interesa lo siguiente: 
             </Text>
           <div className={styles.founderButton}>
           <IconTextButton colorVariant="dark-green" >
