@@ -22,6 +22,7 @@ import ImgFlechas from "@assets/imgFlechas.svg";
 import Section from "../../components/organisms/Section/Section";
 import LeftArrow from "@assets/flechaizquierda.svg";
 import RightArrow from "@assets/flechaderecha.svg";
+import { Linkedin, Mail, Phone } from "lucide-react";
 
 const OurProgram = () => {
   const [showModalVideo, setShowModalVideo] = useState(false);
@@ -229,12 +230,12 @@ const OurProgram = () => {
               </p>
             </div>
             <div className={styles.progressBarButton}>
-                <img className={styles.arrows} src={LeftArrow} />
-                <IconTextButton colorVariant="light-green" >
-                  Aplicar Ahora
-                </IconTextButton>
-                <img className={styles.arrows} src={RightArrow} />
-              </div>
+              <img className={styles.arrows} src={LeftArrow} />
+              <IconTextButton colorVariant="light-green">
+                Aplicar Ahora
+              </IconTextButton>
+              <img className={styles.arrows} src={RightArrow} />
+            </div>
             <div className={styles.progressBar}>
               <Section
                 paso={"PASO #1"}
@@ -292,274 +293,124 @@ const OurProgram = () => {
         </div>
       </header>
       <main className={styles.main}>
-        <div className={styles.ventaHumo}>
-          <div className={styles.subsection}>
-            <Text
-              type="bigtitle"
-              color="black"
-              textAlign="center"
-              s={{ lineHeight: "1.15" }}
-            >
-              Eres el mejor en lo que haces, déjanos a nosotros el Marketing
-            </Text>
-            <Text bold="font-light">
-              Puedes ponerte en contacto con nosotros por correo electrónico a
-              jaka@ .design y te responderemos en un plazo de 24 horas.
-            </Text>
-            <Text bold="font-light">
-              No olvides incluir algunas palabras sobre ti y tu negocio. Puedes
-              ponerte en contacto con nosotros por correo electrónico a jaka@
-              .design y te responderemos en un plazo de 24 horas.
-            </Text>
-            <img src={Nene} className={styles.neneArio} />
-          </div>
-        </div>
-
-        <div className={styles.sectionHorrible}>
-          <div className={styles.contenido}>
-            <div className={styles.seccionnes}>
-              <div className={styles.subsection}>
-                <Text
-                  fontSize="2rem"
-                  color="light"
-                  textAlign="center"
-                  s={{ lineHeight: "1.1" }}
-                >
-                  Los 3 errores más comunes que los consultorios dentales
-                  cometen 😵‍💫❌
-                </Text>
-                <Text color="light" bold="font-light">
-                  Puedes ponerte en contacto con nosotros por correo electrónico
-                  a jaka@ .design y te responderemos en un plazo de 24 horas.
-                </Text>
-                <Text color="light" bold="font-light">
-                  No olvides incluir algunas palabras sobre ti y tu negocio.
-                  Puedes ponerte en contacto con nosotros por correo electrónico
-                  a{" "}
-                  <Mark bold="bold" color="marked">
-                    jaka@ .design
-                  </Mark>{" "}
-                  y te responderemos en un plazo de 24 horas.
-                </Text>
-
+        <section id="contact" className={styles.contact}>
+          {/*  <img src={Flecha2} className={`${styles.flecha} ${styles.flecha3}`} /> */}
+          <div className={styles.bgTransparentContact}>
+            <div className={styles.desc}>
+              <Text
+                type="title"
+                fontSize="28px"
+                color="light"
+                bold="font-light"
+              >
+                Para dueños de Consultorios
+              </Text>
+              <Text type="title" fontSize="32px" color="light" bold="semi-bold">
+                Aplica a nuestra auditoría gratis.
+              </Text>
+              <div className={styles.desc_text}>
                 <Text
                   color="light"
-                  type="subtitle"
-                  textAlign="center"
-                  s={{ lineHeight: "1.1" }}
+                  bold="font-light"
+                  fontSize="18px"
+                  s={{ fontWeight: 300 }}
                 >
-                  Aquí es donde la mayoría de consultorios se equivocan:
+                  Llena la forma y te responderemos en un plazo de 24 horas.
                 </Text>
-                <div className={styles.errors}>
-                  <div className={styles.error}>
-                    <Icon size={"2rem"} color="#8fc29f" type={"closeCircle"} />
-                    <Text color="light" bold="font-light">
-                      Puedes ponerte en contacto con nosotros por correo
-                      electrónico a <Mark color="marked">jaka@ .design</Mark> y
-                      te responderemos en un plazo de 24 horas.
-                    </Text>
-                  </div>
-                  <div className={styles.error}>
-                    <Icon size={"2rem"} color="#8fc29f" type={"closeCircle"} />
-                    <Text color="light" bold="font-light">
-                      Puedes ponerte en contacto con nosotros por correo
-                      electrónico a <Mark color="marked">jaka@ .design</Mark> y
-                      te responderemos en un plazo de 24 horas.
-                    </Text>
-                  </div>
-                  <div className={styles.error}>
-                    <Icon size={"2rem"} color="#8fc29f" type={"closeCircle"} />
-                    <Text color="light" bold="font-light">
-                      Puedes ponerte en contacto con nosotros por correo
-                      electrónico a <Mark color="marked">jaka@ .design</Mark> y
-                      te responderemos en un plazo de 24 horas.
-                    </Text>
-                  </div>
+              </div>
+              <div className={styles.contactIcons}>
+                <Mail className={styles.icons} />
+                <div className={styles.iconsText}>
+                  <h4>Mail</h4>
+                  <p>whittemburydavid1@gmail.com</p>
                 </div>
               </div>
-              <div className={styles.cardMeet}>
-                {/*  <img
-                  src={Flecha1}
-                  className={`${styles.flecha} ${styles.flecha1Izquierda}`}
-                />
-                <img
-                  src={Flecha1}
-                  className={`${styles.flecha} ${styles.flecha1Derecha} `}
-                /> */}
-                <Text color="black" textAlign="center">
-                  ¿Abrirías más consultorios si supieras cómo atraer más
-                  pacientes?
-                </Text>
-                <div className={styles.cardMeetDetail}>
-                  <Text bold="font-light" color="black">
-                    Puedes ponerte en contacto con nosotros por correo
-                    electrónico a jaka@ .design y te responderemos en un plazo
-                    de 24 horas.
-                  </Text>
-                  <Text bold="font-light" color="black">
-                    No olvides incluir algunas palabras sobre ti y tu negocio.
-                    Puedes ponerte en contacto con nosotros por correo
-                    electrónico a jaka@ .design y te responderemos en un plazo
-                    de 24 horas.
-                  </Text>
-                  <div className={styles.btnMeet}>
-                    <IconTextButton size="100%">
-                      Solicita una reunión
-                    </IconTextButton>
-                  </div>
-                  <div
-                    className={`${styles.footer__card} ${styles.footer__cardMeet}`}
-                  >
-                    <img src={Medicos} className={styles.footer__img} />
-                    <div className={styles.footer__desc}>
-                      <Text s={{ color: "black", lineHeight: "1.33" }}>
-                        Únete a los dentistas
-                      </Text>
-                      <Text
-                        bold="font-light"
-                        s={{ color: "black", lineHeight: "1.33" }}
-                      >
-                        que quieren crecer sus consultorios.{" "}
-                        <Mark bold="regular" color="primary-dark">
-                          Cupos limitados.
-                        </Mark>
-                      </Text>
-                    </div>
-                  </div>
+              <div className={styles.contactIcons}>
+                <Phone className={styles.icons} />
+                <div className={styles.iconsText}>
+                  <h4>Whatsapp</h4>
+                  <p>+51 903300422</p>
+                </div>
+              </div>
+              <div className={styles.contactIcons}>
+                <Linkedin className={styles.icons} />
+                <div className={styles.iconsText}>
+                  <h4>LinkedIn</h4>
+                  <p>Jose Whittembury</p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className={styles.comoFunciona}>
-          <img src={ImgFlechas} className={styles.comoFunciona__img} />
-          <div className={styles.comoFunciona__desc}>
-            <Text type="title" color="black">
-              ¿Cuánto más vas a postergar <br />
-              el éxito de tu consultorio dental? 🏆
-            </Text>
-            <Text bold="font-light" s={{ color: "#213343" }}>
-              No olvides incluir algunas palabras sobre ti y tu negocio. Puedes
-              ponerte en contacto con nosotros por correo electrónico.
-            </Text>
-          </div>
-        </div>
-        <section id="contact" className={styles.contact}>
-          {/*  <img src={Flecha2} className={`${styles.flecha} ${styles.flecha3}`} /> */}
-          <div className={styles.desc}>
-            <Text type="title" color="light" bold="bold">
-              Pide una Auditoria para tu Consultorio
-            </Text>
-
-            <Text color="light" bold="font-light">
-              Puedes ponerte en contacto con nosotros por correo electrónico a
-              jaka@ .design y te responderemos en un plazo de 24 horas.
-            </Text>
-            <Text color="light" bold="font-light">
-              No olvides incluir algunas palabras sobre ti y tu negocio. Puedes
-              ponerte en nosotros por{" "}
-              <Mark color="submarked-blue-light">
-                Aceptamos 10 nuevas clínicas
-              </Mark>{" "}
-              contacto con nosotros. Aceptamos 10 nuevas clínicas
-            </Text>
-          </div>
-          <div className={styles.formContainer}>
-            <div className={styles.form}>
-              <Text>
-                <Mark color="primary-bg">ÚLTIMO PASO</Mark>
-              </Text>
-              <div className={styles.formLine}>
-                <Input
-                  label="Nombre*"
-                  variant="white"
-                  labelColor="black"
-                  id={"firstName"}
-                  placeholder="Nombre"
-                  onChange={handleChange}
-                  value={formData.firstName}
-                  onError={() => {}}
-                />
-                <Input
-                  label="Apellido*"
-                  variant="white"
-                  placeholder="Apellido"
-                  labelColor="black"
-                  id={"lastName"}
-                  onChange={handleChange}
-                  value={formData.lastName}
-                  onError={() => {}}
-                />
-              </div>
-              <div className={styles.formLine}>
-                <Input
-                  label="Email*"
-                  variant="white"
-                  labelColor="black"
-                  placeholder="Email"
-                  id={"email"}
-                  onChange={handleChange}
-                  value={formData.email}
-                  onError={() => {}}
-                />
-                <Input
-                  label="Teléfono*"
-                  placeholder="Teléfono"
-                  id={"phone"}
-                  variant="white"
-                  labelColor="black"
-                  onChange={handleChange}
-                  value={formData.phone}
-                />
-              </div>
-              <div className={styles.formLine}>
-                <Input
-                  label="Pais*"
-                  variant="white"
-                  placeholder="Pais"
-                  labelColor="black"
-                  id={"location"}
-                  onChange={() => {}}
-                  onError={() => {}}
-                />
-                {/*  <Input
-                  label="Yo Quiero*"
-                  id={"objetive"}
-                  variant="black"
-                  labelColor="light"
-                  onChange={() => {}}
-                  onError={() => {}}
-                /> */}
-                <div>
-                  <Select
-                    onChange={() => {}}
-                    onError={() => {}}
-                    id={"objetive"}
-                    elements={["ASFAFS"]}
-                    label={"Yo Quiero*"}
+            <div className={styles.formContainer}>
+              <div className={styles.form}>
+                <Text>
+                  <Mark color="primary-bg">ÚLTIMO PASO</Mark>
+                </Text>
+                <div className={styles.formLine}>
+                  <Input
+                    label="Nombre y Apellido*"
                     variant="white"
                     labelColor="black"
-                    placeholder={"Elegir Opción"}
-                    icon={"arrowDown"}
+                    id={"firstName"}
+                    placeholder="Nombre"
+                    onChange={handleChange}
+                    value={formData.firstName}
+                    onError={() => {}}
                   />
                 </div>
-              </div>
-              <TextArea
-                label="Comentarios (opcional)"
-                labelColor="black"
-                variant="white"
-                id={"comments"}
-                placeholder="Ingresa tus comentarios aqui."
-                errorValue={() => {}}
-                onChange={() => {}}
-              />
-              <div className={styles.btnEnviar}>
-                <IconTextButton
-                  colorVariant="primary"
-                  textProps={{ size: "sm" }}
-                >
-                  Quiero ser Contactado
-                </IconTextButton>
+                <div className={styles.formLine}>
+                  <Input
+                    label="Email*"
+                    variant="white"
+                    labelColor="black"
+                    placeholder="Email"
+                    id={"email"}
+                    onChange={handleChange}
+                    value={formData.email}
+                    onError={() => {}}
+                  />
+                </div>
+                <div className={styles.formLine}>
+                  <Input
+                    label="Pais*"
+                    variant="white"
+                    placeholder="Pais"
+                    labelColor="black"
+                    id={"location"}
+                    onChange={() => {}}
+                    onError={() => {}}
+                  />
+                </div>
+                <div className={styles.formLine}>
+                  <Input
+                    label="Teléfono*"
+                    placeholder="Teléfono"
+                    id={"phone"}
+                    variant="white"
+                    labelColor="black"
+                    onChange={handleChange}
+                    value={formData.phone}
+                  />
+                </div>
+                <div className={styles.formLine}>
+                  <Input
+                    label="Sitio Web*"
+                    placeholder="Sitio Web"
+                    id={"phone"}
+                    variant="white"
+                    labelColor="black"
+                    onChange={handleChange}
+                    value={formData.phone}
+                  />
+                </div>
+                <div className={styles.btnEnviar}>
+                  <IconTextButton
+                    colorVariant="primary"
+                    size="100%"
+                    textProps={{ size: "sm" }}
+                  >
+                    Quiero ser Contactado
+                  </IconTextButton>
+                </div>
               </div>
             </div>
           </div>
