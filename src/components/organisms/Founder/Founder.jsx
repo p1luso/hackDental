@@ -7,15 +7,30 @@ import FounderImage from "@assets/FounderImage.svg";
 import FounderImageMobile from "@assets/FounderImageMobile.svg";
 import PreFooter from "../PreFooter/PreFooter";
 import { px } from "framer-motion";
-
-
+import Icon from "../../atoms/Icon/Icon";
 
 const Founder = () => {
   return (
     <div>
       <section className={styles.spainLocation}>
         <div className={styles.founderContainer}>
-        <Text
+          
+          <div className={styles.contentContainer}>
+            <div className={styles.imageWrapper}>
+              <img id={styles.founderImg} src={FounderImage} />
+              <img id={styles.founderImgMobile} src={FounderImageMobile} />
+              <div className={styles.disponibilityBox}>
+                <span className={styles.badge}>1</span>
+                <Text color="white" fontSize="16px" bold="font-light">
+                  Disponibilidad actual
+                </Text>
+                <Text color="white" fontSize="16px" bold="font-light">
+                  <strong>10 clínicas en España</strong>
+                </Text>
+              </div>
+            </div>
+            <div className={styles.founderText}>
+            <Text
             type="bigtitle"
             textAlign="start"
             color="black"
@@ -39,24 +54,46 @@ const Founder = () => {
           >
             Fundador y CEO de HackDental
           </Text>
-        <div className={styles.contentContainer}>
-        <img id={styles.founderImg} src={FounderImage}/>
-        <img id={styles.founderImgMobile} src={FounderImageMobile}/>
-        <div className={styles.founderText}>
-            <Text fontFamily="Lexend" color="black" bold="font-light">
-            <i>"Me dedico única y exclusivamente al marketing de servicios
-            dentales en España."</i>
-            </Text>
-            <Text fontFamily="Lexend" color="black" bold="font-light">
-              <strong>Contáctame</strong> si te interesa lo siguiente: 
-            </Text>
-          <div className={styles.founderButton}>
-          <IconTextButton colorVariant="dark-green" >
-          Contactar a José →
-          </IconTextButton>{" "}
+              <Text fontFamily="Lexend" color="black" bold="font-light">
+                <i>
+                  "Me dedico única y exclusivamente al marketing de servicios
+                  dentales en España."
+                </i>
+              </Text>
+              <Text fontFamily="Lexend" color="black" bold="font-light">
+                <strong>Contáctame</strong> si te interesa lo siguiente:
+              </Text>
+              <div className={styles.beneficios}>
+                <Icon size={"1.3rem"} color="var(--primary-greenDark)" type={"check"} />
+                <Text color="black" fontSize="18px" bold="font-light">
+                  <strong>
+                    Reuniones semanales contigo y tu personal del consultorio.
+                  </strong>
+                </Text>
+              </div>
+              <div className={styles.beneficios}>
+                <Icon size={"1.3rem"} color="var(--primary-greenDark)" type={"check"} />
+                <Text color="black" fontSize="18px" bold="font-light">
+                  <strong>
+                    Reuniones semanales contigo y tu personal del consultorio.
+                  </strong>
+                </Text>
+              </div>
+              <div className={styles.beneficios}>
+                <Icon size={"1.3rem"} color="var(--primary-greenDark)" type={"check"} />
+                <Text color="black" fontSize="18px" bold="font-light">
+                  <strong>
+                    Reuniones semanales contigo y tu personal del consultorio.
+                  </strong>
+                </Text>
+              </div>
+              <div className={styles.founderButton}>
+                <IconTextButton colorVariant="primary-greenDark">
+                  Contactar a José →
+                </IconTextButton>{" "}
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
         </div>
       </section>
       <div className={styles.footer}>

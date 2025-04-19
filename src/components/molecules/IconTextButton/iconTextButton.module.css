@@ -6,6 +6,7 @@
 .black.iconTextButton,
 .white.iconTextButton,
 .blue.iconTextButton,
+.primary-greenDark.iconTextButton,
 .lemon.iconTextButton,
 .primary-rounded,
 .very-light-black.iconTextButton,
@@ -386,6 +387,23 @@
 .very-light-black.iconTextButton.bordered {
   border: 1px solid var(--very-light-black);
   color: var(--very-light-black);
+}
+
+.primary-greenDark.iconTextButton.full {
+  background-color: var(--primary-greenDark);
+  color: var(--white);
+  font-family: Lexend;
+  border-radius: 4px;
+}
+.primary-greenDark.iconTextButton.full {
+  background-color: var(--primary-greenDark);
+  color: var(--white);
+  font-family: Lexend;
+  border-radius: 4px;
+}
+
+.primary-greenDark.iconTextButton.full:hover {
+  background-color:rgb(51, 133, 136);
 }
 
 /* dark-green */
