@@ -301,7 +301,7 @@ const OurProgram = () => {
                 type="title"
                 fontSize="28px"
                 color="white-cream"
-                bold="font-light"
+                bold="medium"
               >
                 Para dueños de Consultorios
               </Text>

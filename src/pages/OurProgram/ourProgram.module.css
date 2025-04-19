@@ -657,6 +657,7 @@
 
 .icons{
   color:#21917b;
+  margin-top: 2%;
 }
 
 .contactIcons{
@@ -669,14 +670,16 @@
 }
 
 .iconsText h4, .iconsText p{
-  color: #d9d9d9;
+  color: #ebeced;
 }
 
 .iconsText h4{
-  font-weight: 600;
+  font-weight: 500;
+  font-family: 'Lexend';
 }
-
 .iconsText p{
+  font-family: 'Lexend';
+
   font-weight: 300;
 }
 
