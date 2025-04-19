@@ -93,7 +93,7 @@ const Founder = () => {
               <div className={styles.beneficios}>
                 <Icon
                   size={"1.3rem"}
-                  color="var(--primary-greenDark)"
+                  color="var(--primary-darker)"
                   type={"check"}
                 />
                 <Text color="black-lighter" fontSize="18px" bold="font-light">
@@ -105,7 +105,7 @@ const Founder = () => {
               <div className={styles.beneficios}>
                 <Icon
                   size={"1.3rem"}
-                  color="var(--primary-greenDark)"
+                  color="var(--primary-darker)"
                   type={"check"}
                 />
                 <Text color="black-lighter" fontSize="18px" bold="font-light">
@@ -118,7 +118,7 @@ const Founder = () => {
               <div className={styles.beneficios}>
                 <Icon
                   size={"1.3rem"}
-                  color="var(--primary-greenDark)"
+                  color="var(--primary-darker)"
                   type={"check"}
                 />
                 <Text color="black-lighter" fontSize="18px" bold="font-light">
