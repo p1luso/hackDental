@@ -569,14 +569,14 @@ const LandingPage = () => {
               <img src={Medicos} className={styles.spainLocation_footer__img} />
               <div className={styles.footer__desc}>
                 <Text
-                  textAlignMobile="center"
+                  textAlignMobile="center" fontSizeMobile="14px"
                   s={{ color: "black", lineHeight: "1.33" }}
                 >
                   Únete a los dentistas
                 </Text>
                 <Text
                   textAlignMobile="center"
-                  bold="font-light"
+                  bold="font-light"  fontSizeMobile="14px"
                   s={{ color: "black", lineHeight: "1.33" }}
                 >
                   que usan nuestro método.{" "}
@@ -601,7 +601,7 @@ const LandingPage = () => {
             fontSizeMobile="21px"
             s={{ lineHeight: "1", fontWeight: "500" }}
           >
-            Aprende a cómo crecer tu consultorio
+            Aprende cómo crecer tu consultorio
           </Text>
           <Text
             type="bigtitle"
@@ -628,7 +628,7 @@ const LandingPage = () => {
             </button>
             <div className={styles.mainContent__card__desc}>
               {currentBooks.map((book, i) => (
-                <EBookCard key={i} {...book} />
+                <EBookCard bookType={false} key={i} {...book} />
               ))}
             </div>
             <button

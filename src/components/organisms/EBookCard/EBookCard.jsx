@@ -5,16 +5,18 @@ import { DOWNLOAD_EBOOK } from "../../../constants/routes";
 import Link from "../../atoms/Link/Link";
 import TextLink from "../../molecules/TextLink/TextLink";
 import Icon from "../../atoms/Icon/Icon";
-const EBookCard = ({ img, title, desc }) => {
+const EBookCard = ({ img, title, desc, bookType = true }) => {
   return (
     <Link to={DOWNLOAD_EBOOK} target="_blank">
       <div className={styles.ebook}>
         <img className={styles.img} src={img} alt={title} />
 
         <div className={styles.descBook}>
-          <Text size="ty" s={{ color: "#006a43" }}>
-            EBOOK
-          </Text>
+          {bookType && (
+            <Text size="ty" s={{ color: "#006a43" }}>
+              EBOOK
+            </Text>
+          )}
           <Text
             bold
             type="smallsubtitle"

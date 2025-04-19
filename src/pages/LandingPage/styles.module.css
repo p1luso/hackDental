@@ -1300,7 +1300,6 @@ body:has(.popupContainer.show) {
 
   .spainLocation_footer__card{
     display: flex;
-    background-color: var(--primary-transparent);
     border-radius: 32px;
     width: fit-content;
     padding: 8px 16px;
