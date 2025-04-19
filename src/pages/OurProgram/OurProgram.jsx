@@ -300,17 +300,17 @@ const OurProgram = () => {
               <Text
                 type="title"
                 fontSize="28px"
-                color="light"
+                color="white-cream"
                 bold="font-light"
               >
                 Para dueños de Consultorios
               </Text>
-              <Text type="title" fontSize="32px" color="light" bold="semi-bold">
+              <Text type="title" fontSize="32px" color="white-cream" bold="semi-bold">
                 Aplica a nuestra auditoría gratis.
               </Text>
               <div className={styles.desc_text}>
                 <Text
-                  color="light"
+                  color="white-cream"
                   bold="font-light"
                   fontSize="18px"
                   s={{ fontWeight: 300 }}
