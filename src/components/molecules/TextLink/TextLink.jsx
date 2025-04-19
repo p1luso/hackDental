@@ -17,7 +17,7 @@ const TextLink = ({
           marked && styles.marked
         }`}
       >
-        <Text {...textProps}>{children}</Text>
+        <Text  fontSize="16px" fontSizeMobile="14px" {...textProps}>{children}</Text>
       </div>
     </Link>
   );
