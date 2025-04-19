@@ -88,43 +88,61 @@ const LandingPage = () => {
               </div> */}
             <div className={styles.title}>
               <Text
-                color="black"
-                type="title"
-                bold="semibold"
+                type="bigtitle"
                 textAlign="center"
+                color="black"
+                fontFamily="lexend"
+                bold="font-light"
+                fontSize="28px"
+                fontSizeMobile="21px"
+                s={{ lineHeight: "1.2", fontWeight: "500" }}
               >
-                Aplica al programa “Consultorio Exitoso”.
+                Descubre si tu consultorio califica para
+              </Text>
+              <Text
+                type="bigtitle"
+                fontFamily="lexend"
+                textAlign="center"
+                color="black"
+                bold="semi-bold"
+                fontSize="32px"
+                fontSizeMobile="24px"
+                s={{ lineHeight: "1.2", fontWeight: "600" }}
+              >
+                una auditoría de Marketing Gratuita
               </Text>
             </div>
             <div className={styles.desc}>
               <Text textAlign="center" color="black" bold="font-light">
-                Transformamos tu consultorio en tan solo 6 meses con nuestro
-                método de “Ventas Convenientes”.
+              Tenemos un servicio <strong>exclusivo para consultorios que:</strong>
               </Text>
             </div>
-            <div className={styles.beneficios}>
-              <div className={styles.beneficio}>
-                <Icon size={"1.16rem"} color="var(--primary)" type={"check"} />
-                <Text color="black" bold="font-light">
-                  Trabajamos con pocos consultorios.
-                </Text>
+            <div className={styles.beneficios__items}>
+                <div className={styles.beneficios}>
+                  <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+
+                  <Text color="black" bold="font-light">
+                    Está ubicado en <strong>España.</strong>
+                  </Text>
+                </div>
+                <div className={styles.beneficios}>
+                  <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+
+                  <Text color="black" bold="font-light">
+                    Factura <strong>10,000 euros</strong> o más al mes
+                  </Text>
+                </div>
+                <div className={styles.beneficios}>
+                  <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+
+                  <Text color="black" bold="font-light">
+                    Quiere crecer rápidamente en el <strong>2025</strong>.
+                  </Text>
+                </div>
               </div>
-              <div className={styles.beneficio}>
-                <Icon size={"1.16rem"} color="var(--primary)" type={"check"} />
-                <Text color="black" bold="font-light">
-                  Nos enfocamos en tus tratamientos más rentables.
-                </Text>
-              </div>
-              <div className={styles.beneficio}>
-                <Icon size={"1.16rem"} color="var(--primary)" type={"check"} />
-                <Text color="black" bold="font-light">
-                  Nos enfocamos en el mercado español.
-                </Text>
-              </div>
-            </div>
             <div className={styles.popupBtns}>
               <IconTextButton size="100%" onClick={() => navigate(OUR_PROGRAM)}>
-                Ver programa
+                Pedir auditoría
               </IconTextButton>
               {/* <IconTextButton
                   size="100%"
@@ -135,13 +153,26 @@ const LandingPage = () => {
                   No gracias
                 </IconTextButton> */}
             </div>
-            <div className={styles.medicosCard}>
-              <MedicsCard
-                bgColor={"#8fc29f33"}
-                title="Únete a los dentistas"
-                textDesc="
-que quieren llevar su consultorio al siguiente nivel."
-              />
+            <div className={styles.spainLocation_footer__card}>
+              <img src={Medicos} className={styles.spainLocation_footer__img} />
+              <div className={styles.footer__desc}>
+                <Text
+                  textAlignMobile="center"
+                  s={{ color: "black", lineHeight: "1.33" }}
+                >
+                  Únete a los dentistas
+                </Text>
+                <Text
+                  textAlignMobile="center"
+                  bold="font-light"
+                  s={{ color: "black", lineHeight: "1.33" }}
+                >
+                  que usan nuestro método.{" "}
+                  <Mark bold="regular" color="darker-green">
+                    Cupos limitados.
+                  </Mark>
+                </Text>
+              </div>
             </div>
           </div>
         </div>
@@ -225,13 +256,16 @@ que quieren llevar su consultorio al siguiente nivel."
           <PartnersCarousel />
         </div>
         <div className={styles.whoAreWe__contents}>
-          <Text color="black" fontSizeMobile="28px" fontSize="32px">¿Quienes Somos?🧐</Text>
-          <Text color="white-secondary" bold="font-light">
-            Somos una <strong>agencia de marketing dental</strong> que se dedica a ayudar a <strong>
-            clínicas dentales en España</strong> a conseguir <strong>más pacientes</strong> de manera
-            efectiva y confiable a largo plazo.
+          <Text color="black" fontSizeMobile="28px" fontSize="32px">
+            ¿Quienes Somos?🧐
           </Text>
-          
+          <Text color="white-secondary" bold="font-light">
+            Somos una <strong>agencia de marketing dental</strong> que se dedica
+            a ayudar a <strong>clínicas dentales en España</strong> a conseguir{" "}
+            <strong>más pacientes</strong> de manera efectiva y confiable a
+            largo plazo.
+          </Text>
+
           <hr className={styles.separator} />
           <Text
             color="black"
@@ -241,19 +275,23 @@ que quieren llevar su consultorio al siguiente nivel."
           >
             ¿Qué nos diferencia de otras agencias? 🧐
           </Text>
-          <img className={styles.neneArio} src={wwaDifferencesMobile} alt="Differences" />
+          <img
+            className={styles.neneArio}
+            src={wwaDifferencesMobile}
+            alt="Differences"
+          />
           <img
             className={`${styles.neneArio} ${styles.mobile}`}
             src={wwaDifferences}
             alt="Differences"
           />
-           <div className={styles.progressBarButton}>
-                <img className={styles.arrows} src={LeftArrow} />
-                <IconTextButton colorVariant="light-green" >
-                  Aplicar Ahora
-                </IconTextButton>
-                <img className={styles.arrows} src={RightArrow} />
-              </div>
+          <div className={styles.progressBarButton}>
+            <img className={styles.arrows} src={LeftArrow} />
+            <IconTextButton colorVariant="light-green">
+              Aplicar Ahora
+            </IconTextButton>
+            <img className={styles.arrows} src={RightArrow} />
+          </div>
           {/*  <Text color="black">
             Puedes ponerte en contacto con nosotros por correo electrónico a
             <br />
@@ -270,7 +308,7 @@ que quieren llevar su consultorio al siguiente nivel."
           </div> */}
         </div>
       </section>
-     {/*  <section className={styles.contactBannerSection}>
+      {/*  <section className={styles.contactBannerSection}>
         <div className={styles.contactBanner__contents}>
           <div className={styles.desc}>
             <div className={styles.stickyContainer}>
@@ -432,16 +470,18 @@ que quieren llevar su consultorio al siguiente nivel."
           bold="semi-bold"
           fontSize="36px"
           fontSizeMobile="24px"
-          s={{ lineHeight: "1", fontWeight: "600"  }}
+          s={{ lineHeight: "1", fontWeight: "600" }}
         >
           déjanos a nosotros el Marketing
         </Text>
         <div className={styles.spainLocation__desc}>
-          
           <Text color="black" fontFamily="Lexend" bold="font-light">
-          Puedes ponerte en contacto con nosotros por correo electrónico a <strong><u>jaka@
-.design</u></strong> y te responderemos en un plazo de 24 horas. No olvides incluir
-algunas palabras sobre ti y tu negocio.
+            Puedes ponerte en contacto con nosotros por correo electrónico a{" "}
+            <strong>
+              <u>jaka@ .design</u>
+            </strong>{" "}
+            y te responderemos en un plazo de 24 horas. No olvides incluir
+            algunas palabras sobre ti y tu negocio.
           </Text>
         </div>
         <div className={styles.spanishLocation__card_container}>
@@ -452,24 +492,24 @@ algunas palabras sobre ti y tu negocio.
               </Text>
               <div className={styles.spainLocation__items}>
                 <div className={styles.spainLocation__items__item}>
-                <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+                  <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
 
                   <Text color="black" bold="font-light">
                     Está ubicado en <strong>España.</strong>
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
-                <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+                  <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
 
                   <Text color="black" bold="font-light">
                     Factura <strong>10,000 euros</strong> o más al mes
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
-                <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+                  <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
 
                   <Text color="black" bold="font-light">
-                  Quiere crecer rápidamente en el <strong>2025</strong>.
+                    Quiere crecer rápidamente en el <strong>2025</strong>.
                   </Text>
                 </div>
               </div>
@@ -480,24 +520,27 @@ algunas palabras sobre ti y tu negocio.
               </div>
             </div>
             <div className={styles.spainLocation_footer__card}>
-                <img src={Medicos} className={styles.spainLocation_footer__img} />
-                <div className={styles.footer__desc}>
-                  <Text textAlignMobile="center" s={{ color: "black", lineHeight: "1.33" }}>
-                    Únete a los dentistas
-                  </Text>
-                  <Text textAlignMobile="center"
-                    bold="font-light"
-                    s={{ color: "black", lineHeight: "1.33" }}
-                  >
-                    que usan nuestro método.{" "}
-                    <Mark bold="regular" color="darker-green">
-                      Cupos limitados.
-                    </Mark>
-                  </Text>
-                </div>
+              <img src={Medicos} className={styles.spainLocation_footer__img} />
+              <div className={styles.footer__desc}>
+                <Text
+                  textAlignMobile="center"
+                  s={{ color: "black", lineHeight: "1.33" }}
+                >
+                  Únete a los dentistas
+                </Text>
+                <Text
+                  textAlignMobile="center"
+                  bold="font-light"
+                  s={{ color: "black", lineHeight: "1.33" }}
+                >
+                  que usan nuestro método.{" "}
+                  <Mark bold="regular" color="darker-green">
+                    Cupos limitados.
+                  </Mark>
+                </Text>
               </div>
+            </div>
           </div>
-          
         </div>
       </section>
       <section className={styles.mainContent}>

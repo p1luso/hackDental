@@ -110,10 +110,10 @@ body:has(.popupContainer.show) {
 
 .popupcard {
   display: flex;
-  background-color: var(--white);
+  background-color: #ecf1f4;
   position: relative;
   width: 1000px;
-  height: 640px;
+  height: 700px;
   transition: all 0.5s ease-out;
   transform: translateY(150%);
 }
@@ -167,20 +167,20 @@ body:has(.popupContainer.show) {
 }
 .popupDesc {
   padding-top: 80px;
-  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 28px;
+  gap: 23px;
   width: 100%;
   position: relative;
-  background-color: var(--primary-transparent-2);
+  background-color: #ecf1f4;
 }
 .popupDesc > .title,
 .popupDesc > .desc {
-  width: 50% !important;
+  width: 100% !important;
 }
 .popupDesc > .desc {
+  
 }
 .popupCloseBtn {
   position: absolute;
@@ -188,13 +188,7 @@ body:has(.popupContainer.show) {
   top: 5%;
   cursor: pointer;
 }
-.beneficios {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  position: relative;
-  bottom: 4px;
-}
+
 .beneficio {
   display: flex;
   gap: 16px;
@@ -204,6 +198,7 @@ body:has(.popupContainer.show) {
   display: flex;
   gap: 16px;
   margin-top: 4px;
+  margin-bottom: 15px;
   width: 350px;
 }
 .popupBtns > :first-child {
@@ -212,6 +207,7 @@ body:has(.popupContainer.show) {
 .medicosCard {
   position: relative;
   bottom: 8px;
+  
 }
 .header {
   display: flex;
@@ -655,6 +651,27 @@ body:has(.popupContainer.show) {
   align-items: center;
   gap: 16px;
   width: 100%;
+  background-color: #006a5a29;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.beneficios__items{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+.beneficios {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+  width: 60%;
   background-color: #006a5a29;
   padding: 15px;
   border-radius: 10px;
@@ -1184,6 +1201,11 @@ body:has(.popupContainer.show) {
     padding: 0 28px;
   }
   .spainLocation__card__elements {
+    gap: 16px;
+    width: 90%;
+  }
+
+  .beneficios{
     gap: 16px;
     width: 90%;
   }
