@@ -692,13 +692,12 @@
 .contact .formContainer {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 40%;
   z-index: 1;
 }
 .contact .form {
   display: flex;
   flex-direction: column;
-  width: 80%;
   padding: 48px 32px;
   border-radius: 16px;
   gap: 24px;
