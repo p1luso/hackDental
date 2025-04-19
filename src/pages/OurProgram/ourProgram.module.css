@@ -704,6 +704,8 @@
   margin-left: 80px;
   background-color: var(--light-green);
   position: relative;
+  box-shadow: 0 4px 50px 0 rgba(124, 197, 133, 0.25);
+
   border: 1px solid var(--primary);
 }
 
@@ -828,9 +830,11 @@
     width: 100%;
     padding: 0;
     display: flex;
+
   }
   .contact .form {
     width: 100%;
+
   }
   .contact .formLine {
     flex-direction: column;
