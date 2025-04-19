@@ -11,7 +11,7 @@ const PreFooter = () => {
 
   return (
     <div className={styles.mainContainer}>
-      <section className={styles.banner}>
+     {/*  <section className={styles.banner}>
         <Text
           type="subtitle"
           color="black"
@@ -30,7 +30,7 @@ const PreFooter = () => {
             Ver programa
           </IconTextButton>
         </div>
-      </section>
+      </section> */}
       <section className={styles.prefooterContainer}>
         <PreFooterFounder/>
       </section>

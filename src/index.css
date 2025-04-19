@@ -126,7 +126,7 @@
 
   --primary-transparent-50: rgba(45, 104, 82, 0.5);
   --primary-transparent: #006a4326;
-  --primary-transparent-25: rgba(0, 107, 68, 0.25);
+  --primary-transparent-25: rgba(0, 107, 68, 0.20);
   --primary-very-transparent: hsla(158, 100%, 21%, 0.047);
   --primary-transparent-2: rgba(0, 107, 68, 0.15);
   --secondary: #1a4789;
