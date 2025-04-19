@@ -703,12 +703,7 @@ body:has(.popupContainer.show) {
   position: relative;
   z-index: 1;
 }
-.mainContent > :nth-child(1) {
-  margin-bottom: 32px;
-}
-.mainContent > :nth-child(2) {
-  margin-bottom: 48px;
-}
+
 .mainContent__desc {
   display: flex;
   flex-direction: column;
@@ -724,12 +719,11 @@ body:has(.popupContainer.show) {
 }
 .mainContent__card {
   display: flex;
-  padding: 40px;
+  margin-top: 30px;
   border-radius: 24px;
   gap: 16px;
   width: 100%;
   align-items: center;
-  height: 650px;
   justify-content: space-evenly;
   position: relative;
 }
@@ -751,7 +745,7 @@ body:has(.popupContainer.show) {
   cursor: pointer;
 }
 
-.arrowButton {
+.arrowButtonDesk {
   background-color: #000;
   color: #fff;
   border: none;
@@ -766,11 +760,35 @@ body:has(.popupContainer.show) {
   transition: background 0.3s ease;
 }
 
-.arrowButton:hover {
+.arrowButtonDesk:hover {
   background-color: #333;
 }
 
-.arrowButton:disabled {
+.arrowButtonDesk:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.arrowButtonMob  {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.arrowButtonMob:hover {
+  background-color: #333;
+}
+
+.arrowButtonMob:disabled {
   background-color: #999;
   cursor: not-allowed;
 }
@@ -778,7 +796,6 @@ body:has(.popupContainer.show) {
 .pagination {
   display: flex;
   justify-content: center;
-  margin-top: 16px;
   gap: 8px;
 }
 
@@ -789,6 +806,20 @@ body:has(.popupContainer.show) {
   border-radius: 2px;
   transition: background-color 0.3s ease;
 }
+
+.paginationWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 12px;
+}
+
+.paginationArrow {
+  display: none;
+}
+
+
 
 .paginationLine.active {
   background-color: #000;
@@ -1307,7 +1338,27 @@ body:has(.popupContainer.show) {
     align-self: center;
     object-fit: fill;
   }
+
+  .paginationArrow {
+    display: block;
+    position: static;
+    transform: none;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+  .mainContent__card__desc {
+    grid-template-columns: repeat(1, auto); 
+    justify-content: center;
+  }
+
+  .arrowButtonDesk,
+  .arrowButtonDesk{
+    display: none; /* ocultamos las flechas laterales en mobile */
+  }
 }
+
+
 @media screen and (max-width: 800px) {
   .banner {
     display: flex;
@@ -1365,6 +1416,7 @@ body:has(.popupContainer.show) {
   .banner__btns {
     width: 100%;
   }
+
   .contactWS {
     width: 100%;
   }
@@ -1391,15 +1443,18 @@ body:has(.popupContainer.show) {
     text-align: center;
   }
 
-
-
   header::after,
   section::after {
     display: none;
   }
 }
 
-@media screen and (max-width: 600px) {
+
+
+@media screen and (max-width: 550px) {
+  .pagination{
+    display: none;
+  }
 }
 @media screen and (max-width: 400px) {
 }

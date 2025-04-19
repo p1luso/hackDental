@@ -43,26 +43,47 @@ const books = [
   { img: imgEbookPrueba, title: "Whatsapp de Clínicas en 5 minutos" },
 ];
 
-const CARDS_PER_PAGE = 3;
-
 const LandingPage = () => {
   const navigate = useNavigate();
   const [showWSMsg, setShowWSMsg] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
+  const [cardsPerPage, setCardsPerPage] = useState(3);
+
   const navMobileMenuIsShow = useConfigStore(
     (state) => state.navMobileMenuIsShow
   );
 
-   useEffect(() => {
+  useEffect(() => {
+    const updateCardsPerPage = () => {
+      if (window.innerWidth <= 800) {
+        setCardsPerPage(1);
+      } else {
+        setCardsPerPage(3);
+      }
+    };
+  
+    updateCardsPerPage(); // correr al inicio
+    window.addEventListener('resize', updateCardsPerPage);
+  
+    return () => {
+      window.removeEventListener('resize', updateCardsPerPage);
+    };
+  }, []);
+  
+
+  useEffect(() => {
     setTimeout(() => {
       setShowPopup(true);
     }, 13 * 1000);
   }, []);
 
   const [page, setPage] = useState(0);
-
-  const maxPage = Math.ceil(books.length / CARDS_PER_PAGE) - 1;
-
+  const totalPages = Math.ceil(books.length / cardsPerPage);
+  const maxPage = totalPages - 1;
+  const startIndex = page * cardsPerPage;
+  const endIndex = startIndex + cardsPerPage;
+  const currentBooks = books.slice(startIndex, endIndex);
+  
   const handleNext = () => {
     if (page < maxPage) setPage((prev) => prev + 1);
   };
@@ -70,11 +91,6 @@ const LandingPage = () => {
   const handlePrev = () => {
     if (page > 0) setPage((prev) => prev - 1);
   };
-
-  const currentBooks = books.slice(
-    page * CARDS_PER_PAGE,
-    (page + 1) * CARDS_PER_PAGE
-  );
 
   return (
     <div className={styles.page}>
@@ -603,7 +619,7 @@ const LandingPage = () => {
         <div className={styles.mainContent__cards}>
           <div className={styles.mainContent__card}>
             <button
-              className={styles.arrowButton}
+              className={styles.arrowButtonDesk}
               onClick={handlePrev}
               disabled={page === 0}
             >
@@ -615,22 +631,40 @@ const LandingPage = () => {
               ))}
             </div>
             <button
-              className={styles.arrowButton}
+              className={styles.arrowButtonDesk}
               onClick={handleNext}
               disabled={page === maxPage}
             >
               →
             </button>
           </div>
-          <div className={styles.pagination}>
-            {Array.from({ length: maxPage + 1 }).map((_, index) => (
-              <span
-                key={index}
-                className={`${styles.paginationLine} ${
-                  index === page ? styles.active : ""
-                }`}
-              />
-            ))}
+          <div className={styles.paginationWrapper}>
+            <button
+              className={`${styles.arrowButtonMob} ${styles.paginationArrow}`}
+              onClick={handlePrev}
+              disabled={page === 0}
+            >
+              ←
+            </button>
+
+            <div className={styles.pagination}>
+              {Array.from({ length: maxPage + 1 }).map((_, index) => (
+                <span
+                  key={index}
+                  className={`${styles.paginationLine} ${
+                    index === page ? styles.active : ""
+                  }`}
+                />
+              ))}
+            </div>
+
+            <button
+              className={`${styles.arrowButtonMob} ${styles.paginationArrow}`}
+              onClick={handleNext}
+              disabled={page === maxPage}
+            >
+              →
+            </button>
           </div>
         </div>
       </section>
