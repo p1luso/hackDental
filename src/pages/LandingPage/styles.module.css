@@ -303,6 +303,20 @@ body:has(.popupContainer.show) {
   background: var(--primary-darker);
 }
 
+.consultorClass {
+  position: relative;
+  background: var(--primary-darker);
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.consultorClass_contents{
+  background: var(--dark-transparent-45);
+  width: 100%;
+}
+
 .footer__card {
   display: flex;
   gap: 16px;
@@ -1452,8 +1466,8 @@ body:has(.popupContainer.show) {
 
 
 @media screen and (max-width: 550px) {
-  .pagination{
-    display: none;
+  .paginationLine{
+    width: 70px;
   }
 }
 @media screen and (max-width: 400px) {

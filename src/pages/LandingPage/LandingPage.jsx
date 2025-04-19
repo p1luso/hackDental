@@ -61,21 +61,20 @@ const LandingPage = () => {
         setCardsPerPage(3);
       }
     };
-  
+
     updateCardsPerPage(); // correr al inicio
-    window.addEventListener('resize', updateCardsPerPage);
-  
+    window.addEventListener("resize", updateCardsPerPage);
+
     return () => {
-      window.removeEventListener('resize', updateCardsPerPage);
+      window.removeEventListener("resize", updateCardsPerPage);
     };
   }, []);
-  
 
-  useEffect(() => {
+ /*  useEffect(() => {
     setTimeout(() => {
       setShowPopup(true);
     }, 13 * 1000);
-  }, []);
+  }, []); */
 
   const [page, setPage] = useState(0);
   const totalPages = Math.ceil(books.length / cardsPerPage);
@@ -83,7 +82,7 @@ const LandingPage = () => {
   const startIndex = page * cardsPerPage;
   const endIndex = startIndex + cardsPerPage;
   const currentBooks = books.slice(startIndex, endIndex);
-  
+
   const handleNext = () => {
     if (page < maxPage) setPage((prev) => prev + 1);
   };
@@ -665,6 +664,36 @@ const LandingPage = () => {
             >
               →
             </button>
+          </div>
+        </div>
+      </section>
+      <section className={styles.consultorClass}>
+        <div className={styles.consultorClass_contents}>
+          <div className={styles.consultorContent}>
+            <Text
+              type="bigtitle"
+              textAlign="center"
+              color="white"
+              fontFamily="lexend"
+              bold="font-light"
+              fontSize="32px"
+              fontSizeMobile="21px"
+              s={{ lineHeight: "1", fontWeight: "500" }}
+            >
+              Eres el mejor en lo que haces,
+            </Text>
+            <Text
+              type="bigtitle"
+              fontFamily="lexend"
+              textAlign="center"
+              color="white"
+              bold="semi-bold"
+              fontSize="36px"
+              fontSizeMobile="24px"
+              s={{ lineHeight: "1", fontWeight: "600" }}
+            >
+              déjanos a nosotros el Marketing
+            </Text>
           </div>
         </div>
       </section>
