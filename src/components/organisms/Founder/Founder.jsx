@@ -46,10 +46,10 @@ const Founder = () => {
               <img id={styles.founderImgMobile} src={FounderImageMobile} />
               <div className={styles.disponibilityBox}>
                 <span className={styles.badge}>1</span>
-                <Text color="white" fontSize="16px" bold="font-light">
+                <Text color="white" fontSize="16px" fontSizeMobile="12px" bold="font-light">
                   Disponibilidad actual
                 </Text>
-                <Text color="white" fontSize="16px" bold="font-light">
+                <Text color="white" fontSize="16px" fontSizeMobile="12px" bold="font-light">
                   <strong>10 clínicas en España</strong>
                 </Text>
               </div>
