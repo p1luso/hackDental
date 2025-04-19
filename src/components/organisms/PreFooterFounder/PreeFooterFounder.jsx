@@ -6,10 +6,10 @@ import styles from "./styles.module.css";
 const PreFooterFounder = () => {
   return (
     <div className={styles.preefooter}>
-      <Text color="dark" fontFamily="Lexend Medium" fontSize="24px" s={{lineHeight: "1.2"}}>
-      ¿Te interesa una audotoria de marketing
+      <Text color="dark" fontFamily="Lexend Medium" fontSize="24px" fontSizeMobile="18px" s={{lineHeight: "1.2"}}>
+      ¿Te interesa una auditoria de marketing
         </Text>
-        <Text type="subtitle" color="dark" bold="semibold" fontFamily="Lexend" s={{lineHeight: "1.2"}} fontSize="28px">
+        <Text type="subtitle" color="dark" bold="semibold" fontFamily="Lexend" s={{lineHeight: "1.2"}} fontSize="28px" fontSizeMobile="21px">
       100% gratuita?
         </Text>
         <div className={styles.subtitle}>
