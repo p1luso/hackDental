@@ -15,6 +15,7 @@ import {
   CONTACT_FORM,
   OUR_PROGRAM,
 } from "../../constants/routes";
+import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
 
 import PreFooter from "../../components/organisms/PreFooter/PreFooter";
 import Mark from "../../components/atoms/Mark/Mark";
@@ -33,6 +34,16 @@ import { useConfigStore } from "../../stores/useConfig";
 import Founder from "../../components/organisms/Founder/Founder";
 import LeftArrow from "@assets/flechaizquierda.svg";
 import RightArrow from "@assets/flechaderecha.svg";
+import EBookCard from "../../components/organisms/EBookCard/EBookCard";
+
+const books = [
+  { img: imgEbookPrueba, title: "7 Secretos del Marketing Dental" },
+  { img: imgEbookPrueba, title: "Whatsapp de Clinicas en 5 minutos" },
+  { img: imgEbookPrueba, title: "IA para Consultorios Dentales" },
+  { img: imgEbookPrueba, title: "Whatsapp de Clínicas en 5 minutos" },
+];
+
+const CARDS_PER_PAGE = 3;
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -42,11 +53,28 @@ const LandingPage = () => {
     (state) => state.navMobileMenuIsShow
   );
 
-  useEffect(() => {
+   useEffect(() => {
     setTimeout(() => {
       setShowPopup(true);
     }, 13 * 1000);
   }, []);
+
+  const [page, setPage] = useState(0);
+
+  const maxPage = Math.ceil(books.length / CARDS_PER_PAGE) - 1;
+
+  const handleNext = () => {
+    if (page < maxPage) setPage((prev) => prev + 1);
+  };
+
+  const handlePrev = () => {
+    if (page > 0) setPage((prev) => prev - 1);
+  };
+
+  const currentBooks = books.slice(
+    page * CARDS_PER_PAGE,
+    (page + 1) * CARDS_PER_PAGE
+  );
 
   return (
     <div className={styles.page}>
@@ -114,32 +142,33 @@ const LandingPage = () => {
             </div>
             <div className={styles.desc}>
               <Text textAlign="center" color="black" bold="font-light">
-              Tenemos un servicio <strong>exclusivo para consultorios que:</strong>
+                Tenemos un servicio{" "}
+                <strong>exclusivo para consultorios que:</strong>
               </Text>
             </div>
             <div className={styles.beneficios__items}>
-                <div className={styles.beneficios}>
-                  <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+              <div className={styles.beneficios}>
+                <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
 
-                  <Text color="black" bold="font-light">
-                    Está ubicado en <strong>España.</strong>
-                  </Text>
-                </div>
-                <div className={styles.beneficios}>
-                  <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
-
-                  <Text color="black" bold="font-light">
-                    Factura <strong>10,000 euros</strong> o más al mes
-                  </Text>
-                </div>
-                <div className={styles.beneficios}>
-                  <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
-
-                  <Text color="black" bold="font-light">
-                    Quiere crecer rápidamente en el <strong>2025</strong>.
-                  </Text>
-                </div>
+                <Text color="black" bold="font-light">
+                  Está ubicado en <strong>España.</strong>
+                </Text>
               </div>
+              <div className={styles.beneficios}>
+                <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+
+                <Text color="black" bold="font-light">
+                  Factura <strong>10,000 euros</strong> o más al mes
+                </Text>
+              </div>
+              <div className={styles.beneficios}>
+                <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+
+                <Text color="black" bold="font-light">
+                  Quiere crecer rápidamente en el <strong>2025</strong>.
+                </Text>
+              </div>
+            </div>
             <div className={styles.popupBtns}>
               <IconTextButton size="100%" onClick={() => navigate(OUR_PROGRAM)}>
                 Pedir auditoría
@@ -549,59 +578,59 @@ const LandingPage = () => {
             type="bigtitle"
             textAlign="center"
             color="black"
-            s={{ lineHeight: "1.3" }}
+            fontFamily="lexend"
+            bold="font-light"
+            fontSize="24px"
+            fontSizeMobile="18px"
+            s={{ lineHeight: "1", fontWeight: "500" }}
           >
-            Te enseñamos cómo crecer tu consultorio.
-            <br /> Revisa nuestros ebooks
-            <Mark color="primary-bg-triangular" bold="medium">
-              gratuitos
-            </Mark>
+            Aprende a cómo crecer tu consultorio
           </Text>
-          <Text color="black" bold="font-light" textAlign="center">
-            Si tienes una práctica dental que factura más de $10,000 euros al
-            mes y quieres llevarla al siguiente nivel, no dudes en contactarnos.
-            Somos expertos en Marketing Dental.
+          <Text
+            type="bigtitle"
+            fontFamily="lexend"
+            textAlign="center"
+            color="black"
+            bold="semi-bold"
+            fontSize="28px"
+            fontSizeMobile="21px"
+            s={{ lineHeight: "1", fontWeight: "600" }}
+          >
+            Descarga nuestros ebooks gratuitos
           </Text>
         </div>
 
         <div className={styles.mainContent__cards}>
           <div className={styles.mainContent__card}>
+            <button
+              className={styles.arrowButton}
+              onClick={handlePrev}
+              disabled={page === 0}
+            >
+              ←
+            </button>
             <div className={styles.mainContent__card__desc}>
-              <Text bold="semibold">2024</Text>
-              <Text type="title" bold="semibold" color="black">
-                7 Secretos del Marketing Dental
-              </Text>
-              <Text size="sm" bold="font-light">
-                Save thousands of engineering hours by using the NexHealth
-                Synchronizer API.
-              </Text>
-              <div className={styles.mainContent__card__btn}>
-                <IconTextButton colorVariant="blue" size="100%">
-                  Descargar Ahora
-                </IconTextButton>
-              </div>
+              {currentBooks.map((book, i) => (
+                <EBookCard key={i} {...book} />
+              ))}
             </div>
-            <img src={ImagenEbook1} />
+            <button
+              className={styles.arrowButton}
+              onClick={handleNext}
+              disabled={page === maxPage}
+            >
+              →
+            </button>
           </div>
-          <div className={styles.mainContent__card}>
-            <div className={styles.mainContent__card__desc}>
-              <Text bold="semibold" color="primary">
-                2024
-              </Text>
-              <Text type="title" bold="semibold" color="black">
-                WhatsApp para Clinicas Dentales
-              </Text>
-              <Text size="sm" bold="font-light">
-                Save thousands of engineering hours by using the NexHealth
-                Synchronizer API.
-              </Text>
-              <div className={styles.mainContent__card__btn}>
-                <IconTextButton colorVariant="primary-rounded" size="100%">
-                  Descargar Ahora
-                </IconTextButton>
-              </div>
-            </div>
-            <img src={ImagenEbookWp} />
+          <div className={styles.pagination}>
+            {Array.from({ length: maxPage + 1 }).map((_, index) => (
+              <span
+                key={index}
+                className={`${styles.paginationLine} ${
+                  index === page ? styles.active : ""
+                }`}
+              />
+            ))}
           </div>
         </div>
       </section>

@@ -696,12 +696,8 @@ body:has(.popupContainer.show) {
 
 .mainContent {
   display: flex;
-
-  background: linear-gradient(0deg, var(--primary-transparent) 10%, white);
   padding-top: 80px;
   padding-bottom: 80px;
-  padding-left: var(--width-unit);
-  padding-right: var(--width-unit);
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -717,11 +713,12 @@ body:has(.popupContainer.show) {
   display: flex;
   flex-direction: column;
   width: 70%;
-  gap: 32px;
+  gap: 10px;
 }
 .mainContent__cards {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   gap: 44px;
 }
@@ -729,9 +726,9 @@ body:has(.popupContainer.show) {
   display: flex;
   padding: 40px;
   border-radius: 24px;
-  background-color: var(--very-light-white);
   gap: 16px;
   width: 100%;
+  align-items: center;
   height: 650px;
   justify-content: space-evenly;
   position: relative;
@@ -746,8 +743,6 @@ body:has(.popupContainer.show) {
   left: -7px;
   top: -7px;
   padding: 6px;
-  background-color: var(--primary-transparent-50);
-  border: 2px solid var(--primary);
 }
 .mainContent__card img {
   width: 500px;
@@ -756,14 +751,62 @@ body:has(.popupContainer.show) {
   cursor: pointer;
 }
 
-.mainContent__card__desc {
+.arrowButton {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  flex-basis: 30%;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
+
+.arrowButton:hover {
+  background-color: #333;
+}
+
+.arrowButton:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 8px;
+}
+
+.paginationLine {
+  width: 100px;
+  height: 4px;
+  background-color: #ccc;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.paginationLine.active {
+  background-color: #000;
+}
+
+
+.mainContent__card__desc  {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 16px;
+}
+
+.mainContent__card__desc img{
+  width: 300px;
+  border-radius: 16px;
+}
+
 .mainContent__card__desc > :nth-child(1) {
-  margin-bottom: 16px;
 }
 .mainContent__card__desc > :nth-child(2),
 .mainContent__card__desc > :nth-child(3) {
