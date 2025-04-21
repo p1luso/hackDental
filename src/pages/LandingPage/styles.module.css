@@ -1048,7 +1048,7 @@ body:has(.popupContainer.show) {
 }
 
 .consultorClass_contents{
-  background: var(--dark-transparent-35);
+  background: var(--dark-transparent-45);
   width: 100%;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -1233,26 +1233,6 @@ body:has(.popupContainer.show) {
     text-align: center !important;
     font-size: 12.5px;
   }
-
-  .popupContainer {
-    align-items: flex-end;
-  }
-
-  .popupDesc {
-    padding: 20px;
-    padding-top: 60px;
-    padding-bottom: 20px;
-    gap: 24px;
-  }
-
-  .tagSupIzq,
-  .tagSupDer,
-  .tagInfIzq,
-  .tagInfDer {
-    width: 60px;
-    height: 20px;
-  }
-
   .cardMetodo {
     box-shadow: none;
     padding: 24px;
@@ -1262,22 +1242,55 @@ body:has(.popupContainer.show) {
     font-size: 17px;
   }
 
-  .popupDesc > .title,
-  .popupDesc > .desc {
-    width: 100% !important;
-  }
-  .popupBtns {
-    width: 100%;
-  }
   .banner__btns > :first-child {
     height: 54px !important;
   }
   .whoAreWe {
-    padding: 28px;
     padding-top: 28px;
     padding-bottom: 32px;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
   }
+
+  .contentContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  .titles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founderText{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .imageWrapper{
+    width: 100%;
+  }
+  #founderImg{
+    width: 300px;
+  }
+
+  .whoAreWeContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .details .detail::after {
     top: 6px;
     display: none;
@@ -1300,11 +1313,6 @@ body:has(.popupContainer.show) {
   .quieroHacerCrecerBtn {
     width: 100%;
   }
-  .popupcard {
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-  }
 
   .notification {
     width: 250px;
@@ -1315,33 +1323,9 @@ body:has(.popupContainer.show) {
   .wsImg {
     width: 60px;
   }
-
-  .popupMobileCloseBtn {
-    display: block;
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    z-index: 1;
-  }
-  .popImg {
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    border-radius: 32px 32px 0 0;
-  }
   .mainContent__desc {
     width: 100%;
     padding: 0 28px;
-  }
-  .popImg img {
-    width: 140px;
-  }
-  .popupCloseBtn {
-    display: none;
-  }
-  .popupBtns {
-    flex-direction: column;
   }
   .medicosCard > :first-child {
     border-radius: 8px;

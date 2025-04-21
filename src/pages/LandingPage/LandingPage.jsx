@@ -8,25 +8,13 @@ import IconTextButton from "../../components/molecules/IconTextButton/IconTextBu
 import IconButton from "../../components/molecules/IconButton/IconButton";
 import Footer from "../../components/organisms/Footer/Footer";
 import Icon from "../../components/atoms/Icon/Icon";
-import MedicsCard from "../../components/organisms/MedicsCard/MedicsCard";
 import { useNavigate } from "react-router-dom";
 import {
-  DOWNLOAD_EBOOK,
   CONTACT_FORM,
-  OUR_PROGRAM,
 } from "../../constants/routes";
 import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
-
-import PreFooter from "../../components/organisms/PreFooter/PreFooter";
 import Mark from "../../components/atoms/Mark/Mark";
 import ImgBanner from "@assets/ImgBanner.svg";
-import imgPublicidadCard from "@assets/La publicidad de tu consultorio es genérica.svg";
-import imgDiseñoCard from "@assets/El diseño de tu Sitio Web Dental es ineficiente.svg";
-import imgEstrategiaCard from "@assets/Tu estrategia de redes sociales es pobre.svg";
-import imgReseñasCard from "@assets/Te faltan reseñas positivas online.svg";
-import imgRecordatorioCard from "@assets/Tienes un mal sistema de recordatorio de citas.svg";
-import ImagenEbook1 from "@assets/Imagen ebook 1.svg";
-import ImagenEbookWp from "@assets/imagen ebook de whatsapp.svg";
 import ImgBtnWS from "@assets/imgBtnWS.svg";
 import PartnersCarousel from "../../components/organisms/PartnersCarousel/PartnersCarousel";
 import Medicos from "@assets/Medicos.svg";
@@ -40,6 +28,7 @@ import HappyDentist from "@assets/happyDentist.svg";
 import SadDentist from "@assets/sadDentist.svg";
 import CheckDentistIcon from "@assets/checkDentistIcon.svg";
 import CrossIcon from "@assets/crossIcon.svg";
+import ModalPopUp from "../../components/organisms/ModalPopUp/ModalPopUp";
 
 const books = [
   { img: imgEbookPrueba, title: "7 Secretos del Marketing Dental" },
@@ -76,11 +65,11 @@ const LandingPage = () => {
     };
   }, []);
 
-  /*  useEffect(() => {
+    useEffect(() => {
     setTimeout(() => {
       setShowPopup(true);
     }, 13 * 1000);
-  }, []); */
+  }, []); 
 
   const [page, setPage] = useState(0);
   const totalPages = Math.ceil(books.length / cardsPerPage);
@@ -114,130 +103,9 @@ const LandingPage = () => {
           showPopup && !navMobileMenuIsShow && styles.show
         }`}
       >
-        <div className={`${styles.popupcard}`}>
-          <div className={`${styles.tagSupIzq}`}></div>
-          <div className={`${styles.tagSupDer}`}></div>
-          <div className={`${styles.tagInfIzq}`}></div>
-          <div className={`${styles.tagInfDer}`}></div>
-          <span
-            className={styles.popupMobileCloseBtn}
-            onClick={() => setShowPopup(false)}
-          >
-            <Icon size={"2rem"} type={"close"} color="var(--black)" />
-          </span>
-          {/*  <div className={styles.popImg}>
-              <Text color="light" type="title" textAlign="center">
-                1O CUPOS
-              </Text>
-              <img src={imagenDentista} />
-            </div> */}
-          <div className={styles.popupDesc}>
-            <span
-              className={styles.popupCloseBtn}
-              onClick={() => setShowPopup(false)}
-            >
-              <Icon size={"2rem"} type={"close"} color="var(--gray)" />
-            </span>
-
-            {/* <div className={styles.popTextOffer}>
-                <Text color="black" bold="semibold">
-                  ¡SOLO POR ENERO!
-                </Text>
-                <hr className={styles.underline} />
-              </div> */}
-            <div className={styles.title}>
-              <Text
-                type="bigtitle"
-                textAlign="center"
-                color="black"
-                fontFamily="lexend"
-                bold="font-light"
-                fontSize="28px"
-                fontSizeMobile="21px"
-                s={{ lineHeight: "1.2", fontWeight: "500" }}
-              >
-                Descubre si tu consultorio califica para
-              </Text>
-              <Text
-                type="bigtitle"
-                fontFamily="lexend"
-                textAlign="center"
-                color="black"
-                bold="semi-bold"
-                fontSize="32px"
-                fontSizeMobile="24px"
-                s={{ lineHeight: "1.2", fontWeight: "600" }}
-              >
-                una auditoría de Marketing Gratuita
-              </Text>
-            </div>
-            <div className={styles.desc}>
-              <Text textAlign="center" color="black" bold="font-light">
-                Tenemos un servicio{" "}
-                <strong>exclusivo para consultorios que:</strong>
-              </Text>
-            </div>
-            <div className={styles.beneficios__items}>
-              <div className={styles.beneficios}>
-                <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
-
-                <Text color="black" bold="font-light">
-                  Está ubicado en <strong>España.</strong>
-                </Text>
-              </div>
-              <div className={styles.beneficios}>
-                <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
-
-                <Text color="black" bold="font-light">
-                  Factura <strong>10,000 euros</strong> o más al mes
-                </Text>
-              </div>
-              <div className={styles.beneficios}>
-                <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
-
-                <Text color="black" bold="font-light">
-                  Quiere crecer rápidamente en el <strong>2025</strong>.
-                </Text>
-              </div>
-            </div>
-            <div className={styles.popupBtns}>
-              <IconTextButton size="100%" onClick={() => navigate(OUR_PROGRAM)}>
-                Pedir auditoría
-              </IconTextButton>
-              {/* <IconTextButton
-                  size="100%"
-                  colorVariant="dark-green"
-                  textProps={{ size: "ty" }}
-                  onClick={() => setShowPopup(false)}
-                >
-                  No gracias
-                </IconTextButton> */}
-            </div>
-            <div className={styles.popUp_footer_card}>
-              <img src={Medicos} className={styles.popUp_footer_img} />
-              <div className={styles.footer__desc}>
-                <Text
-                  textAlignMobile="center"
-                  fontSizeMobile="15px"
-                  s={{ color: "black", lineHeight: "1.33" }}
-                >
-                  Únete a los dentistas
-                </Text>
-                <Text
-                  fontSizeMobile="15px"
-                  textAlignMobile="center"
-                  bold="font-light"
-                  s={{ color: "black", lineHeight: "1.33" }}
-                >
-                  que usan nuestro método.{" "}
-                  <Mark bold="regular" color="darker-green">
-                    Cupos limitados.
-                  </Mark>
-                </Text>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ModalPopUp showPopup={showPopup}
+  setShowPopup={setShowPopup}
+  navMobileMenuIsShow={navMobileMenuIsShow}/>
       </div>
 
       <div className={styles.help}>
@@ -317,17 +185,18 @@ const LandingPage = () => {
           </Text>
           <PartnersCarousel />
         </div>
-        <div className={styles.founderContainer}>
+        <div className={styles.whoAreWeContainer}>
           <div className={styles.contentContainer}>
             <div className={styles.imageWrapper}>
               <img id={styles.founderImg} src={WhoWeAreImage} />
             </div>
             <div className={styles.founderText}>
-              <div className={styles.desktopTitles}>
+              <div className={styles.titles}>
                 <Text
                   type="bigtitle"
                   textAlign="start"
                   color="black"
+                  textAlignMobile="center"
                   fontFamily="lexend"
                   bold="font-light"
                   fontSize="24px"
@@ -340,6 +209,7 @@ const LandingPage = () => {
                   type="bigtitle"
                   fontFamily="lexend"
                   textAlign="start"
+                  textAlignMobile="center"
                   color="black"
                   bold="semi-bold"
                   fontSize="28px"
