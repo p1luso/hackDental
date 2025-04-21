@@ -322,7 +322,7 @@ const LandingPage = () => {
               <div className={styles.desktopTitles}>
                 <Text
                   type="bigtitle"
-                  textAlign="start"
+                  textAlign="start" 
                   color="black"
                   fontFamily="lexend"
                   bold="font-light"

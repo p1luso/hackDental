@@ -103,11 +103,13 @@ const Founder = () => {
                 <strong>Contáctame</strong> si te interesa lo siguiente:
               </Text>
               <div className={styles.beneficios}>
-                <Icon
+                <div className={styles.beneficiosIcon}>
+                  <Icon
                   size={"1.2rem"}
                   color="var(--primary-darker)"
                   type={"check"}
                 />
+                </div>
                 <Text
                   color="black-lighter"
                   fontSize="18px"
@@ -120,11 +122,13 @@ const Founder = () => {
                 </Text>
               </div>
               <div className={styles.beneficios}>
+              <div className={styles.beneficiosIcon}>
                 <Icon
                   size={"1.2rem"}
                   color="var(--primary-darker)"
                   type={"check"}
                 />
+                </div>
                 <Text
                   color="black-lighter"
                   fontSize="18px"
@@ -138,11 +142,13 @@ const Founder = () => {
                 </Text>
               </div>
               <div className={styles.beneficios}>
+              <div className={styles.beneficiosIcon}>
                 <Icon
                   size={"1.2rem"}
                   color="var(--primary-darker)"
                   type={"check"}
                 />
+                </div>
                 <Text
                   color="black-lighter"
                   fontSize="18px"

@@ -794,6 +794,17 @@ body:has(.popupContainer.show) {
   justify-content: center;
   cursor: pointer;
   transition: background 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.arrowButtonDesk:first-of-type {
+  left: 100px;
+}
+
+.arrowButtonDesk:last-of-type {
+  right: 100px;
 }
 
 .arrowButtonDesk:hover {
@@ -1052,6 +1063,13 @@ body:has(.popupContainer.show) {
     justify-content: center;
     flex-direction: column;
     gap: 8px;
+  }
+  .arrowButtonDesk:first-of-type {
+    left: 20px;
+  }
+  
+  .arrowButtonDesk:last-of-type {
+    right: 20px;
   }
 }
 @media screen and (max-width: 1200px) {

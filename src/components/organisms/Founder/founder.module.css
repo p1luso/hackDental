@@ -181,7 +181,13 @@
     width: max-content;
     max-width: 100%;
   }
+.beneficios{
+  align-items: start;
+}
 
+.beneficiosIcon{
+  margin-top: 5px;
+}
 
 .badge {
   right: 13px;
