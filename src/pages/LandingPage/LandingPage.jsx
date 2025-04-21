@@ -35,6 +35,7 @@ import Founder from "../../components/organisms/Founder/Founder";
 import LeftArrow from "@assets/flechaizquierda.svg";
 import RightArrow from "@assets/flechaderecha.svg";
 import EBookCard from "../../components/organisms/EBookCard/EBookCard";
+import WhoWeAreImage from "@assets/whoWeAre.svg";
 
 const books = [
   { img: imgEbookPrueba, title: "7 Secretos del Marketing Dental" },
@@ -71,11 +72,11 @@ const LandingPage = () => {
     };
   }, []);
 
-  useEffect(() => {
+  /*  useEffect(() => {
     setTimeout(() => {
       setShowPopup(true);
     }, 13 * 1000);
-  }, []);
+  }, []); */
 
   const [page, setPage] = useState(0);
   const totalPages = Math.ceil(books.length / cardsPerPage);
@@ -300,7 +301,7 @@ const LandingPage = () => {
           </div>
         </section>
       </header>
-     {/*  <section className={styles.whoAreWe}>
+      <section className={styles.whoAreWe}>
         <div className={styles.partners}>
           <Text
             textAlign="center"
@@ -312,59 +313,65 @@ const LandingPage = () => {
           </Text>
           <PartnersCarousel />
         </div>
-        <div className={styles.whoAreWe__contents}>
-          <Text color="black" fontSizeMobile="28px" fontSize="32px">
-            ¿Quienes Somos?🧐
-          </Text>
-          <Text color="white-secondary" bold="font-light">
-            Somos una <strong>agencia de marketing dental</strong> que se dedica
-            a ayudar a <strong>clínicas dentales en España</strong> a conseguir{" "}
-            <strong>más pacientes</strong> de manera efectiva y confiable a
-            largo plazo.
-          </Text>
-
-          <hr className={styles.separator} />
-          <Text
-            color="black"
-            textAlign="center"
-            fontSizeMobile="28px"
-            s={{ lineHeight: "1.3", fontSize: "32px" }}
-          >
-            ¿Qué nos diferencia de otras agencias? 🧐
-          </Text>
-          <img
-            className={styles.neneArio}
-            src={wwaDifferencesMobile}
-            alt="Differences"
-          />
-          <img
-            className={`${styles.neneArio} ${styles.mobile}`}
-            src={wwaDifferences}
-            alt="Differences"
-          />
-          <div className={styles.progressBarButton}>
-            <img className={styles.arrows} src={LeftArrow} />
-            <IconTextButton colorVariant="light-green">
-              Aplicar Ahora
-            </IconTextButton>
-            <img className={styles.arrows} src={RightArrow} />
+        <div className={styles.founderContainer}>
+          <div className={styles.contentContainer}>
+            <div className={styles.imageWrapper}>
+              <img id={styles.founderImg} src={WhoWeAreImage} />
+            </div>
+            <div className={styles.founderText}>
+              <div className={styles.desktopTitles}>
+                <Text
+                  type="bigtitle"
+                  textAlign="start"
+                  color="black"
+                  fontFamily="lexend"
+                  bold="font-light"
+                  fontSize="24px"
+                  fontSizeMobile="18px"
+                  s={{ lineHeight: "1", fontWeight: "500" }}
+                >
+                  En Hackdental
+                </Text>
+                <Text
+                  type="bigtitle"
+                  fontFamily="lexend"
+                  textAlign="start"
+                  color="black"
+                  bold="semi-bold"
+                  fontSize="28px"
+                  fontSizeMobile="21px"
+                  s={{ lineHeight: "1", fontWeight: "600" }}
+                >
+                  ¿Qué tipo de Agencia Somos?
+                </Text>
+              </div>
+              <Text
+                fontFamily="Lexend"
+                color="black-lighter"
+                fontSize="16px"
+                fontSizeMobile="14px"
+                bold="font-light"
+              >
+                Somos una <strong>agencia de marketing dental</strong> que ayuda
+                a{" "}
+                <strong>consultorios dentales independientes en España</strong> a
+                conseguir más pacientes a largo plazo.
+              </Text>
+              <Text
+                fontFamily="Lexend"
+                color="black-lighter"
+                fontSize="16px"
+                fontSizeMobile="14px"
+                bold="font-light"
+              >
+               Nuestra especialización nos ha permitido crear un método único
+para crecer consultorios dentales que <strong>cumple con la normativa de
+protección de datos vigente en España</strong> (RGPD, LOPDGDD y LSSI)
+              </Text>
+            </div>
           </div>
-          {/*  <Text color="black">
-            Puedes ponerte en contacto con nosotros por correo electrónico a
-            <br />
-            jaka@ .design y te responderemos en un plazo de 24 horas.
-          </Text> */}
-          {/* <div className={styles.cardMetodo}>
-            <Text color="black" s={{ lineHeight: "1.5" }}>
-              ¿Eres un excelente dentista, pero atraer nuevos pacientes sigue
-              siendo un desafío? 🦷
-            </Text>
-            <IconTextButton textProps={{ textAlign: "center" }}>
-              Ver el Método HackDental
-            </IconTextButton>
-          </div> 
         </div>
-      </section>*/}
+      </section>
       {/*  <section className={styles.contactBannerSection}>
         <div className={styles.contactBanner__contents}>
           <div className={styles.desc}>
