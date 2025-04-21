@@ -1478,7 +1478,7 @@ body:has(.popupContainer.show) {
   }
   .mainContent {
     flex-direction: column;
-    padding: 64px 0px;
+    padding: 44px 0px;
   }
   .mainContent__cards {
     padding: 0 28px;
