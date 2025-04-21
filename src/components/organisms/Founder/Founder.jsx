@@ -11,7 +11,7 @@ import Icon from "../../atoms/Icon/Icon";
 
 const Founder = () => {
   return (
-    <div>
+    <div className={styles.founder}>
       <section className={styles.spainLocation}>
         <div className={styles.founderContainer}>
           <div className={styles.contentContainer}>

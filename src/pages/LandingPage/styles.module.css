@@ -1044,6 +1044,8 @@ body:has(.popupContainer.show) {
   align-self: self-start;
 }
 .prefooter {
+  margin: 0;
+  padding: 0;
   background-color: #eef5f4;
 }
 .progressBarButton{
@@ -1594,7 +1596,6 @@ body:has(.popupContainer.show) {
   }
   .prefooter {
     background-color:#eef5f4;
-    padding-top: 32px !important;
   }
 
   .spainLocation_footer__card{
