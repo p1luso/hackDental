@@ -36,6 +36,10 @@ import LeftArrow from "@assets/flechaizquierda.svg";
 import RightArrow from "@assets/flechaderecha.svg";
 import EBookCard from "../../components/organisms/EBookCard/EBookCard";
 import WhoWeAreImage from "@assets/whoWeAre.svg";
+import HappyDentist from "@assets/happyDentist.svg";
+import SadDentist from "@assets/sadDentist.svg";
+import CheckDentistIcon from "@assets/checkDentistIcon.svg";
+import CrossIcon from "@assets/crossIcon.svg";
 
 const books = [
   { img: imgEbookPrueba, title: "7 Secretos del Marketing Dental" },
@@ -322,7 +326,7 @@ const LandingPage = () => {
               <div className={styles.desktopTitles}>
                 <Text
                   type="bigtitle"
-                  textAlign="start" 
+                  textAlign="start"
                   color="black"
                   fontFamily="lexend"
                   bold="font-light"
@@ -354,8 +358,8 @@ const LandingPage = () => {
               >
                 Somos una <strong>agencia de marketing dental</strong> que ayuda
                 a{" "}
-                <strong>consultorios dentales independientes en España</strong> a
-                conseguir más pacientes a largo plazo.
+                <strong>consultorios dentales independientes en España</strong>{" "}
+                a conseguir más pacientes a largo plazo.
               </Text>
               <Text
                 fontFamily="Lexend"
@@ -364,9 +368,13 @@ const LandingPage = () => {
                 fontSizeMobile="14px"
                 bold="font-light"
               >
-               Nuestra especialización nos ha permitido crear un método único
-para crecer consultorios dentales que <strong>cumple con la normativa de
-protección de datos vigente en España</strong> (RGPD, LOPDGDD y LSSI)
+                Nuestra especialización nos ha permitido crear un método único
+                para crecer consultorios dentales que{" "}
+                <strong>
+                  cumple con la normativa de protección de datos vigente en
+                  España
+                </strong>{" "}
+                (RGPD, LOPDGDD y LSSI)
               </Text>
             </div>
           </div>
@@ -693,7 +701,7 @@ protección de datos vigente en España</strong> (RGPD, LOPDGDD y LSSI)
           </div>
         </div>
       </section>
-      {/* <section className={styles.consultorClass}>
+      <section className={styles.consultorClass}>
         <div className={styles.consultorClass_contents}>
           <div className={styles.consultorContent}>
             <Text
@@ -706,7 +714,7 @@ protección de datos vigente en España</strong> (RGPD, LOPDGDD y LSSI)
               fontSizeMobile="21px"
               s={{ lineHeight: "1", fontWeight: "500" }}
             >
-              Eres el mejor en lo que haces,
+              Pregunta para los dueños
             </Text>
             <Text
               type="bigtitle"
@@ -718,11 +726,53 @@ protección de datos vigente en España</strong> (RGPD, LOPDGDD y LSSI)
               fontSizeMobile="24px"
               s={{ lineHeight: "1", fontWeight: "600" }}
             >
-              déjanos a nosotros el Marketing
+              ¿Qué clase de consultorio tienes?
             </Text>
           </div>
+          <div className={styles.dentistImages}>
+            <div className={styles.happyDentist}>
+              <img src={CheckDentistIcon} alt="" className={styles.iconsDentist} />
+              <div className={styles.imgContainer_dentist}>
+                <div className={styles.dentistTitle}>
+                <Text
+                  type="title"
+                  fontFamily="Canva Sans"
+                  textAlign="center"
+                  color="black"
+                  bold="semi-bold"
+                  fontSize="28px"
+                  fontSizeMobile="21px"
+                  s={{ lineHeight: "1", fontWeight: "600" }}
+                >
+                  Consultorio con Marketing especializado
+                </Text>
+                </div>
+                <img src={HappyDentist} alt="happy dentist" />
+              </div>
+            </div>
+            <div className={styles.sadDentist}>
+              <img src={CrossIcon} alt="" className={styles.iconsDentist} />
+              <div className={styles.imgContainer_dentist_sad}>
+                <div className={styles.dentistTitle}>
+                <Text
+                  type="title"
+                  fontFamily="Canva Sans"
+                  textAlign="center"
+                  color="black"
+                  bold="semi-bold"
+                  fontSize="28px"
+                  fontSizeMobile="21px"
+                  s={{ lineHeight: "1", fontWeight: "600" }}
+                >
+                  Consultorio con Marketing generico
+                </Text>
+                </div>
+                <img src={SadDentist} alt="sad dentist" />
+              </div>
+            </div>
+          </div>
         </div>
-      </section> */}
+      </section>
       <section className={styles.prefooter}>
         <Founder />
       </section>
