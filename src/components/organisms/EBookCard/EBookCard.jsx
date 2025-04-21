@@ -32,10 +32,10 @@ const EBookCard = ({ img, title, desc, bookType = true }) => {
           <TextLink
             marked
             textProps={{ size: "ty" }}
-            variant="secondary"
+            variant="blackSecondary"
             to={DOWNLOAD_EBOOK}
           >
-            Descargar la Guia <Icon type={"arrowSquare"} size={"1rem"} />
+            Descargar la Guia <Icon type={"arrowSquare"} color="#33475b" size={"1rem"} />
           </TextLink>
         </div>
       </div>

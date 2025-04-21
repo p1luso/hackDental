@@ -11,6 +11,18 @@
   text-decoration: underline;
 }
 
+.blackSecondary.textLink {
+  display: flex;
+  align-items: center;
+}
+
+.blackSecondary.textLink > *:hover,
+.blackSecondary.textLink.marked > * {
+  color: #33475b !important;
+  text-decoration: underline;
+}
+
+
 /* secondary */
 .secondary.textLink {
   display: flex;
