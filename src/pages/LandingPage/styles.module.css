@@ -876,7 +876,7 @@ body:has(.popupContainer.show) {
 .mainContent__card__desc  {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  gap: 8px;
+  gap: 12px;
 }
 
 .mainContent__card__desc img{
@@ -1551,6 +1551,12 @@ body:has(.popupContainer.show) {
 
   .header {
     height: auto;
+  }
+
+  .mainContent__card__desc img{
+    width: 250px;
+    height: 250px;
+    border-radius: 16px;
   }
 
   .bannerImg {
