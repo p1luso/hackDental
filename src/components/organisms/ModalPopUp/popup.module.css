@@ -74,6 +74,7 @@
     position: relative;
     max-width: 1000px;
     width: 1000px;
+    scroll-behavior: smooth;
     max-height: 90vh;
     transition: all 0.5s ease-out;
     transform: translateY(150%);
@@ -169,7 +170,7 @@
 @media screen and (max-width: 1024px) {
 
   .popupContainer {
-    align-items: flex-end;
+    align-items: center;
   }
 
   .popupDesc {
@@ -211,6 +212,9 @@
     width: 100%;
     height: auto;
     flex-direction: column;
+    border-radius: 20px;
+    overflow-y: auto;
+
   }
 
 
