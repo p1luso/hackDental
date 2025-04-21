@@ -1262,8 +1262,6 @@ body:has(.popupContainer.show) {
   .whoAreWe {
     padding-left: 0;
     padding-right: 0;
-    padding-top: 28px;
-    padding-bottom: 32px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
