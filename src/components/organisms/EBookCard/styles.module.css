@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  justify-content: center;
+  gap: 8px;
   width: 355px;
-  height: 500px;
+  height: 450px;
   background-color: var(--white);
   padding: 28px;
   border-radius: 8px;
@@ -35,6 +36,7 @@
 .descBook {
   display: flex;
   flex-direction: column;
+  padding: 0 15px ;
   flex-grow: 1;
 }
 

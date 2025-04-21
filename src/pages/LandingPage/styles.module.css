@@ -876,11 +876,12 @@ body:has(.popupContainer.show) {
 .mainContent__card__desc  {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  gap: 16px;
+  gap: 12px;
 }
 
 .mainContent__card__desc img{
-  width: 300px;
+  width: 265px;
+  height: 265px;
   border-radius: 16px;
 }
 .fadeIn {
