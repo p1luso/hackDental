@@ -1246,14 +1246,29 @@ body:has(.popupContainer.show) {
     height: 54px !important;
   }
   .whoAreWe {
-    padding-left: var(--width-unit1);
-    padding-right: var(--width-unit1);
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 28px;
     padding-bottom: 32px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     display: flex;
+  }
+
+
+  .whoAreWeContainer
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 28px;
+  }
+
+  .imageWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .contentContainer{
@@ -1283,7 +1298,7 @@ body:has(.popupContainer.show) {
     width: 100%;
   }
   #founderImg{
-    width: 300px;
+    width: 380px;
   }
 
   .whoAreWeContainer{
