@@ -1274,7 +1274,6 @@ body:has(.popupContainer.show) {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 28px;
   }
 
   .imageWrapper{
@@ -1288,6 +1287,7 @@ body:has(.popupContainer.show) {
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
+    margin-top:0;
   }
 
   .titles{
@@ -1311,6 +1311,7 @@ body:has(.popupContainer.show) {
   }
   #founderImg{
     width: 380px;
+    height: 250px;
   }
 
   .whoAreWeContainer{
@@ -1621,6 +1622,8 @@ body:has(.popupContainer.show) {
   }
   #founderImg{
     width: 280px;
+    height: 200px;
+
   }
 
 
