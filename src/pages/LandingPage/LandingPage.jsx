@@ -64,12 +64,11 @@ const LandingPage = () => {
       window.removeEventListener("resize", updateCardsPerPage);
     };
   }, []);
-
-    useEffect(() => {
+  /*   useEffect(() => {
     setTimeout(() => {
       setShowPopup(true);
-    }, 13 * 1000);
-  }, []); 
+    }, 30 * 1000);
+  }, []);  */
 
   const [page, setPage] = useState(0);
   const totalPages = Math.ceil(books.length / cardsPerPage);
@@ -199,8 +198,8 @@ const LandingPage = () => {
                   textAlignMobile="center"
                   fontFamily="lexend"
                   bold="font-light"
-                  fontSize="24px"
-                  fontSizeMobile="18px"
+                  fontSize="28px"
+                  fontSizeMobile="21px"
                   s={{ lineHeight: "1", fontWeight: "500" }}
                 >
                   En Hackdental
@@ -212,8 +211,8 @@ const LandingPage = () => {
                   textAlignMobile="center"
                   color="black"
                   bold="semi-bold"
-                  fontSize="28px"
-                  fontSizeMobile="21px"
+                  fontSize="32px"
+                  fontSizeMobile="24px"
                   s={{ lineHeight: "1", fontWeight: "600" }}
                 >
                   ¿Qué tipo de Agencia Somos?
@@ -222,8 +221,8 @@ const LandingPage = () => {
               <Text
                 fontFamily="Lexend"
                 color="black-lighter"
-                fontSize="16px"
-                fontSizeMobile="14px"
+                fontSize="18px"
+                fontSizeMobile="16px"
                 bold="font-light"
               >
                 Somos una <strong>agencia de marketing dental</strong> que ayuda
@@ -234,8 +233,8 @@ const LandingPage = () => {
               <Text
                 fontFamily="Lexend"
                 color="black-lighter"
-                fontSize="16px"
-                fontSizeMobile="14px"
+                fontSize="18px"
+                fontSizeMobile="16px"
                 bold="font-light"
               >
                 Nuestra especialización nos ha permitido crear un método único
@@ -417,7 +416,7 @@ const LandingPage = () => {
           déjanos a nosotros el Marketing
         </Text>
         <div className={styles.spainLocation__desc}>
-          <Text color="black" fontFamily="Lexend" bold="font-light">
+          <Text color="black-lighter" fontFamily="Lexend" bold="font-light">
             Puedes ponerte en contacto con nosotros por correo electrónico a{" "}
             <strong>
               <u>jaka@ .design</u>

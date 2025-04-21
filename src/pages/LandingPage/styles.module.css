@@ -332,8 +332,8 @@ body:has(.popupContainer.show) {
 }
 .whoAreWe {
   background-color: var(--primary-very-transparent);
-  padding-left: var(--width-unit);
-  padding-right: var(--width-unit);
+  padding-left: var(--width-unit2);
+  padding-right:  350px;
   width: 100%;
   padding-top: 44px;
   padding-bottom: 80px;
@@ -368,8 +368,8 @@ body:has(.popupContainer.show) {
 }
 
 #founderImg {
-  width: 400px;
-  height: 265px;
+  width: 440px;
+  height: 295px;
   border: 3px solid #21917b;
   display: block;
   margin: 0;
@@ -1246,6 +1246,8 @@ body:has(.popupContainer.show) {
     height: 54px !important;
   }
   .whoAreWe {
+    padding-left: var(--width-unit1);
+    padding-right: var(--width-unit1);
     padding-top: 28px;
     padding-bottom: 32px;
     align-items: center;
