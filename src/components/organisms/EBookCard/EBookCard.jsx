@@ -21,7 +21,8 @@ const EBookCard = ({ img, title, desc, bookType = true }) => {
             bold
             type="smallsubtitle"
             color="black"
-            s={{ lineHeight: "1.3" }}
+            fontSizeMobile="19px"
+            s={{ lineHeight: "1.15" }}
           >
             {title}
           </Text>

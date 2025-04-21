@@ -1491,7 +1491,7 @@ body:has(.popupContainer.show) {
     gap: 0;
   }
   .mainContent__card {
-    padding: 32px 24px 16px 24px;
+    padding: 0px 24px 16px 24px;
   }
   .mainContent__card::after {
     display: none;
@@ -1555,7 +1555,7 @@ body:has(.popupContainer.show) {
 
   .mainContent__card__desc img{
     width: 250px;
-    height: 250px;
+    height: 220px;
     border-radius: 16px;
   }
 

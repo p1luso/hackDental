@@ -498,7 +498,7 @@ const LandingPage = () => {
             fontSizeMobile="21px"
             s={{ lineHeight: "1", fontWeight: "500" }}
           >
-            Aprende cómo crecer tu consultorio
+            Aprende gratis con
           </Text>
           <Text
             type="bigtitle"
@@ -510,7 +510,7 @@ const LandingPage = () => {
             fontSizeMobile="24px"
             s={{ lineHeight: "1", fontWeight: "600" }}
           >
-            Descarga nuestros ebooks gratuitos
+            Nuestros Ebooks
           </Text>
         </div>
 
