@@ -571,7 +571,7 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-      <section className={styles.consultorClass}>
+      {/* <section className={styles.consultorClass}>
         <div className={styles.consultorClass_contents}>
           <div className={styles.consultorContent}>
             <Text
@@ -642,7 +642,7 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className={styles.prefooter}>
         <Founder />
       </section>
