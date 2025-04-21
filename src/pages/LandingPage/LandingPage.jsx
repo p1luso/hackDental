@@ -139,6 +139,8 @@ const LandingPage = () => {
                 bold="bold"
                 fontFamily="font-cuarternary"
                 color="white"
+                fontSize="50px"
+                fontSizeMobile="34px"
                 s={{
                   lineHeight: "0.95",
                   fontFamily: "queens",
@@ -153,6 +155,8 @@ const LandingPage = () => {
               <Text
                 fontFamily="lexend"
                 size="lg"
+                textAlignMobile="center"
+                fontSizeMobile="18px"
                 s={{ lineHeight: "1.1", color: "#e9e9e9", fontWeight: "300" }}
               >
                 Convertimos tu clínica en autoridad local

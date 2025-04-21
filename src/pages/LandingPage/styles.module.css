@@ -288,6 +288,7 @@ body:has(.popupContainer.show) {
 .banner__btns {
   display: flex;
   height: 3.5rem;
+  margin-top: 20px;
   align-self: flex-start;
   width: 300px;
 }
