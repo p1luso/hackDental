@@ -1555,7 +1555,7 @@ body:has(.popupContainer.show) {
 
   .mainContent__card__desc img{
     width: 250px;
-    height: 210px;
+    height: 200px;
     border-radius: 16px;
   }
 
