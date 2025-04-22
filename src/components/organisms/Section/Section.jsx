@@ -2,7 +2,6 @@ import React from "react";
 import { useScrollProgress } from "../../../hooks/useScrollProgress";
 import { motion } from "framer-motion";
 import styles from "./section.module.css";
-import Check from "@assets/check.svg";
 
 const Section = ({
   number,
@@ -61,16 +60,13 @@ const Section = ({
             {description && <p className={styles.description}>{description}</p>}
 
             {steps.length > 0 && (
-              <div className={styles.steps}>
+              <ul className={styles.steps}>
                 {steps.map((step, index) => (
-                  <div key={index} className={styles.stepItem}>
-                    <div className={styles.checkIcon}>
-                      <img src={Check} className={styles.check} />
-                    </div>
+                  <li key={index} className={styles.stepItem}>
                     <p className={styles.stepText}>{step}</p>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             )}
           </motion.div>
         </div>

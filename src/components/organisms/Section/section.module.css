@@ -11,13 +11,18 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background-color: #00221d;
+  background-color: #cfe1df;
   transform: translateX(-50%);
   display: none;
 }
 
+.paso{
+  font-size: 16px;
+}
+
 .stepText {
   font-size: 16px;
+  color: #2f4f4f;
 }
 
 .progressLine {
@@ -25,7 +30,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: #25c19b;
+  background-color:#2f4f4f;
   transition: height 0.3s ease-out;
 }
 
@@ -45,10 +50,9 @@
 
 .circle {
   height: 80px;
-  width: 80px;
   border-radius: 9999px;
-  background: var(--dark-transparent-45);
-  color: white;
+  background:#eef5f4;
+  color: #2f4f4f;
   font-size: 52px;
   font-weight: bold;
   font-family: "DM Sans", sans-serif;
@@ -78,6 +82,12 @@
 
 .reverse > * {
   direction: ltr;
+}
+.checkIcon{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #2f4f4f;
 }
 
 @media (min-width: 768px) {
@@ -124,6 +134,34 @@
   padding-left: 0;
 }
 
+.steps {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  list-style-type: disc;
+  gap: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.stepItem {
+  display: list-item;
+  color: #2f4f4f;
+}
+
+.stepText {
+  font-size: 16px;
+  color: #2f4f4f;
+  font-weight: 300;
+  font-family: "Lexend", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.stepItem:first-child .stepText{
+  color: #2f4f4f;
+  font-weight: 500;
+}
+
 @media (min-width: 768px) {
   .textContainer {
     order: 2;
@@ -135,7 +173,7 @@
   font-size: 28px;
   font-family: "Lexend", sans-serif;
   font-weight: 500;
-  color: white;
+  color: black;
   margin-bottom: 1rem;
 }
 
@@ -143,7 +181,7 @@
   font-size: 28px;
   font-family: "Lexend", sans-serif;
   font-weight: 500;
-  color: white;
+  color: black;
   margin-bottom: 1rem;
 }
 
@@ -151,44 +189,23 @@
   font-size: 18px;
   font-family: "Lexend", sans-serif;
   font-weight: 300;
-  color: white;
+  color: black;
   margin-bottom: 1.5rem;
 }
 
-.steps {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
 
-.stepItem {
-  display: flex;
-  align-items: start;
-  gap: 0.75rem;
-  border-radius: 0.5rem;
-}
 
 .paso {
-  color: #25c19b;
+  color: black;
   font-family: Lexend;
-  font-size: 14px;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .check {
   width: 1rem;
   height: 1rem;
-}
-
-.stepText {
-  font-size: 16px;
-  color: #d9d9d9;
-  font-weight: 300;
-  font-family: "Lexend", sans-serif;
-}
-
-.stepItem:first-child .stepText {
-  color: white;
+  color: #2f4f4f;
 }
 
 @media (max-width: 767px) {

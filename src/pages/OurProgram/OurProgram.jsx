@@ -230,60 +230,50 @@ const OurProgram = () => {
               </p>
             </div>
             <div className={styles.progressBarButton}>
-              <img className={styles.arrows} src={LeftArrow} />
-              <IconTextButton colorVariant="light-green">
+              <IconTextButton colorVariant="primary-darker">
                 Aplicar Ahora
               </IconTextButton>
-              <img className={styles.arrows} src={RightArrow} />
             </div>
             <div className={styles.progressBar}>
               <Section
-                paso={"PASO #1"}
+                paso={"Paso #1"}
                 number="01"
                 title="Recibe una auditoría gratuita"
                 steps={[
-                  <strong>
-                    Puedes ponerte en contacto con nosotros por correo
-                  </strong>,
+                  "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
                 ]}
               />
               <Section
-                paso={"PASO #2"}
+                paso={"Paso #2"}
                 number="02"
                 title="Recibe una auditoría gratuita"
                 textLeft={true}
                 steps={[
-                  <strong>
-                    Puedes ponerte en contacto con nosotros por correo
-                  </strong>,
+                  "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
                 ]}
               />
               <Section
-                paso={"PASO #3"}
+                paso={"Paso #3"}
                 number="03"
                 title="Recibe una auditoría gratuita"
                 steps={[
-                  <strong>
-                    Puedes ponerte en contacto con nosotros por correo
-                  </strong>,
+                  "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
                 ]}
               />
               <Section
-                paso={"PASO #4"}
+                paso={"Paso #4"}
                 lastSection={true}
                 number="04"
                 title="Recibe una auditoría gratuita"
                 textLeft={true}
                 steps={[
-                  <strong>
-                    Puedes ponerte en contacto con nosotros por correo
-                  </strong>,
+                  "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
                 ]}
