@@ -1,157 +1,255 @@
-.contactForm {
+.contact {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--light-green);
-}
-.nav {
-  display: flex;
-  justify-content: center;
-}
-.nav > :first-child {
-  width: 230px;
+  background-color: #2f4f4f;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
-.content {
+.circles,
+.finger,
+.irregularFigure {
+  position: absolute;
+  z-index: 0;
+}
+
+/* Tamaños más chicos */
+.circles img {
+  width: 100px;
+}
+
+.finger img {
+  width: 120px;
+}
+
+.irregularFigure img {
+  width: 400px;
+}
+.circles {
+  bottom: 0;
+  left: 0;
+}
+
+.finger {
+  top: 0;
+  right: 40px;
+  z-index: 1;
+}
+
+.irregularFigure {
+  top: -100px;
+  right: -100px;
+}
+
+.mobileBackground {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  background-color: #0c6761; /* o el color de la figura */
+  z-index: -1;
+  clip-path: polygon(0 20%, 20% 1%, 100% 10%, 100% 100%, 0% 100%);
+}
+
+.title img {
+  width: 200px;
+}
+.title {
+  padding-bottom: 50px;
+}
+
+.bgTransparentContact {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  padding-left: var(--width-unit);
-  padding-right: var(--width-unit);
-  padding-top: calc(100vw / 25);
-  padding-bottom: calc(100vw / 20);
+  align-items: start;
+  width: 100%;
+  height: 100%;
+  gap: 60px;
+  z-index: 1;
 }
-.content_sections {
-  display: flex;
-  position: relative;
-}
-.flecha {
+
+.flecha3 {
   position: absolute;
-  width: 200px;
-  top: -12%;
-  left: 35%;
+  width: 180px;
+  left: 40%;
 }
-.desc {
+
+.contact .desc {
   display: flex;
+  margin-top: 90px;
   flex-direction: column;
-  gap: 32px;
-  margin-right: 32px;
-  width: 560px;
-  padding-top: 64px;
+  justify-content: start;
+  z-index: 1;
 }
-.detail {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+
+.icons {
+  color: #21917b;
+  z-index: 1;
 }
-.form {
+
+.contactIcons {
   display: flex;
-  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-direction: row;
   gap: 20px;
-  background-color: var(--light-green);
-  padding: 24px;
-  padding-top: 32px;
-  padding-bottom: 60px;
-  flex-grow: 1;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.iconsText h4,
+.iconsText p {
+  color: #ebeced;
+}
+
+.iconsText h4 {
+  font-weight: 500;
+  font-family: "Lexend";
+}
+.iconsText p {
+  font-family: "Lexend";
+
+  font-weight: 300;
+}
+
+.desc_text {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.contact .formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  z-index: 1;
+}
+.contact .form {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 32px;
   border-radius: 16px;
-  border: 2px solid var(--primary);
-  box-shadow: -4px 4px 0px var(--primary);
+  gap: 24px;
+  margin-left: 80px;
+  background-color: var(--light-green);
+  position: relative;
+  box-shadow: 0 4px 50px 0 rgba(124, 197, 133, 0.25);
+  z-index: 1;
+
+  border: 1px solid var(--primary);
 }
-.input_line {
+
+.contact .formLine {
   display: flex;
+  width: 100%;
   gap: 16px;
 }
-.input_line > * {
-  width: 280px;
+
+.contact .formLine > * {
+  width: 100%;
 }
-.input_line input {
-  height: 48px !important;
+
+.contact .btnEnviar {
+  width: 100%;
 }
-.benefits {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.icons {
+  color: #21917b;
+  margin-top: 2%;
+  z-index: 1;
 }
-.line {
-  display: flex;
-  gap: 16px;
-}
-.usefullLinks {
-  display: flex;
-  gap: 32px;
-}
-.sendBtn {
-  display: flex;
-  justify-content: flex-end;
-}
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--primary-transparent-25);
-  padding-top: 32px;
-  gap: 6px;
-  padding-bottom: calc(var(--linea-amarilla) / 2);
-  height: 120px;
-}
-.footer .links {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.separator {
-  height: 0.77rem;
-  border: 1px solid var(--black);
-}
-@media screen and (max-width: 1024px) {
-  .nav > :first-child {
-    width: 180px;
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .contact .form {
+    margin-left: 0;
   }
-  .content {
-    padding: 24px;
+  .title {
+    padding-bottom: 0px;
+  }
+
+  .bgTransparentContact {
+    padding: 0px 30px 90px 30px;
+  }
+  .contact {
     flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 44px;
   }
-  .content_sections {
-    flex-direction: column;
-    gap: 24px;
-  }
-  .desc {
+  .contact .desc {
     width: 100%;
-    padding-top: 0px;
+    padding: 0;
   }
-  .desc > :first-child {
-    font-size: 24px;
-  }
-  .form {
+  .contact .formContainer {
     width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .input_line {
-    flex-direction: column;
-  }
-  .input_line > * {
-    width: 100%;
-  }
-  .detail {
-    gap: 20px;
-    width: 100%;
-    margin-right: 0;
-  }
-  .sendBtn {
-    width: 100%;
+    padding: 0;
     display: flex;
-    flex-direction: column;
   }
-  .infoBtn {
-    display: flex;
+  .contact .form {
     width: 100%;
+  }
+  .contact .formLine {
     flex-direction: column;
   }
-  .flecha {
+  .contact .formLine > * {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bgTransparentContact {
+    padding: 0px 30px 90px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .circles,
+  .finger, .irregularFigure {
     display: none;
+  }
+  .mobileBackground {
+    display: block;
+  }
+  
+  .contact .form {
+    margin-left: 0;
+  }
+  .title {
+    padding-bottom: 0px;
+  }
+  .contact {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 44px;
+  }
+  .contact .formContainer {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .desc {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .contact .form {
+    width: 100%;
+  }
+  .contact .formLine {
+    flex-direction: column;
+  }
+  .contact .formLine > * {
+    width: 100%;
   }
 }
