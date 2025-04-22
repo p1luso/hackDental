@@ -217,6 +217,10 @@
     display: block;
   }
 
+  .title img{
+    width: 130px;
+  }
+
   .iconsText{
     font-size: 14px;
   }
@@ -232,7 +236,7 @@
     height: auto;
     align-items: center;
     justify-content: center;
-    gap: 44px;
+    gap: 36px;
   }
   .contact .formContainer {
     width: 100%;

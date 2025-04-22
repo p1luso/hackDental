@@ -107,16 +107,16 @@ const ContactForm = () => {
         </div>
 
         <div className={styles.formContainer}>
-        <div className={styles.mobileBackground}></div>
+          <div className={styles.mobileBackground}></div>
 
           <div className={styles.form}>
-            <Text>ÚLTIMO PASO</Text>
+            <Text color="black">ÚLTIMO PASO</Text>
 
             <div className={styles.formLine}>
               <Input
                 label="Nombre y Apellido*"
-                variant="grey"
-                labelColor="black"
+                variant="greyLight"
+                labelColor="black-lighter"
                 id="firstName"
                 placeholder="Nombre"
                 onChange={handleChange}
@@ -128,8 +128,8 @@ const ContactForm = () => {
             <div className={styles.formLine}>
               <Input
                 label="Email*"
-                variant="grey"
-                labelColor="black"
+                variant="greyLight"
+                labelColor="black-lighter"
                 placeholder="Email"
                 id="email"
                 onChange={handleChange}
@@ -141,9 +141,9 @@ const ContactForm = () => {
             <div className={styles.formLine}>
               <Input
                 label="Pais*"
-                variant="grey"
+                variant="greyLight"
                 placeholder="Pais"
-                labelColor="black"
+                labelColor="black-lighter"
                 id="location"
                 onChange={handleChange}
                 value={formData.location}
@@ -156,8 +156,8 @@ const ContactForm = () => {
                 label="Teléfono*"
                 placeholder="Teléfono"
                 id="phone"
-                variant="grey"
-                labelColor="black"
+                variant="greyLight"
+                labelColor="black-lighter"
                 onChange={handleChange}
                 value={formData.phone}
               />
@@ -168,8 +168,8 @@ const ContactForm = () => {
                 label="Sitio Web*"
                 placeholder="Sitio Web"
                 id="website"
-                variant="grey"
-                labelColor="black"
+                variant="greyLight"
+                labelColor="black-lighter"
                 onChange={handleChange}
                 value={formData.website}
               />
