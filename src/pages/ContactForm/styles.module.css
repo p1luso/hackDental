@@ -204,6 +204,7 @@
 @media screen and (max-width: 768px) {
   .bgTransparentContact {
     padding: 0px 30px 90px 30px;
+    gap: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -236,7 +237,7 @@
     height: auto;
     align-items: center;
     justify-content: center;
-    gap: 36px;
+    gap: 28px;
   }
   .contact .formContainer {
     width: 100%;

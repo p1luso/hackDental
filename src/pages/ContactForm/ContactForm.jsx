@@ -55,7 +55,7 @@ const ContactForm = () => {
             type="title"
             fontSize="28px"
             fontSizeMobile="21px"
-            textAlignMobile="center"
+            textAlignMobile="start"
             color="white"
             bold="font-light"
           >
@@ -64,22 +64,22 @@ const ContactForm = () => {
           <Text
             type="title"
             fontSize="32px"
-            fontSizeMobile="24px"
-            textAlignMobile="center"
+            fontSizeMobile="23px"
+            textAlignMobile="start"
             color="white"
             bold="semi-bold"
           >
-            Aplica a nuestra auditoría gratis.
+            Pide una auditoría gratis
           </Text>
           <div className={styles.desc_text}>
             <Text
               color="white"
               bold="font-light"
-              textAlignMobile="center"
+              textAlignMobile="start"
               fontSize="18px"
               fontSizeMobile="14px"
             >
-              Llena la forma y te responderemos en un plazo de 24 horas.
+              Llena la forma, te responderemos en menos de 24 horas.
             </Text>
           </div>
 
