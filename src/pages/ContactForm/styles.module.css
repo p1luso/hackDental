@@ -115,7 +115,6 @@
 }
 .iconsText p {
   font-family: "Lexend";
-
   font-weight: 300;
 }
 
@@ -216,6 +215,10 @@
   }
   .mobileBackground {
     display: block;
+  }
+
+  .iconsText{
+    font-size: 14px;
   }
   
   .contact .form {

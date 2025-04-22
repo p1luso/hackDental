@@ -57,7 +57,7 @@ const ContactForm = () => {
             fontSizeMobile="21px"
             textAlignMobile="center"
             color="white"
-            bold="medium"
+            bold="font-light"
           >
             Para dueños de Consultorios
           </Text>
