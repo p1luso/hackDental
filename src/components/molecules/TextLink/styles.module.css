@@ -97,7 +97,6 @@
 
 .darkGreen.textLink.marked > * {
   color: #2f4f4f !important;
-  text-decoration: underline;
 }
 
 .darkGreen.textLink > * {
@@ -109,6 +108,8 @@
 }
 .darkGreen.textLink > *:hover {
   padding-left: 16px;
+  text-decoration: underline;
+  color:#2f4f4f;
   padding-right: 16px;
   background-color: var(--gray-light);
 }

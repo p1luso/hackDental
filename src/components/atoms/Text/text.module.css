@@ -129,6 +129,11 @@
   color:#2f4f4f;
 }
 
+.black-circle {
+  color: var(--black);
+}
+
+
 .primary {
   color: var(--primary);
 }
