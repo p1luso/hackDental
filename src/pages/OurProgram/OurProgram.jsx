@@ -23,8 +23,8 @@ import Section from "../../components/organisms/Section/Section";
 import LeftArrow from "@assets/flechaizquierda.svg";
 import RightArrow from "@assets/flechaderecha.svg";
 import { Linkedin, Mail, Phone } from "lucide-react";
-import CoberturaDental from "@assets/coberturaDental.svg"
-
+import CoberturaDental from "@assets/coberturaDental.svg";
+import Doubts from "../../components/molecules/Doubts/Doubts";
 
 const OurProgram = () => {
   const [showModalVideo, setShowModalVideo] = useState(false);
@@ -34,6 +34,7 @@ const OurProgram = () => {
     email: localStorage.getItem("email") ?? "",
     phone: localStorage.getItem("phone") ?? "",
   });
+  const [faqExpanded, setFaqExpanded] = useState(false);
 
   const handleChange = (id, value) => {
     localStorage.setItem(id, value);
@@ -220,49 +221,48 @@ const OurProgram = () => {
               </form>
             </div>
           </div>
-          
         </div>
       </header>
-      
+
       <section className={styles.dentalCover}>
         <div className={styles.dentalContainer}>
           <div className={styles.contentContainer_dental}>
-          <div className={styles.founderButtonMobile}>
-                <IconTextButton size="100%" colorVariant="primary-darker">
-                 Pedir auditoría
-                </IconTextButton>{" "}
-              </div>
+            <div className={styles.founderButtonMobile}>
+              <IconTextButton size="100%" colorVariant="primary-darker">
+                Pedir auditoría
+              </IconTextButton>{" "}
+            </div>
             <div className={styles.imageWrapper}>
-            <img src={CoberturaDental} alt="" />
+              <img src={CoberturaDental} alt="" />
             </div>
-            
+
             <div className={styles.founderText}>
-            <div className={styles.titles}>
-              <Text
-                type="bigtitle"
-                textAlign="start"
-                color="black"
-                fontFamily="lexend"
-                bold="font-light"
-                fontSize="28px"
-                fontSizeMobile="21px"
-                s={{ fontWeight: "500" }}
-              >
-                Dueño de Consultorio Dental
-              </Text>
-              <Text
-                type="bigtitle"
-                fontFamily="lexend"
-                textAlign="start"
-                color="black"
-                bold="semi-bold"
-                fontSize="32px"
-                fontSizeMobile="24px"
-                s={{ lineHeight: "1", fontWeight: "600" }}
-              >
-               ¿Te interesa una auditoría gratuita?
-              </Text>
-            </div>
+              <div className={styles.titles}>
+                <Text
+                  type="bigtitle"
+                  textAlign="start"
+                  color="black"
+                  fontFamily="lexend"
+                  bold="font-light"
+                  fontSize="28px"
+                  fontSizeMobile="21px"
+                  s={{ fontWeight: "500" }}
+                >
+                  Dueño de Consultorio Dental
+                </Text>
+                <Text
+                  type="bigtitle"
+                  fontFamily="lexend"
+                  textAlign="start"
+                  color="black"
+                  bold="semi-bold"
+                  fontSize="32px"
+                  fontSizeMobile="24px"
+                  s={{ lineHeight: "1", fontWeight: "600" }}
+                >
+                  ¿Te interesa una auditoría gratuita?
+                </Text>
+              </div>
               <Text
                 fontFamily="Lexend"
                 color="black-lighter"
@@ -270,13 +270,12 @@ const OurProgram = () => {
                 fontSizeMobile="16px"
                 bold="font-light"
               >
-                  Averigua si tu consultorio califica para nuestros servicios
-              
+                Averigua si tu consultorio califica para nuestros servicios
               </Text>
-              
+
               <div className={styles.founderButton}>
                 <IconTextButton size="260px" colorVariant="primary-darker">
-                 Pedir auditoría
+                  Pedir auditoría
                 </IconTextButton>{" "}
               </div>
             </div>
@@ -284,75 +283,144 @@ const OurProgram = () => {
         </div>
       </section>
       <div className={styles.progressBarSection}>
-            <div className={styles.progressTexts}>
-              <h2 className={styles.progressTitle}>
-                Aprende las 4 ventajas del <br></br><span className={styles.hackDentalMethod}>Método del HackDental</span>
-              </h2>
-              <p className={styles.progressText}>
-                Aprende más sobre nuestro <strong>programa de 180 días</strong>{" "}
-                y cómo puede <br></br>cambiar tu{" "}
-                <strong>práctica dental</strong>
-              </p>
-            </div>
-            <div className={styles.progressBarButton}>
-              <IconTextButton size="260px" colorVariant="primary-darker">
-                Aplicar Ahora
-              </IconTextButton>
-            </div>
-            <div className={styles.progressBar}>
-              <Section
-                number="01"
-                title="Aplica en España Cumple con el RGPD"
-                steps={[
-                  "Puedes ponerte en contacto con nosotros por correo",
-                  "Puedes ponerte en contacto con nosotros por correo",
-                  "Puedes ponerte en contacto con nosotros por correo",
-                ]}
-              />
-              <Section
-                number="02"
-                title="Aplica en España Cumple con el RGPD"
-                textLeft={true}
-                steps={[
-                  "Puedes ponerte en contacto con nosotros por correo",
-                  "Puedes ponerte en contacto con nosotros por correo",
-                  "Puedes ponerte en contacto con nosotros por correo",
-                ]}
-              />
-              <Section
-               number="03"
-               title="Aplica en España Cumple con el RGPD"
-                steps={[
-                  "Puedes ponerte en contacto con nosotros por correo",
-                  "Puedes ponerte en contacto con nosotros por correo",
-                  "Puedes ponerte en contacto con nosotros por correo",
-                ]}
-              />
-              <Section
-                number="04"
-                title="Aplica en España Cumple con el RGPD"
-                textLeft={true}
-                lastSection={true}
-                steps={[
-                  "Puedes ponerte en contacto con nosotros por correo",
-                  "Puedes ponerte en contacto con nosotros por correo",
-                  "Puedes ponerte en contacto con nosotros por correo",
-                ]}
-              />
+        <div className={styles.progressTexts}>
+          <h2 className={styles.progressTitle}>
+            Aprende las 4 ventajas del <br></br>
+            <span className={styles.hackDentalMethod}>
+              Método del HackDental
+            </span>
+          </h2>
+          <p className={styles.progressText}>
+            Aprende más sobre nuestro <strong>programa de 180 días</strong> y
+            cómo puede <br></br>cambiar tu <strong>práctica dental</strong>
+          </p>
+        </div>
+        <div className={styles.progressBarButton}>
+          <IconTextButton size="260px" colorVariant="primary-darker">
+            Aplicar Ahora
+          </IconTextButton>
+        </div>
+        <div className={styles.progressBar}>
+          <Section
+            number="01"
+            title="Aplica en España Cumple con el RGPD"
+            steps={[
+              "Puedes ponerte en contacto con nosotros por correo",
+              "Puedes ponerte en contacto con nosotros por correo",
+              "Puedes ponerte en contacto con nosotros por correo",
+            ]}
+          />
+          <Section
+            number="02"
+            title="Aplica en España Cumple con el RGPD"
+            textLeft={true}
+            steps={[
+              "Puedes ponerte en contacto con nosotros por correo",
+              "Puedes ponerte en contacto con nosotros por correo",
+              "Puedes ponerte en contacto con nosotros por correo",
+            ]}
+          />
+          <Section
+            number="03"
+            title="Aplica en España Cumple con el RGPD"
+            steps={[
+              "Puedes ponerte en contacto con nosotros por correo",
+              "Puedes ponerte en contacto con nosotros por correo",
+              "Puedes ponerte en contacto con nosotros por correo",
+            ]}
+          />
+          <Section
+            number="04"
+            title="Aplica en España Cumple con el RGPD"
+            textLeft={true}
+            lastSection={true}
+            steps={[
+              "Puedes ponerte en contacto con nosotros por correo",
+              "Puedes ponerte en contacto con nosotros por correo",
+              "Puedes ponerte en contacto con nosotros por correo",
+            ]}
+          />
+        </div>
+      </div>
+      <section className={styles.doubtsSection}>
+        <div className={styles.doubtContainer}>
+          <div className={styles.contentContainer_doubt}>
+            <div className={styles.doubtText}>
+              <div className={styles.doubtTitles}>
+                <Text
+                  type="bigtitle"
+                  textAlign="center"
+                  color="black"
+                  fontFamily="lexend"
+                  bold="font-light"
+                  fontSize="28px"
+                  fontSizeMobile="21px"
+                  s={{ fontWeight: "500" }}
+                >
+                  ¿Tienes alguna duda?
+                </Text>
+                <Text
+                  type="bigtitle"
+                  fontFamily="lexend"
+                  textAlign="center"
+                  color="black"
+                  bold="semi-bold"
+                  fontSize="32px"
+                  fontSizeMobile="24px"
+                  s={{ lineHeight: "1", fontWeight: "600" }}
+                >
+                  No dudes en Contactarnos
+                </Text>
+              </div>
+              <Text
+                fontFamily="Lexend"
+                color="black-lighter"
+                textAlign="center"
+                fontSize="18px"
+                fontSizeMobile="16px"
+                bold="font-light"
+              >
+                Respondemos en menos de 24 horas
+              </Text>
+
+              <div className={styles.doubtButton}>
+                <IconTextButton size="290px" colorVariant="primary-darker">
+                  Consulta al Whatsapp
+                </IconTextButton>{" "}
+              </div>
+              <div className={styles.doubtButtonMobile}>
+                <IconTextButton size="100%" colorVariant="primary-darker">
+                  Consulta al Whatsapp
+                </IconTextButton>{" "}
+              </div>
+              <div className={styles.faqContainer}>
+                <Doubts
+                  title="Tienes alguna duda. No dudes en Contactarnos"
+                  content=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsum maxime libero cum quidem culpa id, ipsam placeat nobis corporis accusamus quasi distinctio repellendus laudantium illo laborum itaque minima non."
+                />{" "}
+                <Doubts
+                  title="Tienes alguna duda. No dudes en Contactarnos"
+                  content="Lorem"
+                />{" "}
+                <Doubts
+                  title="Tienes alguna duda. No dudes en Contactarnos"
+                  content="Lorem ipsum dolor sit amet consectetur adipisicing elit..."
+                />{" "}
+                <Doubts
+                  title="Tienes alguna duda. No dudes en Contactarnos"
+                  content="Lorem ipsum dolor sit amet consectetur adipisicing elit..."
+                />{" "}
+              </div>
             </div>
           </div>
-         
+        </div>
+      </section>
       <section className={styles.main}>
         <section id="contact" className={styles.contact}>
           {/*  <img src={Flecha2} className={`${styles.flecha} ${styles.flecha3}`} /> */}
           <div className={styles.bgTransparentContact}>
             <div className={styles.desc}>
-              <Text
-                type="title"
-                fontSize="28px"
-                color="white"
-                bold="medium"
-              >
+              <Text type="title" fontSize="28px" color="white" bold="medium">
                 Para dueños de Consultorios
               </Text>
               <Text type="title" fontSize="32px" color="white" bold="semi-bold">
@@ -490,7 +558,6 @@ const OurProgram = () => {
           </div>
         </footer>
       </section>
-      
     </div>
   );
 };
