@@ -23,6 +23,8 @@ import Section from "../../components/organisms/Section/Section";
 import LeftArrow from "@assets/flechaizquierda.svg";
 import RightArrow from "@assets/flechaderecha.svg";
 import { Linkedin, Mail, Phone } from "lucide-react";
+import CoberturaDental from "@assets/coberturaDental.svg"
+
 
 const OurProgram = () => {
   const [showModalVideo, setShowModalVideo] = useState(false);
@@ -221,6 +223,66 @@ const OurProgram = () => {
           
         </div>
       </header>
+      
+      <section className={styles.dentalCover}>
+        <div className={styles.dentalContainer}>
+          <div className={styles.contentContainer_dental}>
+          <div className={styles.founderButtonMobile}>
+                <IconTextButton size="100%" colorVariant="primary-darker">
+                 Pedir auditoría
+                </IconTextButton>{" "}
+              </div>
+            <div className={styles.imageWrapper}>
+            <img src={CoberturaDental} alt="" />
+            </div>
+            
+            <div className={styles.founderText}>
+            <div className={styles.titles}>
+              <Text
+                type="bigtitle"
+                textAlign="start"
+                color="black"
+                fontFamily="lexend"
+                bold="font-light"
+                fontSize="28px"
+                fontSizeMobile="21px"
+                s={{ fontWeight: "500" }}
+              >
+                Dueño de Consultorio Dental
+              </Text>
+              <Text
+                type="bigtitle"
+                fontFamily="lexend"
+                textAlign="start"
+                color="black"
+                bold="semi-bold"
+                fontSize="32px"
+                fontSizeMobile="24px"
+                s={{ lineHeight: "1", fontWeight: "600" }}
+              >
+               ¿Te interesa una auditoría gratuita?
+              </Text>
+            </div>
+              <Text
+                fontFamily="Lexend"
+                color="black-lighter"
+                fontSize="18px"
+                fontSizeMobile="16px"
+                bold="font-light"
+              >
+                  Averigua si tu consultorio califica para nuestros servicios
+              
+              </Text>
+              
+              <div className={styles.founderButton}>
+                <IconTextButton size="260px" colorVariant="primary-darker">
+                 Pedir auditoría
+                </IconTextButton>{" "}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div className={styles.progressBarSection}>
             <div className={styles.progressTexts}>
               <h2 className={styles.progressTitle}>
@@ -233,7 +295,7 @@ const OurProgram = () => {
               </p>
             </div>
             <div className={styles.progressBarButton}>
-              <IconTextButton colorVariant="primary-darker">
+              <IconTextButton size="260px" colorVariant="primary-darker">
                 Aplicar Ahora
               </IconTextButton>
             </div>
@@ -283,7 +345,8 @@ const OurProgram = () => {
               />
             </div>
           </div>
-      <main className={styles.main}>
+         
+      <section className={styles.main}>
         <section id="contact" className={styles.contact}>
           {/*  <img src={Flecha2} className={`${styles.flecha} ${styles.flecha3}`} /> */}
           <div className={styles.bgTransparentContact}>
@@ -430,7 +493,8 @@ const OurProgram = () => {
             </Link>
           </div>
         </footer>
-      </main>
+      </section>
+      
     </div>
   );
 };
