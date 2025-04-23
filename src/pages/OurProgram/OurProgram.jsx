@@ -286,7 +286,7 @@ const OurProgram = () => {
       <div className={styles.progressBarSection}>
             <div className={styles.progressTexts}>
               <h2 className={styles.progressTitle}>
-                Aprende las 4 ventajas del <br></br>Método del HackDental 🔬
+                Aprende las 4 ventajas del <br></br><span className={styles.hackDentalMethod}>Método del HackDental</span>
               </h2>
               <p className={styles.progressText}>
                 Aprende más sobre nuestro <strong>programa de 180 días</strong>{" "}

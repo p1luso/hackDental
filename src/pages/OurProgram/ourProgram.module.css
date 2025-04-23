@@ -98,9 +98,13 @@
   margin-bottom: 20px;
   font-family: Lexend;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 28px;
   color: black;
   line-height: 1.15;
+}
+
+.hackDentalMethod{
+  font-size: 32px;
 }
 
 .progressText{
@@ -765,6 +769,10 @@
   padding-bottom: 80px;
 }
 
+.founderButtonMobile{
+  display: none;
+}
+
 .founderText span {
   color: rgb(65, 65, 65);
 }
@@ -932,8 +940,12 @@
   }
 
   .progressTitle{
+    font-size: 21px;
+  }
+  .hackDentalMethod{
     font-size: 24px;
   }
+
 
   .progressText{
     font-size: 21px;
@@ -990,6 +1002,9 @@
     width: 100px;
   }
   .progressTitle{
+    font-size: 21px;
+  }
+  .hackDentalMethod{
     font-size: 24px;
   }
 
