@@ -301,9 +301,8 @@ const OurProgram = () => {
             </div>
             <div className={styles.progressBar}>
               <Section
-                paso={"Aplica en España"}
                 number="01"
-                title="Cumple con el RGPD"
+                title="Aplica en España Cumple con el RGPD"
                 steps={[
                   "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
@@ -311,9 +310,8 @@ const OurProgram = () => {
                 ]}
               />
               <Section
-                paso={"Aplica en España"}
                 number="02"
-                title="Cumple con el RGPD"
+                title="Aplica en España Cumple con el RGPD"
                 textLeft={true}
                 steps={[
                   "Puedes ponerte en contacto con nosotros por correo",
@@ -322,9 +320,8 @@ const OurProgram = () => {
                 ]}
               />
               <Section
-               paso={"Aplica en España"}
                number="03"
-               title="Cumple con el RGPD"
+               title="Aplica en España Cumple con el RGPD"
                 steps={[
                   "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
@@ -332,9 +329,8 @@ const OurProgram = () => {
                 ]}
               />
               <Section
-                paso={"Aplica en España"}
                 number="04"
-                title="Cumple con el RGPD"
+                title="Aplica en España Cumple con el RGPD"
                 textLeft={true}
                 lastSection={true}
                 steps={[

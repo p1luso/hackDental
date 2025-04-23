@@ -97,7 +97,7 @@
 .progressTitle{
   margin-bottom: 20px;
   font-family: Lexend;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 28px;
   color: black;
   line-height: 1.15;
@@ -105,6 +105,8 @@
 
 .hackDentalMethod{
   font-size: 32px;
+  font-weight: 600;
+
 }
 
 .progressText{
@@ -939,16 +941,10 @@
     margin: 28px;
   }
 
-  .progressTitle{
-    font-size: 21px;
-  }
-  .hackDentalMethod{
-    font-size: 24px;
-  }
 
 
   .progressText{
-    font-size: 21px;
+    font-size: 16px;
   }
 
   .contact .form {
@@ -1009,7 +1005,7 @@
   }
 
   .progressText{
-    font-size: 21px;
+    font-size: 16px;
   }
   .banner {
     padding: 0;
@@ -1135,6 +1131,7 @@
 
   .progressText{
     margin-bottom: 10px;
+    font-size: 16px;
   }
  .bgTransparentContact {
     padding: 0px 30px 90px 30px;
