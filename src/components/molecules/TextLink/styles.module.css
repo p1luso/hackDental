@@ -87,6 +87,32 @@
   background-color: var(--gray-light);
 }
 
+/* black */
+.darkGreen.textLink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+}
+
+.darkGreen.textLink.marked > * {
+  color: #2f4f4f !important;
+  text-decoration: underline;
+}
+
+.darkGreen.textLink > * {
+  transition: all 0.2s ease-in;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 20px;
+  color: #2f4f4f !important;
+}
+.darkGreen.textLink > *:hover {
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--gray-light);
+}
+
 /* rounded */
 
 .rounded.textLink {

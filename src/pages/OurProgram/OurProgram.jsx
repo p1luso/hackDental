@@ -218,10 +218,13 @@ const OurProgram = () => {
               </form>
             </div>
           </div>
-          <div className={styles.progressBarSection}>
+          
+        </div>
+      </header>
+      <div className={styles.progressBarSection}>
             <div className={styles.progressTexts}>
               <h2 className={styles.progressTitle}>
-                Pasos Para Aplicar a Nuestro <br></br>Programa de Marketing 🔬
+                Aprende las 4 ventajas del <br></br>Método del HackDental 🔬
               </h2>
               <p className={styles.progressText}>
                 Aprende más sobre nuestro <strong>programa de 180 días</strong>{" "}
@@ -236,9 +239,9 @@ const OurProgram = () => {
             </div>
             <div className={styles.progressBar}>
               <Section
-                paso={"Paso #1"}
+                paso={"Aplica en España"}
                 number="01"
-                title="Recibe una auditoría gratuita"
+                title="Cumple con el RGPD"
                 steps={[
                   "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
@@ -246,9 +249,9 @@ const OurProgram = () => {
                 ]}
               />
               <Section
-                paso={"Paso #2"}
+                paso={"Aplica en España"}
                 number="02"
-                title="Recibe una auditoría gratuita"
+                title="Cumple con el RGPD"
                 textLeft={true}
                 steps={[
                   "Puedes ponerte en contacto con nosotros por correo",
@@ -257,9 +260,9 @@ const OurProgram = () => {
                 ]}
               />
               <Section
-                paso={"Paso #3"}
-                number="03"
-                title="Recibe una auditoría gratuita"
+               paso={"Aplica en España"}
+               number="03"
+               title="Cumple con el RGPD"
                 steps={[
                   "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
@@ -267,11 +270,11 @@ const OurProgram = () => {
                 ]}
               />
               <Section
-                paso={"Paso #4"}
-                lastSection={true}
+                paso={"Aplica en España"}
                 number="04"
-                title="Recibe una auditoría gratuita"
+                title="Cumple con el RGPD"
                 textLeft={true}
+                lastSection={true}
                 steps={[
                   "Puedes ponerte en contacto con nosotros por correo",
                   "Puedes ponerte en contacto con nosotros por correo",
@@ -280,8 +283,6 @@ const OurProgram = () => {
               />
             </div>
           </div>
-        </div>
-      </header>
       <main className={styles.main}>
         <section id="contact" className={styles.contact}>
           {/*  <img src={Flecha2} className={`${styles.flecha} ${styles.flecha3}`} /> */}

@@ -357,8 +357,8 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 </div>
                 <TextLink
                   marked={showResources}
-                  variant="primary"
-                  textProps={{ color: "black", bold: "font-light", size: "ty" }}
+                  variant="darkGreen"
+                  textProps={{ bold: "font-light", size: "ty" }}
                 >
                   Recursos gratis
                 </TextLink>
@@ -370,9 +370,9 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   </Text>
                 </div>
                 <TextLink
-                  variant="primary"
+                  variant="darkGreen"
                   to={OUR_PROGRAM}
-                  textProps={{ color: "black", bold: "font-light", size: "ty" }}
+                  textProps={{ bold: "font-light", size: "ty" }}
                 >
                   Nuestro Programa
                 </TextLink>
@@ -384,9 +384,9 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 onClick={handleShowAboutUs}
               >
                 <TextLink
-                  variant="primary"
+                  variant="darkGreen"
                   marked={showAboutUs}
-                  textProps={{ color: "black", bold: "font-light", size: "ty" }}
+                  textProps={{ bold: "font-light", size: "ty" }}
                 >
                   Sobre Nosotros
                 </TextLink>
@@ -397,9 +397,9 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 onClick={handleShowContact}
               >
                 <TextLink
-                  variant="primary"
+                  variant="darkGreen"
                   marked={showContact}
-                  textProps={{ color: "black", bold: "font-light", size: "ty" }}
+                  textProps={{ bold: "font-light", size: "ty" }}
                 >
                   Contacto
                 </TextLink>
