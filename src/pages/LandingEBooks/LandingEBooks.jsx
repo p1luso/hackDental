@@ -10,6 +10,9 @@ import Icon from "../../components/atoms/Icon/Icon";
 import { DOWNLOAD_EBOOK } from "../../constants/routes";
 import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
 import { useNavigate } from "react-router-dom";
+import CoberturaDental from "@assets/coberturaDental.svg";
+import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
+
 import Link from "../../components/atoms/Link/Link";
 
 const LandingEBooks = () => {
@@ -117,7 +120,64 @@ const LandingEBooks = () => {
           </div>
         </Link>
       </main>
-      <PreFooter />
+      <section className={styles.dentalCover}>
+        <div className={styles.dentalContainer}>
+          <div className={styles.contentContainer_dental}>
+            <div className={styles.founderButtonMobile}>
+              <IconTextButton size="100%" colorVariant="primary-darker">
+                Pedir auditoría
+              </IconTextButton>{" "}
+            </div>
+            <div className={styles.imageWrapper}>
+              <img src={CoberturaDental} alt="" />
+            </div>
+
+            <div className={styles.founderText}>
+              <div className={styles.titles}>
+                <Text
+                  type="bigtitle"
+                  textAlign="start"
+                  color="black"
+                  fontFamily="lexend"
+                  bold="font-light"
+                  fontSize="28px"
+                  fontSizeMobile="21px"
+                  s={{ fontWeight: "500" }}
+                >
+                  Dueño de Consultorio Dental
+                </Text>
+                <Text
+                  type="bigtitle"
+                  fontFamily="lexend"
+                  textAlign="start"
+                  color="black"
+                  bold="semi-bold"
+                  fontSize="32px"
+                  fontSizeMobile="24px"
+                  s={{ lineHeight: "1", fontWeight: "600" }}
+                >
+                  ¿Te interesa una auditoría gratuita?
+                </Text>
+              </div>
+              <Text
+                fontFamily="Lexend"
+                color="black-lighter"
+                fontSize="18px"
+                fontSizeMobile="16px"
+                bold="font-light"
+              >
+                Averigua si tu consultorio califica para nuestros servicios
+              </Text>
+
+              <div className={styles.founderButton}>
+                <IconTextButton size="260px" colorVariant="primary-darker">
+                  Pedir auditoría
+                </IconTextButton>{" "}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>      
       <Footer />
     </div>
   );

@@ -105,6 +105,65 @@
   padding-right: var(--width-unit);
 }
 
+.dentalCover {
+  background-color: rgba(216, 232, 230, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.founderButtonMobile{
+  display: none;
+}
+
+.founderText span {
+  color: rgb(65, 65, 65);
+}
+
+.dentalContainer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.contentContainer_dental {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 0;
+  line-height: 0;
+  gap: 32px;
+}
+.mobileTitles{
+  display: none;
+}
+
+.founderText {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: Lexend;
+  gap: 15px;
+}
+
+.founderButton {
+  justify-self: left;
+  margin-top: 10px;
+}
+
+
+.imageWrapper img{ 
+  width: 210px;
+}
+
 @media screen and (max-width: 1024px) {
   .header {
     height: auto;
@@ -172,5 +231,34 @@
   .main {
     top: 0;
     padding: 44px 0;
+  }
+  .contentContainer_dental{
+
+    padding: 0 28px 0 28px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+.contentContainer_dental{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding: 0 28px 0 28px;
+}
+.founderText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .founderButton{
+    display: none;
+  }
+  .founderButtonMobile{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
