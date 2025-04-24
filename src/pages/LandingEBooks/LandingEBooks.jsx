@@ -12,6 +12,11 @@ import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
 import { useNavigate } from "react-router-dom";
 import CoberturaDental from "@assets/coberturaDental.svg";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
+import FiguraIrregularIzq from "@assets/figura_irregularIZQ.svg"
+import FiguraIrregularDer from "@assets/Figura_irregular.svg"
+import Libreta from "@assets/libreta.svg"
+import Cohete from "@assets/cohete.svg"
+import Finger from "@assets/3_dedo.svg"
 
 import Link from "../../components/atoms/Link/Link";
 
@@ -22,6 +27,13 @@ const LandingEBooks = () => {
       <Nav hideTopMenu={true} />
       <header className={styles.header}>
         <section className={styles.banner}>
+          <div className={styles.imagesContainer}>
+            <img className={styles.images} src={FiguraIrregularDer} alt="" />
+            <img className={styles.images} src={FiguraIrregularIzq} alt="" />
+            <img className={styles.images} src={Finger} alt="" />
+            <img className={styles.images} src={Cohete} alt="" />
+            <img className={styles.images} src={Libreta} alt="" />
+          </div>
           <Text
             type="bigtitle"
             textAlign="center"
@@ -29,7 +41,7 @@ const LandingEBooks = () => {
             textAlignMobile="center"
             fontFamily="lexend"
             bold="font-light"
-            fontSize="28px"
+            fontSize="30px"
             fontSizeMobile="21px"
             s={{ fontWeight: "500", lineHeight: 1.3 }}
           >
@@ -42,7 +54,7 @@ const LandingEBooks = () => {
             textAlignMobile="center"
             color="white"
             bold="semi-bold"
-            fontSize="32px"
+            fontSize="42px"
             fontSizeMobile="24px"
             s={{ fontWeight: "600", lineHeight: 1.3 }}
           >
@@ -61,70 +73,68 @@ const LandingEBooks = () => {
         </section>
       </header>
       <main className={styles.main}>
-        <Link to={DOWNLOAD_EBOOK} target="_blank">
-          <div className={styles.mainEBook}>
-            <div className={styles.mainEbookCard}>
-              <div className={styles.tag}>
-                <Text size="ty" color="light">
-                  Empieza Aqui
-                </Text>
-              </div>
-              <img className={styles.ebookImg} src={imgEbookPrueba} />
-              <div className={styles.desc}>
-                <Text type="smallsubtitle" color="black">
-                  Marketing Dental: La Guia Definitiva
-                </Text>
-                <Text bold="font-light" size="ty">
-                  Transforma tu clínica dental con nuestros ebooks, redactados
-                  por líderes en marketing digital.
-                </Text>
-                <TextLink
-                  marked
-                  variant="secondary"
-                  to={DOWNLOAD_EBOOK}
-                  textProps={{
-                    size: "sm",
-                  }}
-                >
-                  Descargar la Guia{" "}
-                  <span style={{ position: "relative", top: "2px" }}>
-                    <Icon type={"arrowSquare"} size={"1rem"} />
-                  </span>
-                </TextLink>
-              </div>
+        <div className={styles.mainEBook}>
+          <div className={styles.mainEbookCard}>
+            <div className={styles.tag}>
+              <Text size="ty" color="light">
+                Empieza Aqui
+              </Text>
             </div>
-            <div className={styles.books}>
-              <EBookCard
-                bookType={false}
-                img={imgEbookPrueba}
-                textLinkColor="green-black"
-                textColor="green-black"
-                title={"Email Marketing Dental"}
-                desc={"Transforma tu clínica dental con nuestros ebooks."}
-              />
-              <EBookCard
-                bookType={false}
-                textLinkColor="green-black"
-                textColor="green-black"
-                img={imgEbookPrueba}
-                title={"Aceptación de Casos Dentales"}
-                desc={
-                  "Transforma tu clínica dental con nuestros ebooks, redactados."
-                }
-              />
-              <EBookCard
-                bookType={false}
-                img={imgEbookPrueba}
-                textLinkColor="green-black"
-                textColor="green-black"
-                title={"Marketing de Tratamientos Premium"}
-                desc={
-                  "Transforma tu clínica dental con nuestros ebooks, redactados."
-                }
-              />
+            <img className={styles.ebookImg} src={imgEbookPrueba} />
+            <div className={styles.desc}>
+              <Text type="smallsubtitle" color="black">
+                Marketing Dental: La Guia Definitiva
+              </Text>
+              <Text bold="font-light" size="ty">
+                Transforma tu clínica dental con nuestros ebooks, redactados
+                por líderes en marketing digital.
+              </Text>
+              <TextLink
+                marked
+                variant="secondary"
+                to={DOWNLOAD_EBOOK}
+                textProps={{
+                  size: "sm",
+                }}
+              >
+                Descargar la Guia{" "}
+                <span style={{ position: "relative", top: "2px" }}>
+                  <Icon type={"arrowSquare"} size={"1rem"} />
+                </span>
+              </TextLink>
             </div>
           </div>
-        </Link>
+          <div className={styles.books}>
+            <EBookCard
+              bookType={false}
+              img={imgEbookPrueba}
+              textLinkColor="green-black"
+              textColor="green-black"
+              title={"Email Marketing Dental"}
+              desc={"Transforma tu clínica dental con nuestros ebooks."}
+            />
+            <EBookCard
+              bookType={false}
+              textLinkColor="green-black"
+              textColor="green-black"
+              img={imgEbookPrueba}
+              title={"Aceptación de Casos Dentales"}
+              desc={
+                "Transforma tu clínica dental con nuestros ebooks, redactados."
+              }
+            />
+            <EBookCard
+              bookType={false}
+              img={imgEbookPrueba}
+              textLinkColor="green-black"
+              textColor="green-black"
+              title={"Marketing de Tratamientos Premium"}
+              desc={
+                "Transforma tu clínica dental con nuestros ebooks, redactados."
+              }
+            />
+          </div>
+        </div>
       </main>
       <section className={styles.dentalCover}>
         <div className={styles.dentalContainer}>
