@@ -31,7 +31,7 @@ const LandingEBooks = () => {
             bold="font-light"
             fontSize="28px"
             fontSizeMobile="21px"
-            s={{ fontWeight: "500" }}
+            s={{ fontWeight: "500", lineHeight: 1.3 }}
           >
             ¿Quieres llevar tu consultorio al siguiente nivel?
           </Text>
@@ -44,17 +44,17 @@ const LandingEBooks = () => {
             bold="semi-bold"
             fontSize="32px"
             fontSizeMobile="24px"
-            s={{ fontWeight: "600" }}
+            s={{ fontWeight: "600", lineHeight: 1.3}}
           >
             Aprende de Marketing Dental
           </Text>
           <Text
             bold="font-light"
             textAlign="center"
-            color="white"
+            color="white-lighter"
             fontSize="18px"
             fontSizeMobile="14px"
-            s={{ fontWeight: "300" }}
+            s={{ fontWeight: "300", lineHeight: 1.3}}
           >
             Todos los ebooks de HackDental 100% gratuitos
           </Text>

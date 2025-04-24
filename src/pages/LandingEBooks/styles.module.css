@@ -21,11 +21,9 @@
 .banner > :nth-child(1) {
   margin-top: 8px;
 }
-.banner > :nth-child(2) {
-  margin-bottom: 4px;
-}
+
 .banner > :nth-child(4) {
-  margin-bottom: 4px;
+  margin-bottom: 15px;
 }
 .subnav {
   display: flex;
