@@ -130,13 +130,13 @@
 }
 .separator {
   height: 0.77rem;
-  border: 1px solid var(--black);
+  border: 1px solid #d9d9d9;
 }
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--primary-transparent-25);
+  background-color: var(--green-black);
   padding-top: 32px;
   gap: 6px;
   padding-bottom: calc(var(--linea-amarilla) / 2);

@@ -121,6 +121,10 @@
   color:#213343;
 }
 
+.green-black{
+  color: var(--green-black);
+}
+
 .white-cream{
   color:#d9d9d9;
 }

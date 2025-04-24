@@ -44,7 +44,7 @@ const LandingEBooks = () => {
             bold="semi-bold"
             fontSize="32px"
             fontSizeMobile="24px"
-            s={{ fontWeight: "600", lineHeight: 1.3}}
+            s={{ fontWeight: "600", lineHeight: 1.3 }}
           >
             Aprende de Marketing Dental
           </Text>
@@ -54,7 +54,7 @@ const LandingEBooks = () => {
             color="white-lighter"
             fontSize="18px"
             fontSizeMobile="14px"
-            s={{ fontWeight: "300", lineHeight: 1.3}}
+            s={{ fontWeight: "300", lineHeight: 1.3 }}
           >
             Todos los ebooks de HackDental 100% gratuitos
           </Text>
@@ -71,9 +71,6 @@ const LandingEBooks = () => {
               </div>
               <img className={styles.ebookImg} src={imgEbookPrueba} />
               <div className={styles.desc}>
-                <Text size="ty" s={{ color: "#006a43" }}>
-                  EBOOK
-                </Text>
                 <Text type="smallsubtitle" color="black">
                   Marketing Dental: La Guia Definitiva
                 </Text>
@@ -98,11 +95,17 @@ const LandingEBooks = () => {
             </div>
             <div className={styles.books}>
               <EBookCard
+                bookType={false}
                 img={imgEbookPrueba}
+                textLinkColor="green-black"
+                textColor="green-black"
                 title={"Email Marketing Dental"}
                 desc={"Transforma tu clínica dental con nuestros ebooks."}
               />
               <EBookCard
+                bookType={false}
+                textLinkColor="green-black"
+                textColor="green-black"
                 img={imgEbookPrueba}
                 title={"Aceptación de Casos Dentales"}
                 desc={
@@ -110,7 +113,10 @@ const LandingEBooks = () => {
                 }
               />
               <EBookCard
+                bookType={false}
                 img={imgEbookPrueba}
+                textLinkColor="green-black"
+                textColor="green-black"
                 title={"Marketing de Tratamientos Premium"}
                 desc={
                   "Transforma tu clínica dental con nuestros ebooks, redactados."
@@ -177,8 +183,25 @@ const LandingEBooks = () => {
             </div>
           </div>
         </div>
-      </section>      
-      <Footer />
+      </section>
+      <footer className={styles.footer}>
+        <Text size="sm" color="white-cream" bold="font-light">
+          Copyright © {new Date().getFullYear()}, HackDental.com
+        </Text>
+        <div className={styles.links}>
+          <Link to={"#"}>
+            <Text color="white-cream" size="ty" bold="font-light">
+              Politica de Privacidad
+            </Text>
+          </Link>
+          <hr className={styles.separator} />
+          <Link to={"#"}>
+            <Text color="white-cream" size="ty" bold="font-light">
+              Cumplimiento del RGPD
+            </Text>{" "}
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 };

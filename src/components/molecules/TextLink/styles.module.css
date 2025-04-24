@@ -88,6 +88,19 @@
 }
 
 /* black */
+.green-black.textLink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.green-black.textLink.marked > * {
+  color: var(--green-black) !important;
+  text-decoration: underline;
+}
+
+
+/* black */
 .darkGreen.textLink {
   display: flex;
   align-items: center;
