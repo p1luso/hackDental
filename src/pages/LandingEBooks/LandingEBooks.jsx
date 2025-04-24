@@ -19,24 +19,41 @@ const LandingEBooks = () => {
       <Nav hideTopMenu={true} />
       <header className={styles.header}>
         <section className={styles.banner}>
-          <Text size="xlg" fontFamily="font-terciary" s={{ color: "#25c19b" }}>
-            Contenido 100% Gratuito
+          <Text
+            type="bigtitle"
+            textAlign="center"
+            color="white"
+            textAlignMobile="center"
+            fontFamily="lexend"
+            bold="font-light"
+            fontSize="28px"
+            fontSizeMobile="21px"
+            s={{ fontWeight: "500" }}
+          >
+            ¿Quieres llevar tu consultorio al siguiente nivel?
           </Text>
           <Text
-            size="xbig"
-            bold="semibold"
-            s={{ color: "white", lineHeight: "1.1" }}
+            type="bigtitle"
+            fontFamily="lexend"
             textAlign="center"
+            textAlignMobile="center"
+            color="white"
+            bold="semi-bold"
+            fontSize="32px"
+            fontSizeMobile="24px"
+            s={{ fontWeight: "600" }}
           >
-            Biblioteca de Marketing Dental
+            Aprende de Marketing Dental
           </Text>
           <Text
             bold="font-light"
-            size="lg"
             textAlign="center"
-            s={{ color: "white" }}
+            color="white"
+            fontSize="18px"
+            fontSizeMobile="14px"
+            s={{ fontWeight: "300" }}
           >
-            Todos los recursos de HackDental, en 1 solo lugar
+            Todos los ebooks de HackDental 100% gratuitos
           </Text>
         </section>
       </header>
@@ -76,29 +93,29 @@ const LandingEBooks = () => {
                 </TextLink>
               </div>
             </div>
+            <div className={styles.books}>
+              <EBookCard
+                img={imgEbookPrueba}
+                title={"Email Marketing Dental"}
+                desc={"Transforma tu clínica dental con nuestros ebooks."}
+              />
+              <EBookCard
+                img={imgEbookPrueba}
+                title={"Aceptación de Casos Dentales"}
+                desc={
+                  "Transforma tu clínica dental con nuestros ebooks, redactados."
+                }
+              />
+              <EBookCard
+                img={imgEbookPrueba}
+                title={"Marketing de Tratamientos Premium"}
+                desc={
+                  "Transforma tu clínica dental con nuestros ebooks, redactados."
+                }
+              />
+            </div>
           </div>
         </Link>
-        <div className={styles.books}>
-          <EBookCard
-            img={imgEbookPrueba}
-            title={"Email Marketing Dental"}
-            desc={"Transforma tu clínica dental con nuestros ebooks."}
-          />
-          <EBookCard
-            img={imgEbookPrueba}
-            title={"Aceptación de Casos Dentales"}
-            desc={
-              "Transforma tu clínica dental con nuestros ebooks, redactados."
-            }
-          />
-          <EBookCard
-            img={imgEbookPrueba}
-            title={"Marketing de Tratamientos Premium"}
-            desc={
-              "Transforma tu clínica dental con nuestros ebooks, redactados."
-            }
-          />
-        </div>
       </main>
       <PreFooter />
       <Footer />
