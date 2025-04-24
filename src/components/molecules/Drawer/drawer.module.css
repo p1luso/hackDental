@@ -28,7 +28,7 @@ body:has(.drawer.show) {
   min-height: 68px;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--primary);
+  background-color: var(--primary-darker);
 }
 .container {
   position: absolute;
