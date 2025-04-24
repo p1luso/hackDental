@@ -8,6 +8,7 @@ import Drawer from "../../molecules/Drawer/Drawer";
 import Icon from "../../atoms/Icon/Icon";
 import TextLink from "../../molecules/TextLink/TextLink";
 import Mark from "../../atoms/Mark/Mark";
+import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
 import {
   DOWNLOAD_EBOOK,
   LANDING_EBOOKS,
@@ -19,7 +20,6 @@ import {
 } from "../../../constants/routes";
 import { useNavigate } from "react-router-dom";
 import IconTextButton from "../../molecules/IconTextButton/IconTextButton";
-import imgEbookPrueba from "@assets/ImgCardsNav.svg";
 import { ES } from "country-flag-icons/react/3x2";
 import { parseNumberToMonthName } from "../../../utils/parsing";
 import { useConfigStore } from "../../../stores/useConfig";
@@ -97,18 +97,26 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
         >
           <div className={styles.content}>
             <div className={styles.header}>
-              <Text
-                color="black"
-                fontFamily="font-terciary"
-                s={{ fontSize: "30px" }}
-              >
-                Ebooks Gratuitos 📚
-              </Text>
-
-              <Text bold="font-light" size="sm">
-                Aprende sobre Marketing dental con nuestros recursos 100%
-                Gratuitos
-              </Text>
+            <Text
+              color="black"
+              fontSize="21px"
+              s={{ lineHeight: "1" }}
+              fontFamily="Lexend"
+              type="title"
+              bold="regular"
+            >
+              Aprende ahora con nuestros
+            </Text>
+            <Text
+              fontFamily="Lexend"
+              fontSize="24px"
+              color="black"
+              type="title"
+              bold="semi-bold"
+              s={{ lineHeight: "1.5", bold: "semi-bold" }}
+            >
+              Ebooks 100% Gratuitos
+            </Text>
             </div>
             <div className={styles.cards}>
               <div className={styles.card}>
@@ -116,93 +124,47 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   <img src={imgEbookPrueba} className={styles.cardImg} />
                 </div>
                 <Text
-                  size="ty"
-                  bold="font-light"
-                  s={{ padding: "12px 0 4px 0" }}
-                >
-                  2024
-                </Text>
-                <Text
                   size="sm"
                   bold="semibold"
-                  color="black"
+                  color="black-lighter"
                   s={{ lineHeight: "1.35" }}
                 >
                   Marketing Dental:
                   <br /> La Guia Definitiva
                 </Text>
-                <div className={styles.descargarGratis}>
-                  <Text size="ty" bold="font-light" s={{ paddingTop: "8px" }}>
-                    Descargar Gratis
-                  </Text>
-                  <Icon
-                    type={"arrowSquare"}
-                    size={"0.8rem"}
-                    color="var(--text)"
-                  />
-                </div>
+              
               </div>
               <div className={styles.separator}></div>
               <div className={styles.card}>
                 <div className={styles.cardImgContainer}>
                   <img src={imgEbookPrueba} className={styles.cardImg} />
                 </div>
-                <Text
-                  size="ty"
-                  bold="font-light"
-                  s={{ padding: "12px 0 4px 0" }}
-                >
-                  2024
-                </Text>
+                
                 <Text
                   size="sm"
                   bold="semibold"
-                  color="black"
+                  color="black-lighter"
                   s={{ lineHeight: "1.35" }}
                 >
                   Marketing Dental: <br /> La Guia Definitiva
                 </Text>
-                <div className={styles.descargarGratis}>
-                  <Text size="ty" bold="font-light" s={{ paddingTop: "8px" }}>
-                    Descargar Gratis
-                  </Text>
-                  <Icon
-                    type={"arrowSquare"}
-                    size={"0.8rem"}
-                    color="var(--text)"
-                  />
-                </div>
+                
               </div>
               <div className={styles.separator}></div>
               <div className={styles.card}>
                 <div className={styles.cardImgContainer}>
                   <img src={imgEbookPrueba} className={styles.cardImg} />
                 </div>
-                <Text
-                  size="ty"
-                  bold="font-light"
-                  s={{ padding: "12px 0 4px 0" }}
-                >
-                  2024
-                </Text>
+                
                 <Text
                   size="sm"
                   bold="semibold"
-                  color="black"
+                  color="black-lighter"
                   s={{ lineHeight: "1.35" }}
                 >
                   Marketing Dental: <br /> La Guia Definitiva
                 </Text>
-                <div className={styles.descargarGratis}>
-                  <Text size="ty" bold="font-light" s={{ paddingTop: "8px" }}>
-                    Descargar Gratis
-                  </Text>
-                  <Icon
-                    type={"arrowSquare"}
-                    size={"0.8rem"}
-                    color="var(--text)"
-                  />
-                </div>
+                
               </div>
             </div>
             <div
@@ -222,30 +184,41 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
           <div className={styles.content}>
             <Text
               color="black"
-              fontFamily="font-terciary"
-              s={{ fontSize: "30px" }}
+              fontSize="21px"
+              s={{ lineHeight: "1" }}
+              fontFamily="Lexend"
+              type="title"
+              bold="regular"
             >
-              Contacta a un Representante 📲
+              Contáctanos hoy mismo,
             </Text>
-            <Text size="sm" bold="font-light" s={{ paddingBottom: "28px" }}>
-              Haznos cualquier consulta, te responderemos en menos de 24 horas.
+            <Text
+              fontFamily="Lexend"
+              fontSize="24px"
+              color="black"
+              type="title"
+              bold="semi-bold"
+              s={{ lineHeight: "1", bold: "semi-bold" }}
+            >
+              Respondemos en {"<"} de 24 horas
             </Text>
+
             <div className={styles.links}>
               <div className={styles.contactBtn}>
                 <Icon size={"1rem"} type={"form"} />
-                <Text color="dark" bold="regular" size="sm">
+                <Text color="black-lighter" bold="regular" size="sm">
                   Forma de contacto
                 </Text>
               </div>
               <div className={styles.contactBtn}>
                 <Icon size={"1rem"} type={"email"} />
-                <Text color="dark" bold="regular" size="sm">
+                <Text color="black-lighter" bold="regular" size="sm">
                   Email
                 </Text>
               </div>
               <div className={styles.contactBtn}>
                 <Icon size={"1rem"} type={"wp"} />
-                <Text color="dark" bold="regular" size="sm">
+                <Text color="black-lighter" bold="regular" size="sm">
                   {" "}
                   Whatsapp
                 </Text>
@@ -256,15 +229,25 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
 
         <div className={`${styles.aboutUs} ${showAboutUs && styles.show}`}>
           <div className={styles.content}>
-            <Text
+          <Text
               color="black"
-              s={{ fontSize: "30px" }}
-              fontFamily="font-terciary"
+              fontSize="21px"
+              s={{ lineHeight: "1" }}
+              fontFamily="Lexend"
+              type="title"
+              bold="regular"
             >
-              ¿Quienes somos? 🙋
+              Informate sobre HackDental,
             </Text>
-            <Text size="sm" bold="font-light" s={{ paddingBottom: "28px" }}>
-              Informate sobre HackDental y sus áreas de expertise.
+            <Text
+              fontFamily="Lexend"
+              fontSize="24px"
+              color="black"
+              type="title"
+              bold="semi-bold"
+              s={{ lineHeight: "1.5", bold: "semi-bold" }}
+            >
+              Sus Integrantes y sus Políticas
             </Text>
             <div className={styles.links}>
               <div
@@ -719,11 +702,10 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 s={{ fontSize: "21px" }}
                 fontFamily="font-terciary"
               >
-                Contacta a un representante
+                Contáctanos hoy mismo,
               </Text>
               <Text size="lg" bold="font-light">
-                Haznos cualquier consulta, te responderemos en menos de 24
-                horas.
+                Respondemos en {"<"} de 24 horas
               </Text>
 
               <div className={styles.links}>
@@ -799,15 +781,25 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
           >
             <div className={styles.mobileContact}>
               <Text
-                color="black"
-                s={{ fontSize: "21px" }}
-                fontFamily="font-terciary"
-              >
-                ¿Quienes somos? 🙋
-              </Text>
-              <Text size="lg" bold="font-light">
-                Informate sobre HackDental y sus áreas de expertise.
-              </Text>
+              color="black"
+              fontSize="21px"
+              s={{ lineHeight: "1" }}
+              fontFamily="Lexend"
+              type="title"
+              bold="regular"
+            >
+              Informate sobre HackDental,
+            </Text>
+            <Text
+              fontFamily="Lexend"
+              fontSize="24px"
+              color="black"
+              type="title"
+              bold="semi-bold"
+              s={{ lineHeight: "1.5", bold: "semi-bold" }}
+            >
+              Sus Integrantes y sus Políticas
+            </Text>
               <div className={styles.links}>
                 <div className={styles.contactBtn}>
                   <div
