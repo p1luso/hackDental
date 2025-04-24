@@ -288,7 +288,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               navigate(OUR_PROGRAM);
             }}
           >
-            <span className={styles.whiteMark}>
+            <span className={styles.whiteMark} id={styles.whiteMark_aplicaAhora}>
               <Text s={{ fontSize: "11px" }} bold="semibold" color="black">
                 {location.pathname === "/program" ? "APLICA AHORA" : "NUEVO"}
               </Text>
@@ -391,7 +391,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               <div className={styles.formBtn}>
                 <Link to={CONTACT_FORM} target="_blank">
                   <IconTextButton
-                    colorVariant="primary"
+                    colorVariant="primary-darker"
                     textProps={{ size: "ty" }}
                   >
                     Solicita una reunión
@@ -454,7 +454,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                     </Text>
                   </div>
                   <Text size="xty">
-                    <Mark color="primary-bg">NUEVO</Mark>
+                    <Mark color="green-darker-bg">NUEVO</Mark>
                   </Text>
                 </div>
               </Link>
@@ -478,7 +478,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   </Text>
                 </div>
                 <Text size="xty">
-                  <Mark color="primary-bg">NUEVO</Mark>
+                  <Mark color="green-darker-bg">NUEVO</Mark>
                 </Text>
               </div>
             </div>
@@ -536,7 +536,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
           </div>
 
           <div className={styles.btns}>
-            <IconTextButton size="100%" onClick={() => navigate(CONTACT_FORM)}>
+            <IconTextButton colorVariant="primary-darker" size="100%" onClick={() => navigate(CONTACT_FORM)}>
               Solicita una reunion
             </IconTextButton>
             <IconTextButton
@@ -574,17 +574,26 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             >
               <div className={styles.resourcesContainer}>
                 <div className={styles.recursosDesc}>
-                  <Text
-                    s={{ fontSize: "21px" }}
-                    color="black"
-                    fontFamily="font-terciary"
-                  >
-                    Ebooks Gratuitos 📚
-                  </Text>
-                  <Text size="lg" bold="font-light">
-                    Aprende sobre Marketing dental con nuestros recursos 100%
-                    Gratuitos
-                  </Text>
+                <Text
+              color="black"
+              fontSize="18px"
+              s={{ lineHeight: "0.5" }}
+              fontFamily="Lexend"
+              type="title"
+              bold="regular"
+            >
+              Aprende ahora con nuestros
+            </Text>
+            <Text
+              fontFamily="Lexend"
+              fontSize="21px"
+              color="black"
+              type="title"
+              bold="semi-bold"
+              s={{ lineHeight: "1.5", bold: "semi-bold" }}
+            >
+              Ebooks 100% Gratuitos
+            </Text>
                 </div>
                 <div className={styles.cards}>
                   <Link to={DOWNLOAD_EBOOK} target="_blank">
@@ -596,18 +605,14 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                         />
                       </div>
                       <div className={styles.mobileDesc}>
-                        <Text bold="font-light" size="ty">
-                          {new Date().getFullYear()}
-                        </Text>
+                        
                         <Text
                           color="dark"
                           s={{ lineHeight: "1.25", fontSize: "14px" }}
                         >
                           Marketing Dental: La Guia Definitiva
                         </Text>
-                        <Text s={{ fontSize: "12px" }} bold="regular">
-                          Descarga Gratis
-                        </Text>
+                        
                       </div>
                     </div>
                   </Link>
@@ -621,18 +626,14 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                       </div>
 
                       <div className={styles.mobileDesc}>
-                        <Text bold="font-light" size="ty">
-                          {new Date().getFullYear()}
-                        </Text>
+              
                         <Text
                           color="dark"
                           s={{ lineHeight: "1.25", fontSize: "14px" }}
                         >
                           Marketing Dental: La Guia Definitiva
                         </Text>
-                        <Text s={{ fontSize: "12px" }} bold="regular">
-                          Descarga Gratis
-                        </Text>
+                        
                       </div>
                     </div>
                   </Link>
