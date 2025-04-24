@@ -195,6 +195,7 @@ body:has(.resoursesDropDown.show) {
   gap: 0px;
 }
 
+
 .aboutUs .links,
 .contactBanner .links {
   display: flex;
@@ -215,11 +216,19 @@ body:has(.resoursesDropDown.show) {
   background-color: #eef5f4;
   height: 100%;
 }
-.mobileContact .contactBtn {
+.contactBtn {
   border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
+}
+
+.mobileContact{
+  border-radius: 16px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
   gap: 8px;
 }
 
