@@ -150,7 +150,7 @@ body:has(.resoursesDropDown.show) {
   display: flex;
   width: 100%;
   height: fit-content;
-  background-color: var(--primary-darker);
+  background-color: var(--light-green);
   justify-content: center;
   transform: translateY(-100%);
   visibility: hidden;
