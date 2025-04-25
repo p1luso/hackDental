@@ -1213,9 +1213,13 @@ body:has(.popupContainer.show) {
   width: 210px;
 }
 
+.titlesContainerMobile{
+  display: none;
+}
+
 @media screen and (max-width: 1400px) {
   .mainContent {
-    padding: 0;
+    padding: 44px;
   }
   .contents {
     height: auto;
@@ -1271,6 +1275,12 @@ body:has(.popupContainer.show) {
   }
 }
 @media screen and (max-width: 1024px) {
+  .titlesContainerMobile{
+    display: block;
+  }
+  .titlesContainerDesktop{
+    display: none;
+  }
   .founderButtonEbooks {
     display: none;
   }
@@ -1597,6 +1607,11 @@ body:has(.popupContainer.show) {
   .mainContent__card__desc {
     grid-template-columns: repeat(1, auto); 
     justify-content: center;
+    box-sizing:border-box;
+
+  } 
+  .paginationLine{
+    width: 70px;
   }
 
   .arrowButtonDesk,
@@ -1633,7 +1648,7 @@ body:has(.popupContainer.show) {
   }
 
   .mainContent__card__desc img{
-    width: 250px;
+    width: 200px;
     height: 200px;
     border-radius: 16px;
   }
@@ -1695,6 +1710,9 @@ body:has(.popupContainer.show) {
   header::after,
   section::after {
     display: none;
+  }
+  .paginationLine{
+    width: 70px;
   }
 }
 

@@ -481,7 +481,12 @@ const LandingPage = () => {
         <div className={styles.spanishLocation__card_container}>
           <div className={styles.spainLocation__card}>
             <div className={styles.spainLocation__card__elements}>
-              <Text fontSize="24px" fontSizeMobile="21px" s={{lineHeight:1.3, color: '#2f4f4f'}} color="dark">
+              <Text
+                fontSize="24px"
+                fontSizeMobile="21px"
+                s={{ lineHeight: 1.3, color: "#2f4f4f" }}
+                color="dark"
+              >
                 Contáctanos si tu consultorio cumple con lo siguiente:{" "}
               </Text>
               <div className={styles.spainLocation__items}>
@@ -520,7 +525,6 @@ const LandingPage = () => {
                   textAlignMobile="center"
                   fontSizeMobile="14px"
                   fontSize="16px"
-
                   s={{ color: "#2f4f4f", lineHeight: "1.33" }}
                 >
                   Únete a los dentistas
@@ -544,37 +548,67 @@ const LandingPage = () => {
       </section>
       <section className={styles.mainContent}>
         <div className={styles.mainContent__desc}>
-          <Text
-            type="bigtitle"
-            textAlign="start"
-            textAlignMobile="center"
-            color="black"
-            fontFamily="lexend"
-            bold="font-light"
-            fontSize="28px"
-            fontSizeMobile="21px"
-            s={{ lineHeight: "1", fontWeight: "500" }}
-          >
-            Aprende cómo crecer tu consultorio
-          </Text>
-          <Text
-            type="bigtitle"
-            fontFamily="lexend"
-            textAlign="start"
-            textAlignMobile="center"
-            color="black"
-            bold="semi-bold"
-            fontSize="32px"
-            fontSizeMobile="24px"
-            s={{ lineHeight: "1", fontWeight: "600" }}
-          >
-           Descarga nuestros ebooks gratuitos
-          </Text>
+          <div className={styles.titlesContainerDesktop}>
+            <Text
+              type="bigtitle"
+              textAlign="start"
+              textAlignMobile="center"
+              color="black"
+              fontFamily="lexend"
+              bold="font-light"
+              fontSize="28px"
+              fontSizeMobile="21px"
+              s={{ lineHeight: "1", fontWeight: "500" }}
+            >
+              Aprende cómo crecer tu consultorio
+            </Text>
+            <Text
+              type="bigtitle"
+              fontFamily="lexend"
+              textAlign="start"
+              textAlignMobile="center"
+              color="black"
+              bold="semi-bold"
+              fontSize="32px"
+              fontSizeMobile="24px"
+              s={{ lineHeight: "1", fontWeight: "600" }}
+            >
+              Descarga nuestros ebooks gratuitos
+            </Text>
+          </div>
+          <div className={styles.titlesContainerMobile}>
+            <Text
+              type="bigtitle"
+              textAlign="start"
+              textAlignMobile="center"
+              color="black"
+              fontFamily="lexend"
+              bold="font-light"
+              fontSize="28px"
+              fontSizeMobile="21px"
+              s={{ lineHeight: "1", fontWeight: "500" }}
+            >
+              Aprende de Marketing
+            </Text>
+            <Text
+              type="bigtitle"
+              fontFamily="lexend"
+              textAlign="start"
+              textAlignMobile="center"
+              color="black"
+              bold="semi-bold"
+              fontSize="32px"
+              fontSizeMobile="24px"
+              s={{ lineHeight: "1", fontWeight: "600" }}
+            >
+              Descarga nuestros ebooks gratuitos
+            </Text>
+          </div>
           <div className={styles.founderButtonEbooks}>
-                <IconTextButton size="260px" colorVariant="primary-bordered">
-                Ver todos los ebooks
-                </IconTextButton>{" "}
-              </div>
+            <IconTextButton size="260px" colorVariant="primary-bordered">
+              Ver todos los ebooks
+            </IconTextButton>{" "}
+          </div>
         </div>
         <div className={styles.mainContent__cards}>
           <div className={styles.mainContent__card}>
@@ -632,10 +666,10 @@ const LandingPage = () => {
           </div>
         </div>
         <div className={styles.founderButtonMob}>
-                <IconTextButton size="260px" colorVariant="primary-bordered">
-                Ver todos los ebooks
-                </IconTextButton>{" "}
-              </div>
+          <IconTextButton size="260px" colorVariant="primary-bordered">
+            Ver todos los ebooks
+          </IconTextButton>{" "}
+        </div>
       </section>
       {/* <section className={styles.consultorClass}>
         <div className={styles.consultorClass_contents}>
