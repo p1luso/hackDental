@@ -32,14 +32,13 @@ const books = [
   { img: imgEbookPrueba, title: "7 Secretos del Marketing Dental" },
   { img: imgEbookPrueba, title: "Whatsapp de Clinicas en 5 minutos" },
   { img: imgEbookPrueba, title: "IA para Consultorios Dentales" },
-  { img: imgEbookPrueba, title: "Whatsapp de Clínicas en 5 minutos" },
 ];
 
 const LandingPage = () => {
   const navigate = useNavigate();
   const [showWSMsg, setShowWSMsg] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
-  const [cardsPerPage, setCardsPerPage] = useState(3);
+  const [cardsPerPage, setCardsPerPage] = useState(1);
   const [isFading, setIsFading] = useState(false);
   const fadeDuration = 300;
   const navMobileMenuIsShow = useConfigStore(
@@ -51,7 +50,7 @@ const LandingPage = () => {
       if (window.innerWidth <= 800) {
         setCardsPerPage(1);
       } else {
-        setCardsPerPage(3);
+        setCardsPerPage(1);
       }
     };
 
@@ -547,7 +546,8 @@ const LandingPage = () => {
         <div className={styles.mainContent__desc}>
           <Text
             type="bigtitle"
-            textAlign="center"
+            textAlign="start"
+            textAlignMobile="center"
             color="black"
             fontFamily="lexend"
             bold="font-light"
@@ -555,22 +555,27 @@ const LandingPage = () => {
             fontSizeMobile="21px"
             s={{ lineHeight: "1", fontWeight: "500" }}
           >
-            Aprende gratis con
+            Aprende cómo crecer tu consultorio
           </Text>
           <Text
             type="bigtitle"
             fontFamily="lexend"
-            textAlign="center"
+            textAlign="start"
+            textAlignMobile="center"
             color="black"
             bold="semi-bold"
             fontSize="32px"
             fontSizeMobile="24px"
             s={{ lineHeight: "1", fontWeight: "600" }}
           >
-            Nuestros Ebooks
+           Descarga nuestros ebooks gratuitos
           </Text>
+          <div className={styles.founderButtonEbooks}>
+                <IconTextButton size="260px" colorVariant="primary-bordered">
+                Ver todos los ebooks
+                </IconTextButton>{" "}
+              </div>
         </div>
-
         <div className={styles.mainContent__cards}>
           <div className={styles.mainContent__card}>
             <button
@@ -626,6 +631,11 @@ const LandingPage = () => {
             </button>
           </div>
         </div>
+        <div className={styles.founderButtonMob}>
+                <IconTextButton size="260px" colorVariant="primary-bordered">
+                Ver todos los ebooks
+                </IconTextButton>{" "}
+              </div>
       </section>
       {/* <section className={styles.consultorClass}>
         <div className={styles.consultorClass_contents}>

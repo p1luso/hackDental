@@ -167,11 +167,10 @@
 /*primary-bordered*/
 .primary-bordered.iconTextButton {
   display: flex;
-  border: 1px solid var(--primary);
+  border: 2px solid var(--green-black);
   padding: 10px 24px;
   border-radius: 8px;
   color: var(--black);
-  background-color: #fafafa;
   transition: all 0.3s ease-in;
   justify-content: center;
   align-items: center;

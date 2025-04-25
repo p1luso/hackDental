@@ -735,8 +735,10 @@ body:has(.popupContainer.show) {
   display: flex;
   padding-top: 80px;
   padding-bottom: 80px;
-  flex-direction: column;
+  gap: 160px;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   position: relative;
   background-color: #e6f2ef;
   z-index: 1;
@@ -745,14 +747,12 @@ body:has(.popupContainer.show) {
 .mainContent__desc {
   display: flex;
   flex-direction: column;
-  width: 70%;
   gap: 10px;
 }
 .mainContent__cards {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   gap: 36px;
 }
 .mainContent__card {
@@ -784,14 +784,14 @@ body:has(.popupContainer.show) {
 }
 
 .arrowButtonDesk {
-  background-color: #000;
+  background-color: #2f4f4f;
   color: #fff;
   border: none;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   font-size: 20px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -819,7 +819,7 @@ body:has(.popupContainer.show) {
 }
 
 .arrowButtonMob  {
-  background-color: #000;
+  background-color: #2f4f4f;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -834,7 +834,7 @@ body:has(.popupContainer.show) {
 }
 
 .arrowButtonMob:hover {
-  background-color: #333;
+  background-color: #4f8a8a;
 }
 
 .arrowButtonMob:disabled {
@@ -864,19 +864,18 @@ body:has(.popupContainer.show) {
 }
 
 .paginationArrow {
-  display: none;
+  display: flex;
 }
 
 
 
 .paginationLine.active {
-  background-color: #000;
+  background-color: #2f4f4f;
 }
 
 
 .mainContent__card__desc  {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
+
   gap: 12px;
 }
 
@@ -1199,11 +1198,16 @@ body:has(.popupContainer.show) {
   gap: 15px;
 }
 
-.founderButton {
+.founderButtonEbooks {
   justify-self: left;
   margin-top: 10px;
 }
 
+.founderButtonMob {
+  justify-self: left;
+  display: none;
+
+}
 
 .imageWrapper img{ 
   width: 210px;
@@ -1267,6 +1271,17 @@ body:has(.popupContainer.show) {
   }
 }
 @media screen and (max-width: 1024px) {
+  .founderButtonEbooks {
+    display: none;
+  }
+  .founderButtonMob{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 10px;
+    font-family: Lexend;
+  }
   .banner__content > :nth-child(1) {
     text-align: center !important;
     font-size: 3.2rem;
@@ -1544,6 +1559,7 @@ body:has(.popupContainer.show) {
   .mainContent {
     flex-direction: column;
     padding: 44px 0px;
+    gap: 20px;
   }
   .mainContent__cards {
     padding: 0 28px;
@@ -1591,6 +1607,7 @@ body:has(.popupContainer.show) {
 
 
 @media screen and (max-width: 800px) {
+ 
   .banner {
     display: flex;
     justify-content: center;
