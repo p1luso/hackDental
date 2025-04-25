@@ -482,7 +482,7 @@ const LandingPage = () => {
         <div className={styles.spanishLocation__card_container}>
           <div className={styles.spainLocation__card}>
             <div className={styles.spainLocation__card__elements}>
-              <Text fontSize="24px" fontSizeMobile="21px" color="dark">
+              <Text fontSize="24px" fontSizeMobile="21px" s={{lineHeight:1.3, color: '#2f4f4f'}} color="dark">
                 Contáctanos si tu consultorio cumple con lo siguiente:{" "}
               </Text>
               <div className={styles.spainLocation__items}>
@@ -522,7 +522,7 @@ const LandingPage = () => {
                   fontSizeMobile="14px"
                   fontSize="16px"
 
-                  s={{ color: "black", lineHeight: "1.33" }}
+                  s={{ color: "#2f4f4f", lineHeight: "1.33" }}
                 >
                   Únete a los dentistas
                 </Text>
