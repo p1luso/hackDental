@@ -1150,6 +1150,64 @@ body:has(.popupContainer.show) {
 }
 
 
+.dentalCover {
+  background-color: rgba(216, 232, 230, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.founderButtonMobile{
+  display: none;
+}
+
+.founderText span {
+  color: rgb(65, 65, 65);
+}
+
+.dentalContainer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.contentContainer_dental {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 0;
+  line-height: 0;
+  gap: 32px;
+}
+.mobileTitles{
+  display: none;
+}
+
+.founderText {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: Lexend;
+  gap: 15px;
+}
+
+.founderButton {
+  justify-self: left;
+  margin-top: 10px;
+}
+
+
+.imageWrapper img{ 
+  width: 210px;
+}
 
 @media screen and (max-width: 1400px) {
   .mainContent {

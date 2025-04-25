@@ -167,9 +167,7 @@ const Founder = () => {
           </div>
         </div>
       </section>
-      <div className={styles.footer}>
-        <PreFooter />
-      </div>
+
     </div>
   );
 };

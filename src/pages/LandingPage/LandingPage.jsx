@@ -23,13 +23,13 @@ import Founder from "../../components/organisms/Founder/Founder";
 import LeftArrow from "@assets/flechaizquierda.svg";
 import RightArrow from "@assets/flechaderecha.svg";
 import EBookCard from "../../components/organisms/EBookCard/EBookCard";
-import WhoWeAreImage from "@assets/whoWeAre.svg";
+import WhoWeAreImage from "@assets/whoWeAreImg.svg";
 import HappyDentist from "@assets/happyDentist.svg";
 import SadDentist from "@assets/sadDentist.svg";
 import CheckDentistIcon from "@assets/checkDentistIcon.svg";
 import CrossIcon from "@assets/crossIcon.svg";
 import ModalPopUp from "../../components/organisms/ModalPopUp/ModalPopUp";
-
+import CoberturaDental from "@assets/imagen_dentistLandind.svg"
 const books = [
   { img: imgEbookPrueba, title: "7 Secretos del Marketing Dental" },
   { img: imgEbookPrueba, title: "Whatsapp de Clinicas en 5 minutos" },
@@ -250,6 +250,65 @@ const LandingPage = () => {
                 (RGPD, LOPDGDD y LSSI)
               </Text>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className={styles.dentalCover}>
+        <div className={styles.dentalContainer}>
+          <div className={styles.contentContainer_dental}>
+            <div className={styles.founderButtonMobile}>
+              <IconTextButton size="100%" colorVariant="primary-darker">
+                Pedir auditoría
+              </IconTextButton>{" "}
+            </div>
+           
+            <div className={styles.founderText}>
+              <div className={styles.titles}>
+                <Text
+                  type="bigtitle"
+                  textAlign="start"
+                  color="black"
+                  fontFamily="lexend"
+                  bold="font-light"
+                  fontSize="28px"
+                  fontSizeMobile="21px"
+                  s={{ fontWeight: "500" }}
+                >
+                  Dueño de Consultorio Dental
+                </Text>
+                <Text
+                  type="bigtitle"
+                  fontFamily="lexend"
+                  textAlign="start"
+                  color="black"
+                  bold="semi-bold"
+                  fontSize="32px"
+                  fontSizeMobile="24px"
+                  s={{ lineHeight: "1", fontWeight: "600" }}
+                >
+                  ¿Te interesa una auditoría gratuita?
+                </Text>
+              </div>
+              <Text
+                fontFamily="Lexend"
+                color="black-lighter"
+                fontSize="18px"
+                fontSizeMobile="16px"
+                bold="font-light"
+              >
+                Averigua si tu consultorio califica para nuestros servicios
+              </Text>
+
+              <div className={styles.founderButton}>
+                <IconTextButton size="260px" colorVariant="primary-darker">
+                  Pedir auditoría
+                </IconTextButton>{" "}
+              </div>
+            </div>
+            <div className={styles.imageWrapper}>
+              <img src={CoberturaDental} alt="" />
+            </div>
+
           </div>
         </div>
       </section>
