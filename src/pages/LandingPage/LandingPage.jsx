@@ -254,11 +254,7 @@ const LandingPage = () => {
       <section className={styles.dentalCover}>
         <div className={styles.dentalContainer}>
           <div className={styles.contentContainer_dental}>
-            <div className={styles.founderButtonMobile}>
-              <IconTextButton size="100%" colorVariant="primary-darker">
-                Pedir auditoría
-              </IconTextButton>{" "}
-            </div>
+            
 
             <div className={styles.founderText}>
               <div className={styles.titles}>
@@ -305,6 +301,11 @@ const LandingPage = () => {
             </div>
             <div className={styles.imageWrapper}>
               <img src={CoberturaDental} alt="" />
+            </div>
+            <div className={styles.founderButtonMobile}>
+              <IconTextButton size="100%" colorVariant="primary-darker">
+                Pedir auditoría
+              </IconTextButton>{" "}
             </div>
           </div>
         </div>

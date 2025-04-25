@@ -1362,7 +1362,34 @@ body:has(.popupContainer.show) {
     justify-content: center;
     align-items: center;
   }
-
+  .contentContainer_dental{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: 0 28px 0 28px;
+  }
+  .contentContainer_dental{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 28px 0 28px;
+  }
+  .founderText{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .founderButton{
+      display: none;
+    }
+    .founderButtonMobile{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   .imageWrapper{
     display: flex;
     justify-content: center;
