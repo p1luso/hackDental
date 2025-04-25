@@ -97,26 +97,26 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
         >
           <div className={styles.content}>
             <div className={styles.header}>
-            <Text
-              color="black"
-              fontSize="21px"
-              s={{ lineHeight: "1" }}
-              fontFamily="Lexend"
-              type="title"
-              bold="regular"
-            >
-              Aprende ahora con nuestros
-            </Text>
-            <Text
-              fontFamily="Lexend"
-              fontSize="24px"
-              color="black"
-              type="title"
-              bold="semi-bold"
-              s={{ lineHeight: "1.5", bold: "semi-bold" }}
-            >
-              Ebooks 100% Gratuitos
-            </Text>
+              <Text
+                color="black"
+                fontSize="21px"
+                s={{ lineHeight: "1" }}
+                fontFamily="Lexend"
+                type="title"
+                bold="regular"
+              >
+                Aprende ahora con nuestros
+              </Text>
+              <Text
+                fontFamily="Lexend"
+                fontSize="24px"
+                color="black"
+                type="title"
+                bold="semi-bold"
+                s={{ lineHeight: "1.5", bold: "semi-bold" }}
+              >
+                Ebooks 100% Gratuitos
+              </Text>
             </div>
             <div className={styles.cards}>
               <div className={styles.card}>
@@ -132,14 +132,13 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   Marketing Dental:
                   <br /> La Guia Definitiva
                 </Text>
-              
               </div>
               <div className={styles.separator}></div>
               <div className={styles.card}>
                 <div className={styles.cardImgContainer}>
                   <img src={imgEbookPrueba} className={styles.cardImg} />
                 </div>
-                
+
                 <Text
                   size="sm"
                   bold="semibold"
@@ -148,14 +147,13 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 >
                   Marketing Dental: <br /> La Guia Definitiva
                 </Text>
-                
               </div>
               <div className={styles.separator}></div>
               <div className={styles.card}>
                 <div className={styles.cardImgContainer}>
                   <img src={imgEbookPrueba} className={styles.cardImg} />
                 </div>
-                
+
                 <Text
                   size="sm"
                   bold="semibold"
@@ -164,7 +162,6 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 >
                   Marketing Dental: <br /> La Guia Definitiva
                 </Text>
-                
               </div>
             </div>
             <div
@@ -229,7 +226,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
 
         <div className={`${styles.aboutUs} ${showAboutUs && styles.show}`}>
           <div className={styles.content}>
-          <Text
+            <Text
               color="black"
               fontSize="21px"
               s={{ lineHeight: "1" }}
@@ -288,7 +285,10 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               navigate(OUR_PROGRAM);
             }}
           >
-            <span className={styles.whiteMark} id={styles.whiteMark_aplicaAhora}>
+            <span
+              className={styles.whiteMark}
+              id={styles.whiteMark_aplicaAhora}
+            >
               <Text s={{ fontSize: "11px" }} bold="semibold" color="black">
                 {location.pathname === "/program" ? "APLICA AHORA" : "NUEVO"}
               </Text>
@@ -416,25 +416,40 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
       </div>
       <Drawer
         show={showMobileMenu}
+        hideLogo={true}
         onClose={() => {
           setShowMobileMenu(false);
           setNavMobileMenuIsShow(false);
         }}
         renderCloBtn={
-          <div
-            style={{
-              display: "flex",
-              gap: "8px",
-              alignItems: "center",
-            }}
-          >
-            <Text size="xlg" color="light">
-              Menu
-            </Text>
-            <span style={{ position: "relative", top: "2px" }}>
-              <Icon size={"1.7rem"} type={"close"} color="var(--white)" />
-            </span>
-          </div>
+          <>
+            <div
+              style={{
+                position: "absolute",
+                left: "-60px",
+                top: "10px",
+                background: "transparent",
+                zIndex: 1000,
+              }}
+            >
+              <Icon size={"4rem"} type={"close"} color="var(--white)" />
+            </div>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                alignContent: "center",
+                justifyContent: "center",
+                position: "sticky",
+                top: 0,
+                zIndex: 100,
+              }}
+            >
+              <Text size="xlg" color="black-lighter" bold="font-light">
+                Menu
+              </Text>
+            </div>
+          </>
         }
       >
         <div className={styles.mobileMenu}>
@@ -447,11 +462,16 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                       <Text bold="regular" size="xxlg" color="black">
                         Nuestro Programa
                       </Text>
-                      <Icon color="black" type={"arrow"} size={"1.088rem"} />
+                      <span
+                        style={{
+                          fontSize: "15px",
+                          marginLeft: "10px",
+                          marginBottom: "2px",
+                        }}
+                      >
+                        →
+                      </span>
                     </div>
-                    <Text size="lg" bold="font-light">
-                      Transforma tu Consultorio en 6 meses.
-                    </Text>
                   </div>
                   <Text size="xty">
                     <Mark color="green-darker-bg">NUEVO</Mark>
@@ -471,11 +491,16 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                     <Text bold="regular" size="xxlg" color="black">
                       Recursos Gratis
                     </Text>
-                    <Icon color="black" type={"arrow"} size={"1.088rem"} />
+                    <span
+                      style={{
+                        fontSize: "15px",
+                        marginLeft: "10px",
+                        marginBottom: "2px",
+                      }}
+                    >
+                      →
+                    </span>
                   </div>
-                  <Text size="lg" bold="font-light">
-                    Aprende sobre Marketing dental.
-                  </Text>
                 </div>
                 <Text size="xty">
                   <Mark color="green-darker-bg">NUEVO</Mark>
@@ -494,11 +519,16 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                     <Text bold="regular" size="xxlg" color="black">
                       Contacto
                     </Text>
-                    <Icon color="black" type={"arrow"} size={"1.088rem"} />
+                    <span
+                      style={{
+                        fontSize: "15px",
+                        marginLeft: "10px",
+                        marginBottom: "2px",
+                      }}
+                    >
+                      →
+                    </span>
                   </div>
-                  <Text size="lg" bold="font-light">
-                    Haznos cualquier consulta.
-                  </Text>
                 </div>
                 <Text></Text>
               </div>
@@ -520,11 +550,16 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                     <Text bold="regular" size="xxlg" color="black">
                       Sobre nosotros
                     </Text>
-                    <Icon color="black" type={"arrow"} size={"1.088rem"} />
+                    <span
+                      style={{
+                        fontSize: "15px",
+                        marginLeft: "10px",
+                        marginBottom: "2px",
+                      }}
+                    >
+                      →
+                    </span>
                   </div>
-                  <Text size="lg" bold="font-light">
-                    Informate sobre HackDental
-                  </Text>
                 </div>
               </div>
               <div
@@ -536,7 +571,11 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
           </div>
 
           <div className={styles.btns}>
-            <IconTextButton colorVariant="primary-darker" size="100%" onClick={() => navigate(CONTACT_FORM)}>
+            <IconTextButton
+              colorVariant="primary-darker"
+              size="100%"
+              onClick={() => navigate(CONTACT_FORM)}
+            >
               Solicita una reunion
             </IconTextButton>
             <IconTextButton
@@ -559,11 +598,19 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   alignItems: "center",
                 }}
               >
-                <span style={{ position: "relative", top: "2px" }}>
-                  <Icon size={"2rem"} type={"arrowLeft"} color="var(--white)" />
+                <span
+                  style={{
+                    fontSize: "20px",
+                    transform: "rotate(180deg)",
+
+                    position: "absolute",
+                    left: "30px",
+                  }}
+                >
+                  →
                 </span>
 
-                <Text color="light" size="xlg">
+                <Text color="black-lighter" bold="font-light" size="xlg">
                   Recursos Gratuitos
                 </Text>
               </div>
@@ -574,26 +621,26 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             >
               <div className={styles.resourcesContainer}>
                 <div className={styles.recursosDesc}>
-                <Text
-              color="black"
-              fontSize="18px"
-              s={{ lineHeight: "0.5" }}
-              fontFamily="Lexend"
-              type="title"
-              bold="regular"
-            >
-              Aprende ahora con nuestros
-            </Text>
-            <Text
-              fontFamily="Lexend"
-              fontSize="21px"
-              color="black"
-              type="title"
-              bold="semi-bold"
-              s={{ lineHeight: "1.5", bold: "semi-bold" }}
-            >
-              Ebooks 100% Gratuitos
-            </Text>
+                  <Text
+                    color="black"
+                    fontSize="18px"
+                    s={{ lineHeight: "0.5" }}
+                    fontFamily="Lexend"
+                    type="title"
+                    bold="regular"
+                  >
+                    Aprende ahora con nuestros
+                  </Text>
+                  <Text
+                    fontFamily="Lexend"
+                    fontSize="21px"
+                    color="black"
+                    type="title"
+                    bold="semi-bold"
+                    s={{ lineHeight: "1.5", bold: "semi-bold" }}
+                  >
+                    Ebooks 100% Gratuitos
+                  </Text>
                 </div>
                 <div className={styles.cards}>
                   <Link to={DOWNLOAD_EBOOK} target="_blank">
@@ -605,14 +652,12 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                         />
                       </div>
                       <div className={styles.mobileDesc}>
-                        
                         <Text
                           color="dark"
                           s={{ lineHeight: "1.25", fontSize: "14px" }}
                         >
                           Marketing Dental: La Guia Definitiva
                         </Text>
-                        
                       </div>
                     </div>
                   </Link>
@@ -626,14 +671,12 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                       </div>
 
                       <div className={styles.mobileDesc}>
-              
                         <Text
                           color="dark"
                           s={{ lineHeight: "1.25", fontSize: "14px" }}
                         >
                           Marketing Dental: La Guia Definitiva
                         </Text>
-                        
                       </div>
                     </div>
                   </Link>
@@ -672,6 +715,22 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 >
                   Ir a biblioteca de ebooks
                 </IconTextButton>
+                <div className={styles.btnsContact}>
+                <IconTextButton
+                  colorVariant="primary-darker"
+                  size="100%"
+                  onClick={() => navigate(CONTACT_FORM)}
+                >
+                  Solicita una reunion
+                </IconTextButton>
+                <IconTextButton
+                  colorVariant="primary-bordered"
+                  size="100%"
+                  icon={"wp"}
+                >
+                  Consultas al Whatsapp
+                </IconTextButton>
+              </div>
               </div>
             </div>
           </Drawer>
@@ -687,11 +746,19 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   alignItems: "center",
                 }}
               >
-                <span style={{ position: "relative", top: "2px" }}>
-                  <Icon size={"2rem"} type={"arrowLeft"} color="var(--white)" />
+                <span
+                  style={{
+                    fontSize: "20px",
+                    transform: "rotate(180deg)",
+
+                    position: "absolute",
+                    left: "30px",
+                  }}
+                >
+                  →
                 </span>
 
-                <Text color="light" size="xlg">
+                <Text bold="font-light" color="black-lighter" size="xlg">
                   Contacto
                 </Text>
               </div>
@@ -700,12 +767,19 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             <div className={styles.mobileContact}>
               <Text
                 color="black"
-                s={{ fontSize: "21px" }}
-                fontFamily="font-terciary"
+                fontSize="18px"
+                bold="semi-bold"
+                fontFamily="Lexend"
+                s={{ lineHeight: "1" }}
               >
                 Contáctanos hoy mismo,
               </Text>
-              <Text size="lg" bold="font-light">
+              <Text
+                fontSize="18px"
+                color="black"
+                s={{ lineHeight: "1" }}
+                bold="semi-bold"
+              >
                 Respondemos en {"<"} de 24 horas
               </Text>
 
@@ -719,7 +793,11 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                     }}
                   >
                     <Icon color="black" size={"1.52rem"} type={"form"} />
-                    <Text color="black" s={{ fontSize: "15px" }} bold="regular">
+                    <Text
+                      color="black-lighter"
+                      s={{ fontSize: "15px" }}
+                      bold="regular"
+                    >
                       {" "}
                       Forma de contacto
                     </Text>
@@ -734,9 +812,13 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                     }}
                   >
                     <Icon color="black" size={"1.52rem"} type={"email"} />
-                    <Text color="black" s={{ fontSize: "15px" }} bold="regular">
+                    <Text
+                      color="black-lighter"
+                      s={{ fontSize: "15px" }}
+                      bold="regular"
+                    >
                       {" "}
-                      Email
+                      info@inkadentist.com
                     </Text>
                   </div>
                 </div>
@@ -749,12 +831,32 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                     }}
                   >
                     <Icon color="black" size={"1.52rem"} type={"wp"} />
-                    <Text color="black" s={{ fontSize: "15px" }} bold="regular">
+                    <Text
+                      color="black-lighter"
+                      s={{ fontSize: "15px" }}
+                      bold="regular"
+                    >
                       {" "}
                       WhatsApp
                     </Text>
                   </div>
                 </div>
+              </div>
+              <div className={styles.btnsContact}>
+                <IconTextButton
+                  colorVariant="primary-darker"
+                  size="100%"
+                  onClick={() => navigate(CONTACT_FORM)}
+                >
+                  Solicita una reunion
+                </IconTextButton>
+                <IconTextButton
+                  colorVariant="primary-bordered"
+                  size="100%"
+                  icon={"wp"}
+                >
+                  Consultas al Whatsapp
+                </IconTextButton>
               </div>
             </div>
           </Drawer>
@@ -770,11 +872,19 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   alignItems: "center",
                 }}
               >
-                <span style={{ position: "relative", top: "2px" }}>
-                  <Icon size={"2rem"} type={"arrowLeft"} color="var(--white)" />
+                <span
+                  style={{
+                    fontSize: "20px",
+                    transform: "rotate(180deg)",
+
+                    position: "absolute",
+                    left: "30px",
+                  }}
+                >
+                  →
                 </span>
 
-                <Text color="light" size="xlg">
+                <Text color="black-lighter" bold="font-light" size="xlg">
                   Sobre nosotros
                 </Text>
               </div>
@@ -782,25 +892,22 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
           >
             <div className={styles.mobileContact}>
               <Text
-              color="black"
-              fontSize="21px"
-              s={{ lineHeight: "1" }}
-              fontFamily="Lexend"
-              type="title"
-              bold="regular"
-            >
-              Informate sobre HackDental,
-            </Text>
-            <Text
-              fontFamily="Lexend"
-              fontSize="24px"
-              color="black"
-              type="title"
-              bold="semi-bold"
-              s={{ lineHeight: "1.5", bold: "semi-bold" }}
-            >
-              Sus Integrantes y sus Políticas
-            </Text>
+                color="black"
+                fontSize="18px"
+                bold="semi-bold"
+                fontFamily="Lexend"
+                s={{ lineHeight: "1" }}
+              >
+                Informate sobre HackDental,
+              </Text>
+              <Text
+                fontSize="18px"
+                color="black"
+                s={{ lineHeight: "1" }}
+                bold="semi-bold"
+              >
+                Sus Integrantes y sus Políticas
+              </Text>
               <div className={styles.links}>
                 <div className={styles.contactBtn}>
                   <div
@@ -812,7 +919,11 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                     onClick={() => navigate(ACERCA_DE)}
                   >
                     <Icon color="black" size={"1.52rem"} type={"team"} />
-                    <Text color="black" s={{ fontSize: "15px" }} bold="regular">
+                    <Text
+                      color="black-lighter"
+                      s={{ fontSize: "15px" }}
+                      bold="regular"
+                    >
                       {" "}
                       Nuestro Equipo
                     </Text>
@@ -828,7 +939,11 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                     onClick={() => navigate(CUMPLIMIENTO)}
                   >
                     <Icon color="black" size={"1.52rem"} type={"commitment"} />
-                    <Text color="black" s={{ fontSize: "15px" }} bold="regular">
+                    <Text
+                      color="black-lighter"
+                      s={{ fontSize: "15px" }}
+                      bold="regular"
+                    >
                       {" "}
                       Cumplimiento del RGPD
                     </Text>
@@ -843,12 +958,32 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                     }}
                   >
                     <Icon color="black" size={"1.52rem"} type={"privacy"} />
-                    <Text color="black" s={{ fontSize: "15px" }} bold="regular">
+                    <Text
+                      color="black-lighter"
+                      s={{ fontSize: "15px" }}
+                      bold="regular"
+                    >
                       {" "}
                       Política de privacidad
                     </Text>
                   </div>
                 </div>
+              </div>
+              <div className={styles.btnsContact}>
+                <IconTextButton
+                  colorVariant="primary-darker"
+                  size="100%"
+                  onClick={() => navigate(CONTACT_FORM)}
+                >
+                  Solicita una reunion
+                </IconTextButton>
+                <IconTextButton
+                  colorVariant="primary-bordered"
+                  size="100%"
+                  icon={"wp"}
+                >
+                  Consultas al Whatsapp
+                </IconTextButton>
               </div>
             </div>
           </Drawer>

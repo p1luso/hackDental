@@ -25,10 +25,11 @@ body:has(.drawer.show) {
   display: flex;
   padding: 0 20px 0 20px;
   width: 100%;
-  min-height: 68px;
+  min-height: 48px;
+  border-bottom:1px solid rgba(128, 128, 128, 0.173);
   align-items: center;
-  justify-content: space-between;
-  background-color: var(--primary-darker);
+  justify-content: center;
+  background-color: #eef5f4;
 }
 .container {
   position: absolute;
@@ -60,9 +61,8 @@ body:has(.drawer.show) {
 
 @media screen and (max-width: 850px) {
   .container {
-    width: 85%;
-    max-width: none;
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 }

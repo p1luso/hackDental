@@ -217,12 +217,17 @@ body:has(.resoursesDropDown.show) {
   height: 100%;
 }
 .contactBtn {
-  border-radius: 16px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  width: 100%;
   gap: 8px;
+  padding: 10px 0;
 }
+
+.contactBtn:not(:nth-child(3)) {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.173);
+}
+
 
 .mobileContact{
   border-radius: 16px;
@@ -360,15 +365,22 @@ body:has(.resoursesDropDown.show) {
   height: 100%;
   background-color: #eef5f4;
   padding-top: 48px;
+  padding-left: 10px;
 }
 
 .links{
-  margin-top: 20px;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: start;
+  align-items: start;
+  display: flex;
 }
 
 .btns {
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  align-items: start;
   gap: 16px;
   padding: 20px;
   padding-bottom: 60px;
@@ -381,6 +393,24 @@ body:has(.resoursesDropDown.show) {
 .btns > :nth-child(2) {
   font-size: 15px !important;
 }
+.btnsContact {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 16px;
+  width: 100%;
+  padding-bottom: 60px;
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-light);
+  margin-top: auto;
+}
+.btnsContact > :nth-child(1) {
+  font-size: 16px !important;
+}
+.btnsContact > :nth-child(2) {
+  font-size: 15px !important;
+}
 .dropdownMenus {
   display: flex;
   flex-direction: column;
@@ -390,6 +420,7 @@ body:has(.resoursesDropDown.show) {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding: 0 20px;
 }
 .dropMenuBtn :last-child {
   position: relative;
@@ -398,13 +429,16 @@ body:has(.resoursesDropDown.show) {
 .dropMenuBtn {
   width: 100%;
   display: flex;
-  padding: 0 20px;
+  padding: 10px 20px;
   cursor: pointer;
   justify-content: space-between;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.173);
+
 }
 .dropdownTitleDesc {
   display: flex;
   flex-direction: column;
+
 }
 .dropdownTitle > :last-child {
   position: relative;
@@ -483,7 +517,7 @@ body:has(.resoursesDropDown.show) {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 8px 20px;
+  padding: 0px 31px;
   padding-top: 48px;
 }
 .mobileContact > :nth-child(1) {
@@ -496,6 +530,12 @@ body:has(.resoursesDropDown.show) {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.links{}
+
+.contactBtn:not(:nth-child(3)) {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.173);
 }
 .recursosDesc {
   margin-bottom: 24px;
