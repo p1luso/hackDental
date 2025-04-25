@@ -9,9 +9,7 @@ import IconButton from "../../components/molecules/IconButton/IconButton";
 import Footer from "../../components/organisms/Footer/Footer";
 import Icon from "../../components/atoms/Icon/Icon";
 import { useNavigate } from "react-router-dom";
-import {
-  CONTACT_FORM,
-} from "../../constants/routes";
+import { CONTACT_FORM } from "../../constants/routes";
 import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
 import Mark from "../../components/atoms/Mark/Mark";
 import ImgBanner from "@assets/ImgBanner.svg";
@@ -29,7 +27,7 @@ import SadDentist from "@assets/sadDentist.svg";
 import CheckDentistIcon from "@assets/checkDentistIcon.svg";
 import CrossIcon from "@assets/crossIcon.svg";
 import ModalPopUp from "../../components/organisms/ModalPopUp/ModalPopUp";
-import CoberturaDental from "@assets/imagen_dentistLandind.svg"
+import CoberturaDental from "@assets/imagen_dentistLandind.svg";
 const books = [
   { img: imgEbookPrueba, title: "7 Secretos del Marketing Dental" },
   { img: imgEbookPrueba, title: "Whatsapp de Clinicas en 5 minutos" },
@@ -102,9 +100,11 @@ const LandingPage = () => {
           showPopup && !navMobileMenuIsShow && styles.show
         }`}
       >
-        <ModalPopUp showPopup={showPopup}
-  setShowPopup={setShowPopup}
-  navMobileMenuIsShow={navMobileMenuIsShow}/>
+        <ModalPopUp
+          showPopup={showPopup}
+          setShowPopup={setShowPopup}
+          navMobileMenuIsShow={navMobileMenuIsShow}
+        />
       </div>
 
       {/* <div className={styles.help}>
@@ -241,13 +241,12 @@ const LandingPage = () => {
                 fontSizeMobile="16px"
                 bold="font-light"
               >
-                Nuestra especialización nos ha permitido crear un método único
-                para crecer consultorios dentales que{" "}
+                Contamos con un método especializado de marketing que{" "}
                 <strong>
                   cumple con la normativa de protección de datos vigente en
-                  España
-                </strong>{" "}
-                (RGPD, LOPDGDD y LSSI)
+                  España{" "}
+                </strong>
+                (RGPD, LOPDGDD y LSSI).
               </Text>
             </div>
           </div>
@@ -261,7 +260,7 @@ const LandingPage = () => {
                 Pedir auditoría
               </IconTextButton>{" "}
             </div>
-           
+
             <div className={styles.founderText}>
               <div className={styles.titles}>
                 <Text
@@ -308,7 +307,6 @@ const LandingPage = () => {
             <div className={styles.imageWrapper}>
               <img src={CoberturaDental} alt="" />
             </div>
-
           </div>
         </div>
       </section>
@@ -478,21 +476,14 @@ const LandingPage = () => {
         >
           déjanos a nosotros el Marketing
         </Text>
-        <div className={styles.spainLocation__desc}>
-          <Text color="black-lighter" fontFamily="Lexend" bold="font-light">
-            Puedes ponerte en contacto con nosotros por correo electrónico a{" "}
-            <strong>
-              <u>jaka@ .design</u>
-            </strong>{" "}
-            y te responderemos en un plazo de 24 horas. No olvides incluir
-            algunas palabras sobre ti y tu negocio.
-          </Text>
-        </div>
+        {/* <div className={styles.spainLocation__desc}>
+          
+        </div> */}
         <div className={styles.spanishLocation__card_container}>
           <div className={styles.spainLocation__card}>
             <div className={styles.spainLocation__card__elements}>
-              <Text size="xxxlg" color="dark">
-                Si tu consultorio:
+              <Text fontSize="24px" fontSizeMobile="21px" color="dark">
+                Contáctanos si tu consultorio cumple con lo siguiente:{" "}
               </Text>
               <div className={styles.spainLocation__items}>
                 <div className={styles.spainLocation__items__item}>
@@ -529,6 +520,8 @@ const LandingPage = () => {
                 <Text
                   textAlignMobile="center"
                   fontSizeMobile="14px"
+                  fontSize="16px"
+
                   s={{ color: "black", lineHeight: "1.33" }}
                 >
                   Únete a los dentistas
@@ -536,6 +529,7 @@ const LandingPage = () => {
                 <Text
                   textAlignMobile="center"
                   bold="font-light"
+                  fontSize="16px"
                   fontSizeMobile="14px"
                   s={{ color: "black", lineHeight: "1.33" }}
                 >
