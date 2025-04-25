@@ -1,13 +1,15 @@
 import Medicos from "@assets/Medicos.svg";
 import styles from "./styles.module.css";
 import Text from "../../atoms/Text/Text";
+
 const MedicsCard = ({
   bgColor = "",
+  transparentBg = false,
   textDesc = "que aprenden con nuestros ebooks gratuitos",
   title = " Únete a los muchos dentista",
 }) => {
   return (
-    <div className={styles.card} style={{ backgroundColor: bgColor }}>
+    <div className={`${styles.card} ${transparentBg ? styles.transparent : ''}`}>
       <img src={Medicos} className={styles.medicos} />
       <div className={styles.desc}>
         <Text size="ty" color="black" s={{ lineHeight: "1.4" }}>

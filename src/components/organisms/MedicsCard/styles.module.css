@@ -7,6 +7,11 @@
   border-radius: 32px;
   align-items: center;
 }
+
+.transparent {
+  background-color: transparent !important;
+}
+
 .card .medicos {
   width: 120px;
 }

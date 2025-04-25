@@ -21,12 +21,12 @@ const DownloadEBook = () => {
       <main className={styles.main}>
         <div className={styles.banner}>
           <section className={styles.banner__desc}>
-            <Text color="primary" size="sm">
-              {new Date().getFullYear()}
+            <Text color="black-lighter" size="sm">
+              Ebook escrito en el 2025
             </Text>
             <Text color="black" type="title" bold>
-              Como Mejorar la Aceptación de
-              <br /> Casos de tu Clinica
+              Whatsapp para Consultorios
+              <br /> en 5 minutos
             </Text>
             <div className={styles.desc}>
               <Text color="black" bold="font-light" size="sm">
@@ -36,62 +36,86 @@ const DownloadEBook = () => {
               </Text>
             </div>
             <div className={styles.downloadEBook}>
-              <IconTextButton
-                size="100%"
-                textProps={{ size: "sm" }}
-                onClick={() => setModalOpened(true)}
-              >
+              <IconTextButton size="100%" onClick={() => setModalOpened(true)}>
                 Descargar Ahora
               </IconTextButton>
             </div>
             <div className={styles.medicosCard}>
-              <MedicsCard bgColor={"#8fc29f33"} />
+              <MedicsCard transparentBg={true}/>
             </div>
           </section>
           <img className={styles.ebook} src={EBookImg} />
         </div>
         <div className={styles.moreInfo}>
           <div className={styles.info}>
-            <Text size="xxxlg" color="black">
-              Adentro aprenderás:
-            </Text>
-            <div className={styles.line}>
-              <Icon
-                type={"check"}
-                color="var(--primary-dark)"
-                size={"0.7rem"}
-              />{" "}
-              <Text bold="font-light" size="sm">
-                Panorama de las ventas por chat para el 2023
+            <div className={styles.titles}>
+              <Text
+                type="bigtitle"
+                textAlign="start"
+                color="black"
+                textAlignMobile="center"
+                fontFamily="lexend"
+                bold="font-light"
+                fontSize="24px"
+                fontSizeMobile="16px"
+                s={{ lineHeight: "1", fontWeight: "500" }}
+              >
+                ¿Quieres atraer pacientes con WhatsApp?
+              </Text>
+              <Text
+                type="bigtitle"
+                fontFamily="lexend"
+                textAlign="start"
+                textAlignMobile="center"
+                color="black"
+                bold="semi-bold"
+                fontSize="28px"
+                fontSizeMobile="21px"
+                s={{ lineHeight: "1", fontWeight: "600" }}
+              >
+                En el Ebook aprenderás:
               </Text>
             </div>
-            <div className={styles.line}>
-              <Icon
-                type={"check"}
-                color="var(--primary-dark)"
-                size={"0.7rem"}
-              />{" "}
-              <Text bold="font-light" size="sm">
-                Cuáles son las industrias que más venden por chat aprendiendo a
-                vender por medio de Facebook.
-              </Text>
-            </div>
-            <div className={styles.line}>
-              <Icon
-                type={"check"}
-                color="var(--primary-dark)"
-                size={"0.7rem"}
-              />{" "}
-              <Text bold="font-light" size="sm">
-                Aprendiendo a vender por medio de WhatsApp, Telegram e Instagram
-              </Text>
+            <div className={styles.lines}>
+              <div className={styles.line}>
+                <Icon
+                  type={"check"}
+                  color="var(--primary-dark)"
+                  size={"0.7rem"}
+                />{" "}
+                <Text bold="font-light" color="black-lighter" fontSize="16px" fontSizeMobile="14px">
+                  Panorama de las ventas por chat para el 2023
+                </Text>
+              </div>
+              <div className={styles.line}>
+                <Icon
+                  type={"check"}
+                  color="var(--primary-dark)"
+                  size={"0.7rem"}
+                />{" "}
+                <Text bold="font-light" color="black-lighter" fontSize="16px" fontSizeMobile="14px">
+                  Cuáles son las industrias que más venden por chat aprendiendo
+                  a vender por medio de Facebook.
+                </Text>
+              </div>
+              <div className={styles.line}>
+                <Icon
+                  type={"check"}
+                  color="var(--primary-dark)"
+                  size={"0.7rem"}
+                />{" "}
+                <Text bold="font-light" color="black-lighter" fontSize="16px" fontSizeMobile="14px">
+                  Aprendiendo a vender por medio de WhatsApp, Telegram e
+                  Instagram
+                </Text>
+              </div>
             </div>
           </div>
           <img src={EbookPortada} className={styles.imgPortada} />
         </div>
       </main>
       <section className={styles.prefooter}>
-        <Text color="black" size="xxxlg">
+        <Text color="black" fontSize="28px" fontSizeMobile="24px">
           ¿Listo para empezar?
         </Text>
         <div className={styles.downloadBtn}>
