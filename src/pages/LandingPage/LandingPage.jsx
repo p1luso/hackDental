@@ -497,7 +497,7 @@ const LandingPage = () => {
                   <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
 
                   <Text color="black" bold="font-light">
-                    Factura <strong>10,000 euros</strong> o más al mes
+                    Factura <strong>10,000 euros o más</strong> al mes
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
