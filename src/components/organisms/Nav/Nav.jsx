@@ -634,7 +634,8 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   <Text
                     color="black"
                     fontSize="18px"
-                    s={{ lineHeight: "0.5" }}
+                    
+                    s={{ lineHeight: "0.9" }}
                     fontFamily="Lexend"
                     type="title"
                     bold="regular"

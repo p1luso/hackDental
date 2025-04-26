@@ -49,6 +49,10 @@ body:has(.drawer.show) {
 .content {
   flex-grow: 1;
   overflow-y: auto;
+  width: 100%;
+  height: calc(100% - 48px);
+  display: flex;
+  flex-direction: column;
 }
 .drawer.show .container {
   transform: translateX(0);
@@ -59,10 +63,28 @@ body:has(.drawer.show) {
   cursor: pointer;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 850) {
   .container {
-    width: 80%;
+    width: 0%;
     max-width: 400px;
     min-width: 280px;
+  }
+  .content {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 850px) and (max-width: 1024px){
+  .container {
+    width: 0%;
+    max-width: 400px;
+    min-width: 400px;
+  }
+  .content {
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 }
