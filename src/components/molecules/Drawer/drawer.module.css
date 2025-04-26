@@ -63,7 +63,7 @@ body:has(.drawer.show) {
   cursor: pointer;
 }
 
-@media screen and (max-width: 850) {
+@media screen and (max-width: 850px) {
   .container {
     width: 0%;
     max-width: 400px;
