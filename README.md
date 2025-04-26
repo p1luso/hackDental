@@ -32,6 +32,6 @@ se utilizó firebase como base de datos en principio para guardar los ebooks per
 para el tema de zappier se utiliza sus webhooks para mandar los datos de los formularios a la hoja de excel, cabe aclarar que los webhooks de zappier son una funcion premium
 y que se debe pagar para usarlos, hablarlo con José en caso de que necesite aun esa funcionalidad.
 
-para configurar un webhook se puede preguntar a chatgpt, yo hice eso ya que su documentación no es muy buena.
+para configurar un webhook se puede preguntar a chatgpt, yo hice eso ya que su documentación no es muy buena..
 
 la hoja de excel se debe crear de vuelta ya que yo use mi cuenta de google para integrarme con zappier.
