@@ -114,3 +114,16 @@ body:has(.drawer.show) {
     margin: 0;
   }
 }
+
+@media screen and (max-width: 320px){
+  .container {
+    width: 80%;
+    max-width: 400px;
+    min-width: 260px;
+  }
+  .content {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
