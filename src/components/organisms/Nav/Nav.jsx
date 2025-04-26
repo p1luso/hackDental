@@ -417,6 +417,16 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
       <Drawer
         show={showMobileMenu}
         hideLogo={true}
+        style={{
+          width: "80%",
+          maxWidth: "400px",
+          right: 0,
+          left: "auto",
+          transform: "translateX(100%)",
+          "&.show": {
+            transform: "translateX(0)",
+          }
+        }}
         onClose={() => {
           setShowMobileMenu(false);
           setNavMobileMenuIsShow(false);
