@@ -35,7 +35,7 @@ body:has(.drawer.show) {
   position: absolute;
   right: 0;
   top: 0;
-  width: 80%;
+  width: 85%;
   max-width: 400px;
   height: 100%;
   transform: translateX(100%);
@@ -65,9 +65,9 @@ body:has(.drawer.show) {
 
 @media screen and (max-width: 850px) {
   .container {
-    width: 0%;
+    width: 85%;
     max-width: 400px;
-    min-width: 280px;
+    min-width: 325px;
   }
   .content {
     width: 100%;
@@ -78,9 +78,10 @@ body:has(.drawer.show) {
 
 @media screen and (min-width: 850px) and (max-width: 1024px){
   .container {
-    width: 0%;
+    width: 90%;
     max-width: 400px;
     min-width: 400px;
+
   }
   .content {
     width: 100%;

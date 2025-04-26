@@ -588,6 +588,9 @@ body:has(.resoursesDropDown.show) {
   .formBtn {
     display: none;
   }
+  .whiteMark{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 800px) {
