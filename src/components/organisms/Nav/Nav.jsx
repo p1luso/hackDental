@@ -876,6 +876,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             onClose={() => setShowMobileAboutUsMenu(false)}
             hideLogo
             renderCloBtn={
+              
               <div
                 style={{
                   display: "flex",
@@ -883,7 +884,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   alignItems: "center",
                 }}
               >
-                <span
+              <span
                   style={{
                     fontSize: "20px",
                     transform: "rotate(180deg)",
@@ -894,11 +895,11 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 >
                   →
                 </span>
-
                 <Text color="black-lighter" bold="font-light" size="xlg">
                   Sobre nosotros
                 </Text>
               </div>
+              
             }
           >
             <div className={styles.mobileContact}>
