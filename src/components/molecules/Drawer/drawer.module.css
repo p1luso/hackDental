@@ -65,9 +65,9 @@ body:has(.drawer.show) {
 
 @media screen and (max-width: 850px) {
   .container {
-    width: 85%;
+    width: 80%;
     max-width: 400px;
-    min-width: 325px;
+    min-width: 350px;
   }
   .content {
     width: 100%;
@@ -76,12 +76,37 @@ body:has(.drawer.show) {
   }
 }
 
-@media screen and (min-width: 850px) and (max-width: 1024px){
+@media screen and (min-width: 350px) and (max-width: 450px){
+  .container {
+    width: 85%;
+    max-width: 400px;
+    min-width: 320px;
+  }
+  .content {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 1024px){
   .container {
     width: 90%;
     max-width: 400px;
     min-width: 400px;
+  }
+  .content {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
 
+@media screen and (max-width: 350px){
+  .container {
+    width: 80%;
+    max-width: 400px;
+    min-width: 280px;
   }
   .content {
     width: 100%;
