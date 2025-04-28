@@ -364,7 +364,8 @@ body:has(.resoursesDropDown.show) {
   justify-content: space-between;
   height: 100%;
   background-color: #eef5f4;
-  padding-top: 48px;
+  padding-top: 5vh;
+  width: 100%;
 }
 
 .links{
@@ -380,11 +381,12 @@ body:has(.resoursesDropDown.show) {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  gap: 16px;
-  padding: 20px;
-  padding-bottom: 60px;
-  padding-top: 32px;
+  gap: 2vh;
+  padding: 5%;
+  padding-bottom: 5vh;
+  padding-top: 3vh;
   border-top: 1px solid var(--gray-light);
+  width: 100%;
 }
 .btns > :nth-child(1) {
   font-size: 16px !important;
@@ -397,10 +399,10 @@ body:has(.resoursesDropDown.show) {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  gap: 16px;
+  gap: 2vh;
   width: 100%;
-  padding-bottom: 60px;
-  padding-top: 32px;
+  padding-bottom: 5vh;
+  padding-top: 3vh;
   border-top: 1px solid var(--gray-light);
   margin-top: auto;
 }
@@ -413,13 +415,15 @@ body:has(.resoursesDropDown.show) {
 .dropdownMenus {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 2vh;
+  width: 100%;
+  padding: 0 5%;
 }
 .dropdownMenu {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  
+  width: 100%;
 }
 .dropMenuBtn :last-child {
   position: relative;
@@ -428,16 +432,15 @@ body:has(.resoursesDropDown.show) {
 .dropMenuBtn {
   width: 100%;
   display: flex;
-  padding: 10px 20px;
+  padding: 2vh 5%;
   cursor: pointer;
   justify-content: space-between;
   border-bottom: 1px solid rgba(128, 128, 128, 0.173);
-
 }
 .dropdownTitleDesc {
   display: flex;
   flex-direction: column;
-
+  width: 100%;
 }
 .dropdownTitle > :last-child {
   position: relative;
@@ -446,19 +449,22 @@ body:has(.resoursesDropDown.show) {
 .dropdownTitle {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 1vw;
 }
 
 .resourcesContainer {
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  padding-top: 48px;
+  padding: 5%;
+  padding-top: 5vh;
+  width: 100%;
+  height: 100%;
 }
 .resourcesContainer .cards {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 2vh;
+  width: 100%;
 }
 
 .whiteMark {
@@ -490,24 +496,25 @@ body:has(.resoursesDropDown.show) {
   display: flex;
   background-color: #fff;
   border: 1px solid var(--primary);
-  padding: 16px;
+  padding: 4%;
   border-radius: 8px;
-  gap: 16px;
+  gap: 4%;
   cursor: pointer;
-  height: 112px;
+  height: auto;
+  width: 100%;
 }
 
 .mobileCard .mobileImg {
-  width: 120px;
-  height: 75px;
+  width: 30%;
+  height: auto;
   border-radius: 8px;
-  object-fit: fill;
-  object-position: 0 5px;
+  object-fit: cover;
 }
 .mobileCard .mobileDesc {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 70%;
 }
 .seeGuides {
   align-self: flex-end;
@@ -516,19 +523,21 @@ body:has(.resoursesDropDown.show) {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0px 31px;
-  padding-top: 48px;
+  padding: 5%;
+  padding-top: 5vh;
+  height: 100%;
 }
 .mobileContact > :nth-child(1) {
-  margin-bottom: 4px;
+  margin-bottom: 1vh;
 }
 .mobileContact > :nth-child(2) {
-  margin-bottom: 24px;
+  margin-bottom: 3vh;
 }
 .mobileContact .links {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 2vh;
+  width: 100%;
 }
 
 .links{}
@@ -548,13 +557,16 @@ body:has(.resoursesDropDown.show) {
     flex-direction: column;
     width: 100%;
   }
+  
   .logo > :first-child {
-    width: 180px;
+    width: 30vw;
+    max-width: 180px;
   }
+  
   .nav {
     height: auto;
   }
-
+  
   .right > :nth-child(1),
   .right > :nth-child(2),
   .right > :nth-child(3),
@@ -562,33 +574,41 @@ body:has(.resoursesDropDown.show) {
   .right > :nth-child(5) {
     display: none;
   }
+  
   .topMenu {
-    gap: 12px;
+    gap: 2vw;
   }
+  
   .topMenu > :nth-child(2) {
-    font-size: 13px;
+    font-size: clamp(12px, 2vw, 16px);
     line-height: 1.35;
   }
+  
   .topMenu .whiteMark {
     align-self: self-start;
     position: relative;
     top: 3px;
   }
+  
   .topMenu .whiteMark > :first-child {
-    font-size: 10px !important;
+    font-size: clamp(10px, 1.5vw, 12px) !important;
   }
-
+  
   .btnDropdown {
     display: flex;
   }
+  
   .bottomMenu {
-    padding: 0 16px 0 4px;
-    height: 76px;
+    padding: 0 5% 0 2%;
+    height: auto;
+    min-height: 76px;
   }
+  
   .formBtn {
     display: none;
   }
-  .whiteMark{
+  
+  .whiteMark {
     display: none;
   }
 }
@@ -599,13 +619,64 @@ body:has(.resoursesDropDown.show) {
     height: auto;
     animation: none;
   }
-
+  
   .resoursesDropDown {
     display: none;
   }
-
+  
   .elements {
     justify-content: space-between;
     padding: 0;
   }
+}
+
+/* Estilos para el Drawer */
+.drawer {
+  width: 90% !important;
+  max-width: 400px !important;
+  right: 0 !important;
+  left: auto !important;
+  transform: translateX(100%) !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+
+.drawer.show {
+  transform: translateX(0) !important;
+}
+
+/* Estilos para los botones de cierre y retroceso */
+.closeButton {
+  position: absolute;
+  left: -15vw;
+  top: 2vh;
+  background: transparent;
+  z-index: 1000;
+  width: 15vw;
+  max-width: 60px;
+  height: 15vw;
+  max-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backButton {
+  position: absolute;
+  left: 8vw;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 5vw;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Estilos para el título del Drawer */
+.drawerTitle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2vh 0;
+  font-size: clamp(16px, 4vw, 24px);
 }

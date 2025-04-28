@@ -198,7 +198,7 @@ const LandingPage = () => {
                   type="bigtitle"
                   textAlign="start"
                   color="black"
-                  textAlignMobile="center"
+                  textAlignMobile="start"
                   fontFamily="lexend"
                   bold="font-light"
                   fontSize="28px"

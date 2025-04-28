@@ -1213,6 +1213,12 @@ body:has(.popupContainer.show) {
   width: 210px;
 }
 
+.imageWrapper{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
 .titlesContainerMobile{
   display: none;
 }
