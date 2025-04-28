@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 35vh;
+  min-height: 30vh;
   }
 
 .verticalLine {
@@ -67,7 +67,7 @@
   padding: 0 1rem;
   max-width: 1200px;
   margin: 1% auto;
-  min-height: 40vh;
+  min-height: 20vh;
 }
 
 .grid {

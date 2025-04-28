@@ -14,7 +14,7 @@ export const useScrollProgress = () => {
       const scrollPosition = window.scrollY;
       const viewportHeight = window.innerHeight;
 
-      const visibleStart = Math.max(0, scrollPosition - sectionTop + viewportHeight * 0.25);
+      const visibleStart = Math.max(0, scrollPosition - sectionTop + viewportHeight * 0.5);
       const visibleEnd = Math.min(sectionHeight, scrollPosition + viewportHeight - sectionTop - viewportHeight * 0.25);
       
       const extraScrollSpace = viewportHeight * 0.1;
