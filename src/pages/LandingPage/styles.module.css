@@ -6,6 +6,7 @@
   --yellow-line: calc(var(--width-unit) * 0.375);
   --green-line: calc(var(--width-unit) * 0.25);
   --mobile-margin: 28px;
+  overflow-x: hidden;
 }
 .line {
   display: flex;
