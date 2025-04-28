@@ -61,11 +61,11 @@ const LandingPage = () => {
       window.removeEventListener("resize", updateCardsPerPage);
     };
   }, []);
-  /*   useEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       setShowPopup(true);
     }, 30 * 1000);
-  }, []);  */
+  }, []);
 
   const [page, setPage] = useState(0);
   const totalPages = Math.ceil(books.length / cardsPerPage);
@@ -254,8 +254,6 @@ const LandingPage = () => {
       <section className={styles.dentalCover}>
         <div className={styles.dentalContainer}>
           <div className={styles.contentContainer_dental}>
-            
-
             <div className={styles.founderText}>
               <div className={styles.titles}>
                 <Text
