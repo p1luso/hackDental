@@ -621,7 +621,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               <Icon size={"4rem"} type={"close"} color="var(--white)" />
             </div>
             <div className={styles.drawerTitle}>
-              <span className={styles.backButton} onClick={handleBackToMainMenu}>
+              <span className={styles.backButton} id={styles.backButtonResource} onClick={handleBackToMainMenu}>
                 →
               </span>
               <Text color="black-lighter" bold="font-light" size="xlg">

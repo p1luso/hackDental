@@ -668,6 +668,15 @@ body:has(.resoursesDropDown.show) {
   cursor: pointer;
   z-index: 1000;
 }
+#backButtonResource {
+  position: absolute;
+  left: -20vw;
+  top: 55%;
+  transform: translateY(-50%) rotate(180deg);
+  font-size: 5vw;
+  cursor: pointer;
+  z-index: 1000;
+}
 
 /* Estilos para el título del Drawer */
 .drawerTitle {
