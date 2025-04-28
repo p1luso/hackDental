@@ -505,7 +505,7 @@ body:has(.resoursesDropDown.show) {
 }
 
 .mobileCard .mobileImg {
-  width: 30%;
+  width: 70%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
@@ -659,12 +659,11 @@ body:has(.resoursesDropDown.show) {
   align-items: center;
   justify-content: center;
 }
-
 .backButton {
   position: absolute;
-  left: 8vw;
-  top: 50%;
-  transform: translateY(-50%);
+  left: -25vw;
+  top: 55%;
+  transform: translateY(-50%) rotate(180deg);
   font-size: 5vw;
   cursor: pointer;
   z-index: 1000;

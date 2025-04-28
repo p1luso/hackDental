@@ -658,12 +658,10 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             <div className={styles.cards}>
               <Link to={DOWNLOAD_EBOOK} target="_blank">
                 <div className={styles.mobileCard}>
-                  <div className={styles.mobileCardContainer}>
                     <img
                       src={imgEbookPrueba}
                       className={styles.mobileImg}
                     />
-                  </div>
                   <div className={styles.mobileDesc}>
                     <Text
                       color="dark"
@@ -676,12 +674,10 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               </Link>
               <Link to={DOWNLOAD_EBOOK} target="_blank">
                 <div className={styles.mobileCard}>
-                  <div className={styles.mobileCardContainer}>
                     <img
                       src={imgEbookPrueba}
                       className={styles.mobileImg}
                     />
-                  </div>
                   <div className={styles.mobileDesc}>
                     <Text
                       color="dark"
