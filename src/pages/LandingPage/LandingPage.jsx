@@ -106,7 +106,7 @@ const LandingPage = () => {
         />
       </div>
 
-      {/* <div className={styles.help}>
+      <div className={styles.help}>
         {showWSMsg && (
           <div className={styles.notification}>
             <Text bold="font-light" size="ty">
@@ -127,7 +127,7 @@ const LandingPage = () => {
         <div className={styles.wsBtn}>
           <Icon size={"2rem"} type={"wp"} color="#fafafa" />
         </div>
-      </div> */}
+      </div>
       <Nav />
       <header className={styles.header}>
         <section className={styles.banner}>
