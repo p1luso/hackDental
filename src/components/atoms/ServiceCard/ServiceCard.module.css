@@ -4,6 +4,7 @@
   align-items: center;
   background: white;
   border-radius: 52px;
+  width: 70%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
   transition: all 0.3s ease;

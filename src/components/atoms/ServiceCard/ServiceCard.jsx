@@ -41,48 +41,30 @@ const ServiceCard = ({ initialData, onSubmit }) => {
   });
 
   const [activeField, setActiveField] = useState(null);
-  const activeInputRef = useRef(null);
   const modalRef = useRef(null);
 
+  const handleFocus = (fieldName) => {
+    setActiveField((prev) => (prev === fieldName ? null : fieldName));
+  };
+
+  const handleClickOutside = (e) => {
+    if (
+      modalRef.current &&
+      !modalRef.current.contains(e.target) &&
+      !e.target.closest(`.${styles.inputGroup}`)
+    ) {
+      setActiveField(null);
+    }
+  };
+
   useEffect(() => {
-    // Añadir listener para detectar clics fuera del modal
-    const handleClickOutside = (e) => {
-      // Verifica si el clic fue fuera de los elementos del formulario o modal
-      if (
-        modalRef.current &&
-        !modalRef.current.contains(e.target) &&
-        !activeInputRef.current?.contains(e.target)
-      ) {
-        setActiveField(null); // Cierra el modal si es clic fuera
-      }
-    };
-
-    document.addEventListener("click", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    const cleanValue =
-      name === "servicePrice" || name === "monthlyIncome"
-        ? value.replace(/[^0-9]/g, "")
-        : value;
-
-    setFormData((prev) => ({ ...prev, [name]: cleanValue }));
-  };
-
-  const handleFocus = (fieldName, inputRef) => {
-    setActiveField(fieldName);
-    activeInputRef.current = inputRef;
-  };
-
   const handleExampleClick = (example) => {
-    const value = example.split(" - ")[0].replace("$", "");
-    setFormData((prev) => ({ ...prev, [activeField]: value }));
-    setActiveField(null); // Cerrar el modal después de seleccionar una opción
+    setFormData((prev) => ({ ...prev, [activeField]: example }));
+    setActiveField(null);
   };
 
   const handleSubmit = (e) => {
@@ -96,14 +78,15 @@ const ServiceCard = ({ initialData, onSubmit }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={`${styles.card} ${isAnyFieldActive ? styles.serviceInfoActive : ""}`}
+      className={`${styles.card} ${
+        isAnyFieldActive ? styles.serviceInfoActive : ""
+      }`}
     >
       <div
         className={`${styles.serviceInfo} ${
           isAnyFieldActive ? styles.serviceInfoActive : ""
         }`}
       >
-        {" "}
         {["serviceName", "servicePrice", "monthlyIncome"].map((field) => (
           <div
             key={field}
@@ -120,39 +103,52 @@ const ServiceCard = ({ initialData, onSubmit }) => {
             </label>
 
             <div
-              className={field !== "serviceName" ? styles.priceInput : undefined}
+              onClick={() => handleFocus(field)}
+              className={`${styles.input} ${
+                field !== "serviceName" ? styles.priceInput : ""
+              }`}
+              style={{
+                color: isFieldActive(field) ? "#000000" : "#8A8A8A",
+              }}
             >
-              {field !== "serviceName" && (
-                <span className={styles.currencySymbol}>$</span>
-              )}
-              <input
-                type="text"
-                id={field}
-                name={field}
-                value={formData[field]}
-                onChange={handleChange}
-                onFocus={(e) => handleFocus(field, e.target)}
-                className={styles.input}
-                placeholder={field === "serviceName" ? "Nombre del servicio" : "0"}
-                required
-              />
+              {formData[field] || "Selecciona una opción"}
             </div>
 
-            {activeField === field && (
-              <div ref={modalRef} className={styles.modal}>
-                {InputExamples[field].examples.map((example, index) => (
-                  <Text
-                    key={index}
-                    fontFamily="lexend"
-                    color="gray"
-                    fontSize="16px"
-                    onClick={() => handleExampleClick(example)}
-                    className={styles.exampleItem}
-                  >
-                    {example}
-                  </Text>
-                ))}
-              </div>
+            {isFieldActive(field) && (
+              <>
+                <div className={styles.modalOverlay} />
+                <div ref={modalRef} className={styles.modal}>
+                  {field === "servicePrice" ? (
+                    <input
+                      type="text"
+                      className={styles.modalInput}
+                      placeholder="Ingresa el precio del servicio"
+                      autoFocus
+                      onChange={(e) =>
+                        setFormData((prev) => ({
+                          ...prev,
+                          [field]: e.target.value,
+                        }))
+                      }
+                      onBlur={() => setActiveField(null)}
+                      value={formData[field]}
+                    />
+                  ) : (
+                    InputExamples[field].examples.map((example, index) => (
+                      <Text
+                        key={index}
+                        fontFamily="lexend"
+                        color="gray"
+                        fontSize="16px"
+                        onClick={() => handleExampleClick(example)}
+                        className={styles.exampleItem}
+                      >
+                        {example}
+                      </Text>
+                    ))
+                  )}
+                </div>
+              </>
             )}
           </div>
         ))}
