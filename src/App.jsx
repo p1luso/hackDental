@@ -8,6 +8,7 @@ import {
   OUR_PROGRAM,
   ACERCA_DE,
   CUMPLIMIENTO,
+  LANDING_IA
 } from "./constants/routes";
 import LandingEBooks from "./pages/LandingEBooks/LandingEBooks";
 import DownloadEBook from "./pages/DownloadEBook/DownloadEBook";
@@ -18,6 +19,7 @@ import OurProgram from "./pages/OurProgram/OurProgram";
 import Cumplimiento from "./pages/Cumplimiento/Cumplimiento";
 import AcercaDe from "./pages/AcercaDe/AcercaDe";
 import { useLayoutEffect } from "react";
+import LandingIA from "./pages/IA/LandingIA";
 
 function App() {
   const location = useLocation();
@@ -34,6 +36,7 @@ function App() {
       <Route path={OUR_PROGRAM} element={<OurProgram />} />
       <Route path={CUMPLIMIENTO} element={<Cumplimiento />} />
       <Route path={ACERCA_DE} element={<AcercaDe />} />
+      <Route path={LANDING_IA} element={<LandingIA/>} />
     </Routes>
   );
 }
