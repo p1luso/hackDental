@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "./ServiceCard.module.css";
 import Text from "../Text/Text";
 
@@ -42,6 +42,27 @@ const ServiceCard = ({ initialData, onSubmit }) => {
 
   const [activeField, setActiveField] = useState(null);
   const activeInputRef = useRef(null);
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    // Añadir listener para detectar clics fuera del modal
+    const handleClickOutside = (e) => {
+      // Verifica si el clic fue fuera de los elementos del formulario o modal
+      if (
+        modalRef.current &&
+        !modalRef.current.contains(e.target) &&
+        !activeInputRef.current?.contains(e.target)
+      ) {
+        setActiveField(null); // Cierra el modal si es clic fuera
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -58,20 +79,10 @@ const ServiceCard = ({ initialData, onSubmit }) => {
     activeInputRef.current = inputRef;
   };
 
-  const handleClickOutside = (e) => {
-    if (
-      activeInputRef.current &&
-      !activeInputRef.current.contains(e.target) &&
-      !e.target.closest(`.${styles.modal}`)
-    ) {
-      setActiveField(null);
-    }
-  };
-
   const handleExampleClick = (example) => {
     const value = example.split(" - ")[0].replace("$", "");
     setFormData((prev) => ({ ...prev, [activeField]: value }));
-    setActiveField(null);
+    setActiveField(null); // Cerrar el modal después de seleccionar una opción
   };
 
   const handleSubmit = (e) => {
@@ -83,7 +94,10 @@ const ServiceCard = ({ initialData, onSubmit }) => {
   const isAnyFieldActive = Boolean(activeField);
 
   return (
-    <form onSubmit={handleSubmit} className={`${styles.card} ${isAnyFieldActive ? styles.serviceInfoActive : ''}`} onClick={handleClickOutside}>
+    <form
+      onSubmit={handleSubmit}
+      className={`${styles.card} ${isAnyFieldActive ? styles.serviceInfoActive : ""}`}
+    >
       <div
         className={`${styles.serviceInfo} ${
           isAnyFieldActive ? styles.serviceInfoActive : ""
@@ -106,9 +120,7 @@ const ServiceCard = ({ initialData, onSubmit }) => {
             </label>
 
             <div
-              className={
-                field !== "serviceName" ? styles.priceInput : undefined
-              }
+              className={field !== "serviceName" ? styles.priceInput : undefined}
             >
               {field !== "serviceName" && (
                 <span className={styles.currencySymbol}>$</span>
@@ -121,31 +133,26 @@ const ServiceCard = ({ initialData, onSubmit }) => {
                 onChange={handleChange}
                 onFocus={(e) => handleFocus(field, e.target)}
                 className={styles.input}
-                placeholder={
-                  field === "serviceName" ? "Nombre del servicio" : "0"
-                }
+                placeholder={field === "serviceName" ? "Nombre del servicio" : "0"}
                 required
               />
             </div>
 
             {activeField === field && (
-              <>
-                <div className={styles.modalOverlay} />
-                <div className={styles.modal}>
-                  {InputExamples[field].examples.map((example, index) => (
-                    <Text
-                      key={index}
-                      fontFamily="lexend"
-                      color="gray"
-                      fontSize="16px"
-                      onClick={() => handleExampleClick(example)}
-                      className={styles.exampleItem}
-                    >
-                      {example}
-                    </Text>
-                  ))}
-                </div>
-              </>
+              <div ref={modalRef} className={styles.modal}>
+                {InputExamples[field].examples.map((example, index) => (
+                  <Text
+                    key={index}
+                    fontFamily="lexend"
+                    color="gray"
+                    fontSize="16px"
+                    onClick={() => handleExampleClick(example)}
+                    className={styles.exampleItem}
+                  >
+                    {example}
+                  </Text>
+                ))}
+              </div>
             )}
           </div>
         ))}
