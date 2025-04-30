@@ -8,16 +8,19 @@
   --green-line: calc(var(--width-unit) * 0.25);
   --mobile-margin: 32px;
 }
+.bg{
+  background-color: var(--primary-darker);
+}
 
 .banner {
-  background-color: var(--primary-darker);
+  background-color: var(--dark-transparent-45);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 32px;
 }
 .imgAcerca {
-  width: 340px;
+  width: 240px;
 }
 .desc {
   display: flex;
@@ -45,21 +48,52 @@
 .texts {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 20px;
   width: 40%;
   flex-shrink: 0;
-  align-items: center;
+  align-items: start;
 }
 .texts > * {
-  align-self: center;
+  align-self: flex-start;
   flex-shrink: 0 !important;
 }
+.spainLocation__items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.spainLocation__items__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 10px 0 10px 0;
+  border-radius: 10px;
+}
+
+.titleMob{
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
   .banner {
     flex-direction: column-reverse;
     padding-top: 52px;
     gap: 16px;
   }
+  .titleMob{
+    display: block;
+  }
+
+  .titleDeskt{
+    display: none;
+  }
+  
   .desc > :nth-child(1) {
     margin-bottom: 0px;
     font-size: 36px;
