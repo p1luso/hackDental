@@ -201,7 +201,7 @@ const LandingPage = () => {
                   textAlignMobile="start"
                   fontFamily="lexend"
                   bold="font-light"
-                  fontSize="28px"
+                  fontSize="26px"
                   fontSizeMobile="21px"
                   s={{ lineHeight: "1", fontWeight: "500" }}
                 >
@@ -262,7 +262,7 @@ const LandingPage = () => {
                   color="black"
                   fontFamily="lexend"
                   bold="font-light"
-                  fontSize="28px"
+                  fontSize="26px"
                   fontSizeMobile="21px"
                   s={{ fontWeight: "500" }}
                 >
@@ -555,7 +555,7 @@ const LandingPage = () => {
               color="black"
               fontFamily="lexend"
               bold="font-light"
-              fontSize="28px"
+              fontSize="26px"
               fontSizeMobile="21px"
               s={{ lineHeight: "1", fontWeight: "500" }}
             >
@@ -583,7 +583,7 @@ const LandingPage = () => {
               color="black"
               fontFamily="lexend"
               bold="font-light"
-              fontSize="28px"
+              fontSize="26px"
               fontSizeMobile="21px"
               s={{ lineHeight: "1", fontWeight: "500" }}
             >

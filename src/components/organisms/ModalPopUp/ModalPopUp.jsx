@@ -44,7 +44,7 @@ export default function ModalPopUp({ showPopup, setShowPopup, navMobileMenuIsSho
               color="black"
               fontFamily="lexend"
               bold="font-light"
-              fontSize="28px"
+              fontSize="26px"
               fontSizeMobile="21px"
               s={{ lineHeight: "1.2", fontWeight: "500" }}
             >

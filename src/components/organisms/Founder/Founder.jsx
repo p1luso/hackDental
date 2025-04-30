@@ -22,7 +22,7 @@ const Founder = () => {
                 color="black"
                 fontFamily="lexend"
                 bold="font-light"
-                fontSize="28px"
+                fontSize="26px"
                 fontSizeMobile="21px"
                 s={{ lineHeight: "1", fontWeight: "500" }}
               >

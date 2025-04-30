@@ -244,7 +244,7 @@ const OurProgram = () => {
                   color="black"
                   fontFamily="lexend"
                   bold="font-light"
-                  fontSize="28px"
+                  fontSize="26px"
                   fontSizeMobile="21px"
                   s={{ fontWeight: "500" }}
                 >
@@ -353,7 +353,7 @@ const OurProgram = () => {
                   color="black"
                   fontFamily="lexend"
                   bold="font-light"
-                  fontSize="28px"
+                  fontSize="26px"
                   fontSizeMobile="21px"
                   s={{ fontWeight: "500" }}
                 >
@@ -420,7 +420,7 @@ const OurProgram = () => {
           {/*  <img src={Flecha2} className={`${styles.flecha} ${styles.flecha3}`} /> */}
           <div className={styles.bgTransparentContact}>
             <div className={styles.desc}>
-              <Text type="title" fontSize="28px" color="white" bold="medium">
+              <Text type="title" fontSize="26px" color="white" bold="medium">
                 Para dueños de Consultorios
               </Text>
               <Text type="title" fontSize="32px" color="white" bold="semi-bold">
