@@ -12,11 +12,11 @@ import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
 import { useNavigate } from "react-router-dom";
 import CoberturaDental from "@assets/coberturaDental.svg";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
-import FiguraIrregularIzq from "@assets/figura_irregularIZQ.svg"
-import FiguraIrregularDer from "@assets/Figura_irregular.svg"
-import Libreta from "@assets/libreta.svg"
-import Cohete from "@assets/cohete.svg"
-import Finger from "@assets/3_dedo.svg"
+import FiguraIrregularIzq from "@assets/figura_irregularIZQ.svg";
+import FiguraIrregularDer from "@assets/Figura_irregular.svg";
+import Libreta from "@assets/libreta.svg";
+import Cohete from "@assets/cohete.svg";
+import Finger from "@assets/3_dedo.svg";
 
 import Link from "../../components/atoms/Link/Link";
 
@@ -83,15 +83,15 @@ const LandingEBooks = () => {
             <img className={styles.ebookImg} src={imgEbookPrueba} />
             <div className={styles.desc}>
               <Text type="smallsubtitle" color="black">
-                Marketing Dental: La Guia Definitiva
+                7 secretos del marketing dental
               </Text>
               <Text bold="font-light" size="ty">
-                Transforma tu clínica dental con nuestros ebooks, redactados
-                por líderes en marketing digital.
+                Transforma tu clínica dental con nuestros ebooks, redactados por
+                líderes en marketing digital.
               </Text>
               <TextLink
                 marked
-                variant="secondary"
+                variant="green-black"
                 to={DOWNLOAD_EBOOK}
                 textProps={{
                   size: "sm",
@@ -110,7 +110,7 @@ const LandingEBooks = () => {
               img={imgEbookPrueba}
               textLinkColor="green-black"
               textColor="green-black"
-              title={"Email Marketing Dental"}
+              title={"IA para Consultorios Dentales"}
               desc={"Transforma tu clínica dental con nuestros ebooks."}
             />
             <EBookCard
@@ -118,21 +118,28 @@ const LandingEBooks = () => {
               textLinkColor="green-black"
               textColor="green-black"
               img={imgEbookPrueba}
-              title={"Aceptación de Casos Dentales"}
+              title={"Whatsapp para Consultorios"}
               desc={
                 "Transforma tu clínica dental con nuestros ebooks, redactados."
               }
             />
-            <EBookCard
-              bookType={false}
-              img={imgEbookPrueba}
-              textLinkColor="green-black"
-              textColor="green-black"
-              title={"Marketing de Tratamientos Premium"}
-              desc={
-                "Transforma tu clínica dental con nuestros ebooks, redactados."
-              }
-            />
+            <div className={styles.nextEbook}>
+              <div className={styles.tag}>
+                <Text size="ty" color="light">
+                  Próximamente
+                </Text>
+              </div>
+              <EBookCard
+                bookType={false}
+                img={imgEbookPrueba}
+                textLinkColor="green-black"
+                textColor="green-black"
+                title={"Próximamente"}
+                desc={
+                  "Transforma tu clínica dental con nuestros ebooks, redactados."
+                }
+              />
+            </div>
           </div>
         </div>
       </main>
