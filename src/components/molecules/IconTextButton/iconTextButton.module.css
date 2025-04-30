@@ -12,6 +12,7 @@
 .primary-rounded,
 .very-light-black.iconTextButton,
 .dark-green.iconTextButton,
+.white-green.iconTextButton,
 .darker-green.iconTextButton,
 .light-green.iconTextButton,
 .primary-bordered.iconTextButton {
@@ -452,6 +453,18 @@
 
 .light-green.iconTextButton.full:hover {
   background-color: var(--primary-light2);
+  transition: all 0.3s ease-in;
+
+}
+
+.white-green.iconTextButton.full {
+  background-color: #008060;
+  color: var(--white);
+  border-radius: 4px;
+}
+
+.white-green.iconTextButton.full:hover {
+  background-color: #03aa80;
   transition: all 0.3s ease-in;
 
 }

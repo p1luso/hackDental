@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./ServiceCard.module.css";
 import Text from "../Text/Text";
+import blanqueamientoImg from "@assets/Blanquamiento_Dental.svg";
+import implantesImg from "@assets/Implantes_Dentales.svg";
+import invisalignImg from "@assets/Invisalign.svg";
 
 const InputExamples = {
   serviceName: {
@@ -19,19 +22,25 @@ const InputExamples = {
       "$800 - Limpieza Dental",
       "$2,000 - Implantes Dentales",
       "$1,500 - Carillas",
-      "$3,000 - Ortodoncia",
+
     ],
   },
   monthlyIncome: {
     title: "Ejemplos de Ingresos",
     examples: [
       "$15,000 mensuales - Implantes",
-      "$150,000 anuales - Ortodoncia",
+      "$150,000 anuales - Invisalign",
       "$10,000 mensuales - Blanqueamiento",
-      "$20,000 mensuales - Carillas",
+
     ],
   },
 };
+
+const ServiceOptions = [
+  { title: "Implantes Dentales", image: implantesImg },
+  { title: "Blanqueamiento Dental", image: blanqueamientoImg },
+  { title: "Ortodoncia Invisible", image: invisalignImg },
+];
 
 const ServiceCard = ({ initialData, onSubmit }) => {
   const [formData, setFormData] = useState({
@@ -133,7 +142,40 @@ const ServiceCard = ({ initialData, onSubmit }) => {
                       onBlur={() => setActiveField(null)}
                       value={formData[field]}
                     />
-                  ) : (
+                  ) : field === "serviceName" ? (
+                    <>
+                      <Text
+                            fontFamily="lexend"
+                            color="black-lighter"
+                            fontSize="14px"
+                          >
+                            Elige el mejor servicio de tu consultorio.
+                          </Text>
+                      {ServiceOptions.map((option, index) => (
+                        <div
+                          key={index}
+                          className={styles.serviceOption}
+                          onClick={() => handleExampleClick(option.title)}
+                        >
+                          {option.image && (
+                            <img
+                              src={option.image}
+                              alt={option.title}
+                              className={styles.optionIcon}
+                            />
+                          )}
+                          <Text
+                            fontFamily="lexend"
+                            color="gray"
+                            fontSize="14px"
+                          >
+                            {option.title}
+                          </Text>
+                        </div>
+                      ))}
+                    </>
+                  )
+                  : (
                     InputExamples[field].examples.map((example, index) => (
                       <Text
                         key={index}
