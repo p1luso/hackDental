@@ -430,7 +430,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               <div className={styles.formBtn}>
                 <Link to={CONTACT_FORM} target="_blank">
                   <IconTextButton
-                    colorVariant="primary-darker"
+                    colorVariant="white-green"
                     textProps={{ size: "ty" }}
                   >
                     Solicita una reunión

@@ -61,11 +61,11 @@ const LandingPage = () => {
       window.removeEventListener("resize", updateCardsPerPage);
     };
   }, []);
-  useEffect(() => {
+ /*  useEffect(() => {
     setTimeout(() => {
       setShowPopup(true);
     }, 30 * 1000);
-  }, []);
+  }, []); */
 
   const [page, setPage] = useState(0);
   const totalPages = Math.ceil(books.length / cardsPerPage);
@@ -292,7 +292,7 @@ const LandingPage = () => {
               </Text>
 
               <div className={styles.founderButton}>
-                <IconTextButton size="260px" colorVariant="primary-darker">
+                <IconTextButton size="260px" colorVariant="white-green">
                   Pedir auditoría
                 </IconTextButton>{" "}
               </div>
@@ -301,7 +301,7 @@ const LandingPage = () => {
               <img src={CoberturaDental} alt="" />
             </div>
             <div className={styles.founderButtonMobile}>
-              <IconTextButton size="100%" colorVariant="primary-darker">
+              <IconTextButton size="100%" colorVariant="white-green">
                 Pedir auditoría
               </IconTextButton>{" "}
             </div>
@@ -460,7 +460,7 @@ const LandingPage = () => {
           fontSizeMobile="21px"
           s={{ lineHeight: "1", fontWeight: "500" }}
         >
-          Eres el mejor en lo que haces,
+          Ofreces servicios de calidad,{" "}
         </Text>
         <Text
           type="bigtitle"
@@ -472,7 +472,7 @@ const LandingPage = () => {
           fontSizeMobile="24px"
           s={{ lineHeight: "1", fontWeight: "600" }}
         >
-          déjanos a nosotros el Marketing
+          ¿Pero no consigues nuevos pacientes?{" "}
         </Text>
         {/* <div className={styles.spainLocation__desc}>
           
@@ -490,21 +490,21 @@ const LandingPage = () => {
               </Text>
               <div className={styles.spainLocation__items}>
                 <div className={styles.spainLocation__items__item}>
-                  <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+                  <Icon size={"1.3rem"} color="#008060" type={"check"} />
 
                   <Text color="black" bold="font-light">
                     Está ubicado en <strong>España.</strong>
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
-                  <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+                  <Icon size={"1.3rem"} color="#008060" type={"check"} />
 
                   <Text color="black" bold="font-light">
                     Factura <strong>10,000 euros o más</strong> al mes
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
-                  <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+                  <Icon size={"1.3rem"} color="#008060" type={"check"} />
 
                   <Text color="black" bold="font-light">
                     Quiere crecer rápidamente en el <strong>2025</strong>.
@@ -512,7 +512,7 @@ const LandingPage = () => {
                 </div>
               </div>
               <div className={styles.spainLocation__btn}>
-                <IconTextButton colorVariant="darker-green" size="100%">
+                <IconTextButton colorVariant="white-green" size="100%">
                   Solicita una reunión
                 </IconTextButton>
               </div>

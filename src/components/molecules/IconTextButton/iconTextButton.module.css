@@ -475,3 +475,10 @@
   font-family: Lexend;
   border-radius: 4px;
 }
+
+.darker-green.iconTextButton.full:hover {
+  background-color: #01836f;
+  color: var(--white);
+  font-family: Lexend;
+  border-radius: 4px;
+}

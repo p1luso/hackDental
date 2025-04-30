@@ -69,7 +69,7 @@
   justify-content: space-between;
   padding-left: var(--width-unit);
   padding-right: var(--width-unit);
-  background-color: #eef5f4;
+  background-color: #f5f9f7;
   height: 84px;
 }
 .bottomMenu.changeColor {
@@ -82,7 +82,7 @@
 }
 .newTag {
   position: absolute;
-  background-color: var(--primary-darker);
+  background-color: #008060;
   padding: 0 4px;
   right: -10%;
   top: -22%;

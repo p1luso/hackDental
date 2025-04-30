@@ -93,7 +93,7 @@ export default function ModalPopUp({ showPopup, setShowPopup, navMobileMenuIsSho
           </div>
 
           <div className={styles.popupBtns}>
-            <IconTextButton size="100%" onClick={() => navigate(OUR_PROGRAM)}>
+            <IconTextButton colorVariant="white-green" size="100%" onClick={() => navigate(OUR_PROGRAM)}>
               Pedir auditoría
             </IconTextButton>
           </div>

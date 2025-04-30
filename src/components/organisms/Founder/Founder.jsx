@@ -106,7 +106,7 @@ const Founder = () => {
                 <div className={styles.beneficiosIcon}>
                   <Icon
                   size={"1.2rem"}
-                  color="var(--primary-darker)"
+                  color="#008060"
                   type={"check"}
                 />
                 </div>
@@ -125,7 +125,7 @@ const Founder = () => {
               <div className={styles.beneficiosIcon}>
                 <Icon
                   size={"1.2rem"}
-                  color="var(--primary-darker)"
+                  color="#008060"
                   type={"check"}
                 />
                 </div>
@@ -145,7 +145,7 @@ const Founder = () => {
               <div className={styles.beneficiosIcon}>
                 <Icon
                   size={"1.2rem"}
-                  color="var(--primary-darker)"
+                  color="#008060"
                   type={"check"}
                 />
                 </div>
@@ -159,7 +159,7 @@ const Founder = () => {
                 </Text>
               </div>
               <div className={styles.founderButton}>
-                <IconTextButton colorVariant="primary-darker">
+                <IconTextButton colorVariant="white-green">
                   Contactar a José →
                 </IconTextButton>{" "}
               </div>

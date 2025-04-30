@@ -333,7 +333,7 @@ body:has(.popupContainer.show) {
   height: 72px !important;
 }
 .whoAreWe {
-  background-color: var(--primary-very-transparent);
+  background-color: #f5f9f7;
 
   width: 100%;
   padding-bottom: 80px;
@@ -640,7 +640,7 @@ body:has(.popupContainer.show) {
   display: flex;
   flex-direction: column;
   background-color: var(--very-light-white);
-  border: 8px solid var(--primary-darker);
+  border: 1px solid #607d8b;
   padding: 60px;
   width: 80%;
   border-radius: 32px;
@@ -736,7 +736,7 @@ body:has(.popupContainer.show) {
   display: flex;
   padding-top: 80px;
   padding-bottom: 80px;
-  gap: 160px;
+  gap: 100px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -871,7 +871,7 @@ body:has(.popupContainer.show) {
 
 
 .paginationLine.active {
-  background-color: #2f4f4f;
+  background-color: #008060;
 }
 
 
