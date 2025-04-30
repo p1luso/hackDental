@@ -31,7 +31,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color:#2f4f4f;
+  background-color:#008060;
   transition: height 0.3s ease-out;
 }
 
@@ -45,7 +45,6 @@
 }
 
 .numberCircleBG {
-  background-color: var(--primary-darker);
   border-radius: 50%;
 }
 
