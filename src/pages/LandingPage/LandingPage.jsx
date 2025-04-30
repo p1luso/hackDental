@@ -456,7 +456,7 @@ const LandingPage = () => {
           color="black"
           fontFamily="lexend"
           bold="font-light"
-          fontSize="32px"
+          fontSize="26px"
           fontSizeMobile="21px"
           s={{ lineHeight: "1", fontWeight: "500" }}
         >
@@ -468,7 +468,7 @@ const LandingPage = () => {
           textAlign="center"
           color="black"
           bold="semi-bold"
-          fontSize="36px"
+          fontSize="32px"
           fontSizeMobile="24px"
           s={{ lineHeight: "1", fontWeight: "600" }}
         >

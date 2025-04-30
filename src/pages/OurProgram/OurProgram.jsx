@@ -274,7 +274,7 @@ const OurProgram = () => {
               </Text>
 
               <div className={styles.founderButton}>
-                <IconTextButton size="260px" colorVariant="primary-darker">
+                <IconTextButton size="260px" colorVariant="white-green">
                   Pedir auditoría
                 </IconTextButton>{" "}
               </div>
@@ -384,12 +384,12 @@ const OurProgram = () => {
               </Text>
 
               <div className={styles.doubtButton}>
-                <IconTextButton size="290px" colorVariant="primary-darker">
+                <IconTextButton size="290px" colorVariant="white-green">
                   Consulta al Whatsapp
                 </IconTextButton>{" "}
               </div>
               <div className={styles.doubtButtonMobile}>
-                <IconTextButton size="100%" colorVariant="primary-darker">
+                <IconTextButton size="100%" colorVariant="white-green">
                   Consulta al Whatsapp
                 </IconTextButton>{" "}
               </div>
@@ -415,149 +415,7 @@ const OurProgram = () => {
           </div>
         </div>
       </section>
-      <section className={styles.main}>
-        <section id="contact" className={styles.contact}>
-          {/*  <img src={Flecha2} className={`${styles.flecha} ${styles.flecha3}`} /> */}
-          <div className={styles.bgTransparentContact}>
-            <div className={styles.desc}>
-              <Text type="title" fontSize="26px" color="white" bold="medium">
-                Para dueños de Consultorios
-              </Text>
-              <Text type="title" fontSize="32px" color="white" bold="semi-bold">
-                Aplica a nuestra auditoría gratis.
-              </Text>
-              <div className={styles.desc_text}>
-                <Text
-                  color="white"
-                  bold="font-light"
-                  fontSize="18px"
-                  s={{ fontWeight: 300 }}
-                >
-                  Llena la forma y te responderemos en un plazo de 24 horas.
-                </Text>
-              </div>
-              <div className={styles.contactIcons}>
-                <Mail className={styles.icons} />
-                <div className={styles.iconsText}>
-                  <h4>Mail</h4>
-                  <p>whittemburydavid1@gmail.com</p>
-                </div>
-              </div>
-              <div className={styles.contactIcons}>
-                <Phone className={styles.icons} />
-                <div className={styles.iconsText}>
-                  <h4>Whatsapp</h4>
-                  <p>+51 903300422</p>
-                </div>
-              </div>
-              <div className={styles.contactIcons}>
-                <Linkedin className={styles.icons} />
-                <div className={styles.iconsText}>
-                  <h4>LinkedIn</h4>
-                  <p>Jose Whittembury</p>
-                </div>
-              </div>
-            </div>
-            <div className={styles.formContainer}>
-              <div className={styles.form}>
-                <Text>
-                  <Mark color="primary-bg">ÚLTIMO PASO</Mark>
-                </Text>
-                <div className={styles.formLine}>
-                  <Input
-                    label="Nombre y Apellido*"
-                    variant="grey"
-                    labelColor="black"
-                    id={"firstName"}
-                    placeholder="Nombre"
-                    onChange={handleChange}
-                    value={formData.firstName}
-                    onError={() => {}}
-                  />
-                </div>
-                <div className={styles.formLine}>
-                  <Input
-                    label="Email*"
-                    variant="grey"
-                    labelColor="black"
-                    placeholder="Email"
-                    id={"email"}
-                    onChange={handleChange}
-                    value={formData.email}
-                    onError={() => {}}
-                  />
-                </div>
-                <div className={styles.formLine}>
-                  <Input
-                    label="Pais*"
-                    variant="grey"
-                    placeholder="Pais"
-                    labelColor="black"
-                    id={"location"}
-                    onChange={() => {}}
-                    onError={() => {}}
-                  />
-                </div>
-                <div className={styles.formLine}>
-                  <Input
-                    label="Teléfono*"
-                    placeholder="Teléfono"
-                    id={"phone"}
-                    variant="grey"
-                    labelColor="black"
-                    onChange={handleChange}
-                    value={formData.phone}
-                  />
-                </div>
-                <div className={styles.formLine}>
-                  <Input
-                    label="Sitio Web*"
-                    placeholder="Sitio Web"
-                    id={"phone"}
-                    variant="grey"
-                    labelColor="black"
-                    onChange={handleChange}
-                    value={formData.phone}
-                  />
-                </div>
-                <div className={styles.btnEnviar}>
-                  <IconTextButton
-                    colorVariant="primary"
-                    size="100%"
-                    textProps={{ size: "sm" }}
-                  >
-                    Quiero una auditoría gratuita
-                  </IconTextButton>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <footer className={styles.footer}>
-          <Text color="light" bold="font-light">
-            Copyright © {new Date().getFullYear()}, HackDental.com
-          </Text>
-          <div className={styles.links}>
-            <Link to={"#"}>
-              <Text color="soft-light" size="ty" bold="font-light">
-                Politica de Privacidad
-              </Text>
-            </Link>
-            <hr className={styles.separator_footer} />
-            <Link to={"#"}>
-              <Text color="soft-light" size="ty" bold="font-light">
-                Politica de Privacidad
-              </Text>{" "}
-            </Link>
-            <hr className={styles.separator_footer} />
-            <Link to={"#"}>
-              <Text color="soft-light" size="ty" bold="font-light">
-                Politica de Privacidad
-              </Text>
-            </Link>
-          </div>
-        </footer>
-      </section>
+     
     </div>
   );
 };

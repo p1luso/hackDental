@@ -53,13 +53,13 @@ const ContactForm = () => {
         <div className={styles.desc}>
           <Text
             type="title"
-            fontSize="28px"
+            fontSize="26px"
             fontSizeMobile="21px"
             textAlignMobile="start"
             color="white"
             bold="font-light"
           >
-            Para dueños de Consultorios
+            Dueño de consultorio
           </Text>
           <Text
             type="title"
@@ -177,7 +177,7 @@ const ContactForm = () => {
 
             <div className={styles.btnEnviar}>
               <IconTextButton
-                colorVariant="primary"
+                colorVariant="white-green"
                 size="100%"
                 textProps={{ size: "sm" }}
                 onClick={handleSendFormData}
