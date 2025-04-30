@@ -5,9 +5,19 @@ import { DOWNLOAD_EBOOK } from "../../../constants/routes";
 import Link from "../../atoms/Link/Link";
 import TextLink from "../../molecules/TextLink/TextLink";
 import Icon from "../../atoms/Icon/Icon";
-const EBookCard = ({ img, title, desc, bookType = true, subtitleColor ="black", textColor = "black", textLinkColor = "blackSecondary"}) => {
+const EBookCard = ({
+  img,
+  title,
+  desc,
+  bookType = true,
+  slug,
+  subtitleColor = "black",
+  textColor = "black",
+  textLinkColor = "blackSecondary",
+}) => {
   return (
-    <Link to={DOWNLOAD_EBOOK} target="_blank">
+    <Link to={`/ebooks/${slug}`} target="_blank">
+      {" "}
       <div className={styles.ebook}>
         <img className={styles.img} src={img} alt={title} />
 
@@ -34,9 +44,10 @@ const EBookCard = ({ img, title, desc, bookType = true, subtitleColor ="black", 
             marked
             textProps={{ size: "ty" }}
             variant={textLinkColor}
-            to={DOWNLOAD_EBOOK}
+            to={`/ebooks/${slug}`}
           >
-            Descargar la Guia <Icon type={"arrowSquare"} color="#33475b" size={"1rem"} />
+            Descargar la Guia{" "}
+            <Icon type={"arrowSquare"} color="#33475b" size={"1rem"} />
           </TextLink>
         </div>
       </div>

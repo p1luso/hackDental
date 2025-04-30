@@ -36,7 +36,8 @@
 .descBook {
   display: flex;
   flex-direction: column;
-  padding: 0 15px ;
+ justify-self: flex-start;
+ align-items: start;
   flex-grow: 1;
 }
 

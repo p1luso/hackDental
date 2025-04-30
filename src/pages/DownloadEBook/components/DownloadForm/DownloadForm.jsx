@@ -10,7 +10,7 @@ import { sendContactFormDownloadEbook } from "../../../../services/api/sendConta
 import LoadingScreen from "../../../../components/molecules/LoadingScreen/LoadingScreen";
 
 const MAX_FORMS = 2;
-const DownloadForm = ({ modalOpened }) => {
+const DownloadForm = ({ modalOpened, pdfPath  }) => {
   const [form, setForm] = useState({
     email: localStorage.getItem("email") ?? "",
     firstName: localStorage.getItem("firstName") ?? "",
@@ -70,14 +70,21 @@ const DownloadForm = ({ modalOpened }) => {
   const handleDownloadEbook = async () => {
     try {
       setLoading(true);
-      await sendContactFormDownloadEbook(form);
-      alert("ebook descargado!");
+     // await sendContactFormDownloadEbook(form);
+      const link = document.createElement("a");
+      link.href = pdfPath;
+      link.download = pdfPath.split("/").pop();
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     } catch (error) {
-      alert("hubo un error, intente nuevamente");
+      console.error("Error al descargar el ebook:", error);
+      alert("Hubo un error. Intenta nuevamente.");
     } finally {
       setLoading(false);
     }
   };
+  
 
   return (
     <div

@@ -9,10 +9,19 @@ import Icon from "../../components/atoms/Icon/Icon";
 import EBookImg from "@assets/imgEbook.svg";
 import EbookPortada from "@assets/ImgPortadaEbook.svg";
 import Link from "../../components/atoms/Link/Link";
+import ebookData from "../../services/api/ebookData";
+import { useParams } from "react-router-dom";
 
 import MedicsCard from "../../components/organisms/MedicsCard/MedicsCard";
 const DownloadEBook = () => {
   const [modalOpened, setModalOpened] = useState(false);
+  const { slug } = useParams();
+  const ebook = ebookData[slug];
+
+  if (!ebook) {
+    return <p style={{ padding: "2rem" }}>Ebook no encontrado.</p>;
+  }
+
   return (
     <div className={styles.page}>
       <nav className={styles.nav}>
@@ -25,18 +34,15 @@ const DownloadEBook = () => {
               Ebook escrito en el 2025
             </Text>
             <Text color="black" type="title" bold>
-              Whatsapp para Consultorios
-              <br /> en 5 minutos
+              {ebook.title}
             </Text>
             <div className={styles.desc}>
               <Text color="black" bold="font-light" size="sm">
-                Save thousands of engineering hours by using the NexHealth
-                <br />
-                Synchronizer API to sync bidirectionally
+                {ebook.desc}
               </Text>
             </div>
             <div className={styles.downloadEBook}>
-              <IconTextButton size="100%" onClick={() => setModalOpened(true)}>
+              <IconTextButton colorVariant="white-green" size="100%" onClick={() => setModalOpened(true)}>
                 Descargar Ahora
               </IconTextButton>
             </div>
@@ -121,6 +127,7 @@ const DownloadEBook = () => {
         <div className={styles.downloadBtn}>
           <IconTextButton
             size="100%"
+            colorVariant="white-green"
             textProps={{ size: "sm" }}
             onClick={() => setModalOpened(true)}
           >
@@ -147,7 +154,7 @@ const DownloadEBook = () => {
         </div>
       </footer>
       <Modal isOpen={modalOpened} onClose={() => setModalOpened(false)}>
-        <DownloadForm modalOpened={modalOpened} />
+        <DownloadForm modalOpened={modalOpened} pdfPath={ebook.pdfPath}/>
       </Modal>
     </div>
   );

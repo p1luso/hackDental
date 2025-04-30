@@ -92,7 +92,7 @@ const LandingEBooks = () => {
               <TextLink
                 marked
                 variant="green-black"
-                to={DOWNLOAD_EBOOK}
+                to={`/ebooks/7-secretos-marketing-dental`}
                 textProps={{
                   size: "sm",
                 }}
@@ -107,6 +107,7 @@ const LandingEBooks = () => {
           <div className={styles.books}>
             <EBookCard
               bookType={false}
+              slug="ia-para-consultorios"
               img={imgEbookPrueba}
               textLinkColor="green-black"
               textColor="green-black"
@@ -116,6 +117,7 @@ const LandingEBooks = () => {
             <EBookCard
               bookType={false}
               textLinkColor="green-black"
+              slug="wpp-para-consultorios"
               textColor="green-black"
               img={imgEbookPrueba}
               title={"Whatsapp para Consultorios"}
@@ -131,12 +133,13 @@ const LandingEBooks = () => {
               </div>
               <EBookCard
                 bookType={false}
+                slug="proximamente"
                 img={imgEbookPrueba}
                 textLinkColor="green-black"
                 textColor="green-black"
                 title={"Próximamente"}
                 desc={
-                  "Transforma tu clínica dental con nuestros ebooks, redactados."
+                "Transforma tu clínica dental con nuestros ebooks, redactados."
                 }
               />
             </div>

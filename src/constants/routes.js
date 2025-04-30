@@ -1,6 +1,6 @@
 export const LANDING_EBOOKS = "/ebooks";
 export const LANDING_PAGE = "/";
-export const DOWNLOAD_EBOOK = "/download/:id";
+export const DOWNLOAD_EBOOK = "/ebooks/:slug";
 export const ADMIN_PANEL = "/FGGLAJLGAG";
 export const CONTACT_FORM = "/contact";
 export const OUR_PROGRAM = "/program";
