@@ -1719,6 +1719,9 @@ body:has(.popupContainer.show) {
   font-size: 22px;
 }
 
+.whoAreWe_upText{
+  width: 100%;
+}
   .banner {
     display: flex;
     justify-content: center;

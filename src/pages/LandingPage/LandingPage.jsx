@@ -209,7 +209,7 @@ const LandingPage = () => {
                   bold="font-light"
                   fontSize="26px"
                   fontSizeMobile="18px"
-                  s={{ lineHeight: "1", fontWeight: "500" }}
+                  s={{ lineHeight: "1", fontWeight: "500"}}
                 >
                   Solo trabajamos con
                 </Text>
@@ -223,9 +223,9 @@ const LandingPage = () => {
                   bold="semi-bold"
                   fontSize="32px"
                   fontSizeMobile="22px"
-                  s={{ lineHeight: "1", fontWeight: "600" }}
+                  s={{ lineHeight: "1", fontWeight: "600", letterSpacing: "-0.12px" }}
                 >
-                  Consultorios independientes en España.
+                  Consultorios independientes en España
                 </Text>
                 </div>
                 <div className={styles.mobTitl}>
@@ -278,7 +278,7 @@ const LandingPage = () => {
                     textAlignMobile="start"
                   >
                     Cumplimos con la normativa de protección de datos vigente en
-                    España..
+                    España.
                   </Text>
                 </div>
                 <div style={{ width: "fit-content", display: "flex", justifyContent: "start", alignItems: "start"}}>
@@ -306,7 +306,7 @@ const LandingPage = () => {
                   fontFamily="lexend"
                   bold="font-light"
                   fontSize="26px"
-                  fontSizeMobile="21px"
+                  fontSizeMobile="18px"
                   s={{ fontWeight: "500" }}
                 >
                   Dueño de Consultorio Dental
@@ -318,7 +318,7 @@ const LandingPage = () => {
                   color="black"
                   bold="semi-bold"
                   fontSize="32px"
-                  fontSizeMobile="24px"
+                  fontSizeMobile="22px"
                   s={{ lineHeight: "1", fontWeight: "600" }}
                 >
                   ¿Te interesa una auditoría gratuita?
@@ -500,7 +500,7 @@ const LandingPage = () => {
           fontFamily="lexend"
           bold="font-light"
           fontSize="26px"
-          fontSizeMobile="21px"
+          fontSizeMobile="18px"
           s={{ lineHeight: "1", fontWeight: "500" }}
         >
           Ofreces servicios de calidad,{" "}
@@ -512,7 +512,7 @@ const LandingPage = () => {
           color="black"
           bold="semi-bold"
           fontSize="32px"
-          fontSizeMobile="24px"
+          fontSizeMobile="22px"
           s={{ lineHeight: "1", fontWeight: "600" }}
         >
           ¿Pero no consigues nuevos pacientes?{" "}
@@ -599,7 +599,7 @@ const LandingPage = () => {
               fontFamily="lexend"
               bold="font-light"
               fontSize="26px"
-              fontSizeMobile="21px"
+              fontSizeMobile="18px"
               s={{ lineHeight: "1", fontWeight: "500" }}
             >
               Aprende sin costo
@@ -612,7 +612,7 @@ const LandingPage = () => {
               color="black"
               bold="semi-bold"
               fontSize="32px"
-              fontSizeMobile="24px"
+              fontSizeMobile="22px"
               s={{ lineHeight: "1", fontWeight: "600" }}
             >
               Descargando nuestros ebooks
