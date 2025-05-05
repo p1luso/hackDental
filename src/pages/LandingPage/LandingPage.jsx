@@ -61,7 +61,7 @@ const LandingPage = () => {
       window.removeEventListener("resize", updateCardsPerPage);
     };
   }, []);
- /*  useEffect(() => {
+  /*  useEffect(() => {
     setTimeout(() => {
       setShowPopup(true);
     }, 30 * 1000);
@@ -136,18 +136,19 @@ const LandingPage = () => {
               <Text
                 size="xxbig"
                 bold="bold"
-                fontFamily="font-cuarternary"
+                fontFamily="lexend"
                 color="white"
-                fontSize="50px"
-                fontSizeMobile="34px"
+                fontSize="38px"
+                fontSizeMobile="18px"
                 s={{
                   lineHeight: "0.95",
-                  fontFamily: "queens",
-                  fontWeight: "800",
-                  letterSpacing: "-0.5px",
+                  fontFamily: "lexend",
+                  fontWeight: "500",
+                  letterSpacing: "-0.2px",
                 }}
               >
-                Somos una Agencia de Marketing{" "}
+                Somos una Agencia de{" "}
+                <span className={styles.marketingTitle}>Marketing </span>
                 <s className={styles.crossLine}>genérico</s>{" "}
                 <span className={styles.dentalWord}>Dental</span>
               </Text>
@@ -155,7 +156,7 @@ const LandingPage = () => {
                 fontFamily="lexend"
                 size="lg"
                 textAlignMobile="center"
-                fontSizeMobile="18px"
+                fontSizeMobile="16px"
                 s={{ lineHeight: "1.1", color: "#e9e9e9", fontWeight: "300" }}
               >
                 Convertimos tu clínica en autoridad local
@@ -163,6 +164,8 @@ const LandingPage = () => {
 
               <div className={styles.banner__btns}>
                 <IconTextButton
+                  textProps={{ fontWeight: 400 }}
+                  textFontWeight="400" // Nueva prop
                   size="100%"
                   onClick={() => navigate(CONTACT_FORM)}
                   colorVariant="white"

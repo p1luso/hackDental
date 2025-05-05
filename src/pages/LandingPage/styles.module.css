@@ -21,10 +21,20 @@
 
 .crossLine{
   color: #21917b;
+  font-weight: 700;
+  font-size: 48px;
+
+}
+.marketingTitle{
+  font-weight: 700;
+  font-size: 48px;
+
 }
 
 .dentalWord{
   color:#25c19b;
+  font-weight: 700;
+  font-size: 48px;
 }
 
 .markLine {
@@ -262,7 +272,7 @@ body:has(.popupContainer.show) {
   flex-direction: column;
   position: relative;
   z-index: 1;
-  width: 600px;
+  width: 660px;
   flex-shrink: 0;
   bottom: 32px;
   background: var(--primary-darker);
@@ -290,6 +300,8 @@ body:has(.popupContainer.show) {
   display: flex;
   height: 3.5rem;
   margin-top: 20px;
+  font-family: "lexend";
+  font-weight: 400;
   align-self: flex-start;
   width: 300px;
 }
@@ -1657,6 +1669,19 @@ body:has(.popupContainer.show) {
 
 @media screen and (max-width: 800px) {
  
+.crossLine{
+  font-size: 22px;
+
+}
+.marketingTitle{
+  font-size: 22px;
+
+}
+
+.dentalWord{
+  font-size: 22px;
+}
+
   .banner {
     display: flex;
     justify-content: center;

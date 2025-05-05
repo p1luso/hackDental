@@ -2,6 +2,7 @@ import React from "react";
 import Text from "../../atoms/Text/Text";
 import styles from "./iconTextButton.module.css";
 import Icon from "../../atoms/Icon/Icon";
+
 const IconTextButton = ({
   variant = "full",
   size = "auto",
@@ -9,6 +10,7 @@ const IconTextButton = ({
   colorVariant = "primary",
   icon,
   onClick,
+  textFontWeight = "normal", // Nueva prop con valor predeterminado
   children,
   ...otherProps
 }) => {
@@ -20,7 +22,7 @@ const IconTextButton = ({
       {...otherProps}
     >
       {icon && <Icon size={"1.5rem"} type={icon} />}
-      <Text {...textProps} color="inherit">
+      <Text {...textProps} style={{ fontWeight: textFontWeight }} color="inherit">
         {children}
       </Text>
     </button>
