@@ -149,7 +149,7 @@
   --background-container: var(--white-transparent);
   --container-border: var(--light-gray);
   --width-unit: calc(100vw / 6.2);
-  --width-unit2: calc(100vw / 4.5);
+  --width-unit2: calc(100vw / 3.9);
   --linea-amarilla: calc(100vw / 13);
   --linea-verde: calc(100vw / 24.5);
   --linea-rosa: calc(100vw / 6.67);

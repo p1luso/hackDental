@@ -346,13 +346,20 @@ body:has(.popupContainer.show) {
 }
 .whoAreWe {
   background-color: #f5f9f7;
-
   width: 100%;
   padding-bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+}
+.whoAreWeText{
+  width: 100%;
+}
+
+.whoAreWe_upText{
+  width: 80%;
+  margin-bottom: 20px;
 }
 
 .whoAreWeContainer{
@@ -396,8 +403,8 @@ body:has(.popupContainer.show) {
 }
 
 #founderImg {
-  width: 440px;
-  height: 440px;
+  width: 250px;
+  height: 250px;
   display: block;
   margin: 0;
   padding: 0;
@@ -748,7 +755,7 @@ body:has(.popupContainer.show) {
   display: flex;
   padding-top: 80px;
   padding-bottom: 80px;
-  gap: 100px;
+  gap: 200px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -804,7 +811,7 @@ body:has(.popupContainer.show) {
   width: 40px;
   height: 40px;
   font-size: 20px;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -815,11 +822,11 @@ body:has(.popupContainer.show) {
   z-index: 2;
 }
 .arrowButtonDesk:first-of-type {
-  left: 100px;
+  left: -70px;
 }
 
 .arrowButtonDesk:last-of-type {
-  right: 100px;
+  right: -70px;
 }
 
 .arrowButtonDesk:hover {
@@ -839,7 +846,7 @@ body:has(.popupContainer.show) {
   width: 40px;
   height: 40px;
   font-size: 20px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -877,7 +884,7 @@ body:has(.popupContainer.show) {
 }
 
 .paginationArrow {
-  display: flex;
+  display: none;
 }
 
 
@@ -1136,6 +1143,15 @@ body:has(.popupContainer.show) {
   padding: 20px 0;
 }
 
+.desktTitl{
+  display: flex;
+}
+
+.mobTitl{
+  display: none;
+
+}
+
 .imgContainer_dentist_sad{
   background-color: #f2f2f2;
   width: 100%;
@@ -1373,13 +1389,19 @@ body:has(.popupContainer.show) {
     justify-content: center;
     display: flex;
   }
-
+  .arrowButtonDesk
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .whoAreWeContainer
   {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: var(--mobile-margin);
   }
   .contentContainer_dental{
     display: flex;
@@ -1423,17 +1445,28 @@ body:has(.popupContainer.show) {
     margin-top:0;
   }
 
+  .desktTitl{
+    display: none;
+  }
+
+  .mobTitl{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+  }
+
   .titles{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
     text-align: center;
   }
 
   .founderText{
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
     display: flex;
     text-align: center;
     gap: 20px;

@@ -21,13 +21,16 @@ import Founder from "../../components/organisms/Founder/Founder";
 import LeftArrow from "@assets/flechaizquierda.svg";
 import RightArrow from "@assets/flechaderecha.svg";
 import EBookCard from "../../components/organisms/EBookCard/EBookCard";
-import WhoWeAreImage from "@assets/whoWeAreImg.svg";
+import WhoWeAreImage from "@assets/Spain.svg";
+import checkIconSpain from "@assets/checkIconSpain.svg";
 import HappyDentist from "@assets/happyDentist.svg";
 import SadDentist from "@assets/sadDentist.svg";
 import CheckDentistIcon from "@assets/checkDentistIcon.svg";
 import CrossIcon from "@assets/crossIcon.svg";
 import ModalPopUp from "../../components/organisms/ModalPopUp/ModalPopUp";
 import CoberturaDental from "@assets/imagen_dentistLandind.svg";
+import TextLink from "../../components/molecules/TextLink/TextLink";
+import { color } from "framer-motion";
 const books = [
   { img: imgEbookPrueba, title: "7 Secretos del Marketing Dental" },
   { img: imgEbookPrueba, title: "Whatsapp de Clinicas en 5 minutos" },
@@ -205,51 +208,88 @@ const LandingPage = () => {
                   fontFamily="lexend"
                   bold="font-light"
                   fontSize="26px"
-                  fontSizeMobile="21px"
+                  fontSizeMobile="18px"
                   s={{ lineHeight: "1", fontWeight: "500" }}
                 >
-                  En Hackdental
+                  Solo trabajamos con
                 </Text>
+                <div className={styles.desktTitl}>
                 <Text
                   type="bigtitle"
                   fontFamily="lexend"
                   textAlign="start"
-                  textAlignMobile="center"
+                  textAlignMobile="start"
                   color="black"
                   bold="semi-bold"
                   fontSize="32px"
-                  fontSizeMobile="24px"
+                  fontSizeMobile="22px"
                   s={{ lineHeight: "1", fontWeight: "600" }}
                 >
-                  ¿Qué tipo de Agencia Somos?
+                  Consultorios independientes en España.
                 </Text>
+                </div>
+                <div className={styles.mobTitl}>
+                <Text
+                  type="bigtitle"
+                  fontFamily="lexend"
+                  textAlign="start"
+                  textAlignMobile="start"
+                  color="black"
+                  bold="semi-bold"
+                  fontSize="32px"
+                  fontSizeMobile="22px"
+                  s={{ lineHeight: "1", fontWeight: "600" }}
+                >
+                  Consultorios en España.
+                </Text>
+                </div>
               </div>
-              <Text
-                fontFamily="Lexend"
-                color="black-lighter"
-                fontSize="18px"
-                fontSizeMobile="16px"
-                bold="font-light"
-              >
-                Somos una <strong>agencia de marketing dental</strong> que ayuda
-                a{" "}
-                <strong>consultorios dentales independientes en España</strong>{" "}
-                a conseguir más pacientes a largo plazo.
-              </Text>
-              <Text
-                fontFamily="Lexend"
-                color="black-lighter"
-                fontSize="18px"
-                fontSizeMobile="16px"
-                bold="font-light"
-              >
-                Contamos con un método especializado de marketing que{" "}
-                <strong>
-                  cumple con la normativa de protección de datos vigente en
-                  España{" "}
-                </strong>
-                (RGPD, LOPDGDD y LSSI).
-              </Text>
+              <div className={styles.whoAreWeText}>
+                <div className={styles.whoAreWe_upText}>
+                  <Text
+                    fontFamily="Lexend"
+                    color="black-lighter"
+                    fontSize="17px"
+                    fontSizeMobile="16px"
+                    bold="font-light"
+                  >
+                    Somos una <strong>agencia de marketing dental</strong> que
+                    ayuda a clínicas dentales; independientes a ir al siguiente
+                    nivel.
+                  </Text>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "start",
+                    gap: "0.5rem",
+                    marginBottom: "15px",
+                  }}
+                >
+                  <img src={checkIconSpain} alt="" style={{ width: "25px" }} />
+                  <Text
+                    fontFamily="Lexend"
+                    color="black-lighter"
+                    fontSize="17px"
+                    fontSizeMobile="16px"
+                    bold="font-light"
+                    textAlign="start"
+                    textAlignMobile="start"
+                  >
+                    Cumplimos con la normativa de protección de datos vigente en
+                    España..
+                  </Text>
+                </div>
+                <div style={{ width: "fit-content" }}>
+                  <TextLink
+                    variant="primary-green"
+                    textProps={{ color: "#006a43"}}
+                  >
+                    Ver Mas →
+                  </TextLink>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -562,7 +602,7 @@ const LandingPage = () => {
               fontSizeMobile="21px"
               s={{ lineHeight: "1", fontWeight: "500" }}
             >
-              Aprende cómo crecer tu consultorio
+              Aprende sin costo
             </Text>
             <Text
               type="bigtitle"
@@ -575,7 +615,7 @@ const LandingPage = () => {
               fontSizeMobile="24px"
               s={{ lineHeight: "1", fontWeight: "600" }}
             >
-              Descarga nuestros ebooks gratuitos
+              Descargando nuestros ebooks
             </Text>
           </div>
           <div className={styles.titlesContainerMobile}>
@@ -590,8 +630,8 @@ const LandingPage = () => {
               fontSizeMobile="21px"
               s={{ lineHeight: "1", fontWeight: "500" }}
             >
-              Aprende de Marketing
-            </Text>
+              Aprende sin costo
+              </Text>
             <Text
               type="bigtitle"
               fontFamily="lexend"
@@ -603,13 +643,37 @@ const LandingPage = () => {
               fontSizeMobile="24px"
               s={{ lineHeight: "1", fontWeight: "600" }}
             >
-              Descarga nuestros ebooks gratuitos
+              Descargando nuestros ebooks
+              </Text>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "0.5rem",
+              marginBottom: "15px",
+            }}
+          >
+            <img src={checkIconSpain} alt="" style={{ width: "25px" }} />
+            <Text
+              fontFamily="Lexend"
+              color="black-lighter"
+              fontSize="17px"
+              fontSizeMobile="16px"
+              textAlignMobile="center"
+              bold="font-light"
+            >
+              Todos nuestros recursos de marketing son 100% gratuitos.
             </Text>
           </div>
           <div className={styles.founderButtonEbooks}>
-            <IconTextButton size="260px" colorVariant="primary-bordered">
-              Ver todos los ebooks
-            </IconTextButton>{" "}
+            <TextLink
+              variant="primary-green"
+              textProps={{ color: "#006a43" }}
+            >
+              Ver todos los ebooks →
+            </TextLink>{" "}
           </div>
         </div>
         <div className={styles.mainContent__cards}>
