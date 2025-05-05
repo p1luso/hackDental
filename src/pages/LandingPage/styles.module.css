@@ -355,6 +355,10 @@ body:has(.popupContainer.show) {
 }
 .whoAreWeText{
   width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
 }
 
 .whoAreWe_upText{

@@ -281,10 +281,10 @@ const LandingPage = () => {
                     España..
                   </Text>
                 </div>
-                <div style={{ width: "fit-content" }}>
+                <div style={{ width: "fit-content", display: "flex", justifyContent: "start", alignItems: "start"}}>
                   <TextLink
                     variant="primary-green"
-                    textProps={{ color: "#006a43"}}
+                    textProps={{ color: "#006a43" }}
                   >
                     Ver Mas →
                   </TextLink>

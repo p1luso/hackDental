@@ -25,9 +25,7 @@
 .primary-green.textLink {
   display: flex;
   align-items: start;
-  justify-content: start;
   gap: 16px;
-  padding: 8px 16px;
 }
 
 .primary-green {
