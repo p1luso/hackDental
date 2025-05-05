@@ -25,6 +25,8 @@ import RightArrow from "@assets/flechaderecha.svg";
 import { Linkedin, Mail, Phone } from "lucide-react";
 import CoberturaDental from "@assets/coberturaDental.svg";
 import Doubts from "../../components/molecules/Doubts/Doubts";
+import leftArrow from "@assets/leftArrow.svg";
+import rightArrow from "@assets/rightArrow.svg";
 
 const OurProgram = () => {
   const [showModalVideo, setShowModalVideo] = useState(false);
@@ -105,27 +107,35 @@ const OurProgram = () => {
             src={FlechaNuestroPrograma}
             className={`${styles.flecha} ${styles.nuestroPrograma}`}
           />
+
           <div className={styles.elements}>
             <Text
               type="bigtitle"
               color="white"
               bold="semibold"
               textAlign="center"
+              fontSize="34px"
+              fontSizeMobile="28px"
               s={{
                 lineHeight: "0.95",
-                fontFamily: "queens",
-                fontWeight: "800",
+                fontFamily: "lexend",
+                fontWeight: "500",
                 letterSpacing: "-0.5px",
               }}
             >
-              Aprende cómo vender tu <br></br>
-              <s className={styles.crossLine}>Consultorio</s>{" "}
-              <span className={styles.betterTreatment}>Mejor Tratamiento</span>
+              Conoce nuestro método para <br></br>
+              <span className={styles.betterTreatment}>
+                Vender tus Tratamientos
+              </span>
             </Text>
 
             <div className={styles.videoContainer}>
               <div className={styles.videoDrawer}>
+                <img src={leftArrow} alt="" className={styles.arrows}/>
+
                 <img className={styles.videoImg} src={imgVideo} />
+                <img src={rightArrow} alt="" className={styles.arrows}/>
+
                 <button
                   className={styles.videoPlayBtn}
                   onClick={() => setShowModalVideo(true)}
@@ -150,75 +160,6 @@ const OurProgram = () => {
                   ></iframe>
                 </div>
               </div>
-              <form className={styles.formContacto}>
-                <Text size="sm" textAlign="center">
-                  <div className={styles.dentalOwner}>
-                    *DUEÑO DE CONSULTORIO DENTAL*
-                  </div>
-                </Text>
-                <Text
-                  type="subtitle"
-                  color="white"
-                  bold="semibold"
-                  textAlign="center"
-                  s={{ lineHeight: "1.15" }}
-                >
-                  Reunete con nosotros y <br />
-                  comentanos tus necesidades
-                </Text>
-                <div className={styles.inputs}>
-                  <div className={styles.inputLine}>
-                    <Input
-                      id={"firstName"}
-                      label="Nombre*"
-                      variant="white"
-                      placeholder="Nombre*"
-                      labelColor="#ebeced"
-                      onChange={handleChange}
-                      value={formData.firstName}
-                      onError={() => {}}
-                    />
-                    <Input
-                      id={"lastName"}
-                      label="Apellido*"
-                      variant="white"
-                      placeholder="Apellido*"
-                      labelColor="#ebeced"
-                      onChange={handleChange}
-                      value={formData.lastName}
-                      onError={() => {}}
-                    />
-                  </div>
-                  <Input
-                    id={"email"}
-                    label="Email*"
-                    variant="white"
-                    placeholder="Email*"
-                    labelColor="#ebeced"
-                    onChange={handleChange}
-                    value={formData.email}
-                    onError={() => {}}
-                  />
-                  <Input
-                    id={"phone"}
-                    label="Teléfono*"
-                    variant="white"
-                    placeholder="Teléfono*"
-                    labelColor="#ebeced"
-                    onChange={handleChange}
-                    value={formData.phone}
-                    onError={() => {}}
-                  />
-                  <div className={styles.nextStepBtn}>
-                    <IconTextButton
-                      colorVariant="white"
-                      textProps={{ size: "sm" }}
-                    >
-                      Siguiente Paso
-                    </IconTextButton>
-                  </div>
-                </div>
-              </form>
             </div>
           </div>
         </div>
@@ -415,7 +356,6 @@ const OurProgram = () => {
           </div>
         </div>
       </section>
-     
     </div>
   );
 };

@@ -209,39 +209,43 @@ const LandingPage = () => {
                   bold="font-light"
                   fontSize="26px"
                   fontSizeMobile="18px"
-                  s={{ lineHeight: "1", fontWeight: "500"}}
+                  s={{ lineHeight: "1", fontWeight: "500" }}
                 >
                   Solo trabajamos con
                 </Text>
                 <div className={styles.desktTitl}>
-                <Text
-                  type="bigtitle"
-                  fontFamily="lexend"
-                  textAlign="start"
-                  textAlignMobile="start"
-                  color="black"
-                  bold="semi-bold"
-                  fontSize="32px"
-                  fontSizeMobile="22px"
-                  s={{ lineHeight: "1", fontWeight: "600", letterSpacing: "-0.12px" }}
-                >
-                  Consultorios independientes en España
-                </Text>
+                  <Text
+                    type="bigtitle"
+                    fontFamily="lexend"
+                    textAlign="start"
+                    textAlignMobile="start"
+                    color="black"
+                    bold="semi-bold"
+                    fontSize="32px"
+                    fontSizeMobile="22px"
+                    s={{
+                      lineHeight: "1",
+                      fontWeight: "600",
+                      letterSpacing: "-0.12px",
+                    }}
+                  >
+                    Consultorios independientes en España
+                  </Text>
                 </div>
                 <div className={styles.mobTitl}>
-                <Text
-                  type="bigtitle"
-                  fontFamily="lexend"
-                  textAlign="start"
-                  textAlignMobile="start"
-                  color="black"
-                  bold="semi-bold"
-                  fontSize="32px"
-                  fontSizeMobile="22px"
-                  s={{ lineHeight: "1", fontWeight: "600" }}
-                >
-                  Consultorios en España.
-                </Text>
+                  <Text
+                    type="bigtitle"
+                    fontFamily="lexend"
+                    textAlign="start"
+                    textAlignMobile="start"
+                    color="black"
+                    bold="semi-bold"
+                    fontSize="32px"
+                    fontSizeMobile="22px"
+                    s={{ lineHeight: "1", fontWeight: "600" }}
+                  >
+                    Consultorios en España.
+                  </Text>
                 </div>
               </div>
               <div className={styles.whoAreWeText}>
@@ -281,7 +285,14 @@ const LandingPage = () => {
                     España.
                   </Text>
                 </div>
-                <div style={{ width: "fit-content", display: "flex", justifyContent: "start", alignItems: "start"}}>
+                <div
+                  style={{
+                    width: "fit-content",
+                    display: "flex",
+                    justifyContent: "start",
+                    alignItems: "start",
+                  }}
+                >
                   <TextLink
                     variant="primary-green"
                     textProps={{ color: "#006a43" }}
@@ -631,7 +642,7 @@ const LandingPage = () => {
               s={{ lineHeight: "1", fontWeight: "500" }}
             >
               Aprende sin costo
-              </Text>
+            </Text>
             <Text
               type="bigtitle"
               fontFamily="lexend"
@@ -644,15 +655,19 @@ const LandingPage = () => {
               s={{ lineHeight: "1", fontWeight: "600" }}
             >
               Descargando nuestros ebooks
-              </Text>
+            </Text>
           </div>
           <div
+            className={styles.ebooksContainer}
             style={{
               display: "flex",
-              alignItems: "center",
+              alignItems: "center", // Valor predeterminado
               justifyContent: "center",
               gap: "0.5rem",
               marginBottom: "15px",
+              "@media (max-width: 768px)": {
+                alignItems: "start", // Cambiar a "start" en dispositivos móviles
+              },
             }}
           >
             <img src={checkIconSpain} alt="" style={{ width: "25px" }} />
@@ -668,10 +683,7 @@ const LandingPage = () => {
             </Text>
           </div>
           <div className={styles.founderButtonEbooks}>
-            <TextLink
-              variant="primary-green"
-              textProps={{ color: "#006a43" }}
-            >
+            <TextLink variant="primary-green" textProps={{ color: "#006a43" }}>
               Ver todos los ebooks →
             </TextLink>{" "}
           </div>

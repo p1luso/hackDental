@@ -62,7 +62,7 @@ const Founder = () => {
                   color="black"
                   fontFamily="lexend"
                   bold="font-light"
-                  fontSize="28px"
+                  fontSize="26px"
                   fontSizeMobile="21px"
                   s={{ lineHeight: "1", fontWeight: "500" }}
                 >
@@ -84,7 +84,7 @@ const Founder = () => {
               <Text
                 fontFamily="Lexend"
                 color="black-lighter"
-                fontSize="18px"
+                fontSize="17px"
                 fontSizeMobile="16px"
                 bold="font-light"
               >
@@ -96,7 +96,7 @@ const Founder = () => {
               <Text
                 fontFamily="Lexend"
                 color="black-lighter"
-                fontSize="18px"
+                fontSize="17px"
                 fontSizeMobile="16px"
                 bold="font-light"
               >
@@ -112,7 +112,7 @@ const Founder = () => {
                 </div>
                 <Text
                   color="black-lighter"
-                  fontSize="18px"
+                  fontSize="17px"
                   fontSizeMobile="16px"
                   bold="font-light"
                 >
@@ -131,7 +131,7 @@ const Founder = () => {
                 </div>
                 <Text
                   color="black-lighter"
-                  fontSize="18px"
+                  fontSize="17px"
                   fontSizeMobile="16px"
                   bold="font-light"
                 >
@@ -151,7 +151,7 @@ const Founder = () => {
                 </div>
                 <Text
                   color="black-lighter"
-                  fontSize="18px"
+                  fontSize="17px"
                   fontSizeMobile="16px"
                   bold="font-light"
                 >

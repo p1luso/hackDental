@@ -19,20 +19,18 @@
   background-color: var(--primary);
 }
 
-.crossLine{
+.crossLine {
   color: #21917b;
   font-weight: 700;
   font-size: 48px;
-
 }
-.marketingTitle{
+.marketingTitle {
   font-weight: 700;
   font-size: 48px;
-
 }
 
-.dentalWord{
-  color:#25c19b;
+.dentalWord {
+  color: #25c19b;
   font-weight: 700;
   font-size: 48px;
 }
@@ -191,7 +189,6 @@ body:has(.popupContainer.show) {
   width: 100% !important;
 }
 .popupDesc > .desc {
-  
 }
 .popupCloseBtn {
   position: absolute;
@@ -218,7 +215,6 @@ body:has(.popupContainer.show) {
 .medicosCard {
   position: relative;
   bottom: 8px;
-  
 }
 .header {
   display: flex;
@@ -283,6 +279,14 @@ body:has(.popupContainer.show) {
     transparent 70%,
     transparent 100%
   );
+}
+.ebooksContainer {
+  display: "flex";
+  align-items: "center";
+  justify-content: "center";
+  flex-direction: row;
+  gap: "0.5rem";
+  margin-bottom: "15px";
 }
 
 .banner__content > :nth-child(1) {
@@ -353,7 +357,7 @@ body:has(.popupContainer.show) {
   align-items: center;
   position: relative;
 }
-.whoAreWeText{
+.whoAreWeText {
   width: 100%;
   display: flex;
   justify-content: start;
@@ -361,18 +365,18 @@ body:has(.popupContainer.show) {
   flex-direction: column;
 }
 
-.whoAreWe_upText{
+.whoAreWe_upText {
   width: 80%;
   margin-bottom: 20px;
 }
 
-.whoAreWeContainer{
+.whoAreWeContainer {
   padding-top: 44px;
   padding-left: var(--width-unit2);
   padding-right: var(--width-unit2);
 }
 
-.partners{
+.partners {
   padding-top: 36px;
   padding-bottom: 20px;
   display: flex;
@@ -513,11 +517,8 @@ body:has(.popupContainer.show) {
   flex-direction: column;
 }
 
-
-.whoAreWe{
-
+.whoAreWe {
 }
-
 
 .contactBannerSection .details {
   display: flex;
@@ -670,7 +671,6 @@ body:has(.popupContainer.show) {
   align-items: center;
   position: relative;
   box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.25);
-
 }
 
 .spainLocation__card::after {
@@ -717,7 +717,7 @@ body:has(.popupContainer.show) {
   border-radius: 10px;
 }
 
-.beneficios__items{
+.beneficios__items {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -842,7 +842,7 @@ body:has(.popupContainer.show) {
   cursor: not-allowed;
 }
 
-.arrowButtonMob  {
+.arrowButtonMob {
   background-color: #2f4f4f;
   color: #fff;
   border: none;
@@ -891,19 +891,15 @@ body:has(.popupContainer.show) {
   display: none;
 }
 
-
-
 .paginationLine.active {
   background-color: #008060;
 }
 
-
-.mainContent__card__desc  {
-
+.mainContent__card__desc {
   gap: 12px;
 }
 
-.mainContent__card__desc img{
+.mainContent__card__desc img {
   width: 265px;
   height: 265px;
   border-radius: 16px;
@@ -937,7 +933,6 @@ body:has(.popupContainer.show) {
     transform: translateY(-10px);
   }
 }
-
 
 .mainContent__card__desc > :nth-child(1) {
 }
@@ -974,7 +969,7 @@ body:has(.popupContainer.show) {
   width: 100%;
   height: auto;
 }
-.arrows{
+.arrows {
   width: 150px;
   padding: 10px;
 }
@@ -1073,7 +1068,7 @@ body:has(.popupContainer.show) {
   padding: 0;
   background-color: #eef5f4;
 }
-.progressBarButton{
+.progressBarButton {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1088,7 +1083,7 @@ body:has(.popupContainer.show) {
   flex-grow: 1;
 }
 
-.consultorClass_contents{
+.consultorClass_contents {
   background: var(--dark-transparent-45);
   width: 100%;
   padding-top: 80px;
@@ -1099,15 +1094,15 @@ body:has(.popupContainer.show) {
   align-items: center;
 }
 
-.imgContainer_dentist img{
+.imgContainer_dentist img {
   width: 300px;
 }
 
-.imgContainer_dentist_sad img{
+.imgContainer_dentist_sad img {
   width: 250px;
 }
 
-.dentistImages{
+.dentistImages {
   position: relative;
   width: fit-content;
   display: flex;
@@ -1117,7 +1112,7 @@ body:has(.popupContainer.show) {
   align-items: center;
 }
 
-.iconsDentist{
+.iconsDentist {
   width: 30px;
   padding: 15px 0;
   justify-content: center;
@@ -1133,10 +1128,9 @@ body:has(.popupContainer.show) {
   flex-direction: column;
   background-color: #e4e4e4;
   box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.25);
-
 }
 
-.imgContainer_dentist{
+.imgContainer_dentist {
   background-color: #f2f2f2;
   width: 100%;
   display: flex;
@@ -1147,16 +1141,15 @@ body:has(.popupContainer.show) {
   padding: 20px 0;
 }
 
-.desktTitl{
+.desktTitl {
   display: flex;
 }
 
-.mobTitl{
+.mobTitl {
   display: none;
-
 }
 
-.imgContainer_dentist_sad{
+.imgContainer_dentist_sad {
   background-color: #f2f2f2;
   width: 100%;
   height: 540px;
@@ -1181,7 +1174,6 @@ body:has(.popupContainer.show) {
   box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.25);
 }
 
-
 .dentalCover {
   background-color: rgba(216, 232, 230, 0.8);
   display: flex;
@@ -1193,7 +1185,7 @@ body:has(.popupContainer.show) {
   padding-bottom: 80px;
 }
 
-.founderButtonMobile{
+.founderButtonMobile {
   display: none;
 }
 
@@ -1206,7 +1198,6 @@ body:has(.popupContainer.show) {
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  
 }
 
 .contentContainer_dental {
@@ -1218,7 +1209,7 @@ body:has(.popupContainer.show) {
   line-height: 0;
   gap: 32px;
 }
-.mobileTitles{
+.mobileTitles {
   display: none;
 }
 
@@ -1236,23 +1227,24 @@ body:has(.popupContainer.show) {
   margin-top: 10px;
 }
 
+
+
 .founderButtonMob {
   justify-self: left;
   display: none;
-
 }
 
-.imageWrapper img{ 
+.imageWrapper img {
   width: 210px;
 }
 
-.imageWrapper{
+.imageWrapper {
   display: flex;
   justify-content: start;
   align-items: start;
 }
 
-.titlesContainerMobile{
+.titlesContainerMobile {
   display: none;
 }
 
@@ -1269,7 +1261,7 @@ body:has(.popupContainer.show) {
   .arrowButtonDesk:first-of-type {
     left: 20px;
   }
-  
+
   .arrowButtonDesk:last-of-type {
     right: 20px;
   }
@@ -1287,8 +1279,6 @@ body:has(.popupContainer.show) {
         (var(--linea-roja) + var(--linea-amarilla)) * 0.3
     );
   }
-
- 
 
   .bannerImg {
     width: 75%;
@@ -1314,16 +1304,16 @@ body:has(.popupContainer.show) {
   }
 }
 @media screen and (max-width: 1024px) {
-  .titlesContainerMobile{
+  .titlesContainerMobile {
     display: block;
   }
-  .titlesContainerDesktop{
+  .titlesContainerDesktop {
     display: none;
   }
   .founderButtonEbooks {
     display: none;
   }
-  .founderButtonMob{
+  .founderButtonMob {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -1338,30 +1328,30 @@ body:has(.popupContainer.show) {
     margin-bottom: 16px;
   }
 
-  .imgContainer_dentist{
+  .imgContainer_dentist {
     width: 100%;
     display: flex;
   }
-  
-  .imgContainer_dentist_sad{
+
+  .imgContainer_dentist_sad {
     width: 100%;
     height: 100%;
   }
 
-  .dentistImages{
+  .dentistImages {
     flex-direction: column;
     gap: 30px;
     margin-left: 0;
   }
 
-  .sadDentist{
+  .sadDentist {
     transform: translateX(0);
     width: 500px;
   }
-  .imgContainer_dentist_sad img{
+  .imgContainer_dentist_sad img {
     width: 300px;
   }
-  
+
   .contactBannerSection > .desc {
     margin-top: 0px;
   }
@@ -1393,74 +1383,72 @@ body:has(.popupContainer.show) {
     justify-content: center;
     display: flex;
   }
-  .arrowButtonDesk
-  {
+  .arrowButtonDesk {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .whoAreWeContainer
-  {
+  .whoAreWeContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: var(--mobile-margin);
   }
-  .contentContainer_dental{
+  .contentContainer_dental {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
     padding: 0 28px 0 28px;
   }
-  .contentContainer_dental{
+  .contentContainer_dental {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 0 28px 0 28px;
   }
-  .founderText{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .founderButton{
-      display: none;
-    }
-    .founderButtonMobile{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  .imageWrapper{
+  .founderText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .founderButton {
+    display: none;
+  }
+  .founderButtonMobile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imageWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .contentContainer{
+  .contentContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column-reverse;
-    margin-top:0;
+    margin-top: 0;
   }
 
-  .desktTitl{
+  .desktTitl {
     display: none;
   }
 
-  .mobTitl{
+  .mobTitl {
     display: flex;
     justify-content: start;
     align-items: start;
     flex-direction: column;
   }
 
-  .titles{
+  .titles {
     display: flex;
     justify-content: center;
     align-items: start;
@@ -1468,7 +1456,7 @@ body:has(.popupContainer.show) {
     text-align: center;
   }
 
-  .founderText{
+  .founderText {
     justify-content: start;
     align-items: start;
     display: flex;
@@ -1476,15 +1464,15 @@ body:has(.popupContainer.show) {
     gap: 20px;
   }
 
-  .imageWrapper{
+  .imageWrapper {
     width: 100%;
   }
-  #founderImg{
+  #founderImg {
     width: 380px;
     height: 250px;
   }
 
-  .whoAreWeContainer{
+  .whoAreWeContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1618,12 +1606,12 @@ body:has(.popupContainer.show) {
     width: 90%;
   }
 
-  .beneficios{
+  .beneficios {
     gap: 16px;
     width: 90%;
   }
 
-  .spainLocation_footer__card{
+  .spainLocation_footer__card {
     display: flex;
     border-radius: 32px;
     width: fit-content;
@@ -1636,12 +1624,12 @@ body:has(.popupContainer.show) {
     text-align: center;
   }
 
-  .spainLocation_footer__img{
+  .spainLocation_footer__img {
     width: 110px;
     margin-bottom: -10px;
   }
 
-  .footer__desc{
+  .footer__desc {
     text-align: center;
   }
 
@@ -1678,7 +1666,9 @@ body:has(.popupContainer.show) {
     height: 500px;
     align-self: center;
   }
-
+  .ebooksContainer {
+    align-items: start;
+  }
   .paginationArrow {
     display: block;
     position: static;
@@ -1688,40 +1678,35 @@ body:has(.popupContainer.show) {
     font-size: 16px;
   }
   .mainContent__card__desc {
-    grid-template-columns: repeat(1, auto); 
+    grid-template-columns: repeat(1, auto);
     justify-content: center;
-    box-sizing:border-box;
-
-  } 
-  .paginationLine{
+    box-sizing: border-box;
+  }
+  .paginationLine {
     width: 70px;
   }
 
   .arrowButtonDesk,
-  .arrowButtonDesk{
+  .arrowButtonDesk {
     display: none; /* ocultamos las flechas laterales en mobile */
   }
 }
 
-
 @media screen and (max-width: 800px) {
- 
-.crossLine{
-  font-size: 22px;
+  .crossLine {
+    font-size: 22px;
+  }
+  .marketingTitle {
+    font-size: 22px;
+  }
 
-}
-.marketingTitle{
-  font-size: 22px;
+  .dentalWord {
+    font-size: 22px;
+  }
 
-}
-
-.dentalWord{
-  font-size: 22px;
-}
-
-.whoAreWe_upText{
-  width: 100%;
-}
+  .whoAreWe_upText {
+    width: 100%;
+  }
   .banner {
     display: flex;
     justify-content: center;
@@ -1738,15 +1723,15 @@ body:has(.popupContainer.show) {
     gap: 0px;
     height: auto;
   }
-  .arrows{
+  .arrows {
     width: 100px;
-  } 
+  }
 
   .header {
     height: auto;
   }
 
-  .mainContent__card__desc img{
+  .mainContent__card__desc img {
     width: 200px;
     height: 200px;
     border-radius: 16px;
@@ -1755,7 +1740,7 @@ body:has(.popupContainer.show) {
   .bannerImg {
     width: 400px;
   }
-  .desc{
+  .desc {
     flex-direction: column;
   }
   .contactBannerSection {
@@ -1795,10 +1780,10 @@ body:has(.popupContainer.show) {
     width: 100% !important;
   }
   .prefooter {
-    background-color:#eef5f4;
+    background-color: #eef5f4;
   }
 
-  .spainLocation_footer__card{
+  .spainLocation_footer__card {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1810,40 +1795,36 @@ body:has(.popupContainer.show) {
   section::after {
     display: none;
   }
-  .paginationLine{
+  .paginationLine {
     width: 70px;
   }
 }
 
-
-
 @media screen and (max-width: 550px) {
-  .paginationLine{
+  .paginationLine {
     width: 70px;
   }
-  .imgContainer_dentist_sad img{
+  .imgContainer_dentist_sad img {
     width: 200px;
   }
-  #founderImg{
+  #founderImg {
     width: 280px;
     height: 200px;
-
   }
 
-
-  .imgContainer_dentist img{
+  .imgContainer_dentist img {
     width: 200px;
   }
 
-  .sadDentist{
+  .sadDentist {
     width: 400px;
   }
-  .happyDentist{
+  .happyDentist {
     width: 400px;
   }
 }
 @media screen and (max-width: 400px) {
-  .paginationLine{
+  .paginationLine {
     width: 50px;
   }
 }

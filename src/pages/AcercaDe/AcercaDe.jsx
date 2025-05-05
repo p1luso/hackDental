@@ -20,28 +20,51 @@ const AcercaDe = () => {
           />
 
           <div className={styles.desc}>
+            <div className={styles.desc__texts}>
             <Text
-              fontFamily="font-secondary"
+              fontFamily="lexend"
               color="white"
-              size="xxbig"
-              textAlign="center"
+              fontSize="26px"
+              fontSizeMobile="18px"
+              textAlignMobile="center"
+              textAlign="start"
               s={{
-                lineHeight: "0.95",
-                fontFamily: "queens",
-                fontWeight: "800",
+                lineHeight: "1",
+                fontFamily: "lexend",
+                fontWeight: "500",
                 letterSpacing: "-0.5px",
               }}
             >
-              Jose {screen.availWidth > 1024 && <br />}
-              Whittembury
+              Conoce a Jose Whittembury
             </Text>
             <Text
-              fontFamily="font-terciary"
-              size="lg"
-              textAlign="center"
-              s={{ lineHeight: "1.1", color: "#8fc29f" }}
+              fontFamily="lexend"
+              fontSize="32px"
+              fontSizeMobile="22px"
+              textAlign="start"
+              textAlignMobile="center"
+              color="white"
+              s={{ lineHeight: "1", fontWeight: "600" }}
             >
-              Director de Marketing, Hackdental
+              Fundador y CEO de HackDental
+            </Text>
+            </div>
+            <Text
+              fontFamily="font-secondary"
+              color="white-cream"
+              textAlignMobile="center"
+              bold="font-light"
+              fontSize="16px"
+              textAlign="start"
+              s={{
+                lineHeight: "1.2",
+                fontFamily: "lexend",
+                fontWeight: "300",
+                letterSpacing: "-0.5px",
+              }}
+            >
+              “Me dedico única y exclusivamente al marketing de servicios
+              dentales en España.”
             </Text>
             <div className={styles.contactBtn}>
               <IconTextButton colorVariant="white">
@@ -54,14 +77,14 @@ const AcercaDe = () => {
       <main className={styles.main}>
         <div className={styles.texts}>
           <div className={styles.titleDeskt}>
-          <Text bold="bold  " type="subtitle" color="black">
-            Trabajemos juntos
-          </Text>
+            <Text bold="bold  " type="subtitle" color="black">
+              Trabajemos juntos
+            </Text>
           </div>
           <div className={styles.titleMob}>
-          <Text bold="bold  " type="subtitle" color="black">
-            Áreas de expertise
-          </Text>
+            <Text bold="bold  " type="subtitle" color="black">
+              Áreas de expertise
+            </Text>
           </div>
           <Text bold="font-light" color="black-lighter">
             Puedes ponerte en contacto con nosotros por correo electrónico a{" "}

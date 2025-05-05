@@ -8,9 +8,11 @@
   --green-line: calc(var(--width-unit) * 0.25);
   --mobile-margin: 32px;
 }
-
-.banner {
+.bg{
   background-color: var(--primary-darker);
+}
+.banner {
+  background-color: var(--dark-transparent-35);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,29 +24,108 @@
 .desc {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  gap: 25px;
+}
+.desc > :nth-child(1) {
+  margin-bottom: 5px;
+}
+.desc > :nth-child(2) {
+  font-size: 22px;
+  margin-bottom: 5px;
+  width: 80%;
+}
+
+.desc > :nth-child(3) {
+  font-size: 22px;
+  margin-bottom: 5px;
+  width: 85%;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 32%;
-  padding-right: 32%;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  gap: 32px;
+  padding-top: 44px;
+  padding-bottom: 44px;
   background-color: var(--light-green);
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+  flex-shrink: 0;
+  align-items: start;
+}
+.texts > * {
+  align-self: flex-start;
+  flex-shrink: 0 !important;
+}
+.spainLocation__items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.spainLocation__items__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 10px 0 10px 0;
+  border-radius: 10px;
+}
+
+.titleMob{
+  display: none;
 }
 
 @media screen and (max-width: 1024px) {
   .banner {
-    flex-direction: column;
-    padding-bottom: 32px;
+    flex-direction: column-reverse;
+    padding-top: 52px;
     gap: 16px;
+  }
+  .desc{
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .desc > :nth-child(1) {
+    margin-bottom: 0px;
+    font-size: 36px;
+  }
+  .desc > :nth-child(2) {
+    font-size: 17px;
+  }
+  .desc > :nth-child(3) {
+    font-size: 17px;
+    width: 100%;
   }
   .main {
     padding-left: 32px;
     padding-right: 32px;
+  }
+
+  .titleMob{
+    display: block;
+  }
+
+
+  .titleDeskt{
+    display: none;
+  }
+  .main {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .texts {
+    width: 100%;
+    left: 0;
   }
 }
