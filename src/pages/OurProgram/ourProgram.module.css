@@ -795,7 +795,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  padding-top: 120px;
+  padding-top: 80px;
   padding-bottom: 80px;
 }
 
@@ -917,6 +917,14 @@
     display: none;
   }
 
+  .videoImg{
+    width: 400px;
+  }
+
+  .arrows{
+    width: 100%;
+  }
+
   .nextStepBtn > :first-child {
     width: 100% !important;
   }
@@ -954,9 +962,7 @@
     font-size: 24px;
   }
 
-  .videoDrawer {
-    width: 80%;
-  }
+  
   .videoContainer {
     flex-direction: column;
     align-items: center;
@@ -991,6 +997,29 @@
     text-align: center;
   }
 
+    .videoContainer {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+  
+    .videoDrawer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  
+    .videoImg {
+      width: 100%;
+      height: auto;
+    }
+  
+    .arrows {
+      display: none;
+    }
+  
+
   .main > *:not(.contact) {
     padding-left: 0;
     padding-right: 0;
@@ -1001,19 +1030,13 @@
   .bgTransparent {
     padding: 64px;
   }
-  .videoDrawer {
-    width: calc(var(--width-unit) * 3.1);
-    position: relative;
+  
+  .videoImg{
+    width: 400px;
   }
+
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1280px) {
-  
-  .videoDrawer {
-    width: calc(var(--width-unit) * 2.5);
-    position: relative;
-  }
-}
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .banner {
     padding: 0;
