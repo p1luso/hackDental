@@ -114,7 +114,7 @@
 .bgTransparent {
   background-color: var(--dark-transparent-45);
   width: 100%;
-  min-height: 72vh;
+  min-height: 100%;
   padding-top: 80px;
   
 }
@@ -133,12 +133,12 @@
 }
 
 .videoContainer {
-  position: absolute;
-  top: 100px; 
+  position: relative;
   z-index: 10; 
   width: 100%; 
   height: auto; 
   pointer-events: auto; 
+  margin-bottom: 5px;
 }
 .videoDrawer {
   width: 100%;
@@ -147,13 +147,37 @@
   justify-content: center;
   align-items: center;
 }
+.banner__btns {
+  display: flex;
+  height: 3.5rem;
+  margin-top: 20px;
+  font-family: "lexend";
+  font-weight: 400;
+  align-self: center;
+  width: 300px;
+}
 .videoImg {
-  width: 1000px;
+  width: 800px;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid #8fc29f;
+}
+.spainLocation_footer__card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 30px;
+
+}
+.spainLocation_footer__img {
+  width: 102px;
+}
+
+.footer__desc > :nth-child(1),
+.footer__desc > :nth-child(2) {
+  font-size: 16px;
 }
 .videoPlayBtn {
   position: absolute;
@@ -875,6 +899,19 @@
   padding: 28px;
 }
 
+.daysCounter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #006a5a;
+  border-top: 2px solid #21917b;
+  border-bottom: 2px solid #21917b;
+  padding: 20px 0;
+}
+
+
 @media screen and (max-width: 1024px) {
   .flecha {
     display: none;
@@ -896,6 +933,13 @@
   .banner .elements > :first-child {
     margin-bottom: 44px;
     font-size: 38px;
+  }
+  
+  .banner__btns {
+    width: 100%;
+  }
+  .banner__btns > :first-child {
+    height: 54px !important;
   }
   .formContacto > :nth-child(1) {
     padding-bottom: 20px;
@@ -936,6 +980,17 @@
     height: 40px;
     width: 240px;
   }
+  .spainLocation_footer__card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer__desc {
+    text-align: center;
+  }
+
   .main > *:not(.contact) {
     padding-left: 0;
     padding-right: 0;

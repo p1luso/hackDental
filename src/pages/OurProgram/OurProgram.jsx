@@ -27,6 +27,7 @@ import CoberturaDental from "@assets/coberturaDental.svg";
 import Doubts from "../../components/molecules/Doubts/Doubts";
 import leftArrow from "@assets/leftArrow.svg";
 import rightArrow from "@assets/rightArrow.svg";
+import DaysCounter from "../../components/organisms/DaysCounter/DaysCounter";
 
 const OurProgram = () => {
   const [showModalVideo, setShowModalVideo] = useState(false);
@@ -131,10 +132,10 @@ const OurProgram = () => {
 
             <div className={styles.videoContainer}>
               <div className={styles.videoDrawer}>
-                <img src={leftArrow} alt="" className={styles.arrows}/>
+                <img src={leftArrow} alt="" className={styles.arrows} />
 
                 <img className={styles.videoImg} src={imgVideo} />
-                <img src={rightArrow} alt="" className={styles.arrows}/>
+                <img src={rightArrow} alt="" className={styles.arrows} />
 
                 <button
                   className={styles.videoPlayBtn}
@@ -161,10 +162,57 @@ const OurProgram = () => {
                 </div>
               </div>
             </div>
+            <div className={styles.banner__btns}>
+              <IconTextButton
+                colorVariant="white"
+                textProps={{ fontWeight: 400 }}
+                textFontWeight="400" // Nueva prop
+                size="100%"
+              >
+                Pedir Auditoria Gratis
+              </IconTextButton>
+            </div>
+            <div className={styles.spainLocation_footer__card}>
+              <img src={Medicos} className={styles.spainLocation_footer__img} />
+              <div className={styles.footer__desc}>
+                <Text
+                  textAlignMobile="center"
+                  fontSizeMobile="12px"
+                  fontSize="14px"
+                  s={{ color: "white", lineHeight: "1.33" }}
+                >
+                  Únete a los dentistas
+                </Text>
+                <Text
+                  textAlignMobile="center"
+                  bold="font-light"
+                  fontSize="14px"
+                  fontSizeMobile="12px"
+                  s={{ color: "#d9d9d9", lineHeight: "1.33" }}
+                >
+                  que usan nuestro método.{" "}
+                  <Mark bold="regular" color="green-lighter">
+                    Cupos limitados.
+                  </Mark>
+                </Text>
+              </div>
+            </div>
           </div>
         </div>
       </header>
-
+      <section className={styles.daysCounter}>
+      <Text
+              fontFamily="lexend"
+              color="white-cream"
+              textAlignMobile="center"
+              bold="font-light"
+              fontSize="17px"
+              textAlign="start"
+            >
+              Haremos Auditorias Gratis solo hasta Junio, 2025
+            </Text>
+      <DaysCounter targetDate="2025-06-01" />
+      </section>
       <section className={styles.dentalCover}>
         <div className={styles.dentalContainer}>
           <div className={styles.contentContainer_dental}>

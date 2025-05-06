@@ -17,6 +17,10 @@
   color: #006a5a;
 }
 
+.green-lighter{
+  color: #25c19b;
+}
+
 .green-darker-bg {
   color: var(--white);
   background-color: var(--primary-darker);
