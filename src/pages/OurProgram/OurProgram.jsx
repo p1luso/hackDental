@@ -110,6 +110,7 @@ const OurProgram = () => {
           />
 
           <div className={styles.elements}>
+            <div className={styles.onlyDesktop}>
             <Text
               type="bigtitle"
               color="white"
@@ -129,7 +130,7 @@ const OurProgram = () => {
                 Vender tus Tratamientos
               </span>
             </Text>
-
+            </div>
             <div className={styles.videoContainer}>
               <div className={styles.videoDrawer}>
                 <img src={leftArrow} alt="" className={styles.arrows} />
@@ -161,6 +162,27 @@ const OurProgram = () => {
                   ></iframe>
                 </div>
               </div>
+            </div>
+            <div className={styles.onlyMobile}>
+            <Text
+              type="bigtitle"
+              color="white"
+              bold="semibold"
+              textAlign="center"
+              fontSize="34px"
+              fontSizeMobile="28px"
+              s={{
+                lineHeight: "0.95",
+                fontFamily: "lexend",
+                fontWeight: "500",
+                letterSpacing: "-0.5px",
+              }}
+            >
+              Conoce nuestro método para <br></br>
+              <span className={styles.betterTreatment}>
+                Vender tus Tratamientos
+              </span>
+            </Text>
             </div>
             <div className={styles.banner__btns}>
               <IconTextButton

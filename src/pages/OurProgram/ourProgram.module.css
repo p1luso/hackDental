@@ -910,13 +910,33 @@
   border-bottom: 2px solid #21917b;
   padding: 20px 0;
 }
+.onlyMobile {
+  display: none;
+}
+
+.onlyDesktop {
+  display: block;
+}
 
 
 @media screen and (max-width: 1024px) {
   .flecha {
     display: none;
   }
-
+  .bgTransparent{
+    padding: 0px;
+  }
+  .onlyMobile {
+    display: block;
+    margin: 20px;
+  }
+  .banner__btns{
+    margin: 28px;
+    width: 40%;
+  }
+  .onlyDesktop {
+    display: none;
+  }
   .videoImg{
     width: 400px;
   }
@@ -942,10 +962,7 @@
     margin-bottom: 44px;
     font-size: 38px;
   }
-  
-  .banner__btns {
-    width: 100%;
-  }
+
   .banner__btns > :first-child {
     height: 54px !important;
   }
@@ -1110,10 +1127,7 @@
   .banner {
     padding: 0;
   }
-
-  .elements {
-    margin: 28px;
-  }
+ 
   .bgTransparentContact {
     padding: 0px 30px 90px 30px;
     gap: 28px;
