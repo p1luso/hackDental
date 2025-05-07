@@ -90,7 +90,171 @@
   display: none;
 }
 
+
+.dentalCover {
+  background-color: rgba(216, 232, 230, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.dentalContainer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contentContainer_dental {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 0;
+  line-height: 0;
+  gap: 32px;
+}
+
+.imageWrapper img {
+  width: 280px;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.mobileTitles {
+  display: none;
+}
+
+.daysCounter {
+  display: flex;
+  border-radius: 5px;
+  background-color: rgba(0, 106, 90, 0.3);
+  width: fit-content;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.daysCounter span{
+  color: #006a5a;
+  font-size: 18px;
+  font-weight: 00;
+}
+
+.founderButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+.btn_founder{
+  width: 100%;
+  height: 60px;
+}
+
+.founderText {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: Lexend;
+  gap: 15px;
+}
+
+.founderButtonEbooks {
+  justify-self: left;
+  margin-top: 10px;
+}
+
+.founderButtonMobile {
+  display: none;
+}
+
+
+
+
+.founderButtonMob {
+  justify-self: left;
+  display: none;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--green-black);
+  padding-top: 32px;
+  gap: 6px;
+  padding-bottom: calc(var(--linea-amarilla) / 2);
+  height: 120px;
+}
+.footer .links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.separator {
+  height: 0.77rem;
+  border: 1px solid #d9d9d9;
+}
+
 @media screen and (max-width: 1024px) {
+  .footer {
+    height: 100px;
+  }
+  .contentContainer_dental {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: 0 28px 0 28px;
+  }
+  .dentalContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .contentContainer_dental {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 28px 0 28px;
+  }
+  .founderText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .founderButton {
+    display: none;
+  }
+  .founderButtonMobile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .banner {
     flex-direction: column-reverse;
     padding-top: 52px;
