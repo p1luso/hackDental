@@ -112,9 +112,9 @@ const AcercaDe = () => {
               <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
 
               <Text color="black-lighter" fontSize="17px" bold="font-light">
-                <strong>
+                
                   Mi disponiblidad los 7 días de la semana para tus consultas.
-                </strong>
+               
               </Text>
             </div>
             <div className={styles.spainLocation__items__item}>
