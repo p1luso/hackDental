@@ -93,7 +93,7 @@
   z-index: 1;
 }
 
-.contactIcons {
+.contactIcons a {
   display: flex;
   justify-content: start;
   align-items: start;

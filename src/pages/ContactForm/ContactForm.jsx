@@ -57,7 +57,7 @@ const ContactForm = () => {
             fontSizeMobile="21px"
             textAlignMobile="start"
             color="white"
-            s={{fontWeight: 500}}
+            s={{ fontWeight: 500 }}
           >
             Dueño de consultorio
           </Text>
@@ -84,18 +84,30 @@ const ContactForm = () => {
           </div>
 
           <div className={styles.contactIcons}>
-            <Mail className={styles.icons} />
-            <div className={styles.iconsText}>
-              <h4>Mail</h4>
-              <p>whittemburydavid1@gmail.com</p>
-            </div>
+            <a
+              href="mailto:whittemburydavid1@gmail.com"
+              className={styles.mailLink}
+            >
+              <Mail className={styles.icons} />
+              <div className={styles.iconsText}>
+                <h4>Mail</h4>
+                <p>whittemburydavid1@gmail.com</p>
+              </div>
+            </a>
           </div>
           <div className={styles.contactIcons}>
-            <Phone className={styles.icons} />
-            <div className={styles.iconsText}>
-              <h4>Whatsapp</h4>
-              <p>+51 903300422</p>
-            </div>
+            <a
+              href="https://wa.me/51914727355"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.whatsappLink}
+            >
+              <Phone className={styles.icons} />
+              <div className={styles.iconsText}>
+                <h4>Whatsapp</h4>
+                <p>+51914727355</p>
+              </div>
+            </a>
           </div>
         </div>
 
