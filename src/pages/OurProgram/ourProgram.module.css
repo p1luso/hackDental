@@ -910,6 +910,11 @@
   border-bottom: 2px solid #21917b;
   padding: 20px 0;
 }
+
+.daysCounter span{
+  font-size: 21px;
+}
+
 .onlyMobile {
   display: none;
 }
@@ -1069,7 +1074,12 @@
   .title {
     padding-bottom: 0px;
   }
-
+  .betterTreatment {
+    font-size: 24px;
+  }
+  .spainLocation_footer__card {
+    gap: 6px;
+  }
   .bgTransparentContact {
     padding: 0px 30px 90px 30px;
     flex-direction: column;
@@ -1112,19 +1122,24 @@
     width: 100px;
   }
   .progressTitle {
-    font-size: 21px;
+    font-size: 18px;
   }
   .hackDentalMethod {
-    font-size: 24px;
+    font-size: 22px;
   }
-
+  .spainLocation_footer__card {
+    gap: 6px;
+  }
   .progressText {
     font-size: 16px;
   }
   .banner {
     padding: 0;
   }
- 
+  .betterTreatment {
+    font-size: 24px;
+  }
+
   .bgTransparentContact {
     padding: 0px 30px 90px 30px;
     gap: 28px;
@@ -1184,6 +1199,18 @@
     width: 100%;
     top: 0;
   }
+  .betterTreatment {
+    font-size: 24px;
+  }
+  .spainLocation_footer__card {
+    gap: 6px;
+  }
+  .progressTitle {
+    font-size: 18px;
+  }
+  .hackDentalMethod {
+    font-size: 22px;
+  }
   .arrows {
     display: none;
   }
@@ -1226,9 +1253,7 @@
   .banner {
     padding: 0;
   }
-  .elements {
-    margin: 28px;
-  }
+ 
   .header .elements > :nth-child(2) {
     text-align: start;
     word-wrap: break-word;

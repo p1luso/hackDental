@@ -90,7 +90,6 @@
 .logo {
   cursor: pointer;
   z-index: 0;
-  height: 95px;
 }
 .left {
   display: flex;

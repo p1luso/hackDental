@@ -106,7 +106,7 @@ const OurProgram = () => {
                 bold="semibold"
                 textAlign="center"
                 fontSize="34px"
-                fontSizeMobile="18px"
+                fontSizeMobile="21px"
                 s={{
                   lineHeight: "0.95",
                   fontFamily: "lexend",
@@ -212,17 +212,20 @@ const OurProgram = () => {
         </div>
       </header>
       <section className={styles.daysCounter}>
+        <div style={{ margin: "0 20px", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
         <Text
           fontFamily="lexend"
           color="white-cream"
           textAlignMobile="center"
           bold="font-light"
           fontSize="17px"
+          fontSizeMobile="16px"
           textAlign="start"
         >
           Haremos Auditorias Gratis solo hasta Junio, 2025
         </Text>
         <DaysCounter targetDate="2025-06-01" />
+        </div>
       </section>
       <div className={styles.progressBarSection}>
         <div className={styles.progressTexts}>
@@ -286,7 +289,7 @@ const OurProgram = () => {
                   fontFamily="lexend"
                   bold="font-light"
                   fontSize="26px"
-                  fontSizeMobile="21px"
+                  fontSizeMobile="18px"
                   s={{ fontWeight: "500" }}
                 >
                   ¿Tienes alguna duda?
@@ -298,7 +301,7 @@ const OurProgram = () => {
                   color="black"
                   bold="semi-bold"
                   fontSize="32px"
-                  fontSizeMobile="24px"
+                  fontSizeMobile="22px"
                   s={{ lineHeight: "1", fontWeight: "600" }}
                 >
                   No dudes en Contactarnos

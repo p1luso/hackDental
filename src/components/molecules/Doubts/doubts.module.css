@@ -113,7 +113,7 @@ img{
   }
   .faqTitle {
     font-family: 'Lexend';
-    font-size: 18px;
+    font-size: 16px;
     color: #2f4f4f;
     word-wrap: break-word; /* Permite que las palabras largas se dividan */
     word-break: break-word; /* Rompe palabras largas si es necesario */
