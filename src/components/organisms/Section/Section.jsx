@@ -5,6 +5,7 @@ import styles from "./section.module.css";
 
 const Section = ({
   number,
+  icon,
   title,
   subtitle,
   description,
@@ -31,7 +32,13 @@ const Section = ({
 
       <div className={styles.numberCircle}>
         <div className={styles.numberCircleBG}>
-          <div className={styles.circle}>{number}</div>
+        <div className={styles.circle}>
+            {number && !icon ? (
+              number
+            ) : !number && icon ? (
+              icon 
+            ): (number)}
+          </div>
         </div>
       </div>
 

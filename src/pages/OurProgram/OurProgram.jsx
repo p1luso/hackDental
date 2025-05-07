@@ -14,6 +14,9 @@ import Doubts from "../../components/molecules/Doubts/Doubts";
 import leftArrow from "@assets/leftArrow.svg";
 import rightArrow from "@assets/rightArrow.svg";
 import DaysCounter from "../../components/organisms/DaysCounter/DaysCounter";
+import marketingPlan from "@assets/marketingPlan.svg";
+import marketStudy from "@assets/marketStudy.svg";
+import strategyCall from "@assets/strategyCall.svg";
 
 const OurProgram = () => {
   const [showModalVideo, setShowModalVideo] = useState(false);
@@ -97,25 +100,25 @@ const OurProgram = () => {
 
           <div className={styles.elements}>
             <div className={styles.onlyDesktop}>
-            <Text
-              type="bigtitle"
-              color="white"
-              bold="semibold"
-              textAlign="center"
-              fontSize="34px"
-              fontSizeMobile="18px"
-              s={{
-                lineHeight: "0.95",
-                fontFamily: "lexend",
-                fontWeight: "500",
-                letterSpacing: "-0.5px",
-              }}
-            >
-              Conoce nuestro método para <br></br>
-              <span className={styles.betterTreatment}>
-                Vender tus Tratamientos
-              </span>
-            </Text>
+              <Text
+                type="bigtitle"
+                color="white"
+                bold="semibold"
+                textAlign="center"
+                fontSize="34px"
+                fontSizeMobile="18px"
+                s={{
+                  lineHeight: "0.95",
+                  fontFamily: "lexend",
+                  fontWeight: "500",
+                  letterSpacing: "-0.5px",
+                }}
+              >
+                Conoce nuestro método para <br></br>
+                <span className={styles.betterTreatment}>
+                  Vender tus Tratamientos
+                </span>
+              </Text>
             </div>
             <div className={styles.videoContainer}>
               <div className={styles.videoDrawer}>
@@ -150,25 +153,25 @@ const OurProgram = () => {
               </div>
             </div>
             <div className={styles.onlyMobile}>
-            <Text
-              type="bigtitle"
-              color="white"
-              bold="semibold"
-              textAlign="center"
-              fontSize="34px"
-              fontSizeMobile="22px"
-              s={{
-                lineHeight: "0.95",
-                fontFamily: "lexend",
-                fontWeight: "500",
-                letterSpacing: "-0.5px",
-              }}
-            >
-              Conoce nuestro método para <br></br>
-              <span className={styles.betterTreatment}>
-                Vender tus Tratamientos
-              </span>
-            </Text>
+              <Text
+                type="bigtitle"
+                color="white"
+                bold="semibold"
+                textAlign="center"
+                fontSize="34px"
+                fontSizeMobile="22px"
+                s={{
+                  lineHeight: "0.95",
+                  fontFamily: "lexend",
+                  fontWeight: "500",
+                  letterSpacing: "-0.5px",
+                }}
+              >
+                Conoce nuestro método para <br></br>
+                <span className={styles.betterTreatment}>
+                  Vender tus Tratamientos
+                </span>
+              </Text>
             </div>
             <div className={styles.banner__btns}>
               <IconTextButton
@@ -209,29 +212,29 @@ const OurProgram = () => {
         </div>
       </header>
       <section className={styles.daysCounter}>
-      <Text
-              fontFamily="lexend"
-              color="white-cream"
-              textAlignMobile="center"
-              bold="font-light"
-              fontSize="17px"
-              textAlign="start"
-            >
-              Haremos Auditorias Gratis solo hasta Junio, 2025
-            </Text>
-      <DaysCounter targetDate="2025-06-01" />
+        <Text
+          fontFamily="lexend"
+          color="white-cream"
+          textAlignMobile="center"
+          bold="font-light"
+          fontSize="17px"
+          textAlign="start"
+        >
+          Haremos Auditorias Gratis solo hasta Junio, 2025
+        </Text>
+        <DaysCounter targetDate="2025-06-01" />
       </section>
       <div className={styles.progressBarSection}>
         <div className={styles.progressTexts}>
           <h2 className={styles.progressTitle}>
-          ¿Qué incluye nuestra auditoría? <br></br>
+            ¿Qué incluye nuestra auditoría? <br></br>
             <span className={styles.hackDentalMethod}>
-            Servicios valuados en $2000 Gratis
+              Servicios valuados en{" "}
+              <del style={{ textDecorationThickness: "3px" }}>$2000</del> Gratis
             </span>
           </h2>
           <p className={styles.progressText}>
-            Aprende más sobre nuestro <strong>programa de 180 días</strong> y
-            cómo puede <br></br>cambiar tu <strong>práctica dental</strong>
+            Averigua si tu consultorio califica para nuestros servicios.
           </p>
         </div>
         <div className={styles.progressBarButton}>
@@ -241,8 +244,8 @@ const OurProgram = () => {
         </div>
         <div className={styles.progressBar}>
           <Section
-            number="01"
-            title="Aplica en España Cumple con el RGPD"
+            icon={<img src={strategyCall}/>}
+            title="Llamada Estrategica"
             steps={[
               "Puedes ponerte en contacto con nosotros por correo",
               "Puedes ponerte en contacto con nosotros por correo",
@@ -250,8 +253,8 @@ const OurProgram = () => {
             ]}
           />
           <Section
-            number="02"
-            title="Aplica en España Cumple con el RGPD"
+            icon={<img src={marketStudy}/>}
+            title="Estudio de mercado"
             textLeft={true}
             steps={[
               "Puedes ponerte en contacto con nosotros por correo",
@@ -260,18 +263,8 @@ const OurProgram = () => {
             ]}
           />
           <Section
-            number="03"
-            title="Aplica en España Cumple con el RGPD"
-            steps={[
-              "Puedes ponerte en contacto con nosotros por correo",
-              "Puedes ponerte en contacto con nosotros por correo",
-              "Puedes ponerte en contacto con nosotros por correo",
-            ]}
-          />
-          <Section
-            number="04"
-            title="Aplica en España Cumple con el RGPD"
-            textLeft={true}
+            icon={<img src={marketingPlan}/>}
+            title="Plan de Marketing"
             lastSection={true}
             steps={[
               "Puedes ponerte en contacto con nosotros por correo",

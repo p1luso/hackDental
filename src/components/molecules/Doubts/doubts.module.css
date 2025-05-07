@@ -111,4 +111,13 @@ img{
   img{
     width: 10px;
   }
+  .faqTitle {
+    font-family: 'Lexend';
+    font-size: 18px;
+    color: #2f4f4f;
+    word-wrap: break-word; /* Permite que las palabras largas se dividan */
+    word-break: break-word; /* Rompe palabras largas si es necesario */
+    white-space: normal; /* Permite que el texto ocupe varias líneas */
+    line-height: 1.5; /* Ajusta el espacio entre líneas */
+  }
 } 
