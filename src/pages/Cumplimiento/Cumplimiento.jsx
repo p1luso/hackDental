@@ -9,8 +9,10 @@ import IconTextButton from "../../components/molecules/IconTextButton/IconTextBu
 import CoberturaDental from "@assets/imagen_dentistLandind.svg";
 import DaysCounter from "../../components/organisms/DaysCounter/DaysCounter";
 import Link from "../../components/atoms/Link/Link";
+import { useNavigate } from "react-router-dom";
 
 const Cumplimiento = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.page}>
       <Nav />
@@ -69,7 +71,11 @@ const Cumplimiento = () => {
               en España”.
             </Text>
             <div className={styles.contactBtn}>
-              <IconTextButton colorVariant="white">
+              <IconTextButton
+                colorVariant="white"
+                size="100%"
+                onClick={() => navigate("/contact")}
+              >
                 Pedir Auditoria Gratis
               </IconTextButton>
             </div>
@@ -163,7 +169,11 @@ const Cumplimiento = () => {
 
               <div className={styles.founderButton}>
                 <div className={styles.btn_founder}>
-                  <IconTextButton size="100%" colorVariant="white-green">
+                  <IconTextButton
+                    size="100%"
+                    colorVariant="white-green"
+                    onClick={() => navigate("/contact")}
+                  >
                     Pedir auditoría
                   </IconTextButton>
                 </div>{" "}

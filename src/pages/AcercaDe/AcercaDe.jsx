@@ -7,8 +7,10 @@ import Icon from "../../components/atoms/Icon/Icon";
 import Link from "../../components/atoms/Link/Link";
 import CoberturaDental from "@assets/imagen_dentistLandind.svg";
 import DaysCounter from "../../components/organisms/DaysCounter/DaysCounter";
+import { useNavigate } from "react-router-dom";
 
 const AcercaDe = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.page}>
       <Nav hideBottomMenu={false} />
@@ -22,33 +24,33 @@ const AcercaDe = () => {
 
           <div className={styles.desc}>
             <div className={styles.desc__texts}>
-            <Text
-              fontFamily="lexend"
-              color="white"
-              fontSize="26px"
-              fontSizeMobile="18px"
-              textAlignMobile="center"
-              textAlign="start"
-              s={{
-                lineHeight: "1",
-                fontFamily: "lexend",
-                fontWeight: "500",
-                letterSpacing: "-0.5px",
-              }}
-            >
-              Conoce a Jose Whittembury
-            </Text>
-            <Text
-              fontFamily="lexend"
-              fontSize="32px"
-              fontSizeMobile="22px"
-              textAlign="start"
-              textAlignMobile="center"
-              color="white"
-              s={{ lineHeight: "1", fontWeight: "600" }}
-            >
-              Fundador y CEO de HackDental
-            </Text>
+              <Text
+                fontFamily="lexend"
+                color="white"
+                fontSize="26px"
+                fontSizeMobile="18px"
+                textAlignMobile="center"
+                textAlign="start"
+                s={{
+                  lineHeight: "1",
+                  fontFamily: "lexend",
+                  fontWeight: "500",
+                  letterSpacing: "-0.5px",
+                }}
+              >
+                Conoce a Jose Whittembury
+              </Text>
+              <Text
+                fontFamily="lexend"
+                fontSize="32px"
+                fontSizeMobile="22px"
+                textAlign="start"
+                textAlignMobile="center"
+                color="white"
+                s={{ lineHeight: "1", fontWeight: "600" }}
+              >
+                Fundador y CEO de HackDental
+              </Text>
             </div>
             <Text
               fontFamily="font-secondary"
@@ -68,8 +70,13 @@ const AcercaDe = () => {
               dentales en España.”
             </Text>
             <div className={styles.contactBtn}>
-              <IconTextButton colorVariant="white">
-                Contactar a José →
+              <IconTextButton
+                colorVariant="white"
+                onClick={() =>
+                  window.open("https://wa.me/51914727355", "_blank")
+                }
+              >
+                Contactar a José
               </IconTextButton>
             </div>
           </div>
@@ -111,7 +118,7 @@ const AcercaDe = () => {
               </Text>
             </div>
             <div className={styles.spainLocation__items__item}>
-              <Icon size={"1.3rem"}  color="var(--primary)" type={"check"} />
+              <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
 
               <Text color="black-lighter" fontSize="17px" bold="font-light">
                 Que trabaje 6 meses en el crecimiento de tu consultorio.
@@ -162,7 +169,11 @@ const AcercaDe = () => {
 
               <div className={styles.founderButton}>
                 <div className={styles.btn_founder}>
-                  <IconTextButton size="100%" colorVariant="white-green">
+                  <IconTextButton
+                    size="100%"
+                    colorVariant="white-green"
+                    onClick={() => navigate("/contact")}
+                  >
                     Pedir auditoría
                   </IconTextButton>
                 </div>{" "}
