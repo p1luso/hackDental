@@ -88,21 +88,21 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
     // Cerrar el menú principal
     setShowMobileMenu(false);
     setNavMobileMenuIsShow(false);
-    
+
     // Cerrar todas las modales
     setShowMobileContacMenu(false);
     setShowMobileEbooksMenu(false);
     setShowMobileAboutUsMenu(false);
-    
+
     // Abrir la modal correspondiente
     switch (menuType) {
-      case 'contact':
+      case "contact":
         setShowMobileContacMenu(true);
         break;
-      case 'ebooks':
+      case "ebooks":
         setShowMobileEbooksMenu(true);
         break;
-      case 'about':
+      case "about":
         setShowMobileAboutUsMenu(true);
         break;
       default:
@@ -116,7 +116,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
     setShowMobileContacMenu(false);
     setShowMobileEbooksMenu(false);
     setShowMobileAboutUsMenu(false);
-    
+
     // Abrir el menú principal
     setShowMobileMenu(true);
     setNavMobileMenuIsShow(true);
@@ -241,23 +241,37 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
 
             <div className={styles.links}>
               <div className={styles.contactBtn}>
-                <Icon size={"1rem"} type={"form"} />
-                <Text color="black-lighter" bold="regular" size="sm">
-                  Forma de contacto
-                </Text>
+                <a href="/contact">
+                  <Icon size={"1rem"} type={"form"} />
+                  <Text color="black-lighter" bold="regular" size="sm">
+                    Forma de contacto
+                  </Text>
+                </a>
               </div>
               <div className={styles.contactBtn}>
-                <Icon size={"1rem"} type={"email"} />
-                <Text color="black-lighter" bold="regular" size="sm">
-                  Email
-                </Text>
+                <a
+                  href="mailto:whittemburydavid1@gmail.com"
+                  className={styles.mailLink}
+                >
+                  <Icon size={"1rem"} type={"email"} />
+                  <Text color="black-lighter" bold="regular" size="sm">
+                    Email
+                  </Text>
+                </a>
               </div>
               <div className={styles.contactBtn}>
-                <Icon size={"1rem"} type={"wp"} />
-                <Text color="black-lighter" bold="regular" size="sm">
-                  {" "}
-                  Whatsapp
-                </Text>
+                <a
+                  href="https://wa.me/51914727355"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.whatsappLink}
+                >
+                  <Icon size={"1rem"} type={"wp"} />
+                  <Text color="black-lighter" bold="regular" size="sm">
+                    {" "}
+                    Whatsapp
+                  </Text>
+                </a>
               </div>
             </div>
           </div>
@@ -464,7 +478,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
           transform: "translateX(100%)",
           "&.show": {
             transform: "translateX(0)",
-          }
+          },
         }}
         onClose={() => {
           setShowMobileMenu(false);
@@ -515,7 +529,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 className={`${styles.dropMenuBtn} ${
                   dropElements.recursosGratis && styles.focus
                 }`}
-                onClick={() => handleMobileMenuClick('ebooks')}
+                onClick={() => handleMobileMenuClick("ebooks")}
               >
                 <div className={styles.dropdownTitleDesc}>
                   <div className={styles.dropdownTitle}>
@@ -543,7 +557,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 className={`${styles.dropMenuBtn} ${
                   dropElements.contacto && styles.focus
                 }`}
-                onClick={() => handleMobileMenuClick('contact')}
+                onClick={() => handleMobileMenuClick("contact")}
               >
                 <div className={styles.dropdownTitleDesc}>
                   <div className={styles.dropdownTitle}>
@@ -569,7 +583,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 className={`${styles.dropMenuBtn} ${
                   dropElements.contacto && styles.focus
                 }`}
-                onClick={() => handleMobileMenuClick('about')}
+                onClick={() => handleMobileMenuClick("about")}
               >
                 <div className={styles.dropdownTitleDesc}>
                   <div className={styles.dropdownTitle}>
@@ -609,7 +623,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
           </div>
         </div>
       </Drawer>
-      
+
       {/* Drawer para Recursos Gratuitos */}
       <Drawer
         show={showMobileEbooksMenu}
@@ -621,7 +635,11 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               <Icon size={"4rem"} type={"close"} color="var(--white)" />
             </div>
             <div className={styles.drawerTitle}>
-              <span className={styles.backButton} id={styles.backButtonResource} onClick={handleBackToMainMenu}>
+              <span
+                className={styles.backButton}
+                id={styles.backButtonResource}
+                onClick={handleBackToMainMenu}
+              >
                 →
               </span>
               <Text color="black-lighter" bold="font-light" size="xlg">
@@ -631,7 +649,9 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
           </>
         }
       >
-        <div className={`${styles.dropElements} ${styles.resources} ${styles.show}`}>
+        <div
+          className={`${styles.dropElements} ${styles.resources} ${styles.show}`}
+        >
           <div className={styles.resourcesContainer}>
             <div className={styles.recursosDesc}>
               <Text
@@ -658,10 +678,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             <div className={styles.cards}>
               <Link to={DOWNLOAD_EBOOK} target="_blank">
                 <div className={styles.mobileCard}>
-                    <img
-                      src={imgEbookPrueba}
-                      className={styles.mobileImg}
-                    />
+                  <img src={imgEbookPrueba} className={styles.mobileImg} />
                   <div className={styles.mobileDesc}>
                     <Text
                       color="dark"
@@ -674,10 +691,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               </Link>
               <Link to={DOWNLOAD_EBOOK} target="_blank">
                 <div className={styles.mobileCard}>
-                    <img
-                      src={imgEbookPrueba}
-                      className={styles.mobileImg}
-                    />
+                  <img src={imgEbookPrueba} className={styles.mobileImg} />
                   <div className={styles.mobileDesc}>
                     <Text
                       color="dark"
@@ -717,7 +731,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
           </div>
         </div>
       </Drawer>
-      
+
       {/* Drawer para Contacto */}
       <Drawer
         show={showMobileContacMenu}
@@ -729,7 +743,10 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               <Icon size={"4rem"} type={"close"} color="var(--white)" />
             </div>
             <div className={styles.drawerTitle}>
-              <span className={styles.backButton} onClick={handleBackToMainMenu}>
+              <span
+                className={styles.backButton}
+                onClick={handleBackToMainMenu}
+              >
                 →
               </span>
               <Text bold="font-light" color="black-lighter" size="xlg">
@@ -759,6 +776,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
           </Text>
           <div className={styles.links}>
             <div className={styles.contactBtn}>
+              <a href="/contact">
               <div
                 style={{
                   display: "flex",
@@ -766,37 +784,50 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   gap: "8px",
                 }}
               >
-                <Icon color="black" size={"1.52rem"} type={"form"} />
-                <Text
-                  color="black-lighter"
-                  s={{ fontSize: "15px" }}
-                  bold="regular"
-                >
-                  {" "}
-                  Forma de contacto
-                </Text>
+                  <Icon color="black" size={"1.52rem"} type={"form"} />
+                  <Text
+                    color="black-lighter"
+                    s={{ fontSize: "15px" }}
+                    bold="regular"
+                  >
+                    {" "}
+                    Forma de contacto
+                  </Text>
               </div>
+                </a>
             </div>
             <div className={styles.contactBtn}>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
-                }}
+              <a
+                href="mailto:whittemburydavid1@gmail.com"
+                className={styles.mailLink}
               >
-                <Icon color="black" size={"1.52rem"} type={"email"} />
-                <Text
-                  color="black-lighter"
-                  s={{ fontSize: "15px" }}
-                  bold="regular"
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "row",
+                    gap: "8px",
+                  }}
                 >
-                  {" "}
-                  info@inkadentist.com
-                </Text>
-              </div>
+                  <Icon color="black" size={"1.52rem"} type={"email"} />
+                  <Text
+                    color="black-lighter"
+                    s={{ fontSize: "15px" }}
+                    bold="regular"
+                  >
+                    {" "}
+                    Email
+                  </Text>
+                </div>
+              </a>
             </div>
             <div className={styles.contactBtn}>
+              <a
+                href="https://wa.me/51914727355"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.whatsappLink}
+              >
               <div
                 style={{
                   display: "flex",
@@ -804,16 +835,17 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   gap: "8px",
                 }}
               >
-                <Icon color="black" size={"1.52rem"} type={"wp"} />
-                <Text
-                  color="black-lighter"
-                  s={{ fontSize: "15px" }}
-                  bold="regular"
-                >
-                  {" "}
-                  WhatsApp
-                </Text>
+                  <Icon color="black" size={"1.52rem"} type={"wp"} />
+                  <Text
+                    color="black-lighter"
+                    s={{ fontSize: "15px" }}
+                    bold="regular"
+                  >
+                    {" "}
+                    WhatsApp
+                  </Text>
               </div>
+                </a>
             </div>
           </div>
           <div className={styles.btnsContact}>
@@ -834,7 +866,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
           </div>
         </div>
       </Drawer>
-      
+
       {/* Drawer para Sobre Nosotros */}
       <Drawer
         show={showMobileAboutUsMenu}
@@ -846,7 +878,10 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               <Icon size={"4rem"} type={"close"} color="var(--white)" />
             </div>
             <div className={styles.drawerTitle}>
-              <span className={styles.backButton} onClick={handleBackToMainMenu}>
+              <span
+                className={styles.backButton}
+                onClick={handleBackToMainMenu}
+              >
                 →
               </span>
               <Text color="black-lighter" bold="font-light" size="xlg">

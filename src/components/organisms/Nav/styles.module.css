@@ -203,8 +203,8 @@ body:has(.resoursesDropDown.show) {
   flex-direction: column;
   gap: 16px;
 }
-.contactBanner .contactBtn,
-.aboutUs .contactBtn {
+.contactBanner .contactBtn a,
+.aboutUs .contactBtn a{
   border-radius: 8px;
   width: fit-content;
   display: flex;
