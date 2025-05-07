@@ -126,7 +126,7 @@
 .contact .formContainer {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 35%;
   z-index: 1;
 }
 .contact .form {

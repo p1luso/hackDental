@@ -57,7 +57,7 @@ const ContactForm = () => {
             fontSizeMobile="21px"
             textAlignMobile="start"
             color="white"
-            bold="font-light"
+            s={{fontWeight: 500}}
           >
             Dueño de consultorio
           </Text>

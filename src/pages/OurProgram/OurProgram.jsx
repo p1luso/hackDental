@@ -117,7 +117,7 @@ const OurProgram = () => {
               bold="semibold"
               textAlign="center"
               fontSize="34px"
-              fontSizeMobile="28px"
+              fontSizeMobile="18px"
               s={{
                 lineHeight: "0.95",
                 fontFamily: "lexend",
@@ -170,7 +170,7 @@ const OurProgram = () => {
               bold="semibold"
               textAlign="center"
               fontSize="34px"
-              fontSizeMobile="28px"
+              fontSizeMobile="22px"
               s={{
                 lineHeight: "0.95",
                 fontFamily: "lexend",
