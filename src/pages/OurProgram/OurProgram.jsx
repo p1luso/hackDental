@@ -224,9 +224,9 @@ const OurProgram = () => {
       <div className={styles.progressBarSection}>
         <div className={styles.progressTexts}>
           <h2 className={styles.progressTitle}>
-            Aprende las 4 ventajas del <br></br>
+          ¿Qué incluye nuestra auditoría? <br></br>
             <span className={styles.hackDentalMethod}>
-              Método del HackDental
+            Servicios valuados en $2000 Gratis
             </span>
           </h2>
           <p className={styles.progressText}>

@@ -78,12 +78,12 @@ const AcercaDe = () => {
       <main className={styles.main}>
         <div className={styles.texts}>
           <div className={styles.titleDeskt}>
-            <Text bold="bold  " type="subtitle" color="black">
+            <Text type="subtitle" color="black">
               Trabajemos juntos
             </Text>
           </div>
           <div className={styles.titleMob}>
-            <Text bold="bold  " type="subtitle" color="black">
+            <Text type="subtitle" color="black">
               Áreas de expertise
             </Text>
           </div>
@@ -95,7 +95,7 @@ const AcercaDe = () => {
             <div className={styles.spainLocation__items__item}>
               <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
 
-              <Text color="black-lighter" bold="font-light">
+              <Text color="black-lighter" fontSize="17px" bold="font-light">
                 <strong>
                   Reuniones semanals contigo y tu personal de consultorio
                 </strong>
@@ -104,16 +104,16 @@ const AcercaDe = () => {
             <div className={styles.spainLocation__items__item}>
               <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
 
-              <Text color="black-lighter" bold="font-light">
+              <Text color="black-lighter" fontSize="17px" bold="font-light">
                 <strong>
                   Mi disponiblidad los 7 días de la semana para tus consultas.
                 </strong>
               </Text>
             </div>
             <div className={styles.spainLocation__items__item}>
-              <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
+              <Icon size={"1.3rem"}  color="var(--primary)" type={"check"} />
 
-              <Text color="black-lighter" bold="font-light">
+              <Text color="black-lighter" fontSize="17px" bold="font-light">
                 Que trabaje 6 meses en el crecimiento de tu consultorio.
               </Text>
             </div>
@@ -133,7 +133,7 @@ const AcercaDe = () => {
                   bold="font-light"
                   fontSize="26px"
                   fontSizeMobile="18px"
-                  s={{ fontWeight: "500" }}
+                  s={{ fontWeight: "500", lineHeight: "1.1" }}
                 >
                   Dueño de Consultorio Dental
                 </Text>
@@ -145,7 +145,7 @@ const AcercaDe = () => {
                   bold="semi-bold"
                   fontSize="32px"
                   fontSizeMobile="22px"
-                  s={{ lineHeight: "1", fontWeight: "600" }}
+                  s={{ lineHeight: "1.1", fontWeight: "600" }}
                 >
                   ¿Te interesa una auditoría gratuita?
                 </Text>
@@ -153,7 +153,7 @@ const AcercaDe = () => {
               <Text
                 fontFamily="Lexend"
                 color="black-lighter"
-                fontSize="18px"
+                fontSize="17px"
                 fontSizeMobile="16px"
                 bold="font-light"
               >
