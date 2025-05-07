@@ -6,6 +6,10 @@ import Footer from "../../components/organisms/Footer/Footer";
 import PreefoterSimple from "../../components/organisms/PreefooterSimple/PreefooterSimple";
 import Icon from "../../components/atoms/Icon/Icon";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
+import CoberturaDental from "@assets/imagen_dentistLandind.svg";
+import DaysCounter from "../../components/organisms/DaysCounter/DaysCounter";
+import Link from "../../components/atoms/Link/Link";
+
 const Cumplimiento = () => {
   return (
     <div className={styles.page}>
@@ -66,7 +70,7 @@ const Cumplimiento = () => {
             </Text>
             <div className={styles.contactBtn}>
               <IconTextButton colorVariant="white">
-              Pedir Auditoria Gratis
+                Pedir Auditoria Gratis
               </IconTextButton>
             </div>
           </div>
@@ -117,8 +121,91 @@ const Cumplimiento = () => {
           </div>
         </div>
       </main>
-      <PreefoterSimple />
-      <Footer />
+      <section className={styles.dentalCover}>
+        <div className={styles.dentalContainer}>
+          <div className={styles.contentContainer_dental}>
+            <div className={styles.founderText}>
+              <div className={styles.titles}>
+                <Text
+                  type="bigtitle"
+                  textAlign="start"
+                  color="black"
+                  fontFamily="lexend"
+                  bold="font-light"
+                  fontSize="26px"
+                  fontSizeMobile="18px"
+                  s={{ fontWeight: "500" }}
+                >
+                  Dueño de Consultorio Dental
+                </Text>
+                <Text
+                  type="bigtitle"
+                  fontFamily="lexend"
+                  textAlign="start"
+                  color="black"
+                  bold="semi-bold"
+                  fontSize="32px"
+                  fontSizeMobile="22px"
+                  s={{ lineHeight: "1", fontWeight: "600" }}
+                >
+                  ¿Te interesa una auditoría gratuita?
+                </Text>
+              </div>
+              <Text
+                fontFamily="Lexend"
+                color="black-lighter"
+                fontSize="18px"
+                fontSizeMobile="16px"
+                bold="font-light"
+              >
+                Averigua si tu consultorio califica para nuestros servicios
+              </Text>
+
+              <div className={styles.founderButton}>
+                <div className={styles.btn_founder}>
+                  <IconTextButton size="100%" colorVariant="white-green">
+                    Pedir auditoría
+                  </IconTextButton>
+                </div>{" "}
+                <div className={styles.daysCounter}>
+                  <DaysCounter targetDate="2025-06-01" />
+                </div>
+              </div>
+            </div>
+            <div className={styles.imageWrapper}>
+              <img src={CoberturaDental} alt="" />
+            </div>
+            <div className={styles.founderButtonMobile}>
+              <div className={styles.btn_founder}>
+                <IconTextButton size="100%" colorVariant="white-green">
+                  Pedir auditoría
+                </IconTextButton>
+              </div>{" "}
+              <div className={styles.daysCounter}>
+                <DaysCounter targetDate="2025-06-01" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer className={styles.footer}>
+        <Text size="sm" color="white-cream" bold="font-light">
+          Copyright © {new Date().getFullYear()}, HackDental.com
+        </Text>
+        <div className={styles.links}>
+          <Link to={"#"}>
+            <Text color="white-cream" size="ty" bold="font-light">
+              Politica de Privacidad
+            </Text>
+          </Link>
+          <hr className={styles.separator} />
+          <Link to={"#"}>
+            <Text color="white-cream" size="ty" bold="font-light">
+              Cumplimiento del RGPD
+            </Text>{" "}
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 };
