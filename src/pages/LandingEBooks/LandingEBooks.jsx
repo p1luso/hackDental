@@ -27,13 +27,6 @@ const LandingEBooks = () => {
       <Nav hideTopMenu={true} />
       <header className={styles.header}>
         <section className={styles.banner}>
-          <div className={styles.imagesContainer}>
-            <img className={styles.images} src={FiguraIrregularDer} alt="" />
-            <img className={styles.images} src={FiguraIrregularIzq} alt="" />
-            <img className={styles.images} src={Finger} alt="" />
-            <img className={styles.images} src={Cohete} alt="" />
-            <img className={styles.images} src={Libreta} alt="" />
-          </div>
           <Text
             type="bigtitle"
             textAlign="center"

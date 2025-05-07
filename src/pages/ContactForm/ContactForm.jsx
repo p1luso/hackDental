@@ -97,13 +97,6 @@ const ContactForm = () => {
               <p>+51 903300422</p>
             </div>
           </div>
-          <div className={styles.contactIcons}>
-            <Linkedin className={styles.icons} />
-            <div className={styles.iconsText}>
-              <h4>LinkedIn</h4>
-              <p>Jose Whittembury</p>
-            </div>
-          </div>
         </div>
 
         <div className={styles.formContainer}>
