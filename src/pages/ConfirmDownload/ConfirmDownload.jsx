@@ -69,6 +69,7 @@ const ConfirmDownload = () => {
                 textAlignMobile="center"
                 bold="font-light"
                 fontSize="16px"
+                fontSizeMobile="14px"
                 textAlign="center"
                 s={{
                   lineHeight: "1.2",
@@ -91,7 +92,7 @@ const ConfirmDownload = () => {
               <img src={Medicos} className={styles.spainLocation_footer__img} />
               <div className={styles.footer__desc}>
                 <Text
-                  textAlignMobile="center"
+                  textAlignMobile="start"
                   fontSizeMobile="12px"
                   fontSize="14px"
                   s={{ color: "white", lineHeight: "1.33" }}
@@ -99,7 +100,7 @@ const ConfirmDownload = () => {
                   Únete a los dentistas
                 </Text>
                 <Text
-                  textAlignMobile="center"
+                  textAlignMobile="start"
                   bold="font-light"
                   fontSize="14px"
                   fontSizeMobile="12px"

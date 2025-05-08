@@ -270,6 +270,12 @@
       justify-content: center;
       align-items: center;
     }
+
+    .desc{
+        margin:28px;
+        gap: 25px;
+    }
+
     .founderButton {
       display: none;
     }
