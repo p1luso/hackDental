@@ -8,9 +8,12 @@ import Select from "../../../../components/atoms/Select/Select";
 import { isEmail, isEmpty } from "../../../../utils/inputValidators";
 import { sendContactFormDownloadEbook } from "../../../../services/api/sendContactForm";
 import LoadingScreen from "../../../../components/molecules/LoadingScreen/LoadingScreen";
+import { useNavigate, useParams } from "react-router-dom";
+import ebookData from "../../../../services/api/ebookData";
 
 const MAX_FORMS = 2;
 const DownloadForm = ({ modalOpened, pdfPath  }) => {
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     email: localStorage.getItem("email") ?? "",
     firstName: localStorage.getItem("firstName") ?? "",
@@ -30,6 +33,12 @@ const DownloadForm = ({ modalOpened, pdfPath  }) => {
   const [loading, setLoading] = useState(false);
   const [cambioSeccion, setCambioSecction] = useState(false);
   const [currentForm, setCurrentForm] = useState(1);
+  const { slug } = useParams();
+  const ebook = ebookData[slug];
+
+  if (!ebook) {
+    return <p style={{ padding: "2rem" }}>Ebook no encontrado.</p>;
+  }
 
   const handleNextForm = () => {
     setCambioSecction(true);
@@ -52,6 +61,10 @@ const DownloadForm = ({ modalOpened, pdfPath  }) => {
     setCurrentForm(1);
   };
 
+  const handleRedirectToConfirm = () => {
+    navigate("/confirm_download", { state: { pdfPath: ebook.pdfPath, title: ebook.title } });
+  };
+
   useEffect(() => {
     if (!modalOpened) {
       resetData();
@@ -65,26 +78,7 @@ const DownloadForm = ({ modalOpened, pdfPath  }) => {
       }
     }
     return false;
-  };
-
-  const handleDownloadEbook = async () => {
-    try {
-      setLoading(true);
-     // await sendContactFormDownloadEbook(form);
-      const link = document.createElement("a");
-      link.href = pdfPath;
-      link.download = pdfPath.split("/").pop();
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } catch (error) {
-      console.error("Error al descargar el ebook:", error);
-      alert("Hubo un error. Intenta nuevamente.");
-    } finally {
-      setLoading(false);
-    }
-  };
-  
+  };  
 
   return (
     <div
@@ -255,7 +249,7 @@ const DownloadForm = ({ modalOpened, pdfPath  }) => {
         >
           <IconTextButton
             disabled={isAnFormError()}
-            onClick={handleDownloadEbook}
+            onClick={handleRedirectToConfirm}
           >
             Descargar pdf
           </IconTextButton>
