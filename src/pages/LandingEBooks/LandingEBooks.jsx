@@ -34,11 +34,11 @@ const LandingEBooks = () => {
             textAlignMobile="center"
             fontFamily="lexend"
             bold="font-light"
-            fontSize="30px"
+            fontSize="28px"
             fontSizeMobile="21px"
             s={{ fontWeight: "500", lineHeight: 1.3 }}
           >
-            ¿Quieres llevar tu consultorio al siguiente nivel?
+            Educación para dueños de consultorios
           </Text>
           <Text
             type="bigtitle"
