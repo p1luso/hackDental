@@ -11,7 +11,12 @@ const TextLink = ({
   children,
 }) => {
   return (
-    <Link to={to} extern={extern}>
+    <Link
+    to={to}
+    extern={extern}
+    target={extern ? "_blank" : undefined} // Abre en una nueva pestaña si extern es true
+    rel={extern ? "noopener noreferrer" : undefined} // Mejora la seguridad
+  >
       <div
         className={`${styles[variant]} ${styles.textLink} ${
           marked && styles.marked

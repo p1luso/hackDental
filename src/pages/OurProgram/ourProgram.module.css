@@ -8,6 +8,24 @@
   --green-line: calc(var(--width-unit) * 0.25);
   --mobile-margin: 32px;
 }
+
+.nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 16px;
+}
+
+.btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  flex-direction: row;
+  width: 20%;
+  gap: 16px;
+}
+
 .flecha {
   width: 300px;
   position: absolute;
@@ -55,7 +73,7 @@
   top: 25%;
 }
 .banner .elements > :first-child {
-  margin-bottom: 44px;
+  margin-bottom: 24px;
   font-size: 52px;
 }
 
@@ -128,7 +146,7 @@
 }
 
 .betterTreatment {
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 600;
 }
 
@@ -842,7 +860,8 @@
 }
 
 .doubtsSection {
-  background-color: rgba(216, 232, 230, 0.8);
+  background-color: #f6f9fc;
+  border-top: 2px solid #eaf0f6;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1047,13 +1066,17 @@
   }
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1600px) {
+@media screen and (min-width: 1024px) and (max-width: 1600px) {
   .bgTransparent {
     padding: 64px;
   }
-  
-  .videoImg{
-    width: 400px;
+
+  .btns{
+    width: 30%;
+  }
+
+  .arrows{
+    display: none;
   }
 
 }
@@ -1062,7 +1085,9 @@
   .banner {
     padding: 0;
   }
-
+  .arrows{
+    display: none;
+  }
 
   .progressText {
     font-size: 16px;
@@ -1088,6 +1113,11 @@
     justify-content: center;
     gap: 28px;
   }
+
+  .btns > :last-child {
+display: none;  
+}
+
   .contact {
     flex-direction: column;
     height: auto;
@@ -1136,6 +1166,9 @@
   .banner {
     padding: 0;
   }
+  .btns > :last-child {
+    display: none;  
+    }
   .betterTreatment {
     font-size: 24px;
   }
@@ -1147,6 +1180,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+  .arrows{
+    display: none;
   }
   .circles,
   .finger,
@@ -1320,4 +1356,7 @@
   .contact .formLine > * {
     width: 100%;
   }
+  .btns > :last-child {
+    display: none;  
+    }
 }

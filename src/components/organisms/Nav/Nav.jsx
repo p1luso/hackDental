@@ -412,6 +412,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   variant="darkGreen"
                   to={OUR_PROGRAM}
                   textProps={{ bold: "font-light", fontSize: "14px" }}
+                  extern
                 >
                   Nuestro Método
                 </TextLink>

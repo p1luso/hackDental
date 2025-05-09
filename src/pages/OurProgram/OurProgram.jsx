@@ -17,9 +17,13 @@ import DaysCounter from "../../components/organisms/DaysCounter/DaysCounter";
 import marketingPlan from "@assets/marketingPlan.svg";
 import marketStudy from "@assets/marketStudy.svg";
 import strategyCall from "@assets/strategyCall.svg";
+import Logo from "../../components/atoms/Logo/Logo";
+import { useNavigate } from "react-router-dom";
+import { LANDING_PAGE } from "../../constants/routes";
 
 const OurProgram = () => {
   const [showModalVideo, setShowModalVideo] = useState(false);
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: localStorage.getItem("firstName") ?? "",
     lastName: localStorage.getItem("lastName") ?? "",
@@ -90,7 +94,27 @@ const OurProgram = () => {
 
   return (
     <div className={styles.page}>
-      <Nav />
+      <nav className={styles.nav} onClick={() => navigate(LANDING_PAGE)}>
+        <div role="button" style={{ display: "flex", alignItems: "center", padding: "0px", margin: "0px", cursor: "pointer" }}>
+        <Logo/>
+        </div>
+        <div className={styles.btns}>
+          <IconTextButton
+            colorVariant="primary-bordered2"
+            size="100%"
+            icon={"wp"}
+          >
+            Whatsapp
+          </IconTextButton>
+          <IconTextButton
+            colorVariant="primary-darker"
+            size="100%"
+            onClick={() => navigate(CONTACT_FORM)}
+          >
+            Pedir Auditoría
+          </IconTextButton>
+        </div>
+      </nav>
       <header className={styles.banner}>
         <div className={styles.bgTransparent}>
           <img
@@ -105,7 +129,7 @@ const OurProgram = () => {
                 color="white"
                 bold="semibold"
                 textAlign="center"
-                fontSize="34px"
+                fontSize="30px"
                 fontSizeMobile="21px"
                 s={{
                   lineHeight: "0.95",
@@ -212,19 +236,27 @@ const OurProgram = () => {
         </div>
       </header>
       <section className={styles.daysCounter}>
-        <div style={{ margin: "0 20px", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
-        <Text
-          fontFamily="lexend"
-          color="white-cream"
-          textAlignMobile="center"
-          bold="font-light"
-          fontSize="17px"
-          fontSizeMobile="16px"
-          textAlign="start"
+        <div
+          style={{
+            margin: "0 20px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
         >
-          Haremos Auditorias Gratis solo hasta Junio, 2025
-        </Text>
-        <DaysCounter targetDate="2025-06-01" />
+          <Text
+            fontFamily="lexend"
+            color="white-cream"
+            textAlignMobile="center"
+            bold="font-light"
+            fontSize="17px"
+            fontSizeMobile="16px"
+            textAlign="start"
+          >
+            Haremos Auditorias Gratis solo hasta Junio, 2025
+          </Text>
+          <DaysCounter targetDate="2025-06-01" />
         </div>
       </section>
       <div className={styles.progressBarSection}>
@@ -247,33 +279,21 @@ const OurProgram = () => {
         </div>
         <div className={styles.progressBar}>
           <Section
-            icon={<img src={strategyCall}/>}
-            title="Llamada Estrategica"
-            steps={[
-              "Puedes ponerte en contacto con nosotros por correo",
-              "Puedes ponerte en contacto con nosotros por correo",
-              "Puedes ponerte en contacto con nosotros por correo",
-            ]}
+            icon={<img src={strategyCall} />}
+            title="Llamada estratégica con nuestro fundador."
+            steps={["Puedes ponerte en contacto con nosotros por correo"]}
           />
           <Section
-            icon={<img src={marketStudy}/>}
-            title="Estudio de mercado"
+            icon={<img src={marketStudy} />}
+            title="Estudio de tu mercado local"
             textLeft={true}
-            steps={[
-              "Puedes ponerte en contacto con nosotros por correo",
-              "Puedes ponerte en contacto con nosotros por correo",
-              "Puedes ponerte en contacto con nosotros por correo",
-            ]}
+            steps={["Puedes ponerte en contacto con nosotros por correo"]}
           />
           <Section
-            icon={<img src={marketingPlan}/>}
-            title="Plan de Marketing"
+            icon={<img src={marketingPlan} />}
+            title="Plan de Marketing para tu consultorio"
             lastSection={true}
-            steps={[
-              "Puedes ponerte en contacto con nosotros por correo",
-              "Puedes ponerte en contacto con nosotros por correo",
-              "Puedes ponerte en contacto con nosotros por correo",
-            ]}
+            steps={["Puedes ponerte en contacto con nosotros por correo"]}
           />
         </div>
       </div>
