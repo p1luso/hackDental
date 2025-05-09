@@ -17,6 +17,8 @@
   width: 100%;
   top: 0;
   z-index: 1000;
+  background-color: #f6f9fc;
+
 }
 .nav.ajust {
   height: auto;
@@ -29,14 +31,14 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #f6f9fc;
   z-index: 1000;
   box-shadow: 1px 0 4px var(--gray-light);
 }
 
 .elements:has(.bottomMenu.changeColor) {
   box-shadow: none;
-  border-bottom: 1px solid var(--light-gray);
+  border-bottom: 1px solid #7691ad;
 }
 
 .topMenu,
@@ -54,7 +56,7 @@
   background-color: var(--primary-darker);
   padding: 12px;
   position: relative;
-  border-bottom: 1px solid var(--primary-transparent);
+  border-bottom: 1px solid #7691ad;
   cursor: pointer;
 }
 .country {
@@ -69,11 +71,11 @@
   justify-content: space-between;
   padding-left: var(--width-unit);
   padding-right: var(--width-unit);
-  background-color: #f5f9f7;
+  background-color: #f6f9fc;
   height: 84px;
 }
 .bottomMenu.changeColor {
-  background-color: var(--light-green);
+  background-color: #f6f9fc;
 }
 
 .linkContainer {
@@ -108,10 +110,10 @@
 }
 
 .nav .separator {
-  width: 2px;
+  width: 1px;
   height: 2rem;
   margin: 0 16px;
-  background-color: var(--light-gray);
+  background-color: #7691ad;
 }
 
 .formBtn {
@@ -150,7 +152,7 @@ body:has(.resoursesDropDown.show) {
   display: flex;
   width: 100%;
   height: fit-content;
-  background-color: var(--light-green);
+  background-color: #f6f9fc;
   justify-content: center;
   transform: translateY(-100%);
   visibility: hidden;
@@ -172,7 +174,7 @@ body:has(.resoursesDropDown.show) {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  background-color: var(--light-green);
+  background-color: #f6f9fc;
   height: fit-content;
 
   width: 100%;
@@ -225,7 +227,7 @@ body:has(.resoursesDropDown.show) {
 }
 
 .contactBtn:not(:nth-child(3)) {
-  border-bottom: 1px solid rgba(128, 128, 128, 0.173);
+  border-bottom: 1px solid #7691ad;
 }
 
 
@@ -263,7 +265,7 @@ body:has(.resoursesDropDown.show) {
 .resoursesDropDown .separator {
   width: 1px;
   height: 100%;
-  background-color: var(--light-gray);
+  background-color: #7691ad;
 }
 .resoursesDropDown .cards {
   display: flex;
@@ -280,7 +282,7 @@ body:has(.resoursesDropDown.show) {
   cursor: pointer;
   border-radius: 12px;
   transition: all 0.3s ease-in-out;
-  border: 1px solid var(--light-gray);
+  border: 1px solid #7691ad;
 }
 .descargarGratis {
   display: flex;
@@ -328,21 +330,15 @@ body:has(.resoursesDropDown.show) {
   padding-left: 16px;
   text-decoration: underline;
   padding-right: 16px;
-  background-color: var(--gray-light);
-}
-.resoursesDropDown.show .developText:hover {
-  overflow: hidden;
   background-color: var(--gray-blue-dark);
-  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
+
 
 .resoursesDropDown .cardsBanner .developText > * {
   transition: all 0.3s ease-in-out;
 }
-.resoursesDropDown .cardsBanner.show .developText:hover > * {
-  transform: scale(1.1);
-  transition: all 0.1s ease-in-out;
-}
+
 .resoursesDropDown .cardsBanner .seeEbooksBtn {
   display: flex;
   align-items: center;
@@ -379,13 +375,11 @@ body:has(.resoursesDropDown.show) {
 .btns {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   gap: 2vh;
   padding: 5%;
   padding-bottom: 5vh;
-  padding-top: 3vh;
-  border-top: 1px solid var(--gray-light);
   width: 100%;
 }
 .btns > :nth-child(1) {
@@ -403,7 +397,7 @@ body:has(.resoursesDropDown.show) {
   width: 100%;
   padding-bottom: 5vh;
   padding-top: 3vh;
-  border-top: 1px solid var(--gray-light);
+  border-top: 1px solid #7691ad;
   margin-top: auto;
 }
 .btnsContact > :nth-child(1) {
@@ -435,7 +429,7 @@ body:has(.resoursesDropDown.show) {
   padding: 2vh 5%;
   cursor: pointer;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.173);
+  border-bottom: 1px solid #7691ad;
 }
 .dropdownTitleDesc {
   display: flex;
@@ -495,7 +489,7 @@ body:has(.resoursesDropDown.show) {
 .mobileCard {
   display: flex;
   background-color: #fff;
-  border: 1px solid var(--primary);
+  border: 1px solid #7691ad;
   padding: 4%;
   border-radius: 8px;
   gap: 4%;
@@ -543,7 +537,7 @@ body:has(.resoursesDropDown.show) {
 .links{}
 
 .contactBtn:not(:nth-child(3)) {
-  border-bottom: 1px solid rgba(128, 128, 128, 0.173);
+  border-bottom: 1px solid #7691ad;
 }
 .recursosDesc {
   margin-bottom: 24px;
@@ -662,9 +656,12 @@ body:has(.resoursesDropDown.show) {
 .backButton {
   position: absolute;
   left: -25vw;
-  top: 55%;
-  transform: translateY(-50%) rotate(180deg);
-  font-size: 5vw;
+  color: #005fa3;
+  text-decoration: underline;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 600;
+  font-size: 15px;
   cursor: pointer;
   z-index: 1000;
 }

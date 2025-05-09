@@ -205,11 +205,14 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             </div>
             <div
               className={styles.developText}
-              onClick={() => navigate(LANDING_EBOOKS)}
             >
-              <Text bold="font-light" size="ty" textAlign="center">
-                Ir a la bilbioteca de ebooks
-              </Text>
+              <TextLink
+              variant="primary-green"
+              to={LANDING_EBOOKS}
+              textProps={{ color: "#005fa3", fontSize: "18px" }}
+            >
+              Ir a biblioteca de ebooks
+            </TextLink>
             </div>
           </div>
         </div>
@@ -394,7 +397,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 <TextLink
                   marked={showResources}
                   variant="darkGreen"
-                  textProps={{ bold: "font-light", size: "ty" }}
+                  textProps={{ bold: "font-light", fontSize: "14px" }}
                 >
                   Recursos gratis
                 </TextLink>
@@ -408,9 +411,9 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 <TextLink
                   variant="darkGreen"
                   to={OUR_PROGRAM}
-                  textProps={{ bold: "font-light", size: "ty" }}
+                  textProps={{ bold: "font-light", fontSize: "14px" }}
                 >
-                  Nuestro Programa
+                  Nuestro Método
                 </TextLink>
               </div>
 
@@ -422,7 +425,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 <TextLink
                   variant="darkGreen"
                   marked={showAboutUs}
-                  textProps={{ bold: "font-light", size: "ty" }}
+                  textProps={{ bold: "font-light", fontSize: "14px"  }}
                 >
                   Sobre Nosotros
                 </TextLink>
@@ -435,7 +438,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 <TextLink
                   variant="darkGreen"
                   marked={showContact}
-                  textProps={{ bold: "font-light", size: "ty" }}
+                  textProps={{ bold: "font-light", fontSize: "14px"  }}
                 >
                   Contacto
                 </TextLink>
@@ -447,7 +450,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                     colorVariant="white-green"
                     textProps={{ size: "ty" }}
                   >
-                    Solicita una reunión
+                    Pedir Auditoría
                   </IconTextButton>
                 </Link>
               </div>
@@ -490,7 +493,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               <Icon size={"4rem"} type={"close"} color="var(--white)" />
             </div>
             <div className={styles.drawerTitle}>
-              <Text size="xlg" color="black-lighter" bold="font-light">
+              <Text size="xlg" color="blue-lighter" bold="font-light">
                 Menu
               </Text>
             </div>
@@ -505,7 +508,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   <div className={styles.dropdownTitleDesc}>
                     <div className={styles.dropdownTitle}>
                       <Text bold="regular" size="xxlg" color="black">
-                        Nuestro Programa
+                        Nuestro Método
                       </Text>
                       <span
                         style={{
@@ -611,10 +614,10 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               size="100%"
               onClick={() => navigate(CONTACT_FORM)}
             >
-              Solicita una reunion
+              Pedir Auditoría
             </IconTextButton>
             <IconTextButton
-              colorVariant="primary-bordered"
+              colorVariant="primary-bordered2"
               size="100%"
               icon={"wp"}
             >
@@ -635,15 +638,14 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               <Icon size={"4rem"} type={"close"} color="var(--white)" />
             </div>
             <div className={styles.drawerTitle}>
-              <span
+            <span
                 className={styles.backButton}
-                id={styles.backButtonResource}
                 onClick={handleBackToMainMenu}
               >
-                →
+                ←Atrás
               </span>
-              <Text color="black-lighter" bold="font-light" size="xlg">
-                Recursos Gratuitos
+              <Text color="blue-lighter" bold="font-light" size="xlg">
+                Recursos
               </Text>
             </div>
           </>
@@ -702,26 +704,29 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   </div>
                 </div>
               </Link>
+              <div className={styles.btns}>
+              <TextLink
+              variant="primary-green"
+              to={LANDING_EBOOKS}
+              textProps={{ color: "#005fa3", fontSize: "18px" }}
+            >
+              Ir a biblioteca de ebooks
+            </TextLink>
+            </div>
             </div>
           </div>
           <div className={styles.btns}>
-            <IconTextButton
-              colorVariant="primary-bordered"
-              size="100%"
-              onClick={() => navigate(LANDING_EBOOKS)}
-            >
-              Ir a biblioteca de ebooks
-            </IconTextButton>
+        
             <div className={styles.btnsContact}>
               <IconTextButton
                 colorVariant="primary-darker"
                 size="100%"
                 onClick={() => navigate(CONTACT_FORM)}
               >
-                Solicita una reunion
+                 Pedir Auditoría
               </IconTextButton>
               <IconTextButton
-                colorVariant="primary-bordered"
+                colorVariant="primary-bordered2"
                 size="100%"
                 icon={"wp"}
               >
@@ -743,13 +748,13 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               <Icon size={"4rem"} type={"close"} color="var(--white)" />
             </div>
             <div className={styles.drawerTitle}>
-              <span
+            <span
                 className={styles.backButton}
                 onClick={handleBackToMainMenu}
               >
-                →
+                ←Atrás
               </span>
-              <Text bold="font-light" color="black-lighter" size="xlg">
+              <Text bold="font-light" color="blue-lighter" size="xlg">
                 Contacto
               </Text>
             </div>
@@ -777,13 +782,13 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
           <div className={styles.links}>
             <div className={styles.contactBtn}>
               <a href="/contact">
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
-                }}
-              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                  }}
+                >
                   <Icon color="black" size={"1.52rem"} type={"form"} />
                   <Text
                     color="black-lighter"
@@ -793,8 +798,8 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                     {" "}
                     Forma de contacto
                   </Text>
-              </div>
-                </a>
+                </div>
+              </a>
             </div>
             <div className={styles.contactBtn}>
               <a
@@ -828,13 +833,13 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 rel="noopener noreferrer"
                 className={styles.whatsappLink}
               >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
-                }}
-              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                  }}
+                >
                   <Icon color="black" size={"1.52rem"} type={"wp"} />
                   <Text
                     color="black-lighter"
@@ -844,8 +849,8 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                     {" "}
                     WhatsApp
                   </Text>
-              </div>
-                </a>
+                </div>
+              </a>
             </div>
           </div>
           <div className={styles.btnsContact}>
@@ -854,10 +859,10 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               size="100%"
               onClick={() => navigate(CONTACT_FORM)}
             >
-              Solicita una reunion
+               Pedir Auditoría
             </IconTextButton>
             <IconTextButton
-              colorVariant="primary-bordered"
+              colorVariant="primary-bordered2"
               size="100%"
               icon={"wp"}
             >
@@ -882,10 +887,10 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 className={styles.backButton}
                 onClick={handleBackToMainMenu}
               >
-                →
+                ←Atrás
               </span>
-              <Text color="black-lighter" bold="font-light" size="xlg">
-                Sobre nosotros
+              <Text color="blue-lighter" bold="font-light" size="xlg">
+                Nosotros
               </Text>
             </div>
           </>
@@ -907,7 +912,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             s={{ lineHeight: "1" }}
             bold="semi-bold"
           >
-            Sus Integrantes y sus Políticas
+            Y sus Políticas
           </Text>
           <div className={styles.links}>
             <div className={styles.contactBtn}>
@@ -976,10 +981,10 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               size="100%"
               onClick={() => navigate(CONTACT_FORM)}
             >
-              Solicita una reunion
+               Pedir Auditoría
             </IconTextButton>
             <IconTextButton
-              colorVariant="primary-bordered"
+              colorVariant="primary-bordered2"
               size="100%"
               icon={"wp"}
             >

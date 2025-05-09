@@ -148,7 +148,27 @@
   text-decoration: underline;
   color:#2f4f4f;
   padding-right: 16px;
-  background-color: var(--gray-light);
+  background-color:var(--gray-blue-dark);
+}
+
+/* black */
+.blueLight.textLink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+}
+
+.blueLight.textLink.marked > * {
+  color: #7691ad !important;
+}
+
+.blueLight.textLink > * {
+  transition: all 0.2s ease-in;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 20px;
+  color: #7691ad !important;
 }
 
 /* rounded */

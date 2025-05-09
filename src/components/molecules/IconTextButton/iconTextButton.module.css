@@ -192,6 +192,38 @@
   color: var(--black);
 }
 
+
+
+/*primary-bordered2*/
+.primary-bordered2.iconTextButton {
+  display: flex;
+  border: 1px solid #7691ad;
+  background-color: white;
+  padding: 10px 24px;
+  border-radius: 15px;
+  color: var(--black);
+  transition: all 0.3s ease-in;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.primary-bordered2.iconTextButton:hover {
+}
+
+.primary-bordered2.iconTextButton > i {
+  color: #006a43;
+  position: relative;
+  top: 1px;
+}
+.primary-bordered2.iconTextButton.bordered {
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+
+
+
 .primary-darker.iconTextButton.full {
   background-color: var(--primary-darker);
   color: var(--white);
