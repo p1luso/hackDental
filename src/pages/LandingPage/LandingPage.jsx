@@ -21,7 +21,7 @@ import Founder from "../../components/organisms/Founder/Founder";
 import LeftArrow from "@assets/flechaizquierda.svg";
 import RightArrow from "@assets/flechaderecha.svg";
 import EBookCard from "../../components/organisms/EBookCard/EBookCard";
-import WhoWeAreImage from "@assets/Spain.svg";
+import WhoWeAreImage from "@assets/imagenSpain.svg";
 import checkIconSpain from "@assets/checkIconSpain.svg";
 import HappyDentist from "@assets/happyDentist.svg";
 import SadDentist from "@assets/sadDentist.svg";
@@ -295,7 +295,7 @@ const LandingPage = () => {
                 >
                   <TextLink
                     variant="primary-green"
-                    textProps={{ color: "#006a43" }}
+                    textProps={{ color: "#005fa3" }}
                   >
                     Ver Mas →
                   </TextLink>
@@ -538,7 +538,6 @@ const LandingPage = () => {
                 fontSize="24px"
                 fontSizeMobile="21px"
                 s={{ lineHeight: 1.3, color: "#2f4f4f" }}
-                color="dark"
               >
                 Contáctanos si tu consultorio cumple con lo siguiente:{" "}
               </Text>
@@ -546,21 +545,21 @@ const LandingPage = () => {
                 <div className={styles.spainLocation__items__item}>
                   <Icon size={"1.3rem"} color="#008060" type={"check"} />
 
-                  <Text color="black" bold="font-light">
+                  <Text color="black" bold="font-light" fontSize="17px">
                     Está ubicado en <strong>España.</strong>
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
                   <Icon size={"1.3rem"} color="#008060" type={"check"} />
 
-                  <Text color="black" bold="font-light">
+                  <Text color="black" bold="font-light" fontSize="17px">
                     Factura <strong>10,000 euros o más</strong> al mes
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
                   <Icon size={"1.3rem"} color="#008060" type={"check"} />
 
-                  <Text color="black" bold="font-light">
+                  <Text color="black" bold="font-light" fontSize="17px">
                     Quiere crecer rápidamente en el <strong>2025</strong>.
                   </Text>
                 </div>
@@ -576,8 +575,8 @@ const LandingPage = () => {
               <div className={styles.footer__desc}>
                 <Text
                   textAlignMobile="center"
-                  fontSizeMobile="14px"
-                  fontSize="16px"
+                  fontSizeMobile="12px"
+                  fontSize="14px"
                   s={{ color: "#2f4f4f", lineHeight: "1.33" }}
                 >
                   Únete a los dentistas
@@ -585,14 +584,12 @@ const LandingPage = () => {
                 <Text
                   textAlignMobile="center"
                   bold="font-light"
-                  fontSize="16px"
-                  fontSizeMobile="14px"
+                  fontSize="14px"
+                  fontSizeMobile="12px"
                   s={{ color: "black", lineHeight: "1.33" }}
                 >
                   que usan nuestro método.{" "}
-                  <Mark bold="regular" color="darker-green">
-                    Cupos limitados.
-                  </Mark>
+                 
                 </Text>
               </div>
             </div>
@@ -661,16 +658,14 @@ const LandingPage = () => {
             className={styles.ebooksContainer}
             style={{
               display: "flex",
-              alignItems: "center", // Valor predeterminado
-              justifyContent: "center",
-              gap: "0.5rem",
+              alignItems: "start", // Valor predeterminado
+              justifyContent: "start",
               marginBottom: "15px",
               "@media (max-width: 768px)": {
                 alignItems: "start", // Cambiar a "start" en dispositivos móviles
               },
             }}
           >
-            <img src={checkIconSpain} alt="" style={{ width: "25px" }} />
             <Text
               fontFamily="Lexend"
               color="black-lighter"
@@ -683,7 +678,7 @@ const LandingPage = () => {
             </Text>
           </div>
           <div className={styles.founderButtonEbooks}>
-            <TextLink variant="primary-green" textProps={{ color: "#006a43" }}>
+            <TextLink variant="primary-green" textProps={{ color: "#005fa3", fontSize: "18px" }}>
               Ver todos los ebooks →
             </TextLink>{" "}
           </div>
@@ -703,7 +698,7 @@ const LandingPage = () => {
               }`}
             >
               {currentBooks.map((book, i) => (
-                <EBookCard bookType={false} key={i} {...book} />
+                <EBookCard bookType={false} key={i} {...book} textLinkColor="#005fa3"/>
               ))}
             </div>
             <button

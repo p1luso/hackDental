@@ -29,8 +29,21 @@
 }
 
 .primary-green {
-  color: var(--primary) !important;
-  
+  color: #005fa3 !important;
+  text-decoration: underline;
+
+}
+
+.blue-secondary.textLink {
+  display: flex;
+  align-items: start;
+  gap: 16px;
+}
+
+.blue-secondary {
+  color: #005fa3 !important;
+  text-decoration: underline;
+
 }
 
 

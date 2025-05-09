@@ -8,6 +8,7 @@ import FounderImageMobile from "@assets/FounderImageMobile.svg";
 import PreFooter from "../PreFooter/PreFooter";
 import { px } from "framer-motion";
 import Icon from "../../atoms/Icon/Icon";
+import TextLink from "../../molecules/TextLink/TextLink";
 
 const Founder = () => {
   return (
@@ -46,10 +47,20 @@ const Founder = () => {
               <img id={styles.founderImgMobile} src={FounderImageMobile} />
               <div className={styles.disponibilityBox}>
                 <span className={styles.badge}>1</span>
-                <Text color="white" fontSize="16px" fontSizeMobile="12px" bold="font-light">
+                <Text
+                  color="white"
+                  fontSize="16px"
+                  fontSizeMobile="12px"
+                  bold="font-light"
+                >
                   Disponibilidad actual
                 </Text>
-                <Text color="white" fontSize="16px" fontSizeMobile="12px" bold="font-light">
+                <Text
+                  color="white"
+                  fontSize="16px"
+                  fontSizeMobile="12px"
+                  bold="font-light"
+                >
                   <strong>10 clínicas en España</strong>
                 </Text>
               </div>
@@ -104,11 +115,7 @@ const Founder = () => {
               </Text>
               <div className={styles.beneficios}>
                 <div className={styles.beneficiosIcon}>
-                  <Icon
-                  size={"1.2rem"}
-                  color="#008060"
-                  type={"check"}
-                />
+                  <Icon size={"1.2rem"} color="#008060" type={"check"} />
                 </div>
                 <Text
                   color="black-lighter"
@@ -122,12 +129,8 @@ const Founder = () => {
                 </Text>
               </div>
               <div className={styles.beneficios}>
-              <div className={styles.beneficiosIcon}>
-                <Icon
-                  size={"1.2rem"}
-                  color="#008060"
-                  type={"check"}
-                />
+                <div className={styles.beneficiosIcon}>
+                  <Icon size={"1.2rem"} color="#008060" type={"check"} />
                 </div>
                 <Text
                   color="black-lighter"
@@ -142,12 +145,8 @@ const Founder = () => {
                 </Text>
               </div>
               <div className={styles.beneficios}>
-              <div className={styles.beneficiosIcon}>
-                <Icon
-                  size={"1.2rem"}
-                  color="#008060"
-                  type={"check"}
-                />
+                <div className={styles.beneficiosIcon}>
+                  <Icon size={"1.2rem"} color="#008060" type={"check"} />
                 </div>
                 <Text
                   color="black-lighter"
@@ -159,15 +158,17 @@ const Founder = () => {
                 </Text>
               </div>
               <div className={styles.founderButton}>
-                <IconTextButton colorVariant="white-green">
-                  Contactar a José →
-                </IconTextButton>{" "}
+                <TextLink
+                  variant="primary-green"
+                  textProps={{ color: "#005fa3", fontSize: "18px" }}
+                >
+                  Contactar a Jose →
+                </TextLink>{" "}
               </div>
             </div>
           </div>
         </div>
       </section>
-
     </div>
   );
 };

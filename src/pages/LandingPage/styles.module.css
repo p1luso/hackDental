@@ -349,7 +349,7 @@ body:has(.popupContainer.show) {
   height: 72px !important;
 }
 .whoAreWe {
-  background-color: #f5f9f7;
+  background-color: #f6f9fc;
   width: 100%;
   padding-bottom: 80px;
   display: flex;
@@ -626,15 +626,15 @@ body:has(.popupContainer.show) {
 
 .spainLocation_footer__card {
   display: flex;
-  gap: 16px;
-  margin-top: 30px;
+  gap: 6px;
+  margin-top: 12px;
   align-items: center;
 }
 .spainLocation_footer__img {
   width: 102px;
 }
 .spainLocation {
-  background: linear-gradient(90deg, var(--primary-transparent-2), white);
+  background: #f6f9fc;
   padding-left: var(--width-unit);
   padding-right: var(--width-unit);
   display: flex;
@@ -647,6 +647,12 @@ body:has(.popupContainer.show) {
   padding-bottom: 80px;
   z-index: 1;
 }
+
+.spainLocation__btn{
+  width: 400px;
+  height: 72px !important;
+}
+
 .spainLocation__desc {
   display: flex;
   flex-direction: column;
@@ -663,8 +669,8 @@ body:has(.popupContainer.show) {
 .spainLocation__card {
   display: flex;
   flex-direction: column;
-  background-color: var(--very-light-white);
-  border: 1px solid #607d8b;
+  background-color: #ffff;
+  border: 1px solid #7691ad;
   padding: 60px;
   width: 80%;
   border-radius: 32px;
@@ -712,7 +718,8 @@ body:has(.popupContainer.show) {
   align-items: center;
   gap: 16px;
   width: 100%;
-  background-color: rgba(0, 106, 90, 0.1);
+  background-color: #f6f9fc;
+  border: 1px solid #7691ad;
   padding: 15px;
   border-radius: 10px;
 }
@@ -764,7 +771,7 @@ body:has(.popupContainer.show) {
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: #e6f2ef;
+  background-color: #f6f9fc;
   z-index: 1;
 }
 
@@ -1225,6 +1232,7 @@ body:has(.popupContainer.show) {
 .founderButtonEbooks {
   justify-self: left;
   margin-top: 10px;
+  font-size: 18px;
 }
 
 

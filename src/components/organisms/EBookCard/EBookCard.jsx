@@ -5,6 +5,7 @@ import { DOWNLOAD_EBOOK } from "../../../constants/routes";
 import Link from "../../atoms/Link/Link";
 import TextLink from "../../molecules/TextLink/TextLink";
 import Icon from "../../atoms/Icon/Icon";
+import { color } from "framer-motion";
 const EBookCard = ({
   img,
   title,
@@ -42,12 +43,12 @@ const EBookCard = ({
 
           <TextLink
             marked
-            textProps={{ size: "ty" }}
-            variant={textLinkColor}
+            textProps={{ size: "ty", color: "#005fa3" }}
+            variant="blue-secondary"
             to={`/ebooks/${slug}`}
           >
             Descargar la Guia{" "}
-            <Icon type={"arrowSquare"} color="#33475b" size={"1rem"} />
+            <Icon type={"arrowSquare"} color="#005fa3" size={"1rem"} />
           </TextLink>
         </div>
       </div>
