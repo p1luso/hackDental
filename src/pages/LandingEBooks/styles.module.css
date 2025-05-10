@@ -67,6 +67,7 @@
   background-color: var(--white);
   border: 1px solid transparent;
   border-radius: 8px;
+  width: 100%;
   cursor: pointer;
   gap: 24px;
   transition: all 0.3s ease-in-out;
@@ -98,7 +99,7 @@
 }
 
 .ebookImg {
-  width: 400px;
+  width: 250px;
   border-radius: 16px;
 }
 .desc {
