@@ -965,8 +965,8 @@ body:has(.popupContainer.show) {
 }
 
 .mainContent__card__desc img {
-  width: 265px;
-  height: 265px;
+  width: 220px;
+  height: 220px;
   border-radius: 16px;
 }
 .fadeIn {
@@ -1325,11 +1325,11 @@ body:has(.popupContainer.show) {
     gap: 8px;
   }
   .arrowButtonDesk:first-of-type {
-    left: 20px;
+    left: -40px;
   }
 
   .arrowButtonDesk:last-of-type {
-    right: 20px;
+    right: -40px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1710,6 +1710,7 @@ body:has(.popupContainer.show) {
   }
   .mainContent__cards {
     padding: 0 28px;
+    gap: 16px;
   }
   .mainContent .card {
     width: 100%;
@@ -1731,6 +1732,9 @@ body:has(.popupContainer.show) {
     width: 100%;
     height: 500px;
     align-self: center;
+  }
+  .mainContent__card {
+    margin-top: 0px;
   }
   .ebooksContainer {
     align-items: start;
@@ -1785,6 +1789,10 @@ body:has(.popupContainer.show) {
     height: auto;
     width: 100%;
     padding: var(--mobile-margin);
+  }
+
+  .mainContent__card {
+    margin-top: 0px;
   }
   .mainContent__card {
     flex-direction: column;
