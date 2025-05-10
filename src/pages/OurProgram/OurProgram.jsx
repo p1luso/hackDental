@@ -94,8 +94,8 @@ const OurProgram = () => {
 
   return (
     <div className={styles.page}>
-      <nav className={styles.nav} onClick={() => navigate(LANDING_PAGE)}>
-        <div role="button" style={{ display: "flex", alignItems: "center", padding: "0px", margin: "0px", cursor: "pointer" }}>
+      <nav className={styles.nav}>
+        <div  onClick={() => navigate(LANDING_PAGE)} role="button" style={{ display: "flex", alignItems: "center", padding: "0px", margin: "0px", cursor: "pointer" }}>
         <Logo/>
         </div>
         <div className={styles.btns}>

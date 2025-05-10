@@ -48,7 +48,7 @@ const Select = ({
     >
       {label && (
         <div className={styles.label}>
-          <Text size={"sm"} bold="regular" color={labelColor}>
+          <Text size={"sm"} bold="regular" fontSize="14px" color={labelColor}>
             {label}
           </Text>
         </div>
@@ -60,7 +60,7 @@ const Select = ({
           </Text>
           {icon && (
             <div className={styles.icon}>
-              <Icon size={"1rem"} type={icon} />
+              <Icon size={"1rem"} color="#7691ad" type={icon} />
             </div>
           )}
         </div>

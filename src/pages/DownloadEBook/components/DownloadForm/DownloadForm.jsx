@@ -122,7 +122,8 @@ const DownloadForm = ({ modalOpened, pdfPath  }) => {
         {currentForm == 1 && (
           <div className={`${styles.content} ${styles.first}`}>
             <div className={styles.desc}>
-              <Text bold type="title" color="black" textAlign="center">
+              <Text bold type="title"
+              fontSize="32px" fontSizeMobile="24px" color="black" textAlign="center">
                 Descarga el Ebook Gratuito
               </Text>
               <Text
@@ -130,20 +131,22 @@ const DownloadForm = ({ modalOpened, pdfPath  }) => {
                 color="black"
                 bold="font-light"
                 textAlign="center"
+                fontSize="16px"
+                fontSizeMobile="14px"
               >
                 Todos los campos son obligatorios
               </Text>
             </div>
 
             <Input
-              variant="white"
+              variant="blueLight"
               id={"email"}
               value={form.email}
               onChange={handleChange}
               onError={handleErrorsChange}
               errorMsg={cambioSeccion === false ? "" : formErrors.email}
               labelColor="black"
-              label="Correo electronico de trabajo*"
+              label="Correo electronico*"
               validators={[isEmail, isEmail]}
             />
           </div>
@@ -151,7 +154,7 @@ const DownloadForm = ({ modalOpened, pdfPath  }) => {
         {currentForm == 2 && (
           <div className={`${styles.content} ${styles.second}`}>
             <div className={styles.desc}>
-              <Text bold type="title" color="black" textAlign="center">
+              <Text bold type="title" fontSize="32px" fontSizeMobile="24px" color="black" textAlign="center">
                 Descarga el Ebook Gratuito
               </Text>
               <Text
@@ -159,13 +162,15 @@ const DownloadForm = ({ modalOpened, pdfPath  }) => {
                 color="black"
                 bold="font-light"
                 textAlign="center"
+                fontSize="16px"
+                fontSizeMobile="14px"
               >
                 Todos los campos son obligatorios
               </Text>
             </div>
             <div className={styles.inputChecks}>
               <Input
-                variant="white"
+                variant="blueLight"
                 id={"firstName"}
                 value={form.firstName}
                 onChange={handleChange}
@@ -176,7 +181,7 @@ const DownloadForm = ({ modalOpened, pdfPath  }) => {
                 validators={[isEmpty]}
               />
               <Input
-                variant="white"
+                variant="blueLight"
                 id={"lastName"}
                 labelColor="black"
                 value={form.lastName}
@@ -186,7 +191,7 @@ const DownloadForm = ({ modalOpened, pdfPath  }) => {
                 validators={[isEmpty]}
               />
               <Input
-                variant="white"
+                variant="blueLight"
                 id={"phone"}
                 labelColor="black"
                 value={form.phone}
@@ -197,7 +202,7 @@ const DownloadForm = ({ modalOpened, pdfPath  }) => {
               />
               <Select
                 icon={"arrowDown"}
-                variant="white"
+                variant="blue"
                 labelColor="black"
                 id={"howKnowAbout"}
                 onChange={handleChange}
@@ -207,7 +212,7 @@ const DownloadForm = ({ modalOpened, pdfPath  }) => {
                 elements={["Redes sociales", "Google"]}
                 value={form.howKnowAbout}
                 validators={[isEmpty]}
-                style={{ height: "48px" }}
+                style={{ height: "46px" }}
               />
             </div>
             <div className={styles.privacy}>

@@ -3,25 +3,16 @@ import styles from "./styles.module.css";
 import Nav from "../../components/organisms/Nav/Nav";
 import Text from "../../components/atoms/Text/Text";
 import EBookCard from "../../components/organisms/EBookCard/EBookCard";
-import Footer from "../../components/organisms/Footer/Footer";
-import PreFooter from "../../components/organisms/PreFooter/PreFooter";
 import TextLink from "../../components/molecules/TextLink/TextLink";
 import Icon from "../../components/atoms/Icon/Icon";
-import { DOWNLOAD_EBOOK } from "../../constants/routes";
 import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
 import { useNavigate } from "react-router-dom";
 import CoberturaDental from "@assets/coberturaDental.svg";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
-import FiguraIrregularIzq from "@assets/figura_irregularIZQ.svg";
-import FiguraIrregularDer from "@assets/Figura_irregular.svg";
-import Libreta from "@assets/libreta.svg";
-import Cohete from "@assets/cohete.svg";
-import Finger from "@assets/3_dedo.svg";
-
 import Link from "../../components/atoms/Link/Link";
 
 const LandingEBooks = () => {
-  // const navigate = useNavigate();
+   const navigate = useNavigate();
   return (
     <div className={styles.page}>
       <Nav hideTopMenu={true} />
@@ -67,7 +58,7 @@ const LandingEBooks = () => {
       </header>
       <main className={styles.main}>
         <div className={styles.mainEBook}>
-          <div className={styles.mainEbookCard}>
+          <div className={styles.mainEbookCard} onClick={() => navigate("/ebooks/7-secretos-marketing-dental")}>
             <div className={styles.tag}>
               <Text size="ty" color="light">
                 Empieza Aqui
@@ -84,10 +75,11 @@ const LandingEBooks = () => {
               </Text>
               <TextLink
                 marked
-                variant="green-black"
+                variant="blue-secondary"
                 to={`/ebooks/7-secretos-marketing-dental`}
                 textProps={{
                   size: "sm",
+                  color: "#005fa3",
                 }}
               >
                 Descargar la Guia{" "}
@@ -132,7 +124,7 @@ const LandingEBooks = () => {
                 textColor="green-black"
                 title={"Próximamente"}
                 desc={
-                "Transforma tu clínica dental con nuestros ebooks, redactados."
+                  "Transforma tu clínica dental con nuestros ebooks, redactados."
                 }
               />
             </div>

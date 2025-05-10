@@ -142,6 +142,41 @@
   width: 100%;
 }
 
+/* blue */
+
+.blue {
+  display: block;
+  position: relative;
+}
+.blue .header {
+  display: flex;
+  border: 1px solid #7691ad;
+  background-color: #f6f9fc;
+  padding: 8px;
+  align-items: center;
+  border-radius: 5px;
+}
+.blue .label {
+  color: var(--black);
+  margin-bottom: 4px;
+}
+.blue .icon {
+  color: var(--black);
+}
+
+.blue .elementsList {
+  width: 100%;
+  position: absolute;
+  border: 2px solid #7691ad;
+  background-color: #f6f9fc;
+  padding: 8px;
+}
+.blue .placeholder {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 /* black */
 .black {
   display: block;

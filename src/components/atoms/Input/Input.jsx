@@ -53,8 +53,8 @@ const Input = ({
       {label && (
         <div className={styles.label}>
           <Text
-            size={"sm"}
-            bold="font-light"
+            fontSize="14px"
+            s={{fontWeight: "500"}}
             color={errorMsg ? "error" : labelColor}
           >
             {label}
