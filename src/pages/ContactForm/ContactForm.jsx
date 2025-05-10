@@ -6,10 +6,17 @@ import Logo from "@assets/Logo_Fondo_Oscuro.svg";
 import Input from "../../components/atoms/Input/Input";
 import Mark from "../../components/atoms/Mark/Mark";
 import { sendContactForm } from "../../services/api/sendContactForm";
-import { Mail, Phone, Linkedin } from "lucide-react"; // Asegurate que estos íconos estén disponibles
+import EstudioMercado from "@assets/EstudioMercado.svg";
+import PlanMarketing from "@assets/PlanMarketing.svg";
+import LlamadaEstrategica from "@assets/LlamadaEstrategica.svg";
+
 import Circles from "@assets/3_circulos.svg";
 import Finger from "@assets/3_dedo.svg";
+import IconoWpp from "@assets/iconoWsp.svg";
+
 import IrregularFigure from "@assets/Figura_irregular.svg";
+import { Mail, Phone } from "lucide-react";
+import Footer from "../../components/organisms/Footer/Footer";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -36,9 +43,38 @@ const ContactForm = () => {
   };
 
   return (
+    <div className={styles.container}>
     <section id="contact" className={styles.contact}>
-      <div className={styles.title}>
-        <img src={Logo} />
+      <div className={styles.header}>
+        <div className={styles.title}>
+          <img src={Logo} />
+        </div>
+        <div className={styles.contactsDesktop}>
+        <div className={styles.contactIconsHeader}>
+          <a
+            href="https://wa.me/51914727355"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.whatsappLink}
+          >
+            <img src={IconoWpp} className={styles.icons}  />
+            <div className={styles.iconsText}>
+              <p>Whatsapp</p>
+            </div>
+          </a>
+        </div>
+        <div className={styles.contactIconsHeader}>
+          <a
+            href="mailto:whittemburydavid1@gmail.com"
+            className={styles.mailLink}
+          >
+            <div className={styles.iconsText}>
+              <p>whittemburydavid1@gmail.com</p>
+            </div>
+          </a>
+        </div>
+        
+        </div>
       </div>
       <div className={styles.circles}>
         <img src={Circles} alt="" />
@@ -82,32 +118,34 @@ const ContactForm = () => {
               Llena la forma, te responderemos en menos de 24 horas.
             </Text>
           </div>
-
-          <div className={styles.contactIcons}>
-            <a
-              href="mailto:whittemburydavid1@gmail.com"
-              className={styles.mailLink}
+          <div className={styles.desc__incluye}>
+            <Text
+              color="white"
+              bold="semi-bold"
+              textAlignMobile="start"
+              fontSize="18px"
+              fontSizeMobile="14px"
             >
-              <Mail className={styles.icons} />
-              <div className={styles.iconsText}>
-                <h4>Mail</h4>
-                <p>whittemburydavid1@gmail.com</p>
-              </div>
-            </a>
+              Que incluye:
+            </Text>
           </div>
           <div className={styles.contactIcons}>
-            <a
-              href="https://wa.me/51914727355"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.whatsappLink}
-            >
-              <Phone className={styles.icons} />
-              <div className={styles.iconsText}>
-                <h4>Whatsapp</h4>
-                <p>+51914727355</p>
-              </div>
-            </a>
+            <img src={LlamadaEstrategica} className={styles.icons} />
+            <div className={styles.iconsText}>
+              <p>Llamada estratégica con nuestro fundador.</p>
+            </div>
+          </div>
+          <div className={styles.contactIcons}>
+            <img src={EstudioMercado} className={styles.icons} />
+            <div className={styles.iconsText}>
+              <p>Estudio de tu mercado local</p>
+            </div>
+          </div>
+          <div className={styles.contactIcons}>
+            <img src={PlanMarketing} className={styles.icons} />
+            <div className={styles.iconsText}>
+              <p>Plan de Marketing para tu consultorio</p>
+            </div>
           </div>
         </div>
 
@@ -192,8 +230,36 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
+        <div className={styles.contactsMobile}>
+        <div className={styles.contactIconsHeader}>
+          <a
+            href="https://wa.me/51914727355"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.whatsappLink}
+          >
+            <img src={IconoWpp} className={styles.icons}  />
+            <div className={styles.iconsText}>
+              <p>Whatsapp</p>
+            </div>
+          </a>
+        </div>
+        <div className={styles.contactIconsHeader}>
+          <a
+            href="mailto:whittemburydavid1@gmail.com"
+            className={styles.mailLink}
+          >
+            <div className={styles.iconsText}>
+              <p>whittemburydavid1@gmail.com</p>
+            </div>
+          </a>
+        </div>
+        
+        </div>
       </div>
     </section>
+      <Footer />
+      </div>
   );
 };
 
