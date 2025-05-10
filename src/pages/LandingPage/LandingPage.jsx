@@ -11,6 +11,9 @@ import Icon from "../../components/atoms/Icon/Icon";
 import { useNavigate } from "react-router-dom";
 import { CONTACT_FORM } from "../../constants/routes";
 import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
+import imgEbook7 from "@assets/7SecretosEbook.svg";
+import imgIAEbook from "@assets/IAEbook.svg";
+import imgWppEbook from "@assets/WhatsappEbook.svg";
 import Mark from "../../components/atoms/Mark/Mark";
 import ImgBanner from "@assets/ImgBanner.svg";
 import ImgBtnWS from "@assets/imgBtnWS.svg";
@@ -32,9 +35,9 @@ import CoberturaDental from "@assets/imagen_dentistLandind.svg";
 import TextLink from "../../components/molecules/TextLink/TextLink";
 import { color } from "framer-motion";
 const books = [
-  { img: imgEbookPrueba, title: "7 Secretos del Marketing Dental" },
-  { img: imgEbookPrueba, title: "Whatsapp de Clinicas en 5 minutos" },
-  { img: imgEbookPrueba, title: "IA para Consultorios Dentales" },
+  { img: imgEbook7, title: "7 Secretos del Marketing Dental" },
+  { img: imgWppEbook, title: "Whatsapp de Clinicas en 5 minutos" },
+  { img: imgIAEbook, title: "IA para Consultorios Dentales" },
 ];
 
 const LandingPage = () => {
@@ -152,8 +155,8 @@ const LandingPage = () => {
                 bold="bold"
                 fontFamily="lexend"
                 color="white"
-                fontSize="38px"
-                fontSizeMobile="18px"
+                fontSize="34px"
+                fontSizeMobile="21px"
                 s={{
                   lineHeight: "0.95",
                   fontFamily: "lexend",
@@ -162,6 +165,7 @@ const LandingPage = () => {
                 }}
               >
                 Somos una Agencia de{" "}
+                <br/>
                 <span className={styles.marketingTitle}>Marketing </span>
                 <s className={styles.crossLine}>genérico</s>{" "}
                 <span className={styles.dentalWord}>Dental</span>

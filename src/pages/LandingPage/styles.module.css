@@ -1761,13 +1761,15 @@ body:has(.popupContainer.show) {
 @media screen and (max-width: 800px) {
   .crossLine {
     font-size: 22px;
+    display: none;
   }
   .marketingTitle {
-    font-size: 22px;
+    font-size: 28px;
+    color: #25c19b;
   }
 
   .dentalWord {
-    font-size: 22px;
+    font-size: 28px;
   }
 
   .whoAreWe_upText {

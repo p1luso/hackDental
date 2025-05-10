@@ -9,6 +9,9 @@ import Icon from "../../atoms/Icon/Icon";
 import TextLink from "../../molecules/TextLink/TextLink";
 import Mark from "../../atoms/Mark/Mark";
 import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
+import imgEbook7 from "@assets/7SecretosEbook.svg";
+import imgIAEbook from "@assets/IAEbook.svg";
+import imgWppEbook from "@assets/WhatsappEbook.svg";
 import {
   DOWNLOAD_EBOOK,
   LANDING_EBOOKS,
@@ -160,7 +163,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             <div className={styles.cards}>
               <div className={styles.card}>
                 <div className={styles.cardImgContainer}>
-                  <img src={imgEbookPrueba} className={styles.cardImg} />
+                  <img src={imgEbook7} className={styles.cardImg} />
                 </div>
                 <Text
                   size="sm"
@@ -168,14 +171,13 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   color="black-lighter"
                   s={{ lineHeight: "1.35" }}
                 >
-                  Marketing Dental:
-                  <br /> La Guia Definitiva
+                  7 secretos del marketing dental
                 </Text>
               </div>
               <div className={styles.separator}></div>
               <div className={styles.card}>
                 <div className={styles.cardImgContainer}>
-                  <img src={imgEbookPrueba} className={styles.cardImg} />
+                  <img src={imgWppEbook} className={styles.cardImg} />
                 </div>
 
                 <Text
@@ -184,13 +186,13 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   color="black-lighter"
                   s={{ lineHeight: "1.35" }}
                 >
-                  Marketing Dental: <br /> La Guia Definitiva
+                  Whatsapp para Consultorios
                 </Text>
               </div>
               <div className={styles.separator}></div>
               <div className={styles.card}>
                 <div className={styles.cardImgContainer}>
-                  <img src={imgEbookPrueba} className={styles.cardImg} />
+                  <img src={imgIAEbook} className={styles.cardImg} />
                 </div>
 
                 <Text
@@ -199,20 +201,18 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   color="black-lighter"
                   s={{ lineHeight: "1.35" }}
                 >
-                  Marketing Dental: <br /> La Guia Definitiva
+                  IA para Consultorios Dentales
                 </Text>
               </div>
             </div>
-            <div
-              className={styles.developText}
-            >
+            <div className={styles.developText}>
               <TextLink
-              variant="primary-green"
-              to={LANDING_EBOOKS}
-              textProps={{ color: "#005fa3", fontSize: "18px" }}
-            >
-              Ir a biblioteca de ebooks
-            </TextLink>
+                variant="primary-green"
+                to={LANDING_EBOOKS}
+                textProps={{ color: "#005fa3", fontSize: "18px" }}
+              >
+                Ir a biblioteca de ebooks
+              </TextLink>
             </div>
           </div>
         </div>
@@ -426,7 +426,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 <TextLink
                   variant="darkGreen"
                   marked={showAboutUs}
-                  textProps={{ bold: "font-light", fontSize: "14px"  }}
+                  textProps={{ bold: "font-light", fontSize: "14px" }}
                 >
                   Sobre Nosotros
                 </TextLink>
@@ -439,7 +439,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 <TextLink
                   variant="darkGreen"
                   marked={showContact}
-                  textProps={{ bold: "font-light", fontSize: "14px"  }}
+                  textProps={{ bold: "font-light", fontSize: "14px" }}
                 >
                   Contacto
                 </TextLink>
@@ -639,7 +639,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               <Icon size={"4rem"} type={"close"} color="var(--white)" />
             </div>
             <div className={styles.drawerTitle}>
-            <span
+              <span
                 className={styles.backButton}
                 onClick={handleBackToMainMenu}
               >
@@ -706,25 +706,24 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 </div>
               </Link>
               <div className={styles.btns}>
-              <TextLink
-              variant="primary-green"
-              to={LANDING_EBOOKS}
-              textProps={{ color: "#005fa3", fontSize: "18px" }}
-            >
-              Ir a biblioteca de ebooks
-            </TextLink>
-            </div>
+                <TextLink
+                  variant="primary-green"
+                  to={LANDING_EBOOKS}
+                  textProps={{ color: "#005fa3", fontSize: "18px" }}
+                >
+                  Ir a biblioteca de ebooks
+                </TextLink>
+              </div>
             </div>
           </div>
           <div className={styles.btns}>
-        
             <div className={styles.btnsContact}>
               <IconTextButton
                 colorVariant="primary-darker"
                 size="100%"
                 onClick={() => navigate(CONTACT_FORM)}
               >
-                 Pedir Auditoría
+                Pedir Auditoría
               </IconTextButton>
               <IconTextButton
                 colorVariant="primary-bordered2"
@@ -749,7 +748,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               <Icon size={"4rem"} type={"close"} color="var(--white)" />
             </div>
             <div className={styles.drawerTitle}>
-            <span
+              <span
                 className={styles.backButton}
                 onClick={handleBackToMainMenu}
               >
@@ -860,7 +859,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               size="100%"
               onClick={() => navigate(CONTACT_FORM)}
             >
-               Pedir Auditoría
+              Pedir Auditoría
             </IconTextButton>
             <IconTextButton
               colorVariant="primary-bordered2"
@@ -982,7 +981,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               size="100%"
               onClick={() => navigate(CONTACT_FORM)}
             >
-               Pedir Auditoría
+              Pedir Auditoría
             </IconTextButton>
             <IconTextButton
               colorVariant="primary-bordered2"
