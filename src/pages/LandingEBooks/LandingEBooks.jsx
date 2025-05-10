@@ -8,12 +8,13 @@ import Icon from "../../components/atoms/Icon/Icon";
 import imgEbook7 from "@assets/7SecretosEbook.svg";
 import imgIAEbook from "@assets/IAEbook.svg";
 import imgWppEbook from "@assets/WhatsappEbook.svg";
+import imgEbookProximamente from "@assets/ImagenProximamente.svg";
 import { useNavigate } from "react-router-dom";
 import CoberturaDental from "@assets/coberturaDental.svg";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
 import Link from "../../components/atoms/Link/Link";
-import imgEbookProximamente from "@assets/ImagenProximamente.svg";
 import { useLocation } from "react-router-dom";
+
 const LandingEBooks = () => {
    const navigate = useNavigate();
   return (
