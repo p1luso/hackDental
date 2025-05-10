@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import CoberturaDental from "@assets/coberturaDental.svg";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
 import Link from "../../components/atoms/Link/Link";
-import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
+import imgEbookProximamente from "@assets/ImagenProximamente.svg";
 import { useLocation } from "react-router-dom";
 const LandingEBooks = () => {
    const navigate = useNavigate();
@@ -122,7 +122,7 @@ const LandingEBooks = () => {
               <EBookCard
                 bookType={false}
                 slug="proximamente"
-                img={imgEbookPrueba}
+                img={imgEbookProximamente}
                 textLinkColor="green-black"
                 textColor="green-black"
                 title={"Próximamente"}
