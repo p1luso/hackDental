@@ -126,6 +126,14 @@ const LandingPage = () => {
               <div className={styles.badgeImg}>1</div>{" "}
               {/* Contador para la imagen */}
             </div>
+            <IconTextButton
+              textProps={{ fontSize: "14px" }}
+              colorVariant="white-green"
+              size="100%"
+              icon={"wp"}
+            >
+              Whatsapp
+            </IconTextButton>
           </div>
         )}
         <div
@@ -164,8 +172,7 @@ const LandingPage = () => {
                   letterSpacing: "-0.2px",
                 }}
               >
-                Somos una Agencia de{" "}
-                <br/>
+                Somos una Agencia de <br />
                 <span className={styles.marketingTitle}>Marketing </span>
                 <s className={styles.crossLine}>genérico</s>{" "}
                 <span className={styles.dentalWord}>Dental</span>
