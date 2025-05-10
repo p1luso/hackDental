@@ -14,6 +14,7 @@ import CoberturaDental from "@assets/coberturaDental.svg";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
 import Link from "../../components/atoms/Link/Link";
 import { useLocation } from "react-router-dom";
+import Footer from "../../components/organisms/Footer/Footer";
 
 const LandingEBooks = () => {
    const navigate = useNavigate();
@@ -210,24 +211,7 @@ const LandingEBooks = () => {
           </div>
         </div>
       </section>
-      <footer className={styles.footer}>
-        <Text size="sm" color="white-cream" bold="font-light">
-          Copyright © {new Date().getFullYear()}, HackDental.com
-        </Text>
-        <div className={styles.links}>
-          <Link to={"#"}>
-            <Text color="white-cream" size="ty" bold="font-light">
-              Politica de Privacidad
-            </Text>
-          </Link>
-          <hr className={styles.separator} />
-          <Link to={"#"}>
-            <Text color="white-cream" size="ty" bold="font-light">
-              Cumplimiento del RGPD
-            </Text>{" "}
-          </Link>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 };
