@@ -118,7 +118,11 @@ const LandingPage = () => {
               <br /> Si tiene alguna duda, ¡no dude en contactarme!
             </Text>
 
-            <img src={ImgBtnWS} alt="img ws" className={styles.wsImg} />
+            <div className={styles.imgContainer}>
+              <img src={ImgBtnWS} alt="img ws" className={styles.wsImg} />
+              <div className={styles.badgeImg}>1</div>{" "}
+              {/* Contador para la imagen */}
+            </div>
           </div>
         )}
         <div
@@ -130,7 +134,11 @@ const LandingPage = () => {
           {showWSMsg ? (
             <Icon size={"2rem"} type={"close"} color="#fafafa" />
           ) : (
-            <Icon size={"2rem"} type={"wp"} color="#fafafa" />
+            <div className={styles.iconContainer}>
+              <Icon size={"2rem"} type={"wp"} color="#fafafa" />
+              <div className={styles.badgeWpp}>1</div>{" "}
+              {/* Contador para el logo de WhatsApp */}
+            </div>
           )}
         </div>
       </div>

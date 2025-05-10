@@ -225,11 +225,11 @@
   }
   .mainEbookCard {
     flex-direction: column;
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .mainEbookCard img {
-    height: 250px;
-  }
+ 
   .desc {
     gap: 0;
   }
@@ -246,7 +246,7 @@
     margin-bottom: 6px;
   }
   .ebookImg {
-    width: 100%;
+    width: 70%;
   }
   .main {
     padding: 8px;
@@ -256,7 +256,7 @@
   }
   
   .mainEBook {
-    padding: 8px;
+    padding: 28px;
   }
 
   .main {

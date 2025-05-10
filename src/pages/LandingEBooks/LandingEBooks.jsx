@@ -5,12 +5,15 @@ import Text from "../../components/atoms/Text/Text";
 import EBookCard from "../../components/organisms/EBookCard/EBookCard";
 import TextLink from "../../components/molecules/TextLink/TextLink";
 import Icon from "../../components/atoms/Icon/Icon";
-import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
+import imgEbook7 from "@assets/7SecretosEbook.svg";
+import imgIAEbook from "@assets/IAEbook.svg";
+import imgWppEbook from "@assets/WhatsappEbook.svg";
 import { useNavigate } from "react-router-dom";
 import CoberturaDental from "@assets/coberturaDental.svg";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
 import Link from "../../components/atoms/Link/Link";
-
+import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
+import { useLocation } from "react-router-dom";
 const LandingEBooks = () => {
    const navigate = useNavigate();
   return (
@@ -64,7 +67,7 @@ const LandingEBooks = () => {
                 Empieza Aqui
               </Text>
             </div>
-            <img className={styles.ebookImg} src={imgEbookPrueba} />
+            <img className={styles.ebookImg} src={imgEbook7} />
             <div className={styles.desc}>
               <Text type="smallsubtitle" color="black">
                 7 secretos del marketing dental
@@ -93,7 +96,7 @@ const LandingEBooks = () => {
             <EBookCard
               bookType={false}
               slug="ia-para-consultorios"
-              img={imgEbookPrueba}
+              img={imgIAEbook}
               textLinkColor="green-black"
               textColor="green-black"
               title={"IA para Consultorios Dentales"}
@@ -104,7 +107,7 @@ const LandingEBooks = () => {
               textLinkColor="green-black"
               slug="wpp-para-consultorios"
               textColor="green-black"
-              img={imgEbookPrueba}
+              img={imgWppEbook}
               title={"Whatsapp para Consultorios"}
               desc={
                 "Transforma tu clínica dental con nuestros ebooks, redactados."

@@ -85,6 +85,49 @@
   align-items: center;
 }
 
+.badgeWpp {
+  position: absolute;
+  top: -25px; /* Ajusta según sea necesario */
+  right: -10px; /* Ajusta según sea necesario */
+  background-color: red;
+  color: white;
+  font-size: 0.75rem; /* Tamaño del texto */
+  font-weight: 300;
+  width: 1.2rem; /* Tamaño del círculo */
+  height: 1.2rem; /* Tamaño del círculo */
+  border-radius: 50%; /* Hace que sea circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Badge para la imagen */
+.badgeImg {
+  position: absolute;
+  top: -40px; /* Ajusta según sea necesario */
+  right: -30px; /* Ajusta según sea necesario */
+  background-color: red;
+  color: white;
+  font-size: 0.75rem; /* Tamaño del texto */
+  font-weight: 300;
+  width: 1.2rem; /* Tamaño del círculo */
+  height: 1.2rem; /* Tamaño del círculo */
+  border-radius: 50%; /* Hace que sea circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.imgContainer {
+  position: relative; /* Necesario para posicionar el badge en la imagen */
+}
+
+.iconContainer {
+  position: relative; /* Necesario para posicionar el badge en el logo de WhatsApp */
+}
+
 .notification {
   padding: 28px;
   padding-top: 32px;
