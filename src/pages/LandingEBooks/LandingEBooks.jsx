@@ -22,6 +22,7 @@ const LandingEBooks = () => {
       <Nav hideTopMenu={true} />
       <header className={styles.header}>
         <section className={styles.banner}>
+          <div className={styles.educationText}>
           <Text
             type="bigtitle"
             textAlign="center"
@@ -30,21 +31,37 @@ const LandingEBooks = () => {
             fontFamily="lexend"
             bold="font-light"
             fontSize="28px"
-            fontSizeMobile="21px"
-            s={{ fontWeight: "500", lineHeight: 1.3 }}
+            fontSizeMobile="18px"
+            s={{ fontWeight: "500", lineHeight: 1 }}
           >
             Educación para dueños de consultorios
           </Text>
+          </div>
+          <div className={styles.educationTextMob}>
+          <Text
+            type="bigtitle"
+            textAlign="center"
+            color="white"
+            textAlignMobile="center"
+            fontFamily="lexend"
+            bold="font-light"
+            fontSize="28px"
+            fontSizeMobile="18px"
+            s={{ fontWeight: "500", lineHeight: 1 }}
+          >
+            Educación para dentistas
+          </Text>
+          </div>
           <Text
             type="bigtitle"
             fontFamily="lexend"
             textAlign="center"
             textAlignMobile="center"
             color="white"
-            bold="semi-bold"
+            bold="bold"
             fontSize="42px"
             fontSizeMobile="24px"
-            s={{ fontWeight: "600", lineHeight: 1.3 }}
+            s={{ fontWeight: "700", lineHeight: 1 }}
           >
             Aprende de Marketing Dental
           </Text>

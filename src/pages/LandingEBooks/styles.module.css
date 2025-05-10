@@ -193,6 +193,21 @@
   height: 0.77rem;
   border: 1px solid #d9d9d9;
 }
+
+.educationTextMob {
+  display: none;
+}
+.educationText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  font-family: Lexend;
+  font-size: 16px;
+  color: var(--white);
+}
+
 @media screen and (max-width: 1024px) {
   .header {
     height: auto;
@@ -210,7 +225,7 @@
     margin-bottom: 8px;
   }
   .banner > :nth-child(2) {
-    margin-bottom: 12px;
+    margin-bottom: 5px;
   }
   .books {
     display: flex;
@@ -259,7 +274,10 @@
   .mainEBook {
     padding: 28px;
   }
-
+  
+  .educationText {
+    display: none;
+  }
   .main {
     top: 0;
     padding: 44px 0;
