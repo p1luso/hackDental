@@ -15,7 +15,8 @@
 .white-green.iconTextButton,
 .darker-green.iconTextButton,
 .light-green.iconTextButton,
-.primary-bordered.iconTextButton {
+.primary-bordered.iconTextButton,
+.primary-bordered2.iconTextButton  {
   display: flex;
   outline: none;
   border: 1px solid transparent;
@@ -201,6 +202,7 @@
   background-color: white;
   padding: 10px 24px;
   border-radius: 15px;
+  font-size: 14px;
   color: var(--black);
   transition: all 0.3s ease-in;
   justify-content: center;

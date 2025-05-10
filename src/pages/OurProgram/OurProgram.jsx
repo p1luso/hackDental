@@ -95,11 +95,22 @@ const OurProgram = () => {
   return (
     <div className={styles.page}>
       <nav className={styles.nav}>
-        <div  onClick={() => navigate(LANDING_PAGE)} role="button" style={{ display: "flex", alignItems: "center", padding: "0px", margin: "0px", cursor: "pointer" }}>
-        <Logo/>
+        <div
+          onClick={() => navigate(LANDING_PAGE)}
+          role="button"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            padding: "0px",
+            margin: "0px",
+            cursor: "pointer",
+          }}
+        >
+          <Logo />
         </div>
         <div className={styles.btns}>
           <IconTextButton
+            textProps={{ fontSize: "14px" }}
             colorVariant="primary-bordered2"
             size="100%"
             icon={"wp"}
@@ -107,6 +118,7 @@ const OurProgram = () => {
             Whatsapp
           </IconTextButton>
           <IconTextButton
+            textProps={{ fontSize: "14px" }}
             colorVariant="primary-darker"
             size="100%"
             onClick={() => navigate(CONTACT_FORM)}

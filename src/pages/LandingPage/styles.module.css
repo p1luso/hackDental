@@ -52,6 +52,7 @@
 .help {
   position: fixed;
   bottom: 2%;
+  width: 100%;
   right: 2%;
   z-index: 1000;
   display: flex;
@@ -69,12 +70,26 @@
   justify-content: center;
   align-items: center;
   background-color: #006a5a;
+  transition: all 0.3s ease; 
 }
+
+.wsBtn.open {
+  background-color: #004d43;
+  width: 3.5rem; 
+  height: 3.5rem; 
+}
+
+.wsBtn i{
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+}
+
 .notification {
   padding: 28px;
   padding-top: 32px;
   display: flex;
-  width: 350px;
+  width: 375px;
   height: 150px;
   background-color: #fafafa;
   border-radius: 16px;

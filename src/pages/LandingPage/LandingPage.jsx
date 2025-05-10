@@ -113,22 +113,25 @@ const LandingPage = () => {
         {showWSMsg && (
           <div className={styles.notification}>
             <Text bold="font-light" size="ty">
-              👋¡Hola! Mi nombre es Jose Whittembury, Director de Marketing en
-              HackDental. ¿Tienes alguna duda sobre nuestros servicios?
+              👋 ¡Hola! Te comento que tenemos un servicio de marketing
+              gratuito.
+              <br /> Si tiene alguna duda, ¡no dude en contactarme!
             </Text>
 
             <img src={ImgBtnWS} alt="img ws" className={styles.wsImg} />
-            <div className={styles.closeBtn}>
-              <IconButton
-                icon="close"
-                variant="secondary"
-                onClick={() => setShowWSMsg(false)}
-              />
-            </div>
           </div>
         )}
-        <div className={styles.wsBtn}>
-          <Icon size={"2rem"} type={"wp"} color="#fafafa" />
+        <div
+          className={`${styles.wsBtn} ${
+            showWSMsg ? styles.open : styles.closed
+          }`}
+          onClick={() => setShowWSMsg(!showWSMsg)}
+        >
+          {showWSMsg ? (
+            <Icon size={"2rem"} type={"close"} color="#fafafa" />
+          ) : (
+            <Icon size={"2rem"} type={"wp"} color="#fafafa" />
+          )}
         </div>
       </div>
       <Nav />
@@ -589,7 +592,6 @@ const LandingPage = () => {
                   s={{ color: "black", lineHeight: "1.33" }}
                 >
                   que usan nuestro método.{" "}
-                 
                 </Text>
               </div>
             </div>
@@ -678,7 +680,10 @@ const LandingPage = () => {
             </Text>
           </div>
           <div className={styles.founderButtonEbooks}>
-            <TextLink variant="primary-green" textProps={{ color: "#005fa3", fontSize: "18px" }}>
+            <TextLink
+              variant="primary-green"
+              textProps={{ color: "#005fa3", fontSize: "18px" }}
+            >
               Ver todos los ebooks →
             </TextLink>{" "}
           </div>
@@ -698,7 +703,12 @@ const LandingPage = () => {
               }`}
             >
               {currentBooks.map((book, i) => (
-                <EBookCard bookType={false} key={i} {...book} textLinkColor="#005fa3"/>
+                <EBookCard
+                  bookType={false}
+                  key={i}
+                  {...book}
+                  textLinkColor="#005fa3"
+                />
               ))}
             </div>
             <button
