@@ -22,7 +22,11 @@ const IconTextButton = ({
       {...otherProps}
     >
       {icon && <Icon size={"1.5rem"} type={icon} />}
-      <Text {...textProps} style={{ fontWeight: textFontWeight }} color="inherit">
+      <Text
+        {...textProps}
+        style={{ fontWeight: textFontWeight, fontSize: textProps?.fontSize }}
+        color="inherit"
+      >
         {children}
       </Text>
     </button>
