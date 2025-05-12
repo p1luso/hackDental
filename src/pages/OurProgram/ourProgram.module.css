@@ -59,7 +59,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: var(--primary-darker);
   border-top: 1px solid var(--blue);
   position: relative;
 }
@@ -130,7 +129,7 @@
 }
 
 .bgTransparent {
-  background-color: var(--dark-transparent-45);
+  background-color: #123d3a;
   width: 100%;
   min-height: 100%;
   padding-top: 80px;

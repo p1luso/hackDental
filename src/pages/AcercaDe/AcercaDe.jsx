@@ -8,6 +8,7 @@ import Link from "../../components/atoms/Link/Link";
 import CoberturaDental from "@assets/imagen_dentistLandind.svg";
 import DaysCounter from "../../components/organisms/DaysCounter/DaysCounter";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../components/organisms/Footer/Footer";
 
 const AcercaDe = () => {
   const navigate = useNavigate();
@@ -198,24 +199,7 @@ const AcercaDe = () => {
           </div>
         </div>
       </section>
-      <footer className={styles.footer}>
-        <Text size="sm" color="white-cream" bold="font-light">
-          Copyright © {new Date().getFullYear()}, HackDental.com
-        </Text>
-        <div className={styles.links}>
-          <Link to={"#"}>
-            <Text color="white-cream" size="ty" bold="font-light">
-              Politica de Privacidad
-            </Text>
-          </Link>
-          <hr className={styles.separator} />
-          <Link to={"#"}>
-            <Text color="white-cream" size="ty" bold="font-light">
-              Cumplimiento del RGPD
-            </Text>{" "}
-          </Link>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

@@ -9,11 +9,10 @@
   --mobile-margin: 32px;
 }
 .bg{
-  background-color: var(--primary-darker);
 }
 
 .banner {
-  background-color: var(--dark-transparent-35);
+  background-color: #123d3a;
   display: flex;
   justify-content: center;
   align-items: center;

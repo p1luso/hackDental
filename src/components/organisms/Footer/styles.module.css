@@ -5,7 +5,7 @@
   justify-content: center;
   background-color: var(--green-black);
   gap: 6px;
-  height: 180px;
+  height: 125px;
 }
 .footer .links {
   display: flex;

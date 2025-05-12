@@ -281,11 +281,10 @@ body:has(.popupContainer.show) {
   display: flex;
   flex-direction: column;
   position: relative;
-  background: var(--primary-darker);
 }
 .banner {
   position: relative;
-  background-color: var(--dark-transparent-45);
+  background-color: #123d3a;
   width: 100%;
   flex-grow: 1;
   padding-right: var(--width-unit);

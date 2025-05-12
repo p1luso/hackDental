@@ -20,6 +20,7 @@ import strategyCall from "@assets/strategyCall.svg";
 import Logo from "../../components/atoms/Logo/Logo";
 import { useNavigate } from "react-router-dom";
 import { LANDING_PAGE } from "../../constants/routes";
+import Footer from "../../components/organisms/Footer/Footer";
 
 const OurProgram = () => {
   const [showModalVideo, setShowModalVideo] = useState(false);
@@ -382,6 +383,7 @@ const OurProgram = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 };
