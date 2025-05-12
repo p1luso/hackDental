@@ -96,7 +96,8 @@ const OurProgram = () => {
   return (
     <div className={styles.page}>
       <nav className={styles.nav}>
-        <div
+        <div 
+          className={styles.logo}
           onClick={() => navigate(LANDING_PAGE)}
           role="button"
           style={{
