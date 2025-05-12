@@ -12,6 +12,7 @@ import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
 import imgEbook7 from "@assets/7SecretosEbook.svg";
 import imgIAEbook from "@assets/IAEbook.svg";
 import imgWppEbook from "@assets/WhatsappEbook.svg";
+
 import {
   DOWNLOAD_EBOOK,
   LANDING_EBOOKS,
@@ -681,26 +682,26 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             <div className={styles.cards}>
               <Link to={DOWNLOAD_EBOOK} target="_blank">
                 <div className={styles.mobileCard}>
-                  <img src={imgEbookPrueba} className={styles.mobileImg} />
+                  <img src={imgEbook7} className={styles.mobileImg} />
                   <div className={styles.mobileDesc}>
                     <Text
                       color="dark"
                       s={{ lineHeight: "1.25", fontSize: "14px" }}
                     >
-                      Marketing Dental: La Guia Definitiva
+                      7 secretos del marketing dental
                     </Text>
                   </div>
                 </div>
               </Link>
               <Link to={DOWNLOAD_EBOOK} target="_blank">
                 <div className={styles.mobileCard}>
-                  <img src={imgEbookPrueba} className={styles.mobileImg} />
+                  <img src={imgWppEbook} className={styles.mobileImg} />
                   <div className={styles.mobileDesc}>
                     <Text
                       color="dark"
                       s={{ lineHeight: "1.25", fontSize: "14px" }}
                     >
-                      Marketing Dental: La Guia Definitiva
+                      Whatsapp para Consultorios
                     </Text>
                   </div>
                 </div>

@@ -499,7 +499,7 @@ body:has(.resoursesDropDown.show) {
 }
 
 .mobileCard .mobileImg {
-  width: 70%;
+  width: 35%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
@@ -660,7 +660,8 @@ body:has(.resoursesDropDown.show) {
   text-decoration: underline;
   top: 50%;
   transform: translateY(-50%);
-  font-weight: 600;
+  font-family: Lexend;
+  font-weight: 500;
   font-size: 15px;
   cursor: pointer;
   z-index: 1000;
