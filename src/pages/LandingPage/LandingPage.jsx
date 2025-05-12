@@ -163,7 +163,7 @@ const LandingPage = () => {
                 bold="bold"
                 fontFamily="lexend"
                 color="white"
-                fontSize="34px"
+                fontSize="30px"
                 fontSizeMobile="21px"
                 s={{
                   lineHeight: "0.95",

@@ -22,17 +22,17 @@
 .crossLine {
   color: #21917b;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 42px;
 }
 .marketingTitle {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 42px;
 }
 
 .dentalWord {
   color: #25c19b;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 42px;
 }
 
 .markLine {
@@ -287,8 +287,8 @@ body:has(.popupContainer.show) {
   background-color: #123d3a;
   width: 100%;
   flex-grow: 1;
-  padding-right: var(--width-unit);
-  padding-left: var(--width-unit);
+  padding-right: var(--width-unit-menu);
+  padding-left: var(--width-unit-menu);
   padding-top: 160px;
   padding-bottom: 100px;
   display: flex;
@@ -299,7 +299,7 @@ body:has(.popupContainer.show) {
   display: flex;
   height: calc(var(--width-unit) * 1.3);
   justify-content: space-between;
-  gap: 120px;
+  gap: 32px;
 }
 
 .contents > :last-child {
@@ -328,7 +328,6 @@ body:has(.popupContainer.show) {
   flex-direction: column;
   position: relative;
   z-index: 1;
-  width: 660px;
   flex-shrink: 0;
   bottom: 32px;
   background: var(--primary-darker);
