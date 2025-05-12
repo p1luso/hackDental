@@ -639,19 +639,9 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             <div className={styles.closeButton}>
               <Icon size={"4rem"} type={"close"} color="var(--white)" />
             </div>
-            <div
-              className={styles.drawerTitle}
-              style={{ position: "relative", textAlign: "center" }}
-            >
+            <div className={styles.drawerTitle}>
               <span
                 className={styles.backButton}
-                style={{
-                  position: "absolute",
-                  top: "1.5rem",
-                  left: "1.5rem",
-                  fontSize: "14px",
-                  cursor: "pointer",
-                }}
                 onClick={handleBackToMainMenu}
               >
                 ←Atrás
@@ -758,18 +748,9 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             <div className={styles.closeButton}>
               <Icon size={"4rem"} type={"close"} color="var(--white)" />
             </div>
-            <div
-              className={styles.drawerTitle}
-              style={{ position: "relative", textAlign: "center" }}
-            >
+            <div className={styles.drawerTitle}>
               <span
                 className={styles.backButton}
-                style={{
-                  position: "absolute",
-                  top: "1.5rem",
-                  fontSize: "14px",
-                  cursor: "pointer",
-                }}
                 onClick={handleBackToMainMenu}
               >
                 ←Atrás
@@ -902,19 +883,9 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             <div className={styles.closeButton}>
               <Icon size={"4rem"} type={"close"} color="var(--white)" />
             </div>
-            <div
-              className={styles.drawerTitle}
-              style={{ position: "relative", textAlign: "center" }}
-            >
+            <div className={styles.drawerTitle}>
               <span
                 className={styles.backButton}
-                style={{
-                  position: "absolute",
-                  top: "1.5rem",
-                  left: "1.5rem",
-                  fontSize: "14px",
-                  cursor: "pointer",
-                }}
                 onClick={handleBackToMainMenu}
               >
                 ←Atrás
