@@ -653,16 +653,24 @@ body:has(.resoursesDropDown.show) {
 }
 .backButton {
   position: absolute;
-  left: -25vw;
+  top: 2vh;
   color: #005fa3;
   text-decoration: underline;
-  top: 50%;
-  transform: translateY(-50%);
   font-family: Lexend;
   font-weight: 500;
   font-size: 14px;
   cursor: pointer;
   z-index: 1000;
+  left: -10rem;
+}
+.backButton {
+    left: -10rem;
+  }
+
+@media screen and (max-width: 370px) {
+  .backButton {
+    left: -7rem;
+  }
 }
 #backButtonResource {
   position: absolute;
