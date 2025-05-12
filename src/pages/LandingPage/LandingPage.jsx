@@ -558,8 +558,8 @@ const LandingPage = () => {
             <div className={styles.spainLocation__card__elements}>
               <Text
                 fontSize="24px"
-                fontSizeMobile="21px"
-                s={{ lineHeight: 1.3, color: "#2f4f4f" }}
+                fontSizeMobile="18px"
+                s={{ lineHeight: 1.3, color:"#213343" }}
               >
                 Contáctanos si tu consultorio cumple con lo siguiente:{" "}
               </Text>
@@ -567,21 +567,21 @@ const LandingPage = () => {
                 <div className={styles.spainLocation__items__item}>
                   <Icon size={"1.3rem"} color="#008060" type={"check"} />
 
-                  <Text color="black" bold="font-light" fontSize="17px">
+                  <Text color="black" s={{color:"#213343"}} bold="font-light" fontSize="17px" fontSizeMobile="16px">
                     Está ubicado en <strong>España.</strong>
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
                   <Icon size={"1.3rem"} color="#008060" type={"check"} />
 
-                  <Text color="black" bold="font-light" fontSize="17px">
+                  <Text color="black" s={{color:"#213343"}} bold="font-light" fontSize="17px" fontSizeMobile="16px">
                     Factura <strong>10,000 euros o más</strong> al mes
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
                   <Icon size={"1.3rem"} color="#008060" type={"check"} />
 
-                  <Text color="black" bold="font-light" fontSize="17px">
+                  <Text color="black" s={{color:"#213343"}} bold="font-light" fontSize="17px" fontSizeMobile="16px">
                     Quiere crecer rápidamente en el <strong>2025</strong>.
                   </Text>
                 </div>

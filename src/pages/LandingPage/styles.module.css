@@ -1651,7 +1651,6 @@ body:has(.popupContainer.show) {
     align-items: center;
     padding: 52px 0px;
     gap: 0;
-    width: 99%;
   }
 
   .spainLocation__btn {
@@ -1694,8 +1693,8 @@ body:has(.popupContainer.show) {
     border-radius: 32px;
     width: fit-content;
     padding: 8px 16px;
-    gap: 16px;
-    margin-top: 16px;
+    gap: 12px;
+    margin-top: 4px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -1703,7 +1702,7 @@ body:has(.popupContainer.show) {
   }
 
   .spainLocation_footer__img {
-    width: 110px;
+    width: 90px;
     margin-bottom: -10px;
   }
 
