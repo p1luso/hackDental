@@ -257,20 +257,21 @@ const OurProgram = () => {
             justifyContent: "center",
             alignItems: "center",
             flexDirection: "column",
+            gap: "8px",
           }}
         >
           <Text
             fontFamily="lexend"
-            color="white-cream"
+            color="white"
             textAlignMobile="center"
             bold="font-light"
-            fontSize="17px"
+            fontSize="18px"
             fontSizeMobile="16px"
             textAlign="start"
           >
-            Haremos Auditorias Gratis solo hasta Junio, 2025
+            ¡Apúrate! Haremos auditorías gratis solo hasta junio de 2025.
           </Text>
-          <DaysCounter targetDate="2025-06-01" />
+          <DaysCounter numberBoxes={true} targetDate="2025-06-01" />
         </div>
       </section>
       <div className={styles.progressBarSection}>

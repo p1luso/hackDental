@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from "./daysCounter.module.css";
 
-const DaysCounter = ({ targetDate }) => {
+const DaysCounter = ({ targetDate, numberBoxes = false }) => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetDate));
 
   useEffect(() => {
@@ -31,9 +31,41 @@ const DaysCounter = ({ targetDate }) => {
 
   return (
     <div>
-      <span className={styles.text}>
-        {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
-      </span>
+      {numberBoxes ? (
+        <div className={styles.boxContainer}>
+          <div className={styles.boxItem}>
+            <div className={styles.box}>
+              {timeLeft.days}
+              <div className={styles.label}>Días</div>
+            </div>
+          </div>
+          <span className={styles.separators}>:</span>
+          <div className={styles.boxItem}>
+            <div className={styles.box}>
+              {timeLeft.hours}
+              <div className={styles.label}>Horas</div>
+            </div>
+          </div>
+          <span className={styles.separators}>:</span>
+          <div className={styles.boxItem}>
+            <div className={styles.box}>
+              {timeLeft.minutes}
+              <div className={styles.label}>Mins</div>
+            </div>
+          </div>
+          <span className={styles.separators}>:</span>
+          <div className={styles.boxItem}>
+            <div className={styles.box}>
+              {timeLeft.seconds}
+              <div className={styles.label}>Segs</div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <span className={styles.text}>
+          {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+        </span>
+      )}
     </div>
   );
 };
