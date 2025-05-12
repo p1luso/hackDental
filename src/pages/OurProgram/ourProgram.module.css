@@ -189,7 +189,7 @@
 
 }
 .spainLocation_footer__img {
-  width: 102px;
+  width: 90px;
 }
 
 .footer__desc > :nth-child(1),
@@ -955,7 +955,7 @@
     margin: 20px;
   }
   .banner__btns{
-    margin: 28px;
+    margin: 22px;
   }
   .onlyDesktop {
     display: none;
