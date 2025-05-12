@@ -1,0 +1,36 @@
+.page {
+  position: relative;
+
+  min-height: 100vh;
+  width: 100%;
+  --banner-height: calc(var(--width-unit) * 2);
+  --yellow-line: calc(var(--width-unit) * 0.375);
+  --green-line: calc(var(--width-unit) * 0.25);
+  --mobile-margin: 32px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding-left: var(--width-unit-menu);
+  padding-right: var(--width-unit-menu);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  gap: 30px;
+  background-color: #d8e8e6;
+}
+
+.responsable {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding-left: var(--width-unit-politics);
+  padding-right: var(--width-unit-politics);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  gap: 30px;
+  background-color: #eaf0f6;
+}

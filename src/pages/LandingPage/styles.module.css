@@ -52,7 +52,7 @@
 .help {
   position: fixed;
   bottom: 2%;
-  width: 100%;
+  width: fit-content;
   right: 2%;
   z-index: 1000;
   display: flex;

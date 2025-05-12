@@ -324,9 +324,11 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               </div>
               <div className={styles.contactBtn}>
                 <Icon size={"1rem"} type={"privacy"} />
+                <Link to={"/politicas"}>
                 <Text color="dark" bold="regular" size="sm">
                   Política de Privacidad
                 </Text>
+                </Link>
               </div>
             </div>
           </div>
@@ -971,7 +973,9 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   bold="regular"
                 >
                   {" "}
-                  Política de privacidad
+                  <Link to={"/politicas"}>
+                    Política de Privacidad
+                  </Link>
                 </Text>
               </div>
             </div>

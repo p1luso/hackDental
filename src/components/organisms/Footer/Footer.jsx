@@ -13,33 +13,37 @@ import { color } from "framer-motion";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <Text fontSize="24px" fontSizeMobile="20px" color="white-cream" bold="semi-bold" s={{ fontFamily:"Bree Serif" }}>
+      <Text
+        fontSize="24px"
+        fontSizeMobile="20px"
+        color="white-cream"
+        bold="semi-bold"
+        s={{ fontFamily: "Bree Serif" }}
+      >
         HackDental
       </Text>
       <div className={styles.links}>
         <div className={styles.linksDesktop}>
-          <Link to={"#"}>
-            <Text color="white-cream" fontSize="16px" bold="font-light">
-              © 2025 HackDental LLC –{" "}
-              <span className={styles.linksAviso}>
+          <Text color="white-cream" fontSize="16px" bold="font-light">
+            © 2025 HackDental LLC –{" "}
+              <a href={"/politicas"}>
+            <span className={styles.linksAviso}>
                 Aviso Legal y Política de Privacidad
-              </span>
-            </Text>
-          </Link>
+            </span>
+              </a>
+          </Text>
         </div>
         <div className={styles.linksMob}>
-          <Link to={"#"}>
-            <Text
-              color="white-cream"
-              textAlign="center"
-              textAlignMobile="center"
-              fontSizeMobile="14px"
-              fontSize="14px"
-
-              bold="font-light"
-            >
-              © 2025 HackDental LLC
-            </Text>{" "}
+          <Text
+            color="white-cream"
+            textAlign="center"
+            textAlignMobile="center"
+            fontSizeMobile="14px"
+            fontSize="14px"
+            bold="font-light"
+          >
+            © 2025 HackDental LLC
+          </Text>{" "}
             <Text
               s={{ color: "#0fbfbf", textDecoration: "underline" }}
               textAlign="center"
@@ -48,9 +52,10 @@ const Footer = () => {
               fontSizeMobile="14px"
               bold="font-light"
             >
+          <Link to={"/politicas"}>
               Aviso Legal y Política de Privacidad
-            </Text>{" "}
           </Link>
+            </Text>{" "}
         </div>
       </div>
     </footer>

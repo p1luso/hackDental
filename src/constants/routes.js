@@ -8,3 +8,4 @@ export const CUMPLIMIENTO = "/cumplimiento";
 export const ACERCA_DE = "/acerca_de";
 export const LANDING_IA = "/landing_ia";
 export const CONFIRM_DOWNLOAD = "/confirm_download";
+export const POLITICS = "/politicas";

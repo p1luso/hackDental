@@ -9,7 +9,8 @@ import {
   ACERCA_DE,
   CUMPLIMIENTO,
   LANDING_IA,
-  CONFIRM_DOWNLOAD
+  CONFIRM_DOWNLOAD,
+  POLITICS
 } from "./constants/routes";
 import LandingEBooks from "./pages/LandingEBooks/LandingEBooks";
 import DownloadEBook from "./pages/DownloadEBook/DownloadEBook";
@@ -22,6 +23,7 @@ import AcercaDe from "./pages/AcercaDe/AcercaDe";
 import { useLayoutEffect } from "react";
 import LandingIA from "./pages/IA/LandingIA";
 import ConfirmDownload from "./pages/ConfirmDownload/ConfirmDownload";
+import Politics from "./pages/Politicas/Politics";
 
 function App() {
   const location = useLocation();
@@ -40,6 +42,7 @@ function App() {
       <Route path={ACERCA_DE} element={<AcercaDe />} />
       <Route path={LANDING_IA} element={<LandingIA/>} />
       <Route path={CONFIRM_DOWNLOAD} element={<ConfirmDownload/>} />
+      <Route path={POLITICS} element={<Politics/>} />
     </Routes>
   );
 }
