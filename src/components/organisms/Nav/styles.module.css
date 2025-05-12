@@ -69,8 +69,8 @@
 }
 .bottomMenu {
   justify-content: space-between;
-  padding-left: var(--width-unit);
-  padding-right: var(--width-unit);
+  padding-left: var(--width-unit-menu);
+  padding-right: var(--width-unit-menu);
   background-color: #f6f9fc;
   height: 84px;
 }
