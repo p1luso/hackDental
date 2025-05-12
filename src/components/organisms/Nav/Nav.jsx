@@ -509,7 +509,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 <div className={styles.dropMenuBtn}>
                   <div className={styles.dropdownTitleDesc}>
                     <div className={styles.dropdownTitle}>
-                      <Text bold="regular" size="xxlg" color="black">
+                      <Text bold="regular" fontSize="15px" color="black">
                         Nuestro Método
                       </Text>
                       <span
@@ -538,7 +538,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               >
                 <div className={styles.dropdownTitleDesc}>
                   <div className={styles.dropdownTitle}>
-                    <Text bold="regular" size="xxlg" color="black">
+                    <Text bold="regular" fontSize="15px" color="black">
                       Recursos Gratis
                     </Text>
                     <span
@@ -566,7 +566,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               >
                 <div className={styles.dropdownTitleDesc}>
                   <div className={styles.dropdownTitle}>
-                    <Text bold="regular" size="xxlg" color="black">
+                    <Text bold="regular" fontSize="15px" color="black">
                       Contacto
                     </Text>
                     <span
@@ -592,7 +592,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               >
                 <div className={styles.dropdownTitleDesc}>
                   <div className={styles.dropdownTitle}>
-                    <Text bold="regular" size="xxlg" color="black">
+                    <Text bold="regular" fontSize="15px" color="black">
                       Sobre nosotros
                     </Text>
                     <span
@@ -660,7 +660,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             <div className={styles.recursosDesc}>
               <Text
                 color="black"
-                fontSize="18px"
+                fontSize="16px"
                 s={{ lineHeight: "0.9" }}
                 fontFamily="Lexend"
                 type="title"
@@ -670,11 +670,11 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               </Text>
               <Text
                 fontFamily="Lexend"
-                fontSize="21px"
+                fontSize="19px"
                 color="black"
                 type="title"
                 bold="semi-bold"
-                s={{ lineHeight: "1.5", bold: "semi-bold" }}
+                s={{ lineHeight: "1.1", bold: "semi-bold" }}
               >
                 Ebooks 100% Gratuitos
               </Text>
@@ -765,7 +765,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
         <div className={styles.mobileContact}>
           <Text
             color="black"
-            fontSize="18px"
+            fontSize="16px"
             bold="semi-bold"
             fontFamily="Lexend"
             s={{ lineHeight: "1" }}
@@ -773,7 +773,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             Contáctanos hoy mismo,
           </Text>
           <Text
-            fontSize="18px"
+            fontSize="19px"
             color="black"
             s={{ lineHeight: "1" }}
             bold="semi-bold"
@@ -900,7 +900,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
         <div className={styles.mobileContact}>
           <Text
             color="black"
-            fontSize="18px"
+            fontSize="16px"
             bold="semi-bold"
             fontFamily="Lexend"
             s={{ lineHeight: "1" }}
@@ -908,7 +908,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
             Informate sobre HackDental,
           </Text>
           <Text
-            fontSize="18px"
+            fontSize="19px"
             color="black"
             s={{ lineHeight: "1" }}
             bold="semi-bold"

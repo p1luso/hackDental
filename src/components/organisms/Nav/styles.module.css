@@ -236,7 +236,7 @@ body:has(.resoursesDropDown.show) {
   display: flex;
   align-items: start;
   justify-content: start;
-  gap: 8px;
+  gap: 4px;
 }
 
 .resoursesDropDown.show .contactBanner.show,
@@ -521,9 +521,7 @@ body:has(.resoursesDropDown.show) {
   padding-top: 5vh;
   height: 100%;
 }
-.mobileContact > :nth-child(1) {
-  margin-bottom: 1vh;
-}
+
 .mobileContact > :nth-child(2) {
   margin-bottom: 3vh;
 }
@@ -662,7 +660,7 @@ body:has(.resoursesDropDown.show) {
   transform: translateY(-50%);
   font-family: Lexend;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
   cursor: pointer;
   z-index: 1000;
 }

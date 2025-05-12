@@ -92,8 +92,8 @@ body:has(.drawer.show) {
 @media screen and (min-width: 450px) and (max-width: 1024px){
   .container {
     width: 90%;
-    max-width: 400px;
-    min-width: 400px;
+    max-width: 350px;
+    min-width: 350px;
   }
   .content {
     width: 100%;
