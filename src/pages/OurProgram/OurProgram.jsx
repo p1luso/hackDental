@@ -365,21 +365,18 @@ const OurProgram = () => {
               </div>
               <div className={styles.faqContainer}>
                 <Doubts
-                  title="Tienes alguna duda. No dudes en Contactarnos"
+                  title="¿Para qué tipo de consultorio son los servicios de HackDental?"
                   content=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsum maxime libero cum quidem culpa id, ipsam placeat nobis corporis accusamus quasi distinctio repellendus laudantium illo laborum itaque minima non."
                 />{" "}
                 <Doubts
-                  title="Tienes alguna duda. No dudes en Contactarnos"
+                  title="Me interesa la auditoria gratuita, ¿Cómo aplico?"
                   content="Lorem"
                 />{" "}
                 <Doubts
-                  title="Tienes alguna duda. No dudes en Contactarnos"
+                  title="¿Qué incluye la auditoría gratuita?"
                   content="Lorem ipsum dolor sit amet consectetur adipisicing elit..."
                 />{" "}
-                <Doubts
-                  title="Tienes alguna duda. No dudes en Contactarnos"
-                  content="Lorem ipsum dolor sit amet consectetur adipisicing elit..."
-                />{" "}
+                
               </div>
             </div>
           </div>
