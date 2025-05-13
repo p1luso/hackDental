@@ -288,7 +288,7 @@ const OurProgram = () => {
           </p>
         </div>
         <div className={styles.progressBarButton}>
-          <IconTextButton size="260px" colorVariant="white-green">
+          <IconTextButton size="100%" colorVariant="white-green">
             Aplicar Ahora
           </IconTextButton>
         </div>

@@ -9,14 +9,14 @@
   --mobile-margin: 32px;
 }
 
-.nav{
+.nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 16px;
 }
 
-.btns{
+.btns {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,6 +79,7 @@
 .progressBarSection {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   background-color: #f5f9f7;
   width: 100%;
@@ -99,6 +100,8 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 60px;
+  height: 3.5rem;
+  width: 300px;
 }
 
 .arrows {
@@ -133,7 +136,6 @@
   width: 100%;
   min-height: 100%;
   padding-top: 80px;
-  
 }
 
 .dentalOwner {
@@ -151,10 +153,10 @@
 
 .videoContainer {
   position: relative;
-  z-index: 10; 
-  width: 100%; 
-  height: auto; 
-  pointer-events: auto; 
+  z-index: 10;
+  width: 100%;
+  height: auto;
+  pointer-events: auto;
   margin-bottom: 5px;
 }
 .videoDrawer {
@@ -186,7 +188,6 @@
   gap: 16px;
   align-items: center;
   padding-bottom: 30px;
-
 }
 .spainLocation_footer__img {
   width: 90px;
@@ -911,6 +912,8 @@
 .doubtButton {
   justify-self: left;
   margin-top: 10px;
+  height: 3.5rem;
+  width: 300px;
 }
 
 .faqContainer {
@@ -929,7 +932,6 @@
   padding: 28px 0;
 }
 
-
 .onlyMobile {
   display: none;
 }
@@ -938,33 +940,32 @@
   display: block;
 }
 
-
 @media screen and (max-width: 1024px) {
-   .logo > :first-child {
+  .logo > :first-child {
     width: 30vw;
     max-width: 180px;
   }
   .flecha {
     display: none;
   }
-  .bgTransparent{
+  .bgTransparent {
     padding: 0px;
   }
   .onlyMobile {
     display: block;
     margin: 20px;
   }
-  .banner__btns{
+  .banner__btns {
     margin: 22px;
   }
   .onlyDesktop {
     display: none;
   }
-  .videoImg{
+  .videoImg {
     width: 400px;
   }
 
-  .arrows{
+  .arrows {
     width: 100%;
   }
 
@@ -988,7 +989,25 @@
 
   .banner__btns > :first-child {
     height: 54px !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .doubtButton {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4.5rem !important;
+  }
+
+  .progressBarButton {
+    height: 4.5rem !important;
+    width: 300px;
+  }
+
   .formContacto > :nth-child(1) {
     padding-bottom: 20px;
     font-size: 13px;
@@ -1002,7 +1021,16 @@
     font-size: 24px;
   }
 
-  
+  .progressBarSection {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  .doubtsSection {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
   .videoContainer {
     flex-direction: column;
     align-items: center;
@@ -1037,28 +1065,27 @@
     text-align: center;
   }
 
-    .videoContainer {
-      width: 100%;
-      margin-bottom: 1.5rem;
-    }
-  
-    .videoDrawer {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-  
-    .videoImg {
-      width: 100%;
-      height: auto;
-    }
-  
-    .arrows {
-      display: none;
-    }
-  
+  .videoContainer {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .videoDrawer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .videoImg {
+    width: 100%;
+    height: auto;
+  }
+
+  .arrows {
+    display: none;
+  }
 
   .main > *:not(.contact) {
     padding-left: 0;
@@ -1071,21 +1098,20 @@
     padding: 64px;
   }
 
-  .btns{
+  .btns {
     width: 30%;
   }
 
-  .arrows{
+  .arrows {
     display: none;
   }
-
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .banner {
     padding: 0;
   }
-  .arrows{
+  .arrows {
     display: none;
   }
 
@@ -1115,8 +1141,8 @@
   }
 
   .btns > :last-child {
-display: none;  
-}
+    display: none;
+  }
 
   .contact {
     flex-direction: column;
@@ -1167,8 +1193,8 @@ display: none;
     padding: 0;
   }
   .btns > :last-child {
-    display: none;  
-    }
+    display: none;
+  }
   .betterTreatment {
     font-size: 24px;
   }
@@ -1181,7 +1207,7 @@ display: none;
     align-items: center;
     flex-direction: column;
   }
-  .arrows{
+  .arrows {
     display: none;
   }
   .circles,
@@ -1229,7 +1255,7 @@ display: none;
   .contact .formLine > * {
     width: 100%;
   }
-  .btns{
+  .btns {
     width: 30%;
   }
 }
@@ -1238,7 +1264,7 @@ display: none;
     width: 100%;
     top: 0;
   }
-  .btns{
+  .btns {
     width: 30%;
   }
   .betterTreatment {
@@ -1295,7 +1321,7 @@ display: none;
   .banner {
     padding: 0;
   }
- 
+
   .header .elements > :nth-child(2) {
     text-align: start;
     word-wrap: break-word;
@@ -1363,6 +1389,6 @@ display: none;
     width: 100%;
   }
   .btns > :last-child {
-    display: none;  
-    }
+    display: none;
+  }
 }
