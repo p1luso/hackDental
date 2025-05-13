@@ -46,12 +46,12 @@ const Founder = () => {
               <img id={styles.founderImg} src={FounderImage} />
               <img id={styles.founderImgMobile} src={FounderImageMobile} />
               <div className={styles.disponibilityBox}>
-                <span className={styles.badge}>1</span>
                 <Text
                   color="white"
                   fontSize="16px"
                   fontSizeMobile="12px"
                   bold="font-light"
+                  s={{color: "#213343"}}
                 >
                   Disponibilidad actual
                 </Text>
@@ -60,6 +60,7 @@ const Founder = () => {
                   fontSize="16px"
                   fontSizeMobile="12px"
                   bold="font-light"
+                  s={{color: "#213343"}}
                 >
                   <strong>10 clínicas en España</strong>
                 </Text>
@@ -124,43 +125,16 @@ const Founder = () => {
                   bold="font-light"
                 >
                   <strong>
-                    Reuniones semanales contigo y tu personal del consultorio.
+                    Reunión 1 a 1 conmigo para discutir el futuro de tu consultorio.
                   </strong>
                 </Text>
               </div>
-              <div className={styles.beneficios}>
-                <div className={styles.beneficiosIcon}>
-                  <Icon size={"1.2rem"} color="#008060" type={"check"} />
-                </div>
-                <Text
-                  color="black-lighter"
-                  fontSize="17px"
-                  fontSizeMobile="16px"
-                  bold="font-light"
-                >
-                  <strong>
-                    Mi disponibilidad los 7 días de la semana para tus
-                    consultas.{" "}
-                  </strong>
-                </Text>
-              </div>
-              <div className={styles.beneficios}>
-                <div className={styles.beneficiosIcon}>
-                  <Icon size={"1.2rem"} color="#008060" type={"check"} />
-                </div>
-                <Text
-                  color="black-lighter"
-                  fontSize="17px"
-                  fontSizeMobile="16px"
-                  bold="font-light"
-                >
-                  Que trabaje 6 meses en el crecimiento de tu consultorio.
-                </Text>
-              </div>
+
               <div className={styles.founderButton}>
                 <TextLink
                   variant="primary-green"
                   textProps={{ color: "#005fa3", fontSize: "18px" }}
+                  to={"https://wa.me/51914727355"}
                 >
                   Contactar a Jose →
                 </TextLink>{" "}

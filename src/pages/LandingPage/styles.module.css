@@ -141,6 +141,11 @@
   border: 1px solid #7691ad;
   position: relative;
 }
+.notification a{
+  width: 100%;
+}
+
+
 .wsImg {
   position: absolute;
   left: 0px;
@@ -425,7 +430,7 @@ body:has(.popupContainer.show) {
 }
 
 .whoAreWe_upText {
-  width: 80%;
+  width: 95%;
   margin-bottom: 20px;
 }
 
@@ -487,7 +492,7 @@ body:has(.popupContainer.show) {
   gap: 25px;
 }
 
-.founderButton {
+.founderButton a{
   justify-self: left;
   margin-top: 10px;
 }
@@ -1484,7 +1489,7 @@ body:has(.popupContainer.show) {
   .founderButton {
     display: none;
   }
-  .founderButtonMobile {
+  .founderButtonMobile a{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1652,7 +1657,7 @@ body:has(.popupContainer.show) {
     gap: 0;
   }
 
-  .spainLocation__btn {
+  .spainLocation__btn a{
     margin-top: 0px;
     width: 400px;
     height: 60px;

@@ -15,43 +15,44 @@ import IconTextButton from "../../components/molecules/IconTextButton/IconTextBu
 import Link from "../../components/atoms/Link/Link";
 import { useLocation } from "react-router-dom";
 import Footer from "../../components/organisms/Footer/Footer";
+import { CONTACT_FORM } from "../../constants/routes";
 
 const LandingEBooks = () => {
-   const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div className={styles.page}>
       <Nav hideTopMenu={true} />
       <header className={styles.header}>
         <section className={styles.banner}>
           <div className={styles.educationText}>
-          <Text
-            type="bigtitle"
-            textAlign="center"
-            color="white"
-            textAlignMobile="center"
-            fontFamily="lexend"
-            bold="font-light"
-            fontSize="28px"
-            fontSizeMobile="18px"
-            s={{ fontWeight: "500", lineHeight: 1 }}
-          >
-            Educación para dueños de consultorios
-          </Text>
+            <Text
+              type="bigtitle"
+              textAlign="center"
+              color="white"
+              textAlignMobile="center"
+              fontFamily="lexend"
+              bold="font-light"
+              fontSize="28px"
+              fontSizeMobile="18px"
+              s={{ fontWeight: "500", lineHeight: 1 }}
+            >
+              Educación para dueños de consultorios
+            </Text>
           </div>
           <div className={styles.educationTextMob}>
-          <Text
-            type="bigtitle"
-            textAlign="center"
-            color="white"
-            textAlignMobile="center"
-            fontFamily="lexend"
-            bold="font-light"
-            fontSize="28px"
-            fontSizeMobile="18px"
-            s={{ fontWeight: "500", lineHeight: 1 }}
-          >
-            Educación para dentistas
-          </Text>
+            <Text
+              type="bigtitle"
+              textAlign="center"
+              color="white"
+              textAlignMobile="center"
+              fontFamily="lexend"
+              bold="font-light"
+              fontSize="28px"
+              fontSizeMobile="18px"
+              s={{ fontWeight: "500", lineHeight: 1 }}
+            >
+              Educación para dentistas
+            </Text>
           </div>
           <Text
             type="bigtitle"
@@ -80,7 +81,10 @@ const LandingEBooks = () => {
       </header>
       <main className={styles.main}>
         <div className={styles.mainEBook}>
-          <div className={styles.mainEbookCard} onClick={() => navigate("/ebooks/7-secretos-marketing-dental")}>
+          <div
+            className={styles.mainEbookCard}
+            onClick={() => navigate("/ebooks/7-secretos-marketing-dental")}
+          >
             <div className={styles.tag}>
               <Text size="ty" color="light">
                 Empieza Aqui
@@ -157,9 +161,11 @@ const LandingEBooks = () => {
         <div className={styles.dentalContainer}>
           <div className={styles.contentContainer_dental}>
             <div className={styles.founderButtonMobile}>
-              <IconTextButton size="100%" colorVariant="primary-darker">
-                Pedir auditoría
-              </IconTextButton>{" "}
+              <a href={CONTACT_FORM}>
+                <IconTextButton size="100%" colorVariant="primary-darker">
+                  Pedir auditoría
+                </IconTextButton>{" "}
+              </a>
             </div>
             <div className={styles.imageWrapper}>
               <img src={CoberturaDental} alt="" />
@@ -203,15 +209,17 @@ const LandingEBooks = () => {
               </Text>
 
               <div className={styles.founderButton}>
-                <IconTextButton size="260px" colorVariant="primary-darker">
-                  Pedir auditoría
-                </IconTextButton>{" "}
+                <a href={CONTACT_FORM}>
+                  <IconTextButton size="260px" colorVariant="primary-darker">
+                    Pedir auditoría
+                  </IconTextButton>{" "}
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

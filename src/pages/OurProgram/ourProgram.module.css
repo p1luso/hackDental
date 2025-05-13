@@ -83,8 +83,7 @@
   justify-content: center;
   background-color: #f5f9f7;
   width: 100%;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 44px;
 }
 
 .progressTexts {
@@ -94,7 +93,7 @@
   justify-content: center;
 }
 
-.progressBarButton {
+.progressBarButton a{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -128,7 +127,7 @@
   font-family: Lexend;
   font-weight: 300;
   font-size: 18px;
-  color: #2f4f4f;
+  color: #213343;
 }
 
 .bgTransparent {
@@ -166,7 +165,7 @@
   justify-content: center;
   align-items: center;
 }
-.banner__btns {
+.banner__btns a{
   display: flex;
   height: 3.5rem;
   margin-top: 20px;

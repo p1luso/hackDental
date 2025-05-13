@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 30vh;
+  min-height: 25vh;
   }
 
 .circle img {
@@ -27,9 +27,13 @@
   line-height: 0.5
 }
 
+.title{
+  color: black;
+}
+
 .stepText {
   font-size: 16px;
-  color: #2f4f4f;
+  color: #213343;
 }
 
 .progressLine {
@@ -94,7 +98,7 @@
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background-color: #2f4f4f;
+  background-color: #213343;
 }
 
 @media (min-width: 768px) {
@@ -142,7 +146,7 @@
 }
 
 .steps {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   list-style-type: none;
@@ -151,12 +155,12 @@
 
 .stepItem {
   display: list-item;
-  color: #2f4f4f;
+  color: #213343;
 }
 
 .stepText {
   font-size: 16px;
-  color: #2f4f4f;
+  color: #213343;
   font-weight: 300;
   font-family: "Lexend", sans-serif;
   line-height: 1.5;
@@ -177,7 +181,7 @@
   font-family: "Lexend", sans-serif;
   font-weight: 500;
   color: black;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
@@ -192,7 +196,7 @@
   font-size: 18px;
   font-family: "Lexend", sans-serif;
   font-weight: 300;
-  color: black;
+  color: #213343;
   margin-bottom: 1.5rem;
 }
 
@@ -208,7 +212,7 @@
 .check {
   width: 1rem;
   height: 1rem;
-  color: #2f4f4f;
+  color: #213343;
 }
 
 @media (max-width: 767px) {
@@ -260,10 +264,13 @@
   .container{
     margin-top: -8%;
   }
+  .section {
+    min-height: 25vh;
+  }
 }
 
 @media (max-width: 560px){
-  .container{
-    margin-top: 1%;
+  .section {
+    min-height: 25vh;
   }
 }

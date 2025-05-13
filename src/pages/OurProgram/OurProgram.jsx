@@ -19,7 +19,7 @@ import marketStudy from "@assets/marketStudy.svg";
 import strategyCall from "@assets/strategyCall.svg";
 import Logo from "../../components/atoms/Logo/Logo";
 import { useNavigate } from "react-router-dom";
-import { LANDING_PAGE } from "../../constants/routes";
+import { CONTACT_FORM, LANDING_PAGE } from "../../constants/routes";
 import Footer from "../../components/organisms/Footer/Footer";
 
 const OurProgram = () => {
@@ -96,7 +96,7 @@ const OurProgram = () => {
   return (
     <div className={styles.page}>
       <nav className={styles.nav}>
-        <div 
+        <div
           className={styles.logo}
           onClick={() => navigate(LANDING_PAGE)}
           role="button"
@@ -116,6 +116,7 @@ const OurProgram = () => {
             colorVariant="primary-bordered2"
             size="100%"
             icon={"wp"}
+            onClick={() => navigate("https://wa.me/51914727355")}
           >
             Whatsapp
           </IconTextButton>
@@ -212,14 +213,16 @@ const OurProgram = () => {
               </Text>
             </div>
             <div className={styles.banner__btns}>
-              <IconTextButton
-                colorVariant="white"
-                textProps={{ fontWeight: 400 }}
-                textFontWeight="400" // Nueva prop
-                size="100%"
-              >
-                Pedir Auditoria Gratis
-              </IconTextButton>
+              <a href={CONTACT_FORM}>
+                <IconTextButton
+                  colorVariant="white"
+                  textProps={{ fontWeight: 400 }}
+                  textFontWeight="400" // Nueva prop
+                  size="100%"
+                >
+                  Pedir Auditoria Gratis
+                </IconTextButton>
+              </a>
             </div>
             <div className={styles.spainLocation_footer__card}>
               <img src={Medicos} className={styles.spainLocation_footer__img} />
@@ -288,9 +291,11 @@ const OurProgram = () => {
           </p>
         </div>
         <div className={styles.progressBarButton}>
-          <IconTextButton size="100%" colorVariant="white-green">
-            Aplicar Ahora
-          </IconTextButton>
+          <a href={CONTACT_FORM}>
+            <IconTextButton size="100%" colorVariant="white-green">
+              Aplicar Ahora
+            </IconTextButton>
+          </a>
         </div>
         <div className={styles.progressBar}>
           <Section
@@ -349,19 +354,24 @@ const OurProgram = () => {
                 fontSize="18px"
                 fontSizeMobile="16px"
                 bold="font-light"
+                s={{ color: "#213343" }}
               >
                 Respondemos en menos de 24 horas
               </Text>
 
               <div className={styles.doubtButton}>
-                <IconTextButton size="290px" colorVariant="white-green">
-                  Consulta al Whatsapp
-                </IconTextButton>{" "}
+                <a href={"https://wa.me/51914727355"}>
+                  <IconTextButton size="290px" colorVariant="white-green">
+                    Consulta al Whatsapp
+                  </IconTextButton>{" "}
+                </a>
               </div>
               <div className={styles.doubtButtonMobile}>
-                <IconTextButton size="100%" colorVariant="white-green">
-                  Consulta al Whatsapp
-                </IconTextButton>{" "}
+                <a href={"https://wa.me/51914727355"}>
+                  <IconTextButton size="100%" colorVariant="white-green">
+                    Consulta al Whatsapp
+                  </IconTextButton>{" "}
+                </a>
               </div>
               <div className={styles.faqContainer}>
                 <Doubts
@@ -376,13 +386,12 @@ const OurProgram = () => {
                   title="¿Qué incluye la auditoría gratuita?"
                   content="Lorem ipsum dolor sit amet consectetur adipisicing elit..."
                 />{" "}
-                
               </div>
             </div>
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

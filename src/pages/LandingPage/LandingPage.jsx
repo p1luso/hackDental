@@ -9,7 +9,7 @@ import IconButton from "../../components/molecules/IconButton/IconButton";
 import Footer from "../../components/organisms/Footer/Footer";
 import Icon from "../../components/atoms/Icon/Icon";
 import { useNavigate } from "react-router-dom";
-import { CONTACT_FORM } from "../../constants/routes";
+import { CONTACT_FORM, LANDING_EBOOKS, OUR_PROGRAM } from "../../constants/routes";
 import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
 import imgEbook7 from "@assets/7SecretosEbook.svg";
 import imgIAEbook from "@assets/IAEbook.svg";
@@ -126,14 +126,20 @@ const LandingPage = () => {
               <div className={styles.badgeImg}>1</div>{" "}
               {/* Contador para la imagen */}
             </div>
-            <IconTextButton
-              textProps={{ fontSize: "14px" }}
-              colorVariant="white-green"
-              size="100%"
-              icon={"wp"}
+            <a
+              href="https://wa.me/51914727355"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Whatsapp
-            </IconTextButton>
+              <IconTextButton
+                textProps={{ fontSize: "14px" }}
+                colorVariant="white-green"
+                size="100%"
+                icon={"wp"}
+              >
+                Whatsapp
+              </IconTextButton>
+            </a>
           </div>
         )}
         <div
@@ -192,7 +198,7 @@ const LandingPage = () => {
                   textProps={{ fontWeight: 400 }}
                   textFontWeight="400" // Nueva prop
                   size="100%"
-                  onClick={() => navigate(CONTACT_FORM)}
+                  onClick={() => navigate(OUR_PROGRAM)}
                   colorVariant="white"
                 >
                   Quiero saber más
@@ -278,10 +284,13 @@ const LandingPage = () => {
                     fontSize="17px"
                     fontSizeMobile="16px"
                     bold="font-light"
+                    s={{ color: "#213343" }}
                   >
-                    Somos una <strong>agencia de marketing dental</strong> que
-                    ayuda a clínicas dentales; independientes a ir al siguiente
-                    nivel.
+                    <span style={{ fontWeight: 500 }}>
+                      Solo conocemos el mercado español...
+                    </span>{" "}
+                    pero lo conocemos mejor que nadie. Somos especialistas en
+                    marketing para clínicas dentales en España
                   </Text>
                 </div>
                 <div
@@ -293,7 +302,7 @@ const LandingPage = () => {
                     marginBottom: "15px",
                   }}
                 >
-                  <img src={checkIconSpain} alt="" style={{ width: "25px" }} />
+                  <img src={checkIconSpain} style={{ width: "25px" }} />
                   <Text
                     fontFamily="Lexend"
                     color="black-lighter"
@@ -302,9 +311,9 @@ const LandingPage = () => {
                     bold="font-light"
                     textAlign="start"
                     textAlignMobile="start"
+                    s={{ color: "#213343" }}
                   >
-                    Cumplimos con la normativa de protección de datos vigente en
-                    España.
+                    Método de marketing acorde con el RGPD.
                   </Text>
                 </div>
                 <div
@@ -318,8 +327,9 @@ const LandingPage = () => {
                   <TextLink
                     variant="primary-green"
                     textProps={{ color: "#005fa3" }}
+                    to={OUR_PROGRAM}
                   >
-                    Ver Mas →
+                    Ver Método →
                   </TextLink>
                 </div>
               </div>
@@ -368,18 +378,22 @@ const LandingPage = () => {
               </Text>
 
               <div className={styles.founderButton}>
-                <IconTextButton size="260px" colorVariant="white-green">
-                  Pedir auditoría
-                </IconTextButton>{" "}
+                <a href={CONTACT_FORM}>
+                  <IconTextButton size="260px" colorVariant="white-green">
+                    Pedir auditoría
+                  </IconTextButton>{" "}
+                </a>
               </div>
             </div>
             <div className={styles.imageWrapper}>
               <img src={CoberturaDental} alt="" />
             </div>
             <div className={styles.founderButtonMobile}>
-              <IconTextButton size="100%" colorVariant="white-green">
-                Pedir auditoría
-              </IconTextButton>{" "}
+              <a href={CONTACT_FORM}>
+                <IconTextButton size="100%" colorVariant="white-green">
+                  Pedir auditoría
+                </IconTextButton>{" "}
+              </a>
             </div>
           </div>
         </div>
@@ -559,7 +573,7 @@ const LandingPage = () => {
               <Text
                 fontSize="24px"
                 fontSizeMobile="18px"
-                s={{ lineHeight: 1.3, color:"#213343" }}
+                s={{ lineHeight: 1.3, color: "#213343" }}
               >
                 Contáctanos si tu consultorio cumple con lo siguiente:{" "}
               </Text>
@@ -567,29 +581,49 @@ const LandingPage = () => {
                 <div className={styles.spainLocation__items__item}>
                   <Icon size={"1.3rem"} color="#008060" type={"check"} />
 
-                  <Text color="black" s={{color:"#213343"}} bold="font-light" fontSize="17px" fontSizeMobile="16px">
+                  <Text
+                    color="black"
+                    s={{ color: "#213343" }}
+                    bold="font-light"
+                    fontSize="17px"
+                    fontSizeMobile="16px"
+                  >
                     Está ubicado en <strong>España.</strong>
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
                   <Icon size={"1.3rem"} color="#008060" type={"check"} />
 
-                  <Text color="black" s={{color:"#213343"}} bold="font-light" fontSize="17px" fontSizeMobile="16px">
+                  <Text
+                    color="black"
+                    s={{ color: "#213343" }}
+                    bold="font-light"
+                    fontSize="17px"
+                    fontSizeMobile="16px"
+                  >
                     Factura <strong>10,000 euros o más</strong> al mes
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
                   <Icon size={"1.3rem"} color="#008060" type={"check"} />
 
-                  <Text color="black" s={{color:"#213343"}} bold="font-light" fontSize="17px" fontSizeMobile="16px">
+                  <Text
+                    color="black"
+                    s={{ color: "#213343" }}
+                    bold="font-light"
+                    fontSize="17px"
+                    fontSizeMobile="16px"
+                  >
                     Quiere crecer rápidamente en el <strong>2025</strong>.
                   </Text>
                 </div>
               </div>
               <div className={styles.spainLocation__btn}>
+                <a href={CONTACT_FORM}>
                 <IconTextButton colorVariant="white-green" size="100%">
                   Solicita una reunión
                 </IconTextButton>
+                </a>
               </div>
             </div>
             <div className={styles.spainLocation_footer__card}>
@@ -702,6 +736,7 @@ const LandingPage = () => {
             <TextLink
               variant="primary-green"
               textProps={{ color: "#005fa3", fontSize: "18px" }}
+              to={LANDING_EBOOKS}
             >
               Ver todos los ebooks →
             </TextLink>{" "}
