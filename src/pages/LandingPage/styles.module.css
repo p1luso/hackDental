@@ -415,7 +415,7 @@ body:has(.popupContainer.show) {
 .whoAreWe {
   background-color: #f6f9fc;
   width: 100%;
-  padding-bottom: 80px;
+  padding-bottom: 44px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -436,6 +436,7 @@ body:has(.popupContainer.show) {
 
 .whoAreWeContainer {
   padding-top: 44px;
+  padding-bottom: 0px;
   padding-left: var(--width-unit2);
   padding-right: var(--width-unit2);
 }
@@ -1346,10 +1347,7 @@ body:has(.popupContainer.show) {
     display: flex;
     justify-content: center;
     padding: 0;
-    padding-top: calc(
-      (var(--linea-roja) + var(--linea-amarilla)) -
-        (var(--linea-roja) + var(--linea-amarilla)) * 0.3
-    );
+    padding-top: 70px;
   }
 
   .bannerImg {
@@ -1460,12 +1458,20 @@ body:has(.popupContainer.show) {
     justify-content: center;
     align-items: center;
   }
-
+.dentalCover {
+  background-color: rgba(216, 232, 230, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
   .whoAreWeContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--mobile-margin);
   }
   .contentContainer_dental {
     display: flex;
@@ -1653,7 +1659,7 @@ body:has(.popupContainer.show) {
   .spainLocation {
     flex-direction: column;
     align-items: center;
-    padding: 52px 0px;
+    padding: 44px 0px;
     gap: 0;
   }
 
@@ -1871,7 +1877,7 @@ body:has(.popupContainer.show) {
     width: 100% !important;
   }
   .prefooter {
-    background-color: #eef5f4;
+    background-color: #123d3a;
   }
 
   .spainLocation_footer__card {

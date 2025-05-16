@@ -31,7 +31,17 @@
 .primary-green {
   color: #005fa3 !important;
   text-decoration: underline;
+}
 
+.blue-link.textLink {
+  display: flex;
+  align-items: start;
+  gap: 16px;
+}
+
+.blue-link {
+  color: #0fbfbf;
+  text-decoration: underline;
 }
 
 .blue-secondary.textLink {
@@ -43,9 +53,7 @@
 .blue-secondary {
   color: #005fa3 !important;
   text-decoration: underline;
-
 }
-
 
 /* secondary */
 .secondary.textLink {
@@ -123,7 +131,6 @@
   text-decoration: underline;
 }
 
-
 /* black */
 .darkGreen.textLink {
   display: flex;
@@ -146,9 +153,9 @@
 .darkGreen.textLink > *:hover {
   padding-left: 16px;
   text-decoration: underline;
-  color:#2f4f4f;
+  color: #2f4f4f;
   padding-right: 16px;
-  background-color:var(--gray-blue-dark);
+  background-color: var(--gray-blue-dark);
 }
 
 /* black */

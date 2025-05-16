@@ -3,8 +3,8 @@ import Text from "../../atoms/Text/Text";
 import IconTextButton from "../../molecules/IconTextButton/IconTextButton";
 import styles from "./founder.module.css";
 import PreefooterSimple from "../PreefooterSimple/PreefooterSimple";
-import FounderImage from "@assets/FounderImage.svg";
-import FounderImageMobile from "@assets/FounderImageMobile.svg";
+import FounderImage from "@assets/imagenFundador.svg";
+import FounderImageMobile from "@assets/imagenFundador.svg";
 import PreFooter from "../PreFooter/PreFooter";
 import { px } from "framer-motion";
 import Icon from "../../atoms/Icon/Icon";
@@ -20,7 +20,7 @@ const Founder = () => {
               <Text
                 type="bigtitle"
                 textAlign="center"
-                color="black"
+                color="light"
                 fontFamily="lexend"
                 bold="font-light"
                 fontSize="26px"
@@ -33,7 +33,7 @@ const Founder = () => {
                 type="bigtitle"
                 fontFamily="lexend"
                 textAlign="center"
-                color="black"
+                color="light"
                 bold="semi-bold"
                 fontSize="32px"
                 fontSizeMobile="22px"
@@ -47,22 +47,22 @@ const Founder = () => {
               <img id={styles.founderImgMobile} src={FounderImageMobile} />
               <div className={styles.disponibilityBox}>
                 <Text
-                  color="white"
+                  color="white-lighter"
                   fontSize="16px"
                   fontSizeMobile="12px"
                   bold="font-light"
-                  s={{color: "#213343"}}
+                  s={{ color: "#213343" }}
                 >
                   Disponibilidad actual
                 </Text>
                 <Text
-                  color="white"
+                  color="white-lighter"
                   fontSize="16px"
                   fontSizeMobile="12px"
                   bold="font-light"
-                  s={{color: "#213343"}}
+                  s={{ color: "#213343", fontWeight: "400" }}
                 >
-                  <strong>10 clínicas en España</strong>
+                  10 clínicas en España
                 </Text>
               </div>
             </div>
@@ -71,7 +71,7 @@ const Founder = () => {
                 <Text
                   type="bigtitle"
                   textAlign="start"
-                  color="black"
+                  color="light"
                   fontFamily="lexend"
                   bold="font-light"
                   fontSize="26px"
@@ -84,7 +84,7 @@ const Founder = () => {
                   type="bigtitle"
                   fontFamily="lexend"
                   textAlign="start"
-                  color="black"
+                  color="light"
                   bold="semi-bold"
                   fontSize="32px"
                   fontSizeMobile="24px"
@@ -95,7 +95,7 @@ const Founder = () => {
               </div>
               <Text
                 fontFamily="Lexend"
-                color="black-lighter"
+                color="white-lighter"
                 fontSize="17px"
                 fontSizeMobile="16px"
                 bold="font-light"
@@ -107,33 +107,33 @@ const Founder = () => {
               </Text>
               <Text
                 fontFamily="Lexend"
-                color="black-lighter"
+                color="white-lighter"
                 fontSize="17px"
                 fontSizeMobile="16px"
                 bold="font-light"
               >
-                <strong>Contáctame</strong> si te interesa lo siguiente:
+                <strong style={{fontWeight:"400"}}>Contáctame</strong> si te interesa lo siguiente:
               </Text>
               <div className={styles.beneficios}>
                 <div className={styles.beneficiosIcon}>
                   <Icon size={"1.2rem"} color="#008060" type={"check"} />
                 </div>
                 <Text
-                  color="black-lighter"
+                  color="white-lighter"
                   fontSize="17px"
                   fontSizeMobile="16px"
                   bold="font-light"
+                  s={{ fontWeight: "400" }}
                 >
-                  <strong>
-                    Reunión 1 a 1 conmigo para discutir el futuro de tu consultorio.
-                  </strong>
+                  Reunión 1 a 1 conmigo para discutir el futuro de tu
+                  consultorio.
                 </Text>
               </div>
 
               <div className={styles.founderButton}>
                 <TextLink
-                  variant="primary-green"
-                  textProps={{ color: "#005fa3", fontSize: "18px" }}
+                  variant="blue-link"
+                  textProps={{ color: "#0fbfbf", fontSize: "18px" }}
                   to={"https://wa.me/51914727355"}
                 >
                   Contactar a Jose →
