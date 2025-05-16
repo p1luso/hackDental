@@ -16,7 +16,7 @@
 .darker-green.iconTextButton,
 .light-green.iconTextButton,
 .primary-bordered.iconTextButton,
-.primary-bordered2.iconTextButton  {
+.primary-bordered2.iconTextButton {
   display: flex;
   outline: none;
   border: 1px solid transparent;
@@ -225,6 +225,37 @@
 }
 
 
+/*primary-bordered3*/
+
+
+.primary-bordered3.iconTextButton {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  padding: 10px 1px;
+  border-radius: 15px;
+  font-size: 14px;
+  color: var(--white);
+  transition: all 0.3s ease-in;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.primary-bordered3.iconTextButton:hover {
+}
+
+.primary-bordered3.iconTextButton > i {
+  color: #25c19b;
+  position: relative;
+  top: 1px;
+}
+
+
+/*primary-darker*/
 
 .primary-darker.iconTextButton.full {
   background-color: var(--primary-darker);

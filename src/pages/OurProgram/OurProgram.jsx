@@ -183,13 +183,20 @@ const OurProgram = () => {
             cursor: "pointer",
           }}
         >
-          <Logo />
+          <Text
+            fontSize="24px"
+            fontSizeMobile="20px"
+            color="white-cream"
+            bold="semi-bold"
+            s={{ fontFamily: "Bree Serif" }}
+          >
+            HackDental
+          </Text>
         </div>
         <div className={styles.btns}>
           <IconTextButton
             textProps={{ fontSize: "14px" }}
-            colorVariant="primary-bordered2"
-            size="100%"
+            colorVariant="primary-bordered3"
             icon={"wp"}
             onClick={() => navigate("https://wa.me/51914727355")}
           >
@@ -197,8 +204,8 @@ const OurProgram = () => {
           </IconTextButton>
           <IconTextButton
             textProps={{ fontSize: "14px" }}
-            colorVariant="primary-darker"
-            size="100%"
+            colorVariant="white"
+            size="50%"
             onClick={() => navigate(CONTACT_FORM)}
           >
             Pedir Auditoría
@@ -255,7 +262,7 @@ const OurProgram = () => {
                 >
                   <img src={n1} alt="" className={styles.numbersMain} />
                   <Text
-                color="white-lighter"
+                    color="white-lighter"
                     bold="font-light"
                     textAlign="center"
                     fontSize="18px"
@@ -273,7 +280,7 @@ const OurProgram = () => {
                 >
                   <img src={n2} alt="" className={styles.numbersMain} />
                   <Text
-                color="white-lighter"
+                    color="white-lighter"
                     bold="font-light"
                     textAlign="center"
                     fontSize="18px"
@@ -320,7 +327,7 @@ const OurProgram = () => {
                 bold="semibold"
                 textAlign="center"
                 fontSize="34px"
-                fontSizeMobile="22px"
+                fontSizeMobile="19px"
                 s={{
                   lineHeight: "0.95",
                   fontFamily: "lexend",
@@ -328,11 +335,64 @@ const OurProgram = () => {
                   letterSpacing: "-0.5px",
                 }}
               >
-                Conoce nuestro método para <br></br>
+                Conoce nuestro método para<br></br>
                 <span className={styles.betterTreatment}>
                   Vender tus Tratamientos
                 </span>
               </Text>
+              <Text
+                color="white-lighter"
+                bold="font-light"
+                textAlign="center"
+                fontSize="18px"
+                fontSizeMobile="16px"
+                s={{
+                  lineHeight: "0.95",
+                  fontFamily: "lexend",
+                }}
+              >
+                Obtén una auditoría de marketing dental completamente gratuita y
+                accede a nuestro método especializado para llevar tu clínica al
+                siguiente nivel.
+              </Text>
+              <div className={styles.numberTexts}>
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "8px" }}
+                >
+                  <img src={n1} alt="" className={styles.numbersMain} />
+                  <Text
+                    color="white-lighter"
+                    bold="font-light"
+                    textAlign="center"
+                    fontSize="18px"
+                    fontSizeMobile="16px"
+                    s={{
+                      lineHeight: "0.95",
+                      fontFamily: "lexend",
+                    }}
+                  >
+                    Mira este video y descubre nuestro método.
+                  </Text>
+                </div>
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "8px" }}
+                >
+                  <img src={n2} alt="" className={styles.numbersMain} />
+                  <Text
+                    color="white-lighter"
+                    bold="font-light"
+                    textAlign="center"
+                    fontSize="18px"
+                    fontSizeMobile="16px"
+                    s={{
+                      lineHeight: "0.95",
+                      fontFamily: "lexend",
+                    }}
+                  >
+                    Solicita tu auditoría gratuita hoy.
+                  </Text>
+                </div>
+              </div>
             </div>
             <div className={styles.banner__btns}>
               <a href={CONTACT_FORM}>
@@ -377,7 +437,7 @@ const OurProgram = () => {
       <section className={styles.daysCounter}>
         <div
           style={{
-            margin: "0 20px",
+            margin: "0 28px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
