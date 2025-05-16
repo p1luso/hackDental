@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./ourProgram.module.css";
 import Nav from "../../components/organisms/Nav/Nav";
 import Text from "../../components/atoms/Text/Text";
@@ -21,6 +21,11 @@ import Logo from "../../components/atoms/Logo/Logo";
 import { useNavigate } from "react-router-dom";
 import { CONTACT_FORM, LANDING_PAGE } from "../../constants/routes";
 import Footer from "../../components/organisms/Footer/Footer";
+import ourProgramVideo from "@assets/videoExample.mp4";
+import n1 from "@assets/n1.svg";
+import n2 from "@assets/n2.svg";
+
+import ReactPlayer from "react-player";
 
 const OurProgram = () => {
   const [showModalVideo, setShowModalVideo] = useState(false);
@@ -32,7 +37,11 @@ const OurProgram = () => {
     phone: localStorage.getItem("phone") ?? "",
   });
   const [faqExpanded, setFaqExpanded] = useState(false);
-
+  const [showInlineVideo, setShowInlineVideo] = useState(false);
+  const videoRef = useRef(null);
+  const [progress, setProgress] = useState(0);
+  const [isMuted, setIsMuted] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   const handleChange = (id, value) => {
     localStorage.setItem(id, value);
     setFormData((prev) => ({ ...prev, [id]: value }));
@@ -92,6 +101,72 @@ const OurProgram = () => {
       document.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleTimeUpdate = () => {
+    const video = videoRef.current;
+    if (video) {
+      const percent = (video.currentTime / video.duration) * 100;
+      setProgress(percent);
+    }
+  };
+
+  const handleSeek = (e) => {
+    const video = videoRef.current;
+    if (video) {
+      const bounding = e.target.getBoundingClientRect();
+      const clickPosition = e.clientX - bounding.left;
+      const clickPercent = clickPosition / bounding.width;
+      video.currentTime = video.duration * clickPercent;
+    }
+  };
+
+  const togglePlay = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (isPlaying) {
+      video.pause();
+      setIsPlaying(false);
+    } else {
+      video.play();
+      setIsPlaying(true);
+    }
+  };
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handlePlay = () => setIsPlaying(true);
+    const handlePause = () => setIsPlaying(false);
+
+    video.addEventListener("play", handlePlay);
+    video.addEventListener("pause", handlePause);
+
+    return () => {
+      video.removeEventListener("play", handlePlay);
+      video.removeEventListener("pause", handlePause);
+    };
+  }, []);
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = !isMuted;
+    setIsMuted(!isMuted);
+  };
+
+  const toggleFullscreen = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else {
+      video.parentElement.requestFullscreen(); // fullscreen del contenedor, no del video directo
+    }
+  };
 
   return (
     <div className={styles.page}>
@@ -158,37 +233,84 @@ const OurProgram = () => {
                   Vender tus Tratamientos
                 </span>
               </Text>
+              <Text
+                color="white-lighter"
+                bold="font-light"
+                textAlign="center"
+                fontSize="18px"
+                fontSizeMobile="16px"
+                s={{
+                  lineHeight: "0.95",
+                  fontFamily: "lexend",
+                }}
+              >
+                Obtén una auditoría de marketing dental completamente gratuita y
+                accede a nuestro método especializado para llevar tu clínica al
+                siguiente nivel.
+              </Text>
+
+              <div className={styles.numberTexts}>
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "8px" }}
+                >
+                  <img src={n1} alt="" className={styles.numbersMain} />
+                  <Text
+                color="white-lighter"
+                    bold="font-light"
+                    textAlign="center"
+                    fontSize="18px"
+                    fontSizeMobile="16px"
+                    s={{
+                      lineHeight: "0.95",
+                      fontFamily: "lexend",
+                    }}
+                  >
+                    Mira este video y descubre nuestro método.
+                  </Text>
+                </div>
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "8px" }}
+                >
+                  <img src={n2} alt="" className={styles.numbersMain} />
+                  <Text
+                color="white-lighter"
+                    bold="font-light"
+                    textAlign="center"
+                    fontSize="18px"
+                    fontSizeMobile="16px"
+                    s={{
+                      lineHeight: "0.95",
+                      fontFamily: "lexend",
+                    }}
+                  >
+                    Solicita tu auditoría gratuita hoy.
+                  </Text>
+                </div>
+              </div>
             </div>
             <div className={styles.videoContainer}>
               <div className={styles.videoDrawer}>
                 <img src={leftArrow} alt="" className={styles.arrows} />
-
-                <img className={styles.videoImg} src={imgVideo} />
-                <img src={rightArrow} alt="" className={styles.arrows} />
-
-                <button
-                  className={styles.videoPlayBtn}
-                  onClick={() => setShowModalVideo(true)}
-                >
-                  <Icon size={"1.5rem"} color="var(--white)" type={"play"} />
-                </button>
-                <div
-                  id="bg-video-modal"
-                  className={`${styles.modalVideo} ${
-                    showModalVideo && styles.show
-                  }`}
-                  onClick={handleHideModalVideo}
-                >
-                  <iframe
-                    className={styles.video}
-                    src="https://www.youtube.com/embed/Fu4GHmyvDk8?si=-ugwjpi28KLqfGSM?controls=0&showinfo=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; modestbranding; encrypted-media; gyroscope; picture-in-picture"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
+                <div className={styles.reactPlayerContainer}>
+                  <ReactPlayer
+                    url={ourProgramVideo}
+                    playing={true}
+                    controls={true}
+                    light={imgVideo}
+                    playIcon={
+                      <button className={styles.videoPlayBtn}>
+                        <Icon
+                          size={"1.5rem"}
+                          color="var(--white)"
+                          type="play"
+                        />
+                      </button>
+                    }
+                    width="100%"
+                    height="100%"
+                  />
                 </div>
+                <img src={rightArrow} alt="" className={styles.arrows} />
               </div>
             </div>
             <div className={styles.onlyMobile}>
@@ -277,7 +399,7 @@ const OurProgram = () => {
           <DaysCounter numberBoxes={true} targetDate="2025-06-01" />
         </div>
       </section>
-      <div className={styles.progressBarSection}>
+      {/* <div className={styles.progressBarSection}>
         <div className={styles.progressTexts}>
           <h2 className={styles.progressTitle}>
             ¿Qué incluye nuestra auditoría? <br></br>
@@ -316,7 +438,7 @@ const OurProgram = () => {
             steps={["Puedes ponerte en contacto con nosotros por correo"]}
           />
         </div>
-      </div>
+      </div> */}
       <section className={styles.doubtsSection}>
         <div className={styles.doubtContainer}>
           <div className={styles.contentContainer_doubt}>

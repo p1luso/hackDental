@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: #123d3a;
   gap: 16px;
 }
 
@@ -104,7 +105,7 @@
 }
 
 .arrows {
-  width: 550px;
+  width: 410px;
   opacity: 0.2;
 }
 
@@ -120,6 +121,22 @@
 .hackDentalMethod {
   font-size: 32px;
   font-weight: 600;
+}
+
+.numberTexts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.reactPlayerContainer {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: auto;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .progressText {
@@ -198,7 +215,7 @@
 }
 .videoPlayBtn {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.6);
@@ -936,8 +953,27 @@
 }
 
 .onlyDesktop {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
 }
+
+.numbersMain {
+  background-color: #21917b;
+  border-radius: 50%;
+  width: 25px;
+  height: auto; 
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
 
 @media screen and (max-width: 1024px) {
   .logo > :first-child {
