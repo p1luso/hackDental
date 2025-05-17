@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./ourProgram.module.css";
-import Nav from "../../components/organisms/Nav/Nav";
 import Text from "../../components/atoms/Text/Text";
 import Icon from "../../components/atoms/Icon/Icon";
 import imgVideo from "@assets/videoOurProgram.svg";
@@ -8,24 +7,15 @@ import IconTextButton from "../../components/molecules/IconTextButton/IconTextBu
 import Mark from "../../components/atoms/Mark/Mark";
 import FlechaNuestroPrograma from "@assets/nuestro metodo.svg";
 import Medicos from "@assets/Medicos.svg";
-import Section from "../../components/organisms/Section/Section";
-import CoberturaDental from "@assets/coberturaDental.svg";
 import Doubts from "../../components/molecules/Doubts/Doubts";
 import leftArrow from "@assets/leftArrow.svg";
 import rightArrow from "@assets/rightArrow.svg";
 import DaysCounter from "../../components/organisms/DaysCounter/DaysCounter";
-import marketingPlan from "@assets/marketingPlan.svg";
-import marketStudy from "@assets/marketStudy.svg";
-import strategyCall from "@assets/strategyCall.svg";
-import Logo from "../../components/atoms/Logo/Logo";
 import { useNavigate } from "react-router-dom";
 import { CONTACT_FORM, LANDING_PAGE } from "../../constants/routes";
 import Footer from "../../components/organisms/Footer/Footer";
-import ourProgramVideo from "@assets/videoExample.mp4";
 import n1 from "@assets/n1.svg";
 import n2 from "@assets/n2.svg";
-
-import ReactPlayer from "react-player";
 
 const OurProgram = () => {
   const [showModalVideo, setShowModalVideo] = useState(false);
