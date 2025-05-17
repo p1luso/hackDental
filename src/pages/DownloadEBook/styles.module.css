@@ -172,7 +172,6 @@
 .imgPortada {
   width: 380px;
   height: 230px;
-  margin-left: 20px;
 }
 .medicosCard {
   position: relative;
@@ -260,7 +259,15 @@
   .banner__desc {
     width: 100%;
   }
+.freeGuide {
+  width: 100%;
+  height: 70px;
+}
 
+
+.info__desc {
+  width: 75%;
+}
   .desc {
   }
   .card {
@@ -281,7 +288,9 @@
   .info {
     width: 100%;
   }
-
+.info > :first-child {
+  margin-bottom: 0;
+}
   .prefooter {
     flex-direction: column;
     padding: 28px;
@@ -289,6 +298,10 @@
   }
   .footer {
     height: 100px;
+  }
+  .titles{
+        padding: 18px 16px;
+
   }
 }
 

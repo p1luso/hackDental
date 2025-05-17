@@ -64,7 +64,6 @@ const DownloadEBook = () => {
       {ebook.title === "WhatsApp para Consultorios en 5 minutos" && (
         <section className={styles.moreInfo}>
           <div className={styles.info}>
-            <div className={styles.info__desc}>
               <div className={styles.titles}>
                 <Text
                   textAlign="center"
@@ -72,7 +71,7 @@ const DownloadEBook = () => {
                   textAlignMobile="center"
                   fontFamily="lexend"
                   fontSize="28px"
-                  fontSizeMobile="16px"
+                  fontSizeMobile="21px"
                   s={{
                     lineHeight: "1",
                     fontWeight: "500",
@@ -103,6 +102,7 @@ const DownloadEBook = () => {
                   - Jose Whittembury (CEO de HackDental)
                 </Text>
               </div>
+            <div className={styles.info__desc}>
               <img src={EbookPortada} className={styles.imgPortada} />
               <div className={styles.lines}>
                 <div className={styles.checksTexts}>

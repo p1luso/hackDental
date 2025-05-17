@@ -14,11 +14,17 @@ const MedicsCard = ({
     >
       <img src={Medicos} className={styles.medicos} />
       <div className={styles.desc}>
-        <Text color="black" fontSize="14px" s={{ lineHeight: "1.4" }}>
+        <Text
+          color="black"
+          fontSize="14px"
+          fontSizeMobile="12px"
+          s={{ lineHeight: "1.4" }}
+        >
           {title}
         </Text>
         <Text
           fontSize="14px"
+          fontSizeMobile="12px"
           color="black"
           bold="font-light"
           s={{ lineHeight: "1.4" }}
