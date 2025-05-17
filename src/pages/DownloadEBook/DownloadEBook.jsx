@@ -76,7 +76,7 @@ const DownloadEBook = () => {
                   s={{
                     lineHeight: "1",
                     fontWeight: "500",
-                    marginBottom: "0.5rem",
+                    marginBottom: "10px",
                   }}
                 >
                   El <strong style={{ fontWeight: "600" }}>problema</strong> que
@@ -152,7 +152,7 @@ const DownloadEBook = () => {
                 fontSizeMobile="16px"
                 textAlign="center"
               >
-                <strong>El problema no es que no sepas de odontología.</strong>
+                <strong style={{ fontWeight: "400" }}>El problema no es que no sepas de odontología.</strong>
               </Text>
               <Text
                 bold="font-light"
@@ -161,7 +161,7 @@ const DownloadEBook = () => {
                 fontSizeMobile="16px"
                 textAlign="center"
               >
-                <strong>
+                <strong style={{ fontWeight: "400" }}>
                   El problema es que nadie te ha enseñado a usar tu WhatsApp
                   para captar pacientes.
                 </strong>{" "}

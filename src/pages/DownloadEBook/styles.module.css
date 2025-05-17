@@ -272,8 +272,11 @@
   .moreInfo {
     width: 100%;
     flex-direction: column;
-    padding: 28px;
+    padding: 28px 16px;
     gap: 16px;
+  }
+  .downTexts{
+    margin: 0px 20px;
   }
   .info {
     width: 100%;
