@@ -133,7 +133,7 @@ const LandingEBooks = () => {
               img={imgWppEbook}
               title={"Whatsapp para Consultorios"}
               desc={
-                "Transforma tu clínica dental con nuestros ebooks, redactados."
+                "Aprende a configurar el WhatsApp de tu consultorio de forma efectiva"
               }
             />
             <div className={styles.nextEbook}>

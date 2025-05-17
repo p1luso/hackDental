@@ -6,17 +6,19 @@ const MedicsCard = ({
   bgColor = "",
   transparentBg = false,
   textDesc = "que aprenden con nuestros ebooks gratuitos",
-  title = " Únete a los muchos dentista",
+  title = " Únete a los muchos dentistas",
 }) => {
   return (
-    <div className={`${styles.card} ${transparentBg ? styles.transparent : ''}`}>
+    <div
+      className={`${styles.card} ${transparentBg ? styles.transparent : ""}`}
+    >
       <img src={Medicos} className={styles.medicos} />
       <div className={styles.desc}>
-        <Text size="ty" color="black" s={{ lineHeight: "1.4" }}>
+        <Text color="black" fontSize="14px" s={{ lineHeight: "1.4" }}>
           {title}
         </Text>
         <Text
-          size="ty"
+          fontSize="14px"
           color="black"
           bold="font-light"
           s={{ lineHeight: "1.4" }}

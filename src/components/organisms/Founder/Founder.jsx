@@ -1,11 +1,8 @@
 import React from "react";
 import Text from "../../atoms/Text/Text";
-import IconTextButton from "../../molecules/IconTextButton/IconTextButton";
 import styles from "./founder.module.css";
-import PreefooterSimple from "../PreefooterSimple/PreefooterSimple";
 import FounderImage from "@assets/imagenFundador.svg";
 import FounderImageMobile from "@assets/imagenFundador.svg";
-import PreFooter from "../PreFooter/PreFooter";
 import { px } from "framer-motion";
 import Icon from "../../atoms/Icon/Icon";
 import TextLink from "../../molecules/TextLink/TextLink";

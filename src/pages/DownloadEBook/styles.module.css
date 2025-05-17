@@ -23,8 +23,8 @@
 }
 
 .ebook {
-  width: 400px;
-  height: 400px;
+  width: 380px;
+  height: 380px;
   object-fit: cover;
 }
 
@@ -48,17 +48,17 @@
   margin-bottom: 16px;
 }
 .banner__desc > :nth-child(2) {
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 .banner__desc > :nth-child(3) {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 .banner__desc > :nth-child(4) {
   margin-bottom: 20px;
 }
 .downloadEBook {
   width: 300px;
-  height: 60px;
+  height: 70px;
 }
 
 .downloadEBook > :first-child {
@@ -78,34 +78,92 @@
 }
 .moreInfo {
   padding-top: 100px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
   padding-bottom: 120px;
   padding-left: calc(100vw / 5);
   padding-right: calc(100vw / 7);
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--light-green-transparent);
+  background-color: #eaf0f6;
+  background-image: linear-gradient(
+      to right,
+      rgb(196, 196, 196) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgb(196, 196, 196) 1px, transparent 1px);
+  background-size: 140px 140px; /* Tamaño de los cuadrados, ajusta a gusto */
 }
 
-.titles{
+.titles {
   margin-bottom: 10px;
 }
 
 .info {
   display: flex;
+  justify-content: center;
+  background-color: #f6f9fc;
+  border: 1px solid #7691ad;
+  align-items: center;
   flex-direction: column;
+  padding: 60px 0;
   gap: 12px;
-  width: 100%;
 }
 .info > :first-child {
   margin-bottom: 8px;
 }
 
-.lines{
-  padding-right: 25px;
+.lines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.lines img {
+  width: 20px;
+  height: 20px;
+}
+
+.freeGuide {
+  margin-top: 40px;
+}
+
+.info__desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 65%;
+  gap: 18px;
+}
+
+.downTexts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.freeGuide {
+  width: 60%;
+  height: 70px;
+}
+
+.checksTexts {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .line {
   display: flex;
+  justify-content: center;
   gap: 8px;
 }
 .line > :first-child {
@@ -116,11 +174,11 @@
   width: 380px;
   height: 230px;
   margin-left: 20px;
-  border: 1px solid black;
 }
 .medicosCard {
   position: relative;
   bottom: 8px;
+  margin-top: 20px;
 }
 
 .prefooter {
@@ -162,13 +220,16 @@
 @media screen and (max-width: 1024px) {
   .banner {
     flex-direction: column-reverse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 28px;
     padding-top: 4px;
     gap: 24px;
   }
   .ebook {
-    width: 102%;
+    width: 200px;
     height: auto;
     position: relative;
     right: 8px;
@@ -218,9 +279,7 @@
   .info {
     width: 100%;
   }
-  .imgPortada {
-    width: 100%;
-  }
+
   .prefooter {
     flex-direction: column;
     padding: 28px;
@@ -228,5 +287,12 @@
   }
   .footer {
     height: 100px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .imgPortada {
+    width: 100%;
+    height: auto;
   }
 }

@@ -7,12 +7,16 @@ import DownloadForm from "./components/DownloadForm/DownloadForm";
 import Logo from "../../components/atoms/Logo/Logo";
 import Icon from "../../components/atoms/Icon/Icon";
 import EBookImg from "@assets/imgEbook.svg";
-import EbookPortada from "@assets/ImgPortadaEbook.svg";
+import EbookPortada from "@assets/imagenAnimadaWhatsapp.svg";
 import Link from "../../components/atoms/Link/Link";
 import ebookData from "../../services/api/ebookData";
 import { useParams } from "react-router-dom";
 
 import MedicsCard from "../../components/organisms/MedicsCard/MedicsCard";
+import Footer from "../../components/organisms/Footer/Footer";
+import checkIcon from "@assets/check.svg";
+import crossIcon from "@assets/equis.svg";
+
 const DownloadEBook = () => {
   const [modalOpened, setModalOpened] = useState(false);
   const { slug } = useParams();
@@ -30,7 +34,7 @@ const DownloadEBook = () => {
       <main className={styles.main}>
         <div className={styles.banner}>
           <section className={styles.banner__desc}>
-            <Text color="black-lighter" size="sm">
+            <Text color="black-lighter" fontSize="20px" fontSizeMobile="16px">
               Ebook escrito en el 2025
             </Text>
             <Text color="black" type="title" bold>
@@ -42,119 +46,144 @@ const DownloadEBook = () => {
               </Text>
             </div>
             <div className={styles.downloadEBook}>
-              <IconTextButton colorVariant="white-green" size="100%" onClick={() => setModalOpened(true)}>
+              <IconTextButton
+                colorVariant="white-green"
+                size="100%"
+                onClick={() => setModalOpened(true)}
+              >
                 Descargar Ahora
               </IconTextButton>
             </div>
             <div className={styles.medicosCard}>
-              <MedicsCard transparentBg={true}/>
+              <MedicsCard transparentBg={true} />
             </div>
           </section>
-          <img className={styles.ebook} src={EBookImg} />
+          <img className={styles.ebook} src={ebook.img} />
         </div>
-        <div className={styles.moreInfo}>
+      </main>
+      {ebook.title === "WhatsApp para Consultorios en 5 minutos" && (
+        <section className={styles.moreInfo}>
           <div className={styles.info}>
-            <div className={styles.titles}>
-              <Text
-                type="bigtitle"
-                textAlign="start"
-                color="black"
-                textAlignMobile="center"
-                fontFamily="lexend"
-                bold="font-light"
-                fontSize="24px"
-                fontSizeMobile="16px"
-                s={{ lineHeight: "1", fontWeight: "500" }}
-              >
-                ¿Quieres atraer pacientes con WhatsApp?
-              </Text>
-              <Text
-                type="bigtitle"
-                fontFamily="lexend"
-                textAlign="start"
-                textAlignMobile="center"
-                color="black"
-                bold="semi-bold"
-                fontSize="28px"
-                fontSizeMobile="21px"
-                s={{ lineHeight: "1", fontWeight: "600" }}
-              >
-                En el Ebook aprenderás:
-              </Text>
+            <div className={styles.info__desc}>
+              <div className={styles.titles}>
+                <Text
+                  textAlign="center"
+                  color="black"
+                  textAlignMobile="center"
+                  fontFamily="lexend"
+                  fontSize="28px"
+                  fontSizeMobile="16px"
+                  s={{
+                    lineHeight: "1",
+                    fontWeight: "500",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  El <strong style={{ fontWeight: "600" }}>problema</strong> que
+                  este Ebook{" "}
+                  <strong style={{ fontWeight: "600" }}>Resuelve:</strong>
+                </Text>
+                <Text
+                  bold="font-light"
+                  color="black-lighter"
+                  fontSize="16px"
+                  fontSizeMobile="14px"
+                  textAlign="center"
+                >
+                  "Los pacientes no van con el mejor dentista. Van con el que
+                  responde primero"
+                </Text>
+                <Text
+                  bold="font-light"
+                  color="black-lighter"
+                  fontSize="16px"
+                  fontSizeMobile="14px"
+                  textAlign="center"
+                >
+                  - Jose Whittembury (CEO de HackDental)
+                </Text>
+              </div>
+              <img src={EbookPortada} className={styles.imgPortada} />
+              <div className={styles.lines}>
+                <div className={styles.checksTexts}>
+                  <div className={styles.line}>
+                    <img src={checkIcon} alt="" />
+                    <Text
+                      bold="font-light"
+                      color="black-lighter"
+                      fontSize="16px"
+                      fontSizeMobile="14px"
+                    >
+                      Eres un dentista excepcional.
+                    </Text>
+                  </div>
+                  <div className={styles.line}>
+                    <img src={checkIcon} alt="" />
+                    <Text
+                      bold="font-light"
+                      color="black-lighter"
+                      fontSize="16px"
+                      fontSizeMobile="14px"
+                    >
+                      Tus manos son precisas. Tu técnica es impecable. Tus
+                      empastes duran décadas.
+                    </Text>
+                  </div>
+                  <div className={styles.line}>
+                    <img src={crossIcon} alt="" />
+                    <Text
+                      bold="font-light"
+                      color="black-lighter"
+                      fontSize="16px"
+                      fontSizeMobile="14px"
+                    >
+                      Y aun así, tu agenda tiene huecos. Tu sala de espera no
+                      está llena. Y cada mes, tu preocupación por los ingresos
+                      crece.
+                    </Text>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className={styles.lines}>
-              <div className={styles.line}>
-                <Icon
-                  type={"check"}
-                  color="var(--primary-dark)"
-                  size={"0.7rem"}
-                />{" "}
-                <Text bold="font-light" color="black-lighter" fontSize="16px" fontSizeMobile="14px">
-                  Panorama de las ventas por chat para el 2023
-                </Text>
-              </div>
-              <div className={styles.line}>
-                <Icon
-                  type={"check"}
-                  color="var(--primary-dark)"
-                  size={"0.7rem"}
-                />{" "}
-                <Text bold="font-light" color="black-lighter" fontSize="16px" fontSizeMobile="14px">
-                  Cuáles son las industrias que más venden por chat aprendiendo
-                  a vender por medio de Facebook.
-                </Text>
-              </div>
-              <div className={styles.line}>
-                <Icon
-                  type={"check"}
-                  color="var(--primary-dark)"
-                  size={"0.7rem"}
-                />{" "}
-                <Text bold="font-light" color="black-lighter" fontSize="16px" fontSizeMobile="14px">
-                  Aprendiendo a vender por medio de WhatsApp, Telegram e
-                  Instagram
-                </Text>
+            <div className={styles.downTexts}>
+              <Text
+                bold="font-light"
+                color="black-lighter"
+                fontSize="16px"
+                fontSizeMobile="14px"
+                textAlign="center"
+              >
+                <strong>El problema no es que no sepas de odontología.</strong>
+              </Text>
+              <Text
+                bold="font-light"
+                color="black-lighter"
+                fontSize="16px"
+                fontSizeMobile="14px"
+                textAlign="center"
+              >
+                <strong>
+                  El problema es que nadie te ha enseñado a usar tu WhatsApp
+                  para captar pacientes.
+                </strong>{" "}
+              </Text>
+              <div className={styles.freeGuide}>
+                <IconTextButton
+                  colorVariant="white-green"
+                  size="100%"
+                  onClick={() => setModalOpened(true)}
+                >
+                  Obten tu Guía de WhatsApp Gratis
+                </IconTextButton>
               </div>
             </div>
           </div>
-          <img src={EbookPortada} className={styles.imgPortada} />
-        </div>
-      </main>
-      <section className={styles.prefooter}>
-        <Text color="black" fontSize="28px" fontSizeMobile="24px">
-          ¿Listo para empezar?
-        </Text>
-        <div className={styles.downloadBtn}>
-          <IconTextButton
-            size="100%"
-            colorVariant="white-green"
-            textProps={{ size: "sm" }}
-            onClick={() => setModalOpened(true)}
-          >
-            Obten tu Guia Gratis
-          </IconTextButton>
-        </div>
-      </section>
-      <footer className={styles.footer}>
-        <Text size="sm" color="white-cream" bold="font-light">
-          Copyright © {new Date().getFullYear()}, HackDental.com
-        </Text>
-        <div className={styles.links}>
-          <Link to={"#"}>
-            <Text color="white-cream" size="ty" bold="font-light">
-              Politica de Privacidad
-            </Text>
-          </Link>
-          <hr className={styles.separator} />
-          <Link to={"#"}>
-            <Text color="white-cream" size="ty" bold="font-light">
-              Cumplimiento del RGPD
-            </Text>{" "}
-          </Link>
-        </div>
-      </footer>
+        </section>
+      )}
+
+      <Footer />
       <Modal isOpen={modalOpened} onClose={() => setModalOpened(false)}>
-        <DownloadForm modalOpened={modalOpened} pdfPath={ebook.pdfPath}/>
+        <DownloadForm modalOpened={modalOpened} pdfPath={ebook.pdfPath} />
       </Modal>
     </div>
   );
