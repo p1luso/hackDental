@@ -46,6 +46,11 @@ const Select = ({
       style={{ width: size }}
       onBlur={handleCloseOnBlur}
     >
+      {value === "" && (
+        <div className={styles.errorIcon}>
+          <Icon type="alert" color="var(--error)" size="1rem" />
+        </div>
+      )}
       {label && (
         <div className={styles.label}>
           <Text size={"sm"} bold="regular" fontSize="14px" color={labelColor}>
@@ -70,7 +75,7 @@ const Select = ({
           <div className={styles.subElementList}>
             {elements.map((e) => (
               <div className={styles.hover}>
-                <Text onClick={() => handleChange(e)}>{e}</Text>
+                <p style={{fontFamily:"lexend", fontWeight:"500"}} onClick={() => handleChange(e)}>{e}</p>
               </div>
             ))}
           </div>

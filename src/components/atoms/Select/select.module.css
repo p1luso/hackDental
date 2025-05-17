@@ -147,19 +147,24 @@
 .blue {
   display: block;
   position: relative;
-}
-.blue .header {
-  display: flex;
-  border: 1px solid #7691ad;
-  background-color: #f6f9fc;
-  padding: 8px;
-  align-items: center;
+  width: 100%;
   border-radius: 5px;
 }
+
+.blue .header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #0077c8; /* más fuerte que #7691ad */
+  background-color: #f6f9fc;
+  border-radius: 4px;
+}
+
 .blue .label {
   color: var(--black);
   margin-bottom: 4px;
 }
+
 .blue .icon {
   color: var(--black);
 }
@@ -167,15 +172,42 @@
 .blue .elementsList {
   width: 100%;
   position: absolute;
-  border: 2px solid #7691ad;
-  background-color: #f6f9fc;
-  padding: 8px;
+  border: 1px solid #0077c8;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 999;
 }
+
 .blue .placeholder {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  color: #333;
 }
+.errorIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.blue .hover {
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.blue .hover:hover {
+  background-color: #0077c8;
+  color: white !important;
+}
+
+.blue .hover:hover .optionText {
+  color: white;
+}
+
 
 /* black */
 .black {

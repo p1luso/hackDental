@@ -104,7 +104,7 @@
   padding: 12px;
   color: var(--black);
   background-color: #f6f9fc;
-  font-size: 0.875rem;
+  font-size: 16px;
   font-family: 'lexend';
 }
 .blueLight .label {

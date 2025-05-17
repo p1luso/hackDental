@@ -41,7 +41,7 @@ const DownloadEBook = () => {
               {ebook.title}
             </Text>
             <div className={styles.desc}>
-              <Text color="black" bold="font-light" size="sm">
+              <Text color="black" bold="font-light" fontSize="17px" fontSizeMobile="16px">
                 {ebook.desc}
               </Text>
             </div>
@@ -64,44 +64,44 @@ const DownloadEBook = () => {
       {ebook.title === "WhatsApp para Consultorios en 5 minutos" && (
         <section className={styles.moreInfo}>
           <div className={styles.info}>
-              <div className={styles.titles}>
-                <Text
-                  textAlign="center"
-                  color="black"
-                  textAlignMobile="center"
-                  fontFamily="lexend"
-                  fontSize="28px"
-                  fontSizeMobile="21px"
-                  s={{
-                    lineHeight: "1",
-                    fontWeight: "500",
-                    marginBottom: "10px",
-                  }}
-                >
-                  El <strong style={{ fontWeight: "600" }}>problema</strong> que
-                  este Ebook{" "}
-                  <strong style={{ fontWeight: "600" }}>Resuelve:</strong>
-                </Text>
-                <Text
-                  bold="font-light"
-                  color="white-secondary"
-                  fontSize="17px"
-                  fontSizeMobile="16px"
-                  textAlign="center"
-                >
-                  "Los pacientes no van con el mejor dentista. Van con el que
-                  responde primero"
-                </Text>
-                <Text
-                  bold="font-light"
-                  color="white-secondary"
-                  fontSize="17px"
-                  fontSizeMobile="16px"
-                  textAlign="center"
-                >
-                  - Jose Whittembury (CEO de HackDental)
-                </Text>
-              </div>
+            <div className={styles.titles}>
+              <Text
+                textAlign="center"
+                color="black"
+                textAlignMobile="center"
+                fontFamily="lexend"
+                fontSize="28px"
+                fontSizeMobile="21px"
+                s={{
+                  lineHeight: "1",
+                  fontWeight: "500",
+                  marginBottom: "10px",
+                }}
+              >
+                El <strong style={{ fontWeight: "600" }}>problema</strong> que
+                este Ebook{" "}
+                <strong style={{ fontWeight: "600" }}>Resuelve:</strong>
+              </Text>
+              <Text
+                bold="font-light"
+                color="white-secondary"
+                fontSize="17px"
+                fontSizeMobile="16px"
+                textAlign="center"
+              >
+                <em>"Los pacientes no van con el mejor dentista. Van con el que
+                responde primeros"</em>
+             </Text>
+              <Text
+                bold="font-light"
+                color="white-secondary"
+                fontSize="17px"
+                fontSizeMobile="16px"
+                textAlign="center"
+              >
+                - Jose Whittembury (CEO de HackDental)
+              </Text>
+            </div>
             <div className={styles.info__desc}>
               <img src={EbookPortada} className={styles.imgPortada} />
               <div className={styles.lines}>
@@ -135,7 +135,8 @@ const DownloadEBook = () => {
                       bold="font-light"
                       color="white-secondary"
                       fontSize="17px"
-                      fontSizeMobile="16px"                    >
+                      fontSizeMobile="16px"
+                    >
                       Y aun así, tu agenda tiene huecos. Tu sala de espera no
                       está llena. Y cada mes, tu preocupación por los ingresos
                       crece.
@@ -152,7 +153,9 @@ const DownloadEBook = () => {
                 fontSizeMobile="16px"
                 textAlign="center"
               >
-                <strong style={{ fontWeight: "400" }}>El problema no es que no sepas de odontología.</strong>
+                <strong style={{ fontWeight: "400" }}>
+                  El problema no es que no sepas de odontología.
+                </strong>
               </Text>
               <Text
                 bold="font-light"
@@ -179,7 +182,127 @@ const DownloadEBook = () => {
           </div>
         </section>
       )}
-
+      {ebook.title !== "WhatsApp para Consultorios en 5 minutos" && (
+        <section className={styles.moreInfo}>
+          <div className={styles.info}>
+            <div className={styles.titles}>
+              <Text
+                textAlign="center"
+                color="black"
+                textAlignMobile="center"
+                fontFamily="lexend"
+                fontSize="28px"
+                fontSizeMobile="21px"
+                s={{
+                  lineHeight: "1",
+                  fontWeight: "500",
+                  marginBottom: "10px",
+                }}
+              >
+                El <strong style={{ fontWeight: "600" }}>problema</strong> que
+                este Ebook{" "}
+                <strong style={{ fontWeight: "600" }}>Resuelve:</strong>
+              </Text>
+              <Text
+                bold="font-light"
+                color="white-secondary"
+                fontSize="17px"
+                fontSizeMobile="16px"
+                textAlign="center"
+              >
+                "Los pacientes no van con el mejor dentista. Van con el que
+                responde primero"
+              </Text>
+              <Text
+                bold="font-light"
+                color="white-secondary"
+                fontSize="17px"
+                fontSizeMobile="16px"
+                textAlign="center"
+              >
+                - Jose Whittembury (CEO de HackDental)
+              </Text>
+            </div>
+            <div className={styles.info__desc}>
+              <img src={EbookPortada} className={styles.imgPortada} />
+              {/* <div className={styles.lines}>
+                <div className={styles.checksTexts}>
+                  <div className={styles.line}>
+                    <img src={checkIcon} alt="" />
+                    <Text
+                      bold="font-light"
+                      color="white-secondary"
+                      fontSize="17px"
+                      fontSizeMobile="16px"
+                    >
+                      Eres un dentista excepcional.
+                    </Text>
+                  </div>
+                  <div className={styles.line}>
+                    <img src={checkIcon} alt="" />
+                    <Text
+                      bold="font-light"
+                      color="white-secondary"
+                      fontSize="17px"
+                      fontSizeMobile="16px"
+                    >
+                      Tus manos son precisas. Tu técnica es impecable. Tus
+                      empastes duran décadas.
+                    </Text>
+                  </div>
+                  <div className={styles.line}>
+                    <img src={crossIcon} alt="" />
+                    <Text
+                      bold="font-light"
+                      color="white-secondary"
+                      fontSize="17px"
+                      fontSizeMobile="16px"
+                    >
+                      Y aun así, tu agenda tiene huecos. Tu sala de espera no
+                      está llena. Y cada mes, tu preocupación por los ingresos
+                      crece.
+                    </Text>
+                  </div>
+                </div>
+              </div> */}
+            </div>
+            {/* <div className={styles.downTexts}>
+              <Text
+                bold="font-light"
+                color="white-secondary"
+                fontSize="17px"
+                fontSizeMobile="16px"
+                textAlign="center"
+              >
+                <strong style={{ fontWeight: "400" }}>
+                  El problema no es que no sepas de odontología.
+                </strong>
+              </Text>
+              <Text
+                bold="font-light"
+                color="white-secondary"
+                fontSize="17px"
+                fontSizeMobile="16px"
+                textAlign="center"
+              >
+                <strong style={{ fontWeight: "400" }}>
+                  El problema es que nadie te ha enseñado a usar tu WhatsApp
+                  para captar pacientes.
+                </strong>{" "}
+              </Text>
+              </div> */}
+              <div className={styles.freeGuide}>
+                <IconTextButton
+                  colorVariant="white-green"
+                  size="100%"
+                  onClick={() => setModalOpened(true)}
+                >
+                  Obten tu Guía de WhatsApp Gratis
+                </IconTextButton>
+              </div>
+          </div>
+        </section>
+      )}
       <Footer />
       <Modal isOpen={modalOpened} onClose={() => setModalOpened(false)}>
         <DownloadForm modalOpened={modalOpened} pdfPath={ebook.pdfPath} />

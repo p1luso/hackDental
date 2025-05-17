@@ -162,20 +162,29 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               </Text>
             </div>
             <div className={styles.cards}>
-              <div className={styles.card}>
-                <div className={styles.cardImgContainer}>
-                  <img src={imgEbook7} className={styles.cardImg} />
+              <Link
+                to="/ebooks/7-secretos-marketing-dental"
+                className={styles.cardLink}
+              >
+                <div className={styles.card}>
+                  <div className={styles.cardImgContainer}>
+                    <img src={imgEbook7} className={styles.cardImg} />
+                  </div>
+                  <Text
+                    size="sm"
+                    bold="semibold"
+                    color="black-lighter"
+                    s={{ lineHeight: "1.35" }}
+                  >
+                    7 secretos del marketing dental
+                  </Text>
                 </div>
-                <Text
-                  size="sm"
-                  bold="semibold"
-                  color="black-lighter"
-                  s={{ lineHeight: "1.35" }}
-                >
-                  7 secretos del marketing dental
-                </Text>
-              </div>
+              </Link>
               <div className={styles.separator}></div>
+               <Link
+                to="/ebooks/wpp-para-consultorios"
+                className={styles.cardLink}
+              >
               <div className={styles.card}>
                 <div className={styles.cardImgContainer}>
                   <img src={imgWppEbook} className={styles.cardImg} />
@@ -190,7 +199,12 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   Whatsapp para Consultorios
                 </Text>
               </div>
+              </Link>
               <div className={styles.separator}></div>
+               <Link
+                to="/ebooks/7-secretos-marketing-dental"
+                className={styles.cardLink}
+              >
               <div className={styles.card}>
                 <div className={styles.cardImgContainer}>
                   <img src={imgIAEbook} className={styles.cardImg} />
@@ -205,6 +219,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   IA para Consultorios Dentales
                 </Text>
               </div>
+              </Link>
             </div>
             <div className={styles.developText}>
               <TextLink
@@ -325,9 +340,9 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               <div className={styles.contactBtn}>
                 <Icon size={"1rem"} type={"privacy"} />
                 <Link to={"/politicas"}>
-                <Text color="dark" bold="regular" size="sm">
-                  Política de Privacidad
-                </Text>
+                  <Text color="dark" bold="regular" size="sm">
+                    Política de Privacidad
+                  </Text>
                 </Link>
               </div>
             </div>
@@ -973,9 +988,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                   bold="regular"
                 >
                   {" "}
-                  <Link to={"/politicas"}>
-                    Política de Privacidad
-                  </Link>
+                  <Link to={"/politicas"}>Política de Privacidad</Link>
                 </Text>
               </div>
             </div>

@@ -298,28 +298,34 @@ const OurProgram = () => {
             <div className={styles.videoContainer}>
               <div className={styles.videoDrawer}>
                 <img src={leftArrow} alt="" className={styles.arrows} />
+
                 <div className={styles.reactPlayerContainer}>
-                  <ReactPlayer
-                    url={ourProgramVideo}
-                    playing={true}
-                    controls={true}
-                    light={imgVideo}
-                    playIcon={
+                  {isPlaying ? (
+                    <iframe
+                      src="https://player.vimeo.com/video/1085319519?autoplay=1&title=0&byline=0&portrait=0"
+                      width="100%"
+                      height="100%"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  ) : (
+                    <div
+                      className={styles.previewContainer}
+                      onClick={() => setIsPlaying(true)}
+                    >
+                      <img src={imgVideo} className={styles.previewImage} />
                       <button className={styles.videoPlayBtn}>
-                        <Icon
-                          size={"1.5rem"}
-                          color="var(--white)"
-                          type="play"
-                        />
+                        <Icon size="1.5rem" color="var(--white)" type="play" />
                       </button>
-                    }
-                    width="100%"
-                    height="100%"
-                  />
+                    </div>
+                  )}
                 </div>
+
                 <img src={rightArrow} alt="" className={styles.arrows} />
               </div>
             </div>
+
             <div className={styles.onlyMobile}>
               <Text
                 type="bigtitle"
