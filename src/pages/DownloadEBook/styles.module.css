@@ -33,8 +33,9 @@
   gap: calc(100vh / 50);
   padding-top: 100px;
   padding-bottom: 120px;
-  padding-left: calc(100vw / 5);
-  padding-right: calc(100vw / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--primary-transparent);
   flex-shrink: 0;
 }
@@ -77,22 +78,20 @@
   width: 120px;
 }
 .moreInfo {
-  padding-top: 100px;
+  padding-top: 48px;
   flex-direction: column;
   display: flex;
   justify-content: center;
   gap: 16px;
   align-items: center;
-  padding-bottom: 120px;
-  padding-left: calc(100vw / 5);
-  padding-right: calc(100vw / 7);
+  padding-bottom: 48px;
   background-color: #eaf0f6;
   background-image: linear-gradient(
       to right,
-      rgb(196, 196, 196) 1px,
+      rgba(196, 196, 196, 0.651) 1px,
       transparent 1px
     ),
-    linear-gradient(to bottom, rgb(196, 196, 196) 1px, transparent 1px);
+    linear-gradient(to bottom, rgba(196, 196, 196, 0.651) 1px, transparent 1px);
   background-size: 140px 140px; /* Tamaño de los cuadrados, ajusta a gusto */
 }
 

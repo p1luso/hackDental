@@ -85,9 +85,9 @@ const DownloadEBook = () => {
                 </Text>
                 <Text
                   bold="font-light"
-                  color="black-lighter"
-                  fontSize="16px"
-                  fontSizeMobile="14px"
+                  color="white-secondary"
+                  fontSize="17px"
+                  fontSizeMobile="16px"
                   textAlign="center"
                 >
                   "Los pacientes no van con el mejor dentista. Van con el que
@@ -95,9 +95,9 @@ const DownloadEBook = () => {
                 </Text>
                 <Text
                   bold="font-light"
-                  color="black-lighter"
-                  fontSize="16px"
-                  fontSizeMobile="14px"
+                  color="white-secondary"
+                  fontSize="17px"
+                  fontSizeMobile="16px"
                   textAlign="center"
                 >
                   - Jose Whittembury (CEO de HackDental)
@@ -110,9 +110,9 @@ const DownloadEBook = () => {
                     <img src={checkIcon} alt="" />
                     <Text
                       bold="font-light"
-                      color="black-lighter"
-                      fontSize="16px"
-                      fontSizeMobile="14px"
+                      color="white-secondary"
+                      fontSize="17px"
+                      fontSizeMobile="16px"
                     >
                       Eres un dentista excepcional.
                     </Text>
@@ -121,9 +121,9 @@ const DownloadEBook = () => {
                     <img src={checkIcon} alt="" />
                     <Text
                       bold="font-light"
-                      color="black-lighter"
-                      fontSize="16px"
-                      fontSizeMobile="14px"
+                      color="white-secondary"
+                      fontSize="17px"
+                      fontSizeMobile="16px"
                     >
                       Tus manos son precisas. Tu técnica es impecable. Tus
                       empastes duran décadas.
@@ -133,10 +133,9 @@ const DownloadEBook = () => {
                     <img src={crossIcon} alt="" />
                     <Text
                       bold="font-light"
-                      color="black-lighter"
-                      fontSize="16px"
-                      fontSizeMobile="14px"
-                    >
+                      color="white-secondary"
+                      fontSize="17px"
+                      fontSizeMobile="16px"                    >
                       Y aun así, tu agenda tiene huecos. Tu sala de espera no
                       está llena. Y cada mes, tu preocupación por los ingresos
                       crece.
@@ -148,18 +147,18 @@ const DownloadEBook = () => {
             <div className={styles.downTexts}>
               <Text
                 bold="font-light"
-                color="black-lighter"
-                fontSize="16px"
-                fontSizeMobile="14px"
+                color="white-secondary"
+                fontSize="17px"
+                fontSizeMobile="16px"
                 textAlign="center"
               >
                 <strong>El problema no es que no sepas de odontología.</strong>
               </Text>
               <Text
                 bold="font-light"
-                color="black-lighter"
-                fontSize="16px"
-                fontSizeMobile="14px"
+                color="white-secondary"
+                fontSize="17px"
+                fontSizeMobile="16px"
                 textAlign="center"
               >
                 <strong>
