@@ -82,7 +82,7 @@ const AcercaDe = () => {
               to={"https://wa.me/51914727355"}
             >
               Contactar a Jose →
-            </TextLink>{" "}
+            </TextLink>
           </div>
         </div>
       </div>
