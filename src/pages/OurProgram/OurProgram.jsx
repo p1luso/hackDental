@@ -236,22 +236,23 @@ const OurProgram = () => {
                   Vender tus Tratamientos
                 </span>
               </Text>
-              <Text
-                color="white-lighter"
-                bold="font-light"
-                textAlign="center"
-                fontSize="18px"
-                fontSizeMobile="16px"
-                s={{
-                  lineHeight: "0.95",
-                  fontFamily: "lexend",
-                }}
-              >
-                Obtén una auditoría de marketing dental completamente gratuita y
-                accede a nuestro método especializado para llevar tu clínica al
-                siguiente nivel.
-              </Text>
-
+              <div style={{width:"90%"}}>
+                <Text
+                  color="white-lighter"
+                  bold="font-light"
+                  textAlign="center"
+                  fontSize="17px"
+                  fontSizeMobile="16px"
+                  s={{
+                    lineHeight: "0.95",
+                    fontFamily: "lexend",
+                  }}
+                >
+                  Obtén una auditoría de marketing dental completamente gratuita
+                  y accede a nuestro método especializado para llevar tu clínica
+                  al siguiente nivel.
+                </Text>
+              </div>
               <div className={styles.numberTexts}>
                 <div
                   style={{ display: "flex", alignItems: "center", gap: "8px" }}
@@ -261,7 +262,7 @@ const OurProgram = () => {
                     color="white-lighter"
                     bold="font-light"
                     textAlign="center"
-                    fontSize="18px"
+                    fontSize="17px"
                     fontSizeMobile="16px"
                     s={{
                       lineHeight: "0.95",
@@ -279,7 +280,7 @@ const OurProgram = () => {
                     color="white-lighter"
                     bold="font-light"
                     textAlign="center"
-                    fontSize="18px"
+                    fontSize="17px"
                     fontSizeMobile="16px"
                     s={{
                       lineHeight: "0.95",
