@@ -154,7 +154,7 @@
   background-color: #123d3a;
   width: 100%;
   min-height: 100%;
-  padding-top: 80px;
+  padding-top: 60px;
 }
 
 .dentalOwner {
@@ -166,8 +166,8 @@
 }
 
 .betterTreatment {
-  font-size: 42px;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 700;
 }
 
 .videoContainer {

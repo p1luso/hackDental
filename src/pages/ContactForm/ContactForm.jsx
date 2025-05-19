@@ -18,6 +18,7 @@ import IrregularFigure from "@assets/Figura_irregular.svg";
 import { Mail, Phone } from "lucide-react";
 import Footer from "../../components/organisms/Footer/Footer";
 import Select from "../../components/atoms/Select/Select";
+import { line } from "framer-motion/client";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -29,34 +30,48 @@ const ContactForm = () => {
   });
 
   const countryList = [
-  "España", "Argentina", "Bolivia", "Chile", "Colombia", "Costa Rica",
-  "Cuba", "Ecuador", "El Salvador", "Guatemala", "Honduras",
-  "México", "Nicaragua", "Panamá", "Paraguay", "Perú", "República Dominicana",
-  "Uruguay", "Venezuela"
-];
-
+    "España",
+    "Argentina",
+    "Bolivia",
+    "Chile",
+    "Colombia",
+    "Costa Rica",
+    "Cuba",
+    "Ecuador",
+    "El Salvador",
+    "Guatemala",
+    "Honduras",
+    "México",
+    "Nicaragua",
+    "Panamá",
+    "Paraguay",
+    "Perú",
+    "República Dominicana",
+    "Uruguay",
+    "Venezuela",
+  ];
 
   const handleChange = (id, value) => {
     localStorage.setItem(id, value);
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
- const handleSendFormData = async () => {
-  try {
-    await sendContactForm(formData);
-    // Pixel Facebook
-    if (window.fbq) {
-      window.fbq("trackCustom", "FormularioEnviado", {
-        content_name: "Formulario de Audiencia enviado",
-        content_category: "Formulario de Audiencia",
-      });
+  const handleSendFormData = async () => {
+    try {
+      await sendContactForm(formData);
+      // Pixel Facebook
+      if (window.fbq) {
+        window.fbq("trackCustom", "FormularioEnviado", {
+          content_name: "Formulario de Audiencia enviado",
+          content_category: "Formulario de Audiencia",
+        });
+      }
+      alert("Datos enviados!");
+    } catch (error) {
+      alert("Hubo un error al enviar los datos, por favor intente nuevamente");
+      console.log(error);
     }
-    alert("Datos enviados!");
-  } catch (error) {
-    alert("Hubo un error al enviar los datos, por favor intente nuevamente");
-    console.log(error);
-  }
-};
+  };
 
   return (
     <div className={styles.container}>
@@ -105,7 +120,7 @@ const ContactForm = () => {
               fontSizeMobile="21px"
               textAlignMobile="start"
               color="white"
-              s={{ fontWeight: 400 }}
+              s={{ fontWeight: 400, lineHeight: "1" }}
             >
               Dueño de consultorio
             </Text>
@@ -115,6 +130,7 @@ const ContactForm = () => {
               fontSizeMobile="23px"
               textAlignMobile="start"
               color="white"
+              s={{ lineHeight: "1" }}
               bold="bold"
             >
               Pide una auditoría gratis

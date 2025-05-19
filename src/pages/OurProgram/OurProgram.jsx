@@ -222,12 +222,12 @@ const OurProgram = () => {
                 color="white"
                 bold="semibold"
                 textAlign="center"
-                fontSize="30px"
+                fontSize="26px"
                 fontSizeMobile="21px"
                 s={{
                   lineHeight: "0.95",
                   fontFamily: "lexend",
-                  fontWeight: "500",
+                  fontWeight: "400",
                   letterSpacing: "-0.5px",
                 }}
               >
