@@ -16,6 +16,7 @@ import { CONTACT_FORM, LANDING_PAGE } from "../../constants/routes";
 import Footer from "../../components/organisms/Footer/Footer";
 import n1 from "@assets/n1.svg";
 import n2 from "@assets/n2.svg";
+import Logo from "@assets/Logo_Fondo_Oscuro.svg";
 
 const OurProgram = () => {
   const [showModalVideo, setShowModalVideo] = useState(false);
@@ -169,27 +170,8 @@ const OurProgram = () => {
   return (
     <div className={styles.page}>
       <nav className={styles.nav}>
-        <div
-          className={styles.logo}
-          onClick={() => navigate(LANDING_PAGE)}
-          role="button"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            padding: "0px",
-            margin: "0px",
-            cursor: "pointer",
-          }}
-        >
-          <Text
-            fontSize="24px"
-            fontSizeMobile="20px"
-            color="white-cream"
-            bold="semi-bold"
-            s={{ fontFamily: "Bree Serif" }}
-          >
-            HackDental
-          </Text>
+        <div className={styles.logo}>
+          <img src={Logo} />
         </div>
         <div className={styles.btns}>
           <IconTextButton

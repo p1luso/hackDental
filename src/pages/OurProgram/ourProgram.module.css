@@ -9,12 +9,15 @@
   --mobile-margin: 32px;
 }
 
+.logo img {
+  width: 150px;
+}
+
 .nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #123d3a;
-  gap: 16px;
   padding: 15px var(--width-unit-menu);
 }
 
@@ -24,7 +27,7 @@
   align-items: center;
   width: fit-content;
   flex-direction: row;
-  width: 20%;
+  width: 30%;
   gap: 16px;
 }
 
