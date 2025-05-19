@@ -1,17 +1,12 @@
 import styles from "./styles.module.css";
 import Nav from "../../components/organisms/Nav/Nav";
-import imgEspaña from "@assets/imagen españa.svg";
+import imgEspaña from "@assets/sectorSalud.svg";
 import Text from "../../components/atoms/Text/Text";
 import Footer from "../../components/organisms/Footer/Footer";
-import PreefoterSimple from "../../components/organisms/PreefooterSimple/PreefooterSimple";
-import Icon from "../../components/atoms/Icon/Icon";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
-import CoberturaDental from "@assets/imagen_dentistLandind.svg";
-import DaysCounter from "../../components/organisms/DaysCounter/DaysCounter";
-import Link from "../../components/atoms/Link/Link";
 import { useNavigate } from "react-router-dom";
 import checkIcon from "@assets/check.svg";
-import crossIcon from "@assets/equis.svg";
+import TextLink from "../../components/molecules/TextLink/TextLink";
 
 const Cumplimiento = () => {
   const navigate = useNavigate();
@@ -41,7 +36,7 @@ const Cumplimiento = () => {
                   letterSpacing: "-0.5px",
                 }}
               >
-                Conoce nuestro método de
+                Somos expertos en el
               </Text>
               <Text
                 fontFamily="lexend"
@@ -52,7 +47,7 @@ const Cumplimiento = () => {
                 color="white"
                 s={{ lineHeight: "1", fontWeight: "600" }}
               >
-                Cumplimiento del RGPD
+                Sector Dental Español
               </Text>
             </div>
             <Text
@@ -69,17 +64,17 @@ const Cumplimiento = () => {
                 letterSpacing: "-0.5px",
               }}
             >
-              “Creamos estrategias de marketing solo para consultorios dentales
-              en España”.
+              <em>“Nuestras estrategias de marketing están enfocadas solo en el
+              sector de salud dental español”.</em>
             </Text>
             <div className={styles.contactBtn}>
-              <IconTextButton
-                colorVariant="white"
-                size="100%"
-                onClick={() => navigate("/contact")}
+              <TextLink
+                variant="blue-link"
+                textProps={{ color: "#0fbfbf", fontSize: "18px" }}
+                to={"/contact"}
               >
                 Pedir Auditoria Gratis
-              </IconTextButton>
+              </TextLink>
             </div>
           </div>
         </div>
@@ -101,7 +96,7 @@ const Cumplimiento = () => {
                   fontWeight: "400",
                 }}
               >
-                Importancia de tener un fundador que
+                Importancia de trabajar con una agencia
               </Text>
               <Text
                 fontFamily="lexend"
@@ -112,7 +107,7 @@ const Cumplimiento = () => {
                 color="black"
                 s={{ lineHeight: "1", fontWeight: "700" }}
               >
-                Trabaje directamente con tu consultorio.
+                100% especializada en el sector dental español
               </Text>
             </div>
             <div className={styles.info__desc}>
@@ -124,12 +119,12 @@ const Cumplimiento = () => {
                   fontSizeMobile="16px"
                   s={{ lineHeight: "1.75" }}
                 >
-                  Imagina que contratas a una agencia de marketing dental. Estás
-                  emocionado. ¡Por fin vas a hacer crecer tu clínica! Pero hay
-                  un problema... Tu cuenta se la dan a alguien con poca
-                  experiencia. El fundador, el que realmente sabe, está muy
-                  ocupado para atenderte. Así que la ayuda experta que
-                  esperabas, nunca llega. Menuda decepción, ¿no?
+                  Imagina que estás buscando una agencia de marketing para tu
+                  clínica dental. Quieres a alguien que entienda tu negocio, tus
+                  pacientes, tus retos. Pero la mayoría de las agencias son
+                  generalistas. Un día trabajan con un restaurante, al siguiente
+                  con una tienda online. ¿Cómo pueden entender realmente las
+                  peculiaridades de una clínica dental en España?
                 </Text>
                 <Text
                   bold="font-light"
@@ -138,10 +133,10 @@ const Cumplimiento = () => {
                   fontSizeMobile="16px"
                   s={{ lineHeight: "1.75" }}
                 >
-                  Pero, ¿y si hubiera otra forma de hacer las cosas? Una donde
-                  el fundador, en vez de ser alguien lejano, fuera tu aliado
-                  número uno. Alguien que está contigo en todo momento, para
-                  hacer crecer tu clínica.
+                  Ahora imagina una agencia diferente. Una que vive y respira el
+                  sector dental español. Que conoce las regulaciones, las
+                  mejores prácticas, los desafíos únicos que enfrentas. Una
+                  agencia así sería un verdadero aliado, ¿no crees?
                 </Text>
                 <Text
                   bold="font-light"
@@ -150,8 +145,8 @@ const Cumplimiento = () => {
                   fontSizeMobile="16px"
                   s={{ lineHeight: "1.75" }}
                 >
-                  Pues tengo buenas noticias. Esa es exactamente la visión con
-                  la que creé HackDental:
+                  Pues esa agencia existe. Somos HackDental. Y esto es lo que
+                  nos hace diferentes:
                 </Text>
 
                 <div className={styles.checksTexts}>
@@ -164,8 +159,9 @@ const Cumplimiento = () => {
                       fontSizeMobile="16px"
                       s={{ lineHeight: "1.75" }}
                     >
-                      Reuniones de estrategia cada semana directamente conmigo,
-                      no con un empleado nuevo.
+                      Nos dedicamos exclusivamente al marketing para clínicas
+                      dentales en España. No nos distraemos con nada más. Somos
+                      100% dental.
                     </Text>
                   </div>
                   <div className={styles.line}>
@@ -177,8 +173,9 @@ const Cumplimiento = () => {
                       fontSizeMobile="16px"
                       s={{ lineHeight: "1.75" }}
                     >
-                      Acceso directo a mí por Whatsapp, los 7 días de la semana.
-                      ¿Tienes una duda? Pregunta. Estoy aquí para ayudarte.
+                      Conocemos al dedillo las regulaciones específicas para el
+                      sector dental en España, incluyendo el RGPD. Nos
+                      mantenemos siempre actualizados
                     </Text>
                   </div>
                   <div className={styles.line}>
@@ -190,8 +187,8 @@ const Cumplimiento = () => {
                       fontSizeMobile="16px"
                       s={{ lineHeight: "1.75" }}
                     >
-                      Un compromiso total con tu éxito, por eso solo trabajo con
-                      10 clínicas cada 6 meses. Calidad, no cantidad.
+                      Entendemos los retos únicos de las clínicas dentales en
+                      España, desde atraer nuevos pacientes hasta gestionar
                     </Text>
                   </div>
                 </div>
@@ -206,11 +203,22 @@ const Cumplimiento = () => {
                 textAlign="start"
                 s={{ lineHeight: "1.75" }}
               >
-                Mira, sé que dirigir una clínica dental es un reto constante. Mi
-                trabajo es hacerte la vida más fácil, no darte más dolores de
-                cabeza. Si quieres un aliado de verdad, alguien que realmente se
-                preocupa por ti y por tu clínica, no dudes en contactarme
-                directamente.
+                En HackDental, no somos una agencia de marketing más. Somos tu
+                partner estratégico en el crecimiento de tu clínica dental.
+                Entendemos tu negocio como nadie más porque es lo único que
+                hacemos.
+              </Text>
+              <Text
+                bold="font-light"
+                color="white-secondary"
+                fontSize="17px"
+                fontSizeMobile="16px"
+                textAlign="start"
+                s={{ lineHeight: "1.75" }}
+              >
+                Si quieres trabajar con una agencia que realmente entiende tu
+                clínica dental y sabe cómo hacerla crecer en el mercado español,
+                hablemos. Estamos aquí para ayudarte a triunfar.
               </Text>
               <div className={styles.freeGuide}>
                 <IconTextButton
