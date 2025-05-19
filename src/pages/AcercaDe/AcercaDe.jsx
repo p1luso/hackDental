@@ -114,7 +114,35 @@ const AcercaDe = () => {
                 color="black"
                 s={{ lineHeight: "1", fontWeight: "700" }}
               >
-                Trabaje directamente con tu consultorio.
+                Trabaje mano a mano con tu consultorio.
+              </Text>
+            </div>
+            <div className={styles.mobileTitles}>
+              <Text
+                fontFamily="lexend"
+                color="black"
+                fontSize="21px"
+                fontSizeMobile="18px"
+                textAlignMobile="center"
+                textAlign="center"
+                s={{
+                  lineHeight: "1",
+                  fontFamily: "lexend",
+                  fontWeight: "400",
+                }}
+              >
+                Importancia de un fundador que
+              </Text>
+              <Text
+                fontFamily="lexend"
+                fontSize="28px"
+                fontSizeMobile="22px"
+                textAlign="center"
+                textAlignMobile="center"
+                color="black"
+                s={{ lineHeight: "1", fontWeight: "700" }}
+              >
+                Trabaje mano a mano con tu consultorio.
               </Text>
             </div>
             <div className={styles.info__desc}>

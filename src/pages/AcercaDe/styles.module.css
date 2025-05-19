@@ -215,7 +215,20 @@
   margin-bottom: 10px;
 }
 
+.mobileTitles {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
+  .titles {
+    display: none;
+  }
+  .mobileTitles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   .moreInfo {
     padding: 0 0px;
   }
