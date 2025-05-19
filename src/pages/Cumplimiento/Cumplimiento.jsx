@@ -32,7 +32,7 @@ const Cumplimiento = () => {
                 s={{
                   lineHeight: "1",
                   fontFamily: "lexend",
-                  fontWeight: "500",
+                  fontWeight: "400",
                   letterSpacing: "-0.5px",
                 }}
               >
@@ -45,7 +45,7 @@ const Cumplimiento = () => {
                 textAlign="start"
                 textAlignMobile="center"
                 color="white"
-                s={{ lineHeight: "1", fontWeight: "600" }}
+                s={{ lineHeight: "1", fontWeight: "700" }}
               >
                 Sector Dental Español
               </Text>

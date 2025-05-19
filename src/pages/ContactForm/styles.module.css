@@ -83,7 +83,8 @@
 
 .header{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 0 var(--width-unit-menu);
   align-items: center;
   flex-direction: row;
 }

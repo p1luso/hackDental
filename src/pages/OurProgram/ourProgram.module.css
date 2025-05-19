@@ -15,7 +15,7 @@
   align-items: center;
   background-color: #123d3a;
   gap: 16px;
-  padding: 15px 0;
+  padding: 15px var(--width-unit-menu);
 }
 
 .btns {
