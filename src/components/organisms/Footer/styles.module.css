@@ -27,10 +27,10 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .footer {
-    height: 150px;
+.footer {
+    gap: 0;
+    height: 108px;
   }
-
   .linksMob {
     display: flex;
     flex-direction: column;

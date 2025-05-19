@@ -45,7 +45,7 @@ const Footer = () => {
             © 2025 HackDental LLC
           </Text>{" "}
             <Text
-              s={{ color: "#0fbfbf", textDecoration: "underline" }}
+              s={{ color: "#0fbfbf", textDecoration: "underline", fontWeight: "500" }}
               textAlign="center"
               textAlignMobile="center"
               fontSize="14px"
