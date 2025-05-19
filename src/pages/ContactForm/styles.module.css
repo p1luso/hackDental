@@ -10,6 +10,14 @@
   z-index: 1;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #123d3a;
+  padding: 15px var(--width-unit-menu);
+}
+
 .circles,
 .finger,
 .irregularFigure {
@@ -60,9 +68,6 @@
 .title img {
   width: 150px;
 }
-.title {
-  padding-bottom: 50px;
-}
 
 .contactsDesktop{
   display: flex;
@@ -81,13 +86,6 @@
   z-index: 10;
 }
 
-.header{
-  display: flex;
-  justify-content: space-between;
-  padding: 0 var(--width-unit-menu);
-  align-items: center;
-  flex-direction: row;
-}
 
 .bgTransparentContact {
   display: flex;
@@ -168,7 +166,7 @@
 .contact .formContainer {
   display: flex;
   flex-direction: column;
-  width: 35%;
+  width: 33%;
   z-index: 1;
 }
 .contact .form {

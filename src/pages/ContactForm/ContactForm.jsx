@@ -91,9 +91,6 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
-        <div className={styles.circles}>
-          <img src={Circles} alt="" />
-        </div>
         <div className={styles.finger}>
           <img src={Finger} alt="" />
         </div>
@@ -104,11 +101,11 @@ const ContactForm = () => {
           <div className={styles.desc}>
             <Text
               type="title"
-              fontSize="26px"
+              fontSize="24px"
               fontSizeMobile="21px"
               textAlignMobile="start"
               color="white"
-              s={{ fontWeight: 500 }}
+              s={{ fontWeight: 400 }}
             >
               Dueño de consultorio
             </Text>
@@ -118,7 +115,7 @@ const ContactForm = () => {
               fontSizeMobile="23px"
               textAlignMobile="start"
               color="white"
-              bold="semi-bold"
+              bold="bold"
             >
               Pide una auditoría gratis
             </Text>
