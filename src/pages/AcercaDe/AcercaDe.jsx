@@ -9,196 +9,225 @@ import CoberturaDental from "@assets/imagen_dentistLandind.svg";
 import DaysCounter from "../../components/organisms/DaysCounter/DaysCounter";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/organisms/Footer/Footer";
+import TextLink from "../../components/molecules/TextLink/TextLink";
+import checkIcon from "@assets/check.svg";
+import crossIcon from "@assets/equis.svg";
 
 const AcercaDe = () => {
   const navigate = useNavigate();
   return (
     <div className={styles.page}>
-      <Nav hideBottomMenu={false} />
-      <div className={styles.bg}>
-        <div className={styles.banner}>
-          <img
-            src={imgAcercaDe}
-            alt="imagen españa"
-            className={styles.imgAcerca}
-          />
+      <Nav hideBottomMenu={false} hideTopMenu={true} />
+      <div className={styles.banner}>
+        <img
+          src={imgAcercaDe}
+          alt="imagen españa"
+          className={styles.imgAcerca}
+        />
 
-          <div className={styles.desc}>
-            <div className={styles.desc__texts}>
-              <Text
-                fontFamily="lexend"
-                color="white"
-                fontSize="26px"
-                fontSizeMobile="18px"
-                textAlignMobile="center"
-                textAlign="start"
-                s={{
-                  lineHeight: "1",
-                  fontFamily: "lexend",
-                  fontWeight: "500",
-                  letterSpacing: "-0.5px",
-                }}
-              >
-                Conoce a Jose Whittembury
-              </Text>
-              <Text
-                fontFamily="lexend"
-                fontSize="32px"
-                fontSizeMobile="22px"
-                textAlign="start"
-                textAlignMobile="center"
-                color="white"
-                s={{ lineHeight: "1", fontWeight: "600" }}
-              >
-                Fundador y CEO de HackDental
-              </Text>
-            </div>
+        <div className={styles.desc}>
+          <div className={styles.desc__texts}>
             <Text
-              fontFamily="font-secondary"
-              color="white-cream"
+              fontFamily="lexend"
+              color="white"
+              fontSize="26px"
+              fontSizeMobile="18px"
               textAlignMobile="center"
-              bold="font-light"
-              fontSize="16px"
               textAlign="start"
               s={{
-                lineHeight: "1.2",
+                lineHeight: "1",
                 fontFamily: "lexend",
-                fontWeight: "300",
+                fontWeight: "400",
                 letterSpacing: "-0.5px",
               }}
             >
+              Conoce a Jose Whittembury
+            </Text>
+            <Text
+              fontFamily="lexend"
+              fontSize="32px"
+              fontSizeMobile="22px"
+              textAlign="start"
+              textAlignMobile="center"
+              color="white"
+              s={{ lineHeight: "1", fontWeight: "700" }}
+            >
+              Fundador y CEO de HackDental
+            </Text>
+          </div>
+          <Text
+            fontFamily="font-secondary"
+            color="white-cream"
+            textAlignMobile="center"
+            bold="font-light"
+            fontSize="17px"
+            fontSizeMobile="16px"
+            textAlign="start"
+            s={{
+              lineHeight: "1.2",
+              fontFamily: "lexend",
+              fontWeight: "300",
+              letterSpacing: "-0.5px",
+            }}
+          >
+            <em>
               “Me dedico única y exclusivamente al marketing de servicios
               dentales en España.”
-            </Text>
-            <div className={styles.contactBtn}>
-              <IconTextButton
-                colorVariant="white"
-                onClick={() =>
-                  window.open("https://wa.me/51914727355", "_blank")
-                }
-              >
-                Contactar a José
-              </IconTextButton>
-            </div>
+            </em>
+          </Text>
+          <div className={styles.contactBtn}>
+            <TextLink
+              variant="blue-link"
+              textProps={{ color: "#0fbfbf", fontSize: "18px" }}
+              to={"https://wa.me/51914727355"}
+            >
+              Contactar a Jose →
+            </TextLink>{" "}
           </div>
         </div>
       </div>
       <main className={styles.main}>
-        <div className={styles.texts}>
-          <div className={styles.titleDeskt}>
-            <Text type="subtitle" color="black">
-              Trabajemos juntos
-            </Text>
-          </div>
-          <div className={styles.titleMob}>
-            <Text type="subtitle" color="black">
-              Áreas de expertise
-            </Text>
-          </div>
-          <Text bold="font-light" color="black-lighter">
-            Puedes ponerte en contacto con nosotros por correo electrónico a{" "}
-            <u>jaka@.design</u> y te responderemos en un plazo de 24 horas
-          </Text>
-          <div className={styles.spainLocation__items}>
-            <div className={styles.spainLocation__items__item}>
-              <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
-
-              <Text color="black-lighter" fontSize="17px" bold="font-light">
-                <strong>
-                  Reuniones semanals contigo y tu personal de consultorio
-                </strong>
-              </Text>
-            </div>
-            <div className={styles.spainLocation__items__item}>
-              <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
-
-              <Text color="black-lighter" fontSize="17px" bold="font-light">
-                
-                  Mi disponiblidad los 7 días de la semana para tus consultas.
-               
-              </Text>
-            </div>
-            <div className={styles.spainLocation__items__item}>
-              <Icon size={"1.3rem"} color="var(--primary)" type={"check"} />
-
-              <Text color="black-lighter" fontSize="17px" bold="font-light">
-                Que trabaje 6 meses en el crecimiento de tu consultorio.
-              </Text>
-            </div>
-          </div>
-        </div>
-      </main>
-      <section className={styles.dentalCover}>
-        <div className={styles.dentalContainer}>
-          <div className={styles.contentContainer_dental}>
-            <div className={styles.founderText}>
-              <div className={styles.titles}>
-                <Text
-                  type="bigtitle"
-                  textAlign="start"
-                  color="black"
-                  fontFamily="lexend"
-                  bold="font-light"
-                  fontSize="26px"
-                  fontSizeMobile="18px"
-                  s={{ fontWeight: "500", lineHeight: "1.1" }}
-                >
-                  Dueño de Consultorio Dental
-                </Text>
-                <Text
-                  type="bigtitle"
-                  fontFamily="lexend"
-                  textAlign="start"
-                  color="black"
-                  bold="semi-bold"
-                  fontSize="32px"
-                  fontSizeMobile="22px"
-                  s={{ lineHeight: "1.1", fontWeight: "600" }}
-                >
-                  ¿Te interesa una auditoría gratuita?
-                </Text>
-              </div>
+        <section className={styles.moreInfo}>
+          <div className={styles.info}>
+            <div className={styles.titles}>
               <Text
-                fontFamily="Lexend"
-                color="black-lighter"
-                fontSize="17px"
-                fontSizeMobile="16px"
-                bold="font-light"
+                fontFamily="lexend"
+                color="black"
+                fontSize="21px"
+                fontSizeMobile="18px"
+                textAlignMobile="center"
+                textAlign="center"
+                s={{
+                  lineHeight: "1",
+                  fontFamily: "lexend",
+                  fontWeight: "400",
+                }}
               >
-                Averigua si tu consultorio califica para nuestros servicios
+                Importancia de tener un fundador que
               </Text>
+              <Text
+                fontFamily="lexend"
+                fontSize="28px"
+                fontSizeMobile="22px"
+                textAlign="center"
+                textAlignMobile="center"
+                color="black"
+                s={{ lineHeight: "1", fontWeight: "700" }}
+              >
+                Trabaje directamente con tu consultorio.
+              </Text>
+            </div>
+            <div className={styles.info__desc}>
+              <div className={styles.lines}>
+                <Text
+                  bold="font-light"
+                  color="white-secondary"
+                  fontSize="17px"
+                  fontSizeMobile="16px"
+                  s={{ lineHeight: "1.75" }}
+                >
+                  Imagina que contratas a una agencia de marketing dental. Estás
+                  emocionado. ¡Por fin vas a hacer crecer tu clínica! Pero hay
+                  un problema... Tu cuenta se la dan a alguien con poca
+                  experiencia. El fundador, el que realmente sabe, está muy
+                  ocupado para atenderte. Así que la ayuda experta que
+                  esperabas, nunca llega. Menuda decepción, ¿no?
+                </Text>
+                <Text
+                  bold="font-light"
+                  color="white-secondary"
+                  fontSize="17px"
+                  fontSizeMobile="16px"
+                  s={{ lineHeight: "1.75" }}
+                >
+                  Pero, ¿y si hubiera otra forma de hacer las cosas? Una donde
+                  el fundador, en vez de ser alguien lejano, fuera tu aliado
+                  número uno. Alguien que está contigo en todo momento, para
+                  hacer crecer tu clínica.
+                </Text>
+                <Text
+                  bold="font-light"
+                  color="white-secondary"
+                  fontSize="17px"
+                  fontSizeMobile="16px"
+                  s={{ lineHeight: "1.75" }}
+                >
+                  Pues tengo buenas noticias. Esa es exactamente la visión con
+                  la que creé HackDental:
+                </Text>
 
-              <div className={styles.founderButton}>
-                <div className={styles.btn_founder}>
-                  <IconTextButton
-                    size="100%"
-                    colorVariant="white-green"
-                    onClick={() => navigate("/contact")}
-                  >
-                    Pedir auditoría
-                  </IconTextButton>
-                </div>{" "}
-                <div className={styles.daysCounter}>
-                  <DaysCounter targetDate="2025-06-01" />
+                <div className={styles.checksTexts}>
+                  <div className={styles.line}>
+                    <img src={checkIcon} alt="" />
+                    <Text
+                      bold="font-light"
+                      color="white-secondary"
+                      fontSize="17px"
+                      fontSizeMobile="16px"
+                      s={{ lineHeight: "1.75" }}
+                    >
+                      Reuniones de estrategia cada semana directamente conmigo,
+                      no con un empleado nuevo.
+                    </Text>
+                  </div>
+                  <div className={styles.line}>
+                    <img src={checkIcon} alt="" />
+                    <Text
+                      bold="font-light"
+                      color="white-secondary"
+                      fontSize="17px"
+                      fontSizeMobile="16px"
+                      s={{ lineHeight: "1.75" }}
+                    >
+                      Acceso directo a mí por Whatsapp, los 7 días de la semana.
+                      ¿Tienes una duda? Pregunta. Estoy aquí para ayudarte.
+                    </Text>
+                  </div>
+                  <div className={styles.line}>
+                    <img src={checkIcon} alt="" />
+                    <Text
+                      bold="font-light"
+                      color="white-secondary"
+                      fontSize="17px"
+                      fontSizeMobile="16px"
+                      s={{ lineHeight: "1.75" }}
+                    >
+                      Un compromiso total con tu éxito, por eso solo trabajo con
+                      10 clínicas cada 6 meses. Calidad, no cantidad.
+                    </Text>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className={styles.imageWrapper}>
-              <img src={CoberturaDental} alt="" />
-            </div>
-            <div className={styles.founderButtonMobile}>
-              <div className={styles.btn_founder}>
-                <IconTextButton size="100%" colorVariant="white-green">
-                  Pedir auditoría
+            <div className={styles.info__desc}>
+              <Text
+                bold="font-light"
+                color="white-secondary"
+                fontSize="17px"
+                fontSizeMobile="16px"
+                textAlign="start"
+                s={{ lineHeight: "1.75" }}
+              >
+                Mira, sé que dirigir una clínica dental es un reto constante. Mi
+                trabajo es hacerte la vida más fácil, no darte más dolores de
+                cabeza. Si quieres un aliado de verdad, alguien que realmente se
+                preocupa por ti y por tu clínica, no dudes en contactarme
+                directamente.
+              </Text>
+              <div className={styles.freeGuide}>
+                <IconTextButton
+                  colorVariant="white-green"
+                  size="100%"
+                  onClick={() => setModalOpened(true)}
+                >
+                  Pedir Auditoria Gratis
                 </IconTextButton>
-              </div>{" "}
-              <div className={styles.daysCounter}>
-                <DaysCounter targetDate="2025-06-01" />
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
+
       <Footer />
     </div>
   );

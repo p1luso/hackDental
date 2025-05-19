@@ -31,6 +31,7 @@ function App() {
     document.documentElement.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [location.pathname]);
   return (
+    <>
     <Routes>
       <Route path={LANDING_PAGE} element={<LandingPage />} />
       <Route path={LANDING_EBOOKS} element={<LandingEBooks />} />
@@ -44,6 +45,7 @@ function App() {
       <Route path={CONFIRM_DOWNLOAD} element={<ConfirmDownload/>} />
       <Route path={POLITICS} element={<Politics/>} />
     </Routes>
+    </>
   );
 }
 

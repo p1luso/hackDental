@@ -9,7 +9,11 @@ import IconButton from "../../components/molecules/IconButton/IconButton";
 import Footer from "../../components/organisms/Footer/Footer";
 import Icon from "../../components/atoms/Icon/Icon";
 import { useNavigate } from "react-router-dom";
-import { CONTACT_FORM, LANDING_EBOOKS, OUR_PROGRAM } from "../../constants/routes";
+import {
+  CONTACT_FORM,
+  LANDING_EBOOKS,
+  OUR_PROGRAM,
+} from "../../constants/routes";
 import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
 import imgEbook7 from "@assets/7SecretosEbook.svg";
 import imgIAEbook from "@assets/IAEbook.svg";
@@ -35,9 +39,21 @@ import CoberturaDental from "@assets/imagen_dentistLandind.svg";
 import TextLink from "../../components/molecules/TextLink/TextLink";
 import { color } from "framer-motion";
 const books = [
-  { img: imgEbook7, title: "7 Secretos del Marketing Dental" },
-  { img: imgWppEbook, title: "Whatsapp de Clinicas en 5 minutos" },
-  { img: imgIAEbook, title: "IA para Consultorios Dentales" },
+  {
+    img: imgEbook7,
+    title: "7 Secretos del Marketing Dental",
+    slug: "7-secretos-marketing-dental",
+  },
+  {
+    img: imgWppEbook,
+    title: "Whatsapp de Clinicas en 5 minutos",
+    slug: "wpp-para-consultorios",
+  },
+  {
+    img: imgIAEbook,
+    title: "IA para Consultorios Dentales",
+    slug: "ia-para-consultorios",
+  },
 ];
 
 const LandingPage = () => {
@@ -136,6 +152,14 @@ const LandingPage = () => {
                 colorVariant="white-green"
                 size="100%"
                 icon={"wp"}
+                onClick={() => {
+                  if (window.fbq) {
+                    window.fbq("trackCustom", "WhatsappButton", {
+                      content_name: title,
+                      content_category: "Button",
+                    });
+                  }
+                }}
               >
                 Whatsapp
               </IconTextButton>
@@ -198,7 +222,15 @@ const LandingPage = () => {
                   textProps={{ fontWeight: 400 }}
                   textFontWeight="400" // Nueva prop
                   size="100%"
-                  onClick={() => navigate(OUR_PROGRAM)}
+                  onClick={() => {
+                    navigate(OUR_PROGRAM);
+                    if (window.fbq) {
+                      window.fbq("trackCustom", "GoToContactForm", {
+                        content_name: title,
+                        content_category: "Button",
+                      });
+                    }
+                  }}
                   colorVariant="white"
                 >
                   Quiero saber más
@@ -337,7 +369,7 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-           <section className={styles.prefooter}>
+      <section className={styles.prefooter}>
         <Founder />
       </section>
       {/*  <section className={styles.contactBannerSection}>
@@ -562,9 +594,20 @@ const LandingPage = () => {
               </div>
               <div className={styles.spainLocation__btn}>
                 <a href={CONTACT_FORM}>
-                <IconTextButton colorVariant="white-green" size="100%">
-                  Solicita una reunión
-                </IconTextButton>
+                  <IconTextButton
+                    colorVariant="white-green"
+                    size="100%"
+                    onClick={() => {
+                      if (window.fbq) {
+                        window.fbq("trackCustom", "GoToContactForm", {
+                          content_name: title,
+                          content_category: "Button",
+                        });
+                      }
+                    }}
+                  >
+                    Solicita una reunión
+                  </IconTextButton>
                 </a>
               </div>
             </div>
@@ -593,7 +636,7 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-       <section className={styles.dentalCover}>
+      <section className={styles.dentalCover}>
         <div className={styles.dentalContainer}>
           <div className={styles.contentContainer_dental}>
             <div className={styles.founderText}>
@@ -635,7 +678,18 @@ const LandingPage = () => {
 
               <div className={styles.founderButton}>
                 <a href={CONTACT_FORM}>
-                  <IconTextButton size="260px" colorVariant="white-green">
+                  <IconTextButton
+                    size="260px"
+                    colorVariant="white-green"
+                    onClick={() => {
+                      if (window.fbq) {
+                        window.fbq("trackCustom", "GoToContactForm", {
+                          content_name: title,
+                          content_category: "Button",
+                        });
+                      }
+                    }}
+                  >
                     Pedir auditoría
                   </IconTextButton>{" "}
                 </a>
@@ -646,7 +700,18 @@ const LandingPage = () => {
             </div>
             <div className={styles.founderButtonMobile}>
               <a href={CONTACT_FORM}>
-                <IconTextButton size="100%" colorVariant="white-green">
+                <IconTextButton
+                  size="100%"
+                  colorVariant="white-green"
+                  onClick={() => {
+                    if (window.fbq) {
+                      window.fbq("trackCustom", "GoToContactForm", {
+                        content_name: title,
+                        content_category: "Button",
+                      });
+                    }
+                  }}
+                >
                   Pedir auditoría
                 </IconTextButton>{" "}
               </a>
@@ -761,6 +826,7 @@ const LandingPage = () => {
             >
               {currentBooks.map((book, i) => (
                 <EBookCard
+                  slug={book.slug}
                   bookType={false}
                   key={i}
                   {...book}
@@ -806,7 +872,18 @@ const LandingPage = () => {
           </div>
         </div>
         <div className={styles.founderButtonMob}>
-          <IconTextButton size="260px" colorVariant="primary-bordered">
+          <IconTextButton
+            size="260px"
+            colorVariant="primary-bordered"
+            onClick={() => {
+              if (window.fbq) {
+                window.fbq("trackCustom", "GoToEbooksLanding", {
+                  content_name: title,
+                  content_category: "Button",
+                });
+              }
+            }}
+          >
             Ver todos los ebooks
           </IconTextButton>{" "}
         </div>

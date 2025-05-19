@@ -127,7 +127,15 @@ const OurProgram = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    const handlePlay = () => setIsPlaying(true);
+    const handlePlay = () => {
+      setIsPlaying(true);
+      if (window.fbq) {
+        window.fbq("trackCustom", "VideoWatch", {
+          content_name: title,
+          content_category: "Button",
+        });
+      }
+    };
     const handlePause = () => setIsPlaying(false);
 
     video.addEventListener("play", handlePlay);
@@ -188,7 +196,15 @@ const OurProgram = () => {
             textProps={{ fontSize: "14px" }}
             colorVariant="primary-bordered3"
             icon={"wp"}
-            onClick={() => navigate("https://wa.me/51914727355")}
+            onClick={() => {
+              navigate("https://wa.me/51914727355");
+              if (window.fbq) {
+                window.fbq("trackCustom", "WhatsappButton", {
+                  content_name: title,
+                  content_category: "Button",
+                });
+              }
+            }}
           >
             Whatsapp
           </IconTextButton>
@@ -196,7 +212,15 @@ const OurProgram = () => {
             textProps={{ fontSize: "14px" }}
             colorVariant="white"
             size="50%"
-            onClick={() => navigate(CONTACT_FORM)}
+            onClick={() => {
+              navigate(CONTACT_FORM);
+              if (window.fbq) {
+                window.fbq("trackCustom", "GoToContactForm", {
+                  content_name: title,
+                  content_category: "Button",
+                });
+              }
+            }}
           >
             Pedir Auditoría
           </IconTextButton>
@@ -397,6 +421,14 @@ const OurProgram = () => {
                   textProps={{ fontWeight: 400 }}
                   textFontWeight="400" // Nueva prop
                   size="100%"
+                  onClick={() => {
+                    if (window.fbq) {
+                      window.fbq("trackCustom", "GoToContactForm", {
+                        content_name: title,
+                        content_category: "Button",
+                      });
+                    }
+                  }}
                 >
                   Pedir Auditoria Gratis
                 </IconTextButton>
@@ -539,14 +571,36 @@ const OurProgram = () => {
 
               <div className={styles.doubtButton}>
                 <a href={"https://wa.me/51914727355"}>
-                  <IconTextButton size="290px" colorVariant="white-green">
+                  <IconTextButton
+                    size="290px"
+                    colorVariant="white-green"
+                    onClick={() => {
+                      if (window.fbq) {
+                        window.fbq("trackCustom", "GoToContactForm", {
+                          content_name: title,
+                          content_category: "Button",
+                        });
+                      }
+                    }}
+                  >
                     Consulta al Whatsapp
                   </IconTextButton>{" "}
                 </a>
               </div>
               <div className={styles.doubtButtonMobile}>
                 <a href={"https://wa.me/51914727355"}>
-                  <IconTextButton size="100%" colorVariant="white-green">
+                  <IconTextButton
+                    size="100%"
+                    colorVariant="white-green"
+                    onClick={() => {
+                      if (window.fbq) {
+                        window.fbq("trackCustom", "WhatsappButton", {
+                          content_name: title,
+                          content_category: "Button",
+                        });
+                      }
+                    }}
+                  >
                     Consulta al Whatsapp
                   </IconTextButton>{" "}
                 </a>

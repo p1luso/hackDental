@@ -44,6 +44,24 @@ const DownloadForm = ({ modalOpened, pdfPath }) => {
     return <p style={{ padding: "2rem" }}>Ebook no encontrado.</p>;
   }
 
+  useEffect(() => {
+    if (
+      window.fbq &&
+      ebook.title &&
+      !window.__fbqSentForEbookTitle?.includes?.(ebook.title)
+    ) {
+      window.fbq("trackCustom", `${ebook.title} Page`, {
+        content_name: `${ebook.title} Page`,
+        content_category: "Ebook",
+      });
+
+      window.__fbqSentForEbookTitle = [
+        ...(window.__fbqSentForEbookTitle || []),
+        ebook.title,
+      ];
+    }
+  }, [ebook.title]);
+
   const handleNextForm = () => {
     setCambioSecction(true);
     setCurrentForm((prev) => prev + 1);
@@ -138,13 +156,17 @@ const DownloadForm = ({ modalOpened, pdfPath }) => {
               >
                 Ya tenemos tus datos. Podés volver a descargar tu ebook aquí.
               </Text>
-
               <Input
                 variant="blueLight"
                 id={"email"}
                 value={form.email}
-                label="Correo electrónico"
+                icon={alreadyDownloaded ? "check" : undefined}
+                onChange={handleChange}
+                onError={handleErrorsChange}
+                errorMsg={cambioSeccion === false ? "" : formErrors.email}
                 labelColor="black"
+                label="Correo electronico*"
+                validators={[isEmail, isEmail]}
               />
 
               <div className={styles.privacy}>
@@ -175,7 +197,17 @@ const DownloadForm = ({ modalOpened, pdfPath }) => {
 
           <footer className={styles.footer}>
             <div className={styles.alreadyDownloadBtn}>
-              <IconTextButton onClick={handleRedirectToConfirm}>
+              <IconTextButton
+                onClick={() => {
+                  handleRedirectToConfirm();
+                  if (window.fbq) {
+                    window.fbq("trackCustom", "GoToContactForm", {
+                      content_name: title,
+                      content_category: "Button",
+                    });
+                  }
+                }}
+              >
                 Descargar PDF
               </IconTextButton>
             </div>
@@ -383,7 +415,15 @@ const DownloadForm = ({ modalOpened, pdfPath }) => {
             >
               <IconTextButton
                 disabled={isAnFormError()}
-                onClick={handleRedirectToConfirm}
+                onClick={() => {
+                  handleRedirectToConfirm();
+                  if (window.fbq) {
+                    window.fbq("trackCustom", "GoToContactForm", {
+                      content_name: title,
+                      content_category: "Button",
+                    });
+                  }
+                }}
               >
                 Descargar pdf
               </IconTextButton>

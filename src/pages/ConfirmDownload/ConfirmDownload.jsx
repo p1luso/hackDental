@@ -19,13 +19,6 @@ const ConfirmDownload = () => {
 
   const handleDownload = () => {
     if (window.fbq) {
-      // Evento estándar
-      window.fbq("track", "Lead", {
-        content_name: title,
-        content_category: "Ebook",
-      });
-
-      // Evento personalizado
       window.fbq("trackCustom", "EbookDescargado", {
         content_name: title,
         content_category: "Ebook",

@@ -162,7 +162,18 @@ const LandingEBooks = () => {
           <div className={styles.contentContainer_dental}>
             <div className={styles.founderButtonMobile}>
               <a href={CONTACT_FORM}>
-                <IconTextButton size="100%" colorVariant="primary-darker">
+                <IconTextButton
+                  size="100%"
+                  colorVariant="primary-darker"
+                  onClick={() => {
+                    if (window.fbq) {
+                      window.fbq("trackCustom", "GoToContactForm", {
+                        content_name: title,
+                        content_category: "Button",
+                      });
+                    }
+                  }}
+                >
                   Pedir auditoría
                 </IconTextButton>{" "}
               </a>
@@ -210,7 +221,18 @@ const LandingEBooks = () => {
 
               <div className={styles.founderButton}>
                 <a href={CONTACT_FORM}>
-                  <IconTextButton size="260px" colorVariant="primary-darker">
+                  <IconTextButton
+                    size="260px"
+                    colorVariant="primary-darker"
+                    onClick={() => {
+                      if (window.fbq) {
+                        window.fbq("trackCustom", "GoToContactForm", {
+                          content_name: title,
+                          content_category: "Button",
+                        });
+                      }
+                    }}
+                  >
                     Pedir auditoría
                   </IconTextButton>{" "}
                 </a>

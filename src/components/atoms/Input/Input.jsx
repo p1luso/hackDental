@@ -44,34 +44,36 @@ const Input = ({
         errorMsg ? styles.error : ""
       }`}
     >
-      {icon && (
-        <div className={styles.icon}>
-          <Icon type={icon} size={"1.4rem"} />
-        </div>
-      )}
-
       {label && (
         <div className={styles.label}>
           <Text
             fontSize="14px"
-            s={{fontWeight: "500"}}
+            s={{ fontWeight: "500" }}
             color={errorMsg ? "error" : labelColor}
           >
             {label}
           </Text>
         </div>
       )}
-      <input
-        ref={input}
-        style={{ width: size }}
-        className={styles.input}
-        id={id}
-        onKeyDown={(e) => {
-          e.key === "Enter" && onEnterPressed();
-        }}
-        onChange={handleChange}
-        {...otherProps}
-      />
+
+      <div className={styles.inputWrapper}>
+        <input
+          ref={input}
+          style={{ width: size }}
+          className={styles.input}
+          id={id}
+          onKeyDown={(e) => {
+            e.key === "Enter" && onEnterPressed();
+          }}
+          onChange={handleChange}
+          {...otherProps}
+        />
+        {icon && (
+          <div className={styles.endIcon}>
+            <Icon type={icon} size={"1.2rem"} color="green" />
+          </div>
+        )}
+      </div>
     </div>
   );
 };
