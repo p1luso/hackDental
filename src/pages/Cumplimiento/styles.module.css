@@ -178,6 +178,117 @@
 
 
 
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.info {
+  display: flex;
+  justify-content: center;
+  background-color: #f6f9fc;
+  border: 1px solid #7691ad;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 0;
+  gap: 12px;
+}
+
+.lines {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.lines img {
+  width: 20px;
+  height: 20px;
+}
+
+.freeGuide {
+  margin-top: 40px;
+}
+
+.info__desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 65%;
+  gap: 18px;
+}
+
+.downTexts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.freeGuide {
+  width: 60%;
+  height: 70px;
+}
+
+.checksTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra la lista en el contenedor */
+  gap: 8px;
+  width: 100%; /* O el ancho que prefieras */
+}
+
+.line {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 70%; /* O el ancho que prefieras para centrar la lista */
+  margin: 0 auto; /* Centra la línea dentro del contenedor */
+}
+
+.line > :first-child {
+  position: relative;
+  top: 3px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: #eaf0f6;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      to right,
+      rgba(196, 196, 196, 0.651) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(196, 196, 196, 0.651) 1px, transparent 1px);
+  background-size: 140px 140px; /* Tamaño de los cuadrados, ajusta a gusto */
+}
+
+.line Text,
+.line .text {
+  text-align: start !important;
+}
+.info > :first-child {
+  margin-bottom: 8px;
+}
+.moreInfo {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--width-unit-menu);
+  gap: 16px;
+  align-items: center;
+}
+
+.titles {
+  margin-bottom: 10px;
+}
 
 .founderButtonMob {
   justify-self: left;
