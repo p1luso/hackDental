@@ -53,7 +53,6 @@
   width: 80%;
 }
 
-
 .texts {
   display: flex;
   flex-direction: column;
@@ -162,9 +161,9 @@
 .checksTexts {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra la lista en el contenedor */
+  align-items: center;
   gap: 8px;
-  width: 100%; /* O el ancho que prefieras */
+  width: 100%;
 }
 
 .line {
@@ -217,9 +216,20 @@
 }
 
 @media screen and (max-width: 1024px) {
-
   .moreInfo {
     padding: 0 0px;
+  }
+
+  .line{
+    width: 75%;
+  }
+
+  .freeGuide {
+    width: 100%;
+  }
+
+  .info__desc {
+    width: 75%;
   }
 
   .footer {
