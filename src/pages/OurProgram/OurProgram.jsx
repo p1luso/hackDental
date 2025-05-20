@@ -374,7 +374,7 @@ const OurProgram = () => {
                       fontFamily: "lexend",
                     }}
                   >
-                    Mira este video sobre nuestro método.
+                    Mira este video completo
                   </Text>
                 </div>
                 <div
