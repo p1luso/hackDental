@@ -269,7 +269,7 @@ const OurProgram = () => {
                       fontFamily: "lexend",
                     }}
                   >
-                    Mira este video y descubre nuestro método.
+                    Mira este video sobre nuestro metodo.
                   </Text>
                 </div>
                 <div
@@ -374,7 +374,7 @@ const OurProgram = () => {
                       fontFamily: "lexend",
                     }}
                   >
-                    Mira este video y descubre nuestro método.
+                    Mira este video sobre nuestro método.
                   </Text>
                 </div>
                 <div
