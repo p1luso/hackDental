@@ -193,12 +193,12 @@ const LandingPage = () => {
                 bold="bold"
                 fontFamily="lexend"
                 color="white"
-                fontSize="30px"
+                fontSize="24px"
                 fontSizeMobile="21px"
                 s={{
                   lineHeight: "0.95",
                   fontFamily: "lexend",
-                  fontWeight: "500",
+                  fontWeight: "400",
                   letterSpacing: "-0.2px",
                 }}
               >
@@ -267,9 +267,9 @@ const LandingPage = () => {
                   textAlignMobile="start"
                   fontFamily="lexend"
                   bold="font-light"
-                  fontSize="26px"
+                  fontSize="24px"
                   fontSizeMobile="18px"
-                  s={{ lineHeight: "1", fontWeight: "500" }}
+                  s={{ lineHeight: "1", fontWeight: "400" }}
                 >
                   Solo trabajamos con
                 </Text>
@@ -281,11 +281,11 @@ const LandingPage = () => {
                     textAlignMobile="start"
                     color="black"
                     bold="semi-bold"
-                    fontSize="32px"
+                    fontSize="30px"
                     fontSizeMobile="22px"
                     s={{
                       lineHeight: "1",
-                      fontWeight: "600",
+                      fontWeight: "700",
                       letterSpacing: "-0.12px",
                     }}
                   >
@@ -300,9 +300,9 @@ const LandingPage = () => {
                     textAlignMobile="start"
                     color="black"
                     bold="semi-bold"
-                    fontSize="32px"
+                    fontSize="30px"
                     fontSizeMobile="22px"
-                    s={{ lineHeight: "1", fontWeight: "600" }}
+                    s={{ lineHeight: "1", fontWeight: "700" }}
                   >
                     Consultorios en España.
                   </Text>
@@ -519,10 +519,9 @@ const LandingPage = () => {
           textAlign="center"
           color="black"
           fontFamily="lexend"
-          bold="font-light"
-          fontSize="26px"
+          fontSize="24px"
           fontSizeMobile="18px"
-          s={{ lineHeight: "1", fontWeight: "500" }}
+          s={{ lineHeight: "1", fontWeight: "400" }}
         >
           Ofreces servicios de calidad,{" "}
         </Text>
@@ -531,10 +530,9 @@ const LandingPage = () => {
           fontFamily="lexend"
           textAlign="center"
           color="black"
-          bold="semi-bold"
-          fontSize="32px"
+          fontSize="30px"
           fontSizeMobile="22px"
-          s={{ lineHeight: "1", fontWeight: "600" }}
+          s={{ lineHeight: "1", fontWeight: "700" }}
         >
           ¿Pero no consigues nuevos pacientes?{" "}
         </Text>
@@ -646,10 +644,9 @@ const LandingPage = () => {
                   textAlign="start"
                   color="black"
                   fontFamily="lexend"
-                  bold="font-light"
-                  fontSize="26px"
+                  fontSize="24px"
                   fontSizeMobile="18px"
-                  s={{ fontWeight: "500" }}
+                  s={{ fontWeight: "400", lineHeight: "1" }}
                 >
                   Dueño de Consultorio Dental
                 </Text>
@@ -658,10 +655,9 @@ const LandingPage = () => {
                   fontFamily="lexend"
                   textAlign="start"
                   color="black"
-                  bold="semi-bold"
-                  fontSize="32px"
+                  fontSize="30px"
                   fontSizeMobile="22px"
-                  s={{ lineHeight: "1", fontWeight: "600" }}
+                  s={{ lineHeight: "1", fontWeight: "700" }}
                 >
                   ¿Te interesa una auditoría gratuita?
                 </Text>
@@ -729,9 +725,9 @@ const LandingPage = () => {
               color="black"
               fontFamily="lexend"
               bold="font-light"
-              fontSize="26px"
+              fontSize="24px"
               fontSizeMobile="18px"
-              s={{ lineHeight: "1", fontWeight: "500" }}
+              s={{ lineHeight: "1", fontWeight: "400" }}
             >
               Aprende sin costo
             </Text>
@@ -742,9 +738,9 @@ const LandingPage = () => {
               textAlignMobile="center"
               color="black"
               bold="semi-bold"
-              fontSize="32px"
+              fontSize="30px"
               fontSizeMobile="22px"
-              s={{ lineHeight: "1", fontWeight: "600" }}
+              s={{ lineHeight: "1", fontWeight: "700" }}
             >
               Descargando nuestros ebooks
             </Text>
@@ -757,9 +753,9 @@ const LandingPage = () => {
               color="black"
               fontFamily="lexend"
               bold="font-light"
-              fontSize="26px"
+              fontSize="24px"
               fontSizeMobile="21px"
-              s={{ lineHeight: "1", fontWeight: "500" }}
+              s={{ lineHeight: "1", fontWeight: "400" }}
             >
               Aprende sin costo
             </Text>
@@ -770,9 +766,9 @@ const LandingPage = () => {
               textAlignMobile="center"
               color="black"
               bold="semi-bold"
-              fontSize="32px"
+              fontSize="30px"
               fontSizeMobile="24px"
-              s={{ lineHeight: "1", fontWeight: "600" }}
+              s={{ lineHeight: "1", fontWeight: "700" }}
             >
               Descargando nuestros ebooks
             </Text>
@@ -783,7 +779,6 @@ const LandingPage = () => {
               display: "flex",
               alignItems: "start", // Valor predeterminado
               justifyContent: "start",
-              marginBottom: "15px",
               "@media (max-width: 768px)": {
                 alignItems: "start", // Cambiar a "start" en dispositivos móviles
               },
@@ -897,7 +892,7 @@ const LandingPage = () => {
               color="white"
               fontFamily="lexend"
               bold="font-light"
-              fontSize="32px"
+              fontSize="30px"
               fontSizeMobile="21px"
               s={{ lineHeight: "1", fontWeight: "500" }}
             >

@@ -19,10 +19,9 @@ const Founder = () => {
                 textAlign="center"
                 color="light"
                 fontFamily="lexend"
-                bold="font-light"
                 fontSize="26px"
                 fontSizeMobile="18px"
-                s={{ lineHeight: "1", fontWeight: "500" }}
+                s={{ lineHeight: "1", fontWeight: "400" }}
               >
                 Conoce a Jose Whittembury
               </Text>
@@ -31,10 +30,10 @@ const Founder = () => {
                 fontFamily="lexend"
                 textAlign="center"
                 color="light"
-                bold="semi-bold"
+                bold="bold"
                 fontSize="32px"
                 fontSizeMobile="22px"
-                s={{ lineHeight: "1", fontWeight: "600" }}
+                s={{ lineHeight: "1", fontWeight: "700" }}
               >
                 Fundador y CEO de HackDental
               </Text>
@@ -70,10 +69,9 @@ const Founder = () => {
                   textAlign="start"
                   color="light"
                   fontFamily="lexend"
-                  bold="font-light"
                   fontSize="26px"
                   fontSizeMobile="21px"
-                  s={{ lineHeight: "1", fontWeight: "500" }}
+                  s={{ lineHeight: "1", fontWeight: "400" }}
                 >
                   Conoce a Jose Whittembury
                 </Text>
@@ -82,10 +80,10 @@ const Founder = () => {
                   fontFamily="lexend"
                   textAlign="start"
                   color="light"
-                  bold="semi-bold"
+                  bold="bold"
                   fontSize="32px"
                   fontSizeMobile="24px"
-                  s={{ lineHeight: "1", fontWeight: "600" }}
+                  s={{ lineHeight: "1", fontWeight: "700" }}
                 >
                   Fundador y CEO de HackDental
                 </Text>

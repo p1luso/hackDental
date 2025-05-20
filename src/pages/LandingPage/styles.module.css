@@ -70,17 +70,17 @@
   justify-content: center;
   align-items: center;
   background-color: #006a5a;
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 }
 
 .wsBtn.open {
   background-color: #004d43;
-  width: 3.5rem; 
-  height: 3.5rem; 
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
-.wsBtn i{
-  display: flex ;
+.wsBtn i {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -141,10 +141,9 @@
   border: 1px solid #7691ad;
   position: relative;
 }
-.notification a{
+.notification a {
   width: 100%;
 }
-
 
 .wsImg {
   position: absolute;
@@ -350,7 +349,6 @@ body:has(.popupContainer.show) {
   justify-content: "center";
   flex-direction: row;
   gap: "0.5rem";
-  margin-bottom: "15px";
 }
 
 .banner__content > :nth-child(1) {
@@ -443,6 +441,7 @@ body:has(.popupContainer.show) {
 
 .partners {
   padding-top: 36px;
+  padding-bottom: 26px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -492,9 +491,8 @@ body:has(.popupContainer.show) {
   gap: 25px;
 }
 
-.founderButton a{
+.founderButton a {
   justify-self: left;
-  margin-top: 10px;
 }
 
 #founderImgMobile {
@@ -702,7 +700,6 @@ body:has(.popupContainer.show) {
   padding-left: var(--width-unit);
   padding-right: var(--width-unit);
   display: flex;
-  gap: 10px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -712,7 +709,7 @@ body:has(.popupContainer.show) {
   z-index: 1;
 }
 
-.spainLocation__btn{
+.spainLocation__btn {
   width: 400px;
   height: 72px !important;
 }
@@ -1295,11 +1292,8 @@ body:has(.popupContainer.show) {
 
 .founderButtonEbooks {
   justify-self: left;
-  margin-top: 10px;
   font-size: 18px;
 }
-
-
 
 .founderButtonMob {
   justify-self: left;
@@ -1451,23 +1445,22 @@ body:has(.popupContainer.show) {
     flex-direction: column;
     justify-content: center;
     display: flex;
-    padding-top: 44px;
   }
   .arrowButtonDesk {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-.dentalCover {
-  background-color: rgba(216, 232, 230, 0.8);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding-top: 44px;
-  padding-bottom: 44px;
-}
+  .dentalCover {
+    background-color: rgba(216, 232, 230, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
   .whoAreWeContainer {
     display: flex;
     justify-content: center;
@@ -1495,7 +1488,7 @@ body:has(.popupContainer.show) {
   .founderButton {
     display: none;
   }
-  .founderButtonMobile a{
+  .founderButtonMobile a {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1589,12 +1582,12 @@ body:has(.popupContainer.show) {
     width: 60px;
   }
 
-  .badgeWpp{
+  .badgeWpp {
     top: -15px;
     left: 20px;
   }
 
-  .badgeImg{
+  .badgeImg {
     top: -150px;
     left: 10px;
   }
@@ -1663,7 +1656,7 @@ body:has(.popupContainer.show) {
     gap: 0;
   }
 
-  .spainLocation__btn a{
+  .spainLocation__btn a {
     margin-top: 0px;
     width: 400px;
     height: 60px;
@@ -1785,16 +1778,15 @@ body:has(.popupContainer.show) {
 
 @media screen and (max-width: 800px) {
   .crossLine {
-    font-size: 22px;
     display: none;
   }
   .marketingTitle {
-    font-size: 28px;
+    font-size: 32px;
     color: #25c19b;
   }
 
   .dentalWord {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .whoAreWe_upText {
