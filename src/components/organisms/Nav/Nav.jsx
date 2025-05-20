@@ -27,6 +27,7 @@ import IconTextButton from "../../molecules/IconTextButton/IconTextButton";
 import { ES } from "country-flag-icons/react/3x2";
 import { parseNumberToMonthName } from "../../../utils/parsing";
 import { useConfigStore } from "../../../stores/useConfig";
+import DaysCounter from "../DaysCounter/DaysCounter";
 
 const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -181,44 +182,44 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
                 </div>
               </Link>
               <div className={styles.separator}></div>
-               <Link
+              <Link
                 to="/ebooks/wpp-para-consultorios"
                 className={styles.cardLink}
               >
-              <div className={styles.card}>
-                <div className={styles.cardImgContainer}>
-                  <img src={imgWppEbook} className={styles.cardImg} />
-                </div>
+                <div className={styles.card}>
+                  <div className={styles.cardImgContainer}>
+                    <img src={imgWppEbook} className={styles.cardImg} />
+                  </div>
 
-                <Text
-                  size="sm"
-                  bold="semibold"
-                  color="black-lighter"
-                  s={{ lineHeight: "1.35" }}
-                >
-                  Whatsapp para Consultorios
-                </Text>
-              </div>
+                  <Text
+                    size="sm"
+                    bold="semibold"
+                    color="black-lighter"
+                    s={{ lineHeight: "1.35" }}
+                  >
+                    Whatsapp para Consultorios
+                  </Text>
+                </div>
               </Link>
               <div className={styles.separator}></div>
-               <Link
+              <Link
                 to="/ebooks/7-secretos-marketing-dental"
                 className={styles.cardLink}
               >
-              <div className={styles.card}>
-                <div className={styles.cardImgContainer}>
-                  <img src={imgIAEbook} className={styles.cardImg} />
-                </div>
+                <div className={styles.card}>
+                  <div className={styles.cardImgContainer}>
+                    <img src={imgIAEbook} className={styles.cardImg} />
+                  </div>
 
-                <Text
-                  size="sm"
-                  bold="semibold"
-                  color="black-lighter"
-                  s={{ lineHeight: "1.35" }}
-                >
-                  IA para Consultorios Dentales
-                </Text>
-              </div>
+                  <Text
+                    size="sm"
+                    bold="semibold"
+                    color="black-lighter"
+                    s={{ lineHeight: "1.35" }}
+                  >
+                    IA para Consultorios Dentales
+                  </Text>
+                </div>
               </Link>
             </div>
             <div className={styles.developText}>
@@ -359,31 +360,19 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               navigate(OUR_PROGRAM);
             }}
           >
-            <span
-              className={styles.whiteMark}
-              id={styles.whiteMark_aplicaAhora}
-            >
-              <Text s={{ fontSize: "11px" }} bold="semibold" color="black">
-                {location.pathname === "/program" ? "APLICA AHORA" : "NUEVO"}
+            <div className={styles.onlyDesktop}>
+              <div className={styles.daysCounterbox}>
+              <DaysCounter targetDate="2025-06-01" />
+              </div>
+              <Text size="sm" color="light" bold="font-lighter">
+                Estamos haciendo auditorías de marketing gratis hasta Julio →
               </Text>
-            </span>
-            {location.pathname === "/program" ? (
-              <Text size="sm" color="light">
-                Aceptamos 10 nuevas clínicas en España
+            </div>
+            <div className={styles.onlyMobile}>
+              <Text fontSize="12px" color="light"  bold="font-lighter">
+                Estamos haciendo auditorías de marketing gratis hasta Julio →
               </Text>
-            ) : (
-              <Text size="sm" color="light">
-                Aceptamos 10 nuevas clínicas en España:{" "}
-                {screen.availWidth < 1024 && <br />}
-                <span style={{ fontWeight: "lighter" }}>
-                  Descubre si calificas
-                </span>
-                &nbsp;→
-                {/* <span className={styles.country}>
-                <Icon color="white" size={"1rem"} type={"arrowFoward"} />
-              </span> */}
-              </Text>
-            )}
+            </div>
           </div>
         )}
         {hideBottomMenu || (
