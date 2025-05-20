@@ -236,7 +236,7 @@ const OurProgram = () => {
                   Vender tus Tratamientos
                 </span>
               </Text>
-              <div style={{width:"90%"}}>
+              <div style={{ width: "90%" }}>
                 <Text
                   color="white-lighter"
                   bold="font-light"
@@ -244,7 +244,7 @@ const OurProgram = () => {
                   fontSize="17px"
                   fontSizeMobile="16px"
                   s={{
-                    lineHeight: "0.95",
+                    lineHeight: "1.7",
                     fontFamily: "lexend",
                   }}
                 >
@@ -265,7 +265,7 @@ const OurProgram = () => {
                     fontSize="17px"
                     fontSizeMobile="16px"
                     s={{
-                      lineHeight: "0.95",
+                      lineHeight: "1.7",
                       fontFamily: "lexend",
                     }}
                   >
@@ -283,7 +283,7 @@ const OurProgram = () => {
                     fontSize="17px"
                     fontSizeMobile="16px"
                     s={{
-                      lineHeight: "0.95",
+                      lineHeight: "1.7",
                       fontFamily: "lexend",
                     }}
                   >
@@ -350,7 +350,7 @@ const OurProgram = () => {
                 fontSize="18px"
                 fontSizeMobile="16px"
                 s={{
-                  lineHeight: "0.95",
+                    lineHeight: "1.7",
                   fontFamily: "lexend",
                 }}
               >
@@ -370,7 +370,7 @@ const OurProgram = () => {
                     fontSize="18px"
                     fontSizeMobile="16px"
                     s={{
-                      lineHeight: "0.95",
+                    lineHeight: "1.7",
                       fontFamily: "lexend",
                     }}
                   >
@@ -388,7 +388,7 @@ const OurProgram = () => {
                     fontSize="18px"
                     fontSizeMobile="16px"
                     s={{
-                      lineHeight: "0.95",
+                    lineHeight: "1.7",
                       fontFamily: "lexend",
                     }}
                   >
@@ -555,7 +555,7 @@ const OurProgram = () => {
               <div className={styles.doubtButton}>
                 <a href={"https://wa.me/51914727355"}>
                   <IconTextButton
-                    size="290px"
+                    size="100%"
                     colorVariant="white-green"
                     onClick={() => {
                       if (window.fbq) {
