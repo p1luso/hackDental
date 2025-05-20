@@ -5,7 +5,7 @@ import Text from "../../components/atoms/Text/Text";
 import EBookCard from "../../components/organisms/EBookCard/EBookCard";
 import TextLink from "../../components/molecules/TextLink/TextLink";
 import Icon from "../../components/atoms/Icon/Icon";
-import imgEbook7 from "@assets/7SecretosEbook.svg";
+import imgEbook7 from "@assets/ebook7secrets.svg";
 import imgIAEbook from "@assets/IAEbook.svg";
 import imgWppEbook from "@assets/WhatsappEbook.svg";
 import imgEbookProximamente from "@assets/ImagenProximamente.svg";
@@ -32,9 +32,9 @@ const LandingEBooks = () => {
               textAlignMobile="center"
               fontFamily="lexend"
               bold="font-light"
-              fontSize="28px"
+              fontSize="24px"
               fontSizeMobile="18px"
-              s={{ fontWeight: "500", lineHeight: 1 }}
+              s={{ fontWeight: "400", lineHeight: 1 }}
             >
               Educación para dueños de consultorios
             </Text>
@@ -46,10 +46,9 @@ const LandingEBooks = () => {
               color="white"
               textAlignMobile="center"
               fontFamily="lexend"
-              bold="font-light"
-              fontSize="28px"
+              fontSize="24px"
               fontSizeMobile="18px"
-              s={{ fontWeight: "500", lineHeight: 1 }}
+              s={{ fontWeight: "400", lineHeight: 1 }}
             >
               Educación para dentistas
             </Text>
@@ -61,7 +60,7 @@ const LandingEBooks = () => {
             textAlignMobile="center"
             color="white"
             bold="bold"
-            fontSize="42px"
+            fontSize="40px"
             fontSizeMobile="24px"
             s={{ fontWeight: "700", lineHeight: 1 }}
           >
@@ -79,84 +78,89 @@ const LandingEBooks = () => {
           </Text>
         </section>
       </header>
-      <main className={styles.main}>
-        <div className={styles.mainEBook}>
-          <div
-            className={styles.mainEbookCard}
-            onClick={() => navigate("/ebooks/7-secretos-marketing-dental")}
-          >
-            <div className={styles.tag}>
-              <Text size="ty" color="light">
-                Empieza Aqui
-              </Text>
-            </div>
-            <img className={styles.ebookImg} src={imgEbook7} />
-            <div className={styles.desc}>
-              <Text type="smallsubtitle" color="black">
-                7 secretos del marketing dental
-              </Text>
-              <Text bold="font-light" size="ty">
-                Transforma tu clínica dental con nuestros ebooks, redactados por
-                líderes en marketing digital.
-              </Text>
-              <TextLink
-                marked
-                variant="blue-secondary"
-                to={`/ebooks/7-secretos-marketing-dental`}
-                textProps={{
-                  size: "sm",
-                  color: "#005fa3",
-                }}
-              >
-                Descargar la Guia{" "}
-                <span style={{ position: "relative", top: "2px" }}>
-                  <Icon type={"arrowSquare"} size={"1rem"} />
-                </span>
-              </TextLink>
-            </div>
-          </div>
-          <div className={styles.books}>
-            <EBookCard
-              bookType={false}
-              slug="ia-para-consultorios"
-              img={imgIAEbook}
-              textLinkColor="green-black"
-              textColor="green-black"
-              title={"IA para Consultorios Dentales"}
-              desc={"Transforma tu clínica dental con nuestros ebooks."}
-            />
-            <EBookCard
-              bookType={false}
-              textLinkColor="green-black"
-              slug="wpp-para-consultorios"
-              textColor="green-black"
-              img={imgWppEbook}
-              title={"Whatsapp para Consultorios"}
-              desc={
-                "Aprende a configurar el WhatsApp de tu consultorio de forma efectiva"
-              }
-            />
-            <div className={styles.nextEbook}>
+      <div className={styles.bgMain}>
+        <main className={styles.main}>
+          <div className={styles.mainEBook}>
+            <div
+              className={styles.mainEbookCard}
+              onClick={() => navigate("/ebooks/7-secretos-marketing-dental")}
+            >
               <div className={styles.tag}>
                 <Text size="ty" color="light">
-                  Próximamente
+                  Empieza Aqui
                 </Text>
               </div>
+              <img className={styles.ebookImg} src={imgEbook7} />
+              <div className={styles.desc}>
+                <Text type="smallsubtitle" color="black">
+                  7 secretos del marketing dental
+                </Text>
+                <Text bold="font-light" size="ty">
+                  Transforma tu clínica dental con nuestros ebooks, redactados
+                  por líderes en marketing digital.
+                </Text>
+                <TextLink
+                  marked
+                  variant="blue-secondary"
+                  to={`/ebooks/7-secretos-marketing-dental`}
+                  textProps={{
+                    size: "sm",
+                    color: "#005fa3",
+                  }}
+                >
+                  Descargar la Guia{" "}
+                  <span style={{ position: "relative", top: "2px" }}>
+                    <Icon type={"arrowSquare"} size={"1rem"} />
+                  </span>
+                </TextLink>
+              </div>
+            </div>
+            <div className={styles.books}>
               <EBookCard
                 bookType={false}
-                slug="proximamente"
-                img={imgEbookProximamente}
+                border="1px solid #7691ad"
+                slug="ia-para-consultorios"
+                img={imgIAEbook}
                 textLinkColor="green-black"
                 textColor="green-black"
-                title={"Próximamente"}
+                title={"IA para Consultorios Dentales"}
+                desc={"Transforma tu clínica dental con nuestros ebooks."}
+              />
+              <EBookCard
+                bookType={false}
+                textLinkColor="green-black"
+                border="1px solid #7691ad"
+                slug="wpp-para-consultorios"
+                textColor="green-black"
+                img={imgWppEbook}
+                title={"Whatsapp para Consultorios"}
                 desc={
-                  "Transforma tu clínica dental con nuestros ebooks, redactados."
+                  "Aprende a configurar el WhatsApp de tu consultorio de forma efectiva"
                 }
               />
+              <div className={styles.nextEbook}>
+                <div className={styles.tag}>
+                  <Text size="ty" color="light">
+                    Próximamente
+                  </Text>
+                </div>
+                <EBookCard
+                  bookType={false}
+                  slug="proximamente"
+                  img={imgEbookProximamente}
+                  border="1px solid #7691ad"
+                  textLinkColor="green-black"
+                  textColor="green-black"
+                  title={"Próximamente"}
+                  desc={
+                    "Transforma tu clínica dental con nuestros ebooks, redactados."
+                  }
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
       <section className={styles.dentalCover}>
         <div className={styles.dentalContainer}>
           <div className={styles.contentContainer_dental}>

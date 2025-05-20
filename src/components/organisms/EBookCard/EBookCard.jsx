@@ -15,11 +15,12 @@ const EBookCard = ({
   subtitleColor = "black",
   textColor = "black",
   textLinkColor = "blackSecondary",
+  border = false, 
 }) => {
   return (
     <Link to={`/ebooks/${slug}`} target="_blank">
       {" "}
-      <div className={styles.ebook}>
+      <div className={styles.ebook} style={{ border: border ? border : "none" }}>
         <img className={styles.img} src={img} alt={title} />
 
         <div className={styles.descBook}>

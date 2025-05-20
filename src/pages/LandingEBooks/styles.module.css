@@ -6,7 +6,6 @@
 .header {
   display: flex;
   flex-direction: column;
-  
 }
 .banner {
   position: relative;
@@ -15,10 +14,9 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  padding-top: 76px;
+  padding-top: 96px;
   padding-bottom: calc(var(--linea-roja) * 1.3);
   background-color: #123d3a;
-;
 }
 .banner > :nth-child(1) {
   margin-top: 8px;
@@ -41,8 +39,19 @@
   height: 40px;
   width: 100%;
   background-color: var(--light-green);
-  
 }
+
+.bgMain {
+  background-color: #eaf0f6;
+  background-image: linear-gradient(
+      to right,
+      rgba(196, 196, 196, 0.397) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(196, 196, 196, 0.397) 1px, transparent 1px);
+  background-size: 140px 140px; /* Tamaño de los cuadrados, ajusta a gusto */
+}
+
 .main {
   padding: 1px;
   display: flex;
@@ -51,7 +60,7 @@
   align-items: center;
   gap: 16px;
   position: relative;
-  top: -100px;
+  top: -108px;
 }
 
 .mainEBook {
@@ -71,6 +80,7 @@
   width: 100%;
   cursor: pointer;
   gap: 24px;
+  border: 1px solid #7691ad;
   transition: all 0.3s ease-in-out;
   box-shadow: 0px 0px 8px var(--gray-light);
 }
@@ -78,7 +88,6 @@
   box-shadow: 0px 0px 20px var(--gray-light);
   transform: scale(1.05);
   cursor: pointer;
-
 }
 
 .tag {
@@ -90,8 +99,7 @@
   border-radius: 12px 8px 8px 12px;
 }
 
-.nextEbook
-{
+.nextEbook {
   position: relative;
   display: flex;
   cursor: pointer;
@@ -127,7 +135,7 @@
   padding-bottom: 80px;
 }
 
-.founderButtonMobile{
+.founderButtonMobile {
   display: none;
 }
 
@@ -140,7 +148,6 @@
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  
 }
 
 .contentContainer_dental {
@@ -152,7 +159,7 @@
   line-height: 0;
   gap: 32px;
 }
-.mobileTitles{
+.mobileTitles {
   display: none;
 }
 
@@ -170,8 +177,7 @@
   margin-top: 10px;
 }
 
-
-.imageWrapper img{ 
+.imageWrapper img {
   width: 210px;
 }
 
@@ -209,6 +215,11 @@
   color: var(--white);
 }
 
+@media screen and (max-width: 1280px) {
+  .main {
+    margin-top: 50px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .header {
     height: auto;
@@ -216,6 +227,7 @@
   .footer {
     height: 100px;
   }
+
   .banner {
     padding-top: 44px;
     padding-left: 28px;
@@ -246,7 +258,7 @@
     justify-content: center;
     align-items: center;
   }
- 
+
   .desc {
     gap: 0;
   }
@@ -271,11 +283,11 @@
   .tag {
     right: -2%;
   }
-  
+
   .mainEBook {
     padding: 28px;
   }
-  
+
   .educationText {
     display: none;
   }
@@ -283,30 +295,28 @@
     top: 0;
     padding: 44px 0;
   }
-  .contentContainer_dental{
-
+  .contentContainer_dental {
     padding: 0 28px 0 28px;
   }
 }
 
 @media screen and (max-width: 500px) {
-
-.contentContainer_dental{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column-reverse;
-  padding: 0 28px 0 28px;
-}
-.founderText{
+  .contentContainer_dental {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: 0 28px 0 28px;
+  }
+  .founderText {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .founderButton{
+  .founderButton {
     display: none;
   }
-  .founderButtonMobile{
+  .founderButtonMobile {
     width: 100%;
     display: flex;
     justify-content: center;
