@@ -5,7 +5,6 @@ import Icon from "../../components/atoms/Icon/Icon";
 import imgVideo from "@assets/videoOurProgram.svg";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
 import Mark from "../../components/atoms/Mark/Mark";
-import FlechaNuestroPrograma from "@assets/nuestro metodo.svg";
 import Medicos from "@assets/Medicos.svg";
 import Doubts from "../../components/molecules/Doubts/Doubts";
 import leftArrow from "@assets/leftArrow.svg";
@@ -210,11 +209,7 @@ const OurProgram = () => {
       </nav>
       <header className={styles.banner}>
         <div className={styles.bgTransparent}>
-          <img
-            src={FlechaNuestroPrograma}
-            className={`${styles.flecha} ${styles.nuestroPrograma}`}
-          />
-
+          
           <div className={styles.elements}>
             <div className={styles.onlyDesktop}>
               <Text

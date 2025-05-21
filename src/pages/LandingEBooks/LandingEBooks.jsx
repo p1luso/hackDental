@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./styles.module.css";
 import Nav from "../../components/organisms/Nav/Nav";
 import Text from "../../components/atoms/Text/Text";
@@ -12,8 +11,6 @@ import imgEbookProximamente from "@assets/ImagenProximamente.svg";
 import { useNavigate } from "react-router-dom";
 import CoberturaDental from "@assets/coberturaDental.svg";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
-import Link from "../../components/atoms/Link/Link";
-import { useLocation } from "react-router-dom";
 import Footer from "../../components/organisms/Footer/Footer";
 import { CONTACT_FORM } from "../../constants/routes";
 
@@ -146,7 +143,8 @@ const LandingEBooks = () => {
                 </div>
                 <EBookCard
                   bookType={false}
-                  slug="proximamente"
+                  hasHover={false}
+                  isLink={false}
                   img={imgEbookProximamente}
                   border="1px solid #7691ad"
                   textLinkColor="green-black"

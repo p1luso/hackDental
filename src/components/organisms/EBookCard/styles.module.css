@@ -51,6 +51,14 @@
   margin-bottom: 6px;
 }
 
+.noHover {
+  pointer-events: none;
+}
+.noHover:hover {
+  transform: none;
+  box-shadow: 0px 0px 8px var(--gray-light);
+}
+
 @media screen and (max-width: 1024px) {
   .ebook {
     width: 100%;

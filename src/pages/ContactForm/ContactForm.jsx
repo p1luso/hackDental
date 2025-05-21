@@ -1,24 +1,20 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./styles.module.css";
 import Text from "../../components/atoms/Text/Text";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
 import Logo from "@assets/Logo_Fondo_Oscuro.svg";
 import Input from "../../components/atoms/Input/Input";
-import Mark from "../../components/atoms/Mark/Mark";
 import { sendContactForm } from "../../services/api/sendContactForm";
 import EstudioMercado from "@assets/EstudioMercado.svg";
 import PlanMarketing from "@assets/PlanMarketing.svg";
 import LlamadaEstrategica from "@assets/LlamadaEstrategica.svg";
 
-import Circles from "@assets/3_circulos.svg";
 import Finger from "@assets/3_dedo.svg";
 import IconoWpp from "@assets/iconoWsp.svg";
 
 import IrregularFigure from "@assets/Figura_irregular.svg";
-import { Mail, Phone } from "lucide-react";
 import Footer from "../../components/organisms/Footer/Footer";
 import Select from "../../components/atoms/Select/Select";
-import { line } from "framer-motion/client";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({

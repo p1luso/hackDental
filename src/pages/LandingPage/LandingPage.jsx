@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import Nav from "../../components/organisms/Nav/Nav";
-import wwaDifferences from "@assets/wwaDifferences.svg";
-import wwaDifferencesMobile from "@assets/wwaDifferencesMobile.svg";
 import Text from "../../components/atoms/Text/Text";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
-import IconButton from "../../components/molecules/IconButton/IconButton";
 import Footer from "../../components/organisms/Footer/Footer";
 import Icon from "../../components/atoms/Icon/Icon";
 import { useNavigate } from "react-router-dom";
@@ -14,30 +11,23 @@ import {
   LANDING_EBOOKS,
   OUR_PROGRAM,
 } from "../../constants/routes";
-import imgEbookPrueba from "@assets/imgEbookPrueba.svg";
 import imgEbook7 from "@assets/7SecretosEbook.svg";
 import imgIAEbook from "@assets/IAEbook.svg";
 import imgWppEbook from "@assets/WhatsappEbook.svg";
-import Mark from "../../components/atoms/Mark/Mark";
 import ImgBanner from "@assets/ImgBanner.svg";
 import ImgBtnWS from "@assets/imgBtnWS.svg";
 import PartnersCarousel from "../../components/organisms/PartnersCarousel/PartnersCarousel";
 import Medicos from "@assets/Medicos.svg";
 import { useConfigStore } from "../../stores/useConfig";
 import Founder from "../../components/organisms/Founder/Founder";
-import LeftArrow from "@assets/flechaizquierda.svg";
-import RightArrow from "@assets/flechaderecha.svg";
 import EBookCard from "../../components/organisms/EBookCard/EBookCard";
 import WhoWeAreImage from "@assets/imagenSpain.svg";
 import checkIconSpain from "@assets/checkIconSpain.svg";
-import HappyDentist from "@assets/happyDentist.svg";
-import SadDentist from "@assets/sadDentist.svg";
-import CheckDentistIcon from "@assets/checkDentistIcon.svg";
-import CrossIcon from "@assets/crossIcon.svg";
 import ModalPopUp from "../../components/organisms/ModalPopUp/ModalPopUp";
 import CoberturaDental from "@assets/imagen_dentistLandind.svg";
 import TextLink from "../../components/molecules/TextLink/TextLink";
-import { color } from "framer-motion";
+
+
 const books = [
   {
     img: imgEbook7,
@@ -285,7 +275,7 @@ const LandingPage = () => {
                     fontSizeMobile="22px"
                     s={{
                       lineHeight: "1",
-                      fontWeight: "700",
+                      fontWeight: "600",
                       letterSpacing: "-0.12px",
                     }}
                   >
@@ -532,7 +522,7 @@ const LandingPage = () => {
           color="black"
           fontSize="30px"
           fontSizeMobile="22px"
-          s={{ lineHeight: "1", fontWeight: "700" }}
+          s={{ lineHeight: "1", fontWeight: "600" }}
         >
           ¿Pero no consigues nuevos pacientes?{" "}
         </Text>
@@ -657,7 +647,7 @@ const LandingPage = () => {
                   color="black"
                   fontSize="30px"
                   fontSizeMobile="22px"
-                  s={{ lineHeight: "1", fontWeight: "700" }}
+                  s={{ lineHeight: "1", fontWeight: "600" }}
                 >
                   ¿Te interesa una auditoría gratuita?
                 </Text>
@@ -740,7 +730,7 @@ const LandingPage = () => {
               bold="semi-bold"
               fontSize="30px"
               fontSizeMobile="22px"
-              s={{ lineHeight: "1", fontWeight: "700" }}
+              s={{ lineHeight: "1", fontWeight: "600" }}
             >
               Descargando nuestros ebooks
             </Text>
