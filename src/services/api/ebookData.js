@@ -20,20 +20,19 @@ const ebookData = {
     img: imgIAEbook,
     pdfPath: IaEbook,
   },
-  // ...existing code...
-"wpp-para-consultorios": {
+
+  "wpp-para-consultorios": {
   title:    "WhatsApp para Consultorios en 5 minutos",
   desc: "Aprende a configurar el WhatsApp de tu consultorio de forma efectiva.",
   img: imgWppEbook,
   pdfPath: WppEbook,
 },
-// ...existing code...
-  proximamente: {
+
+proximamente: {
     title: "Próximamente",
     desc: "Próximamente...",
     img: imgEbookProximamente,
   },
-  // etc
 };
 
 export default ebookData;

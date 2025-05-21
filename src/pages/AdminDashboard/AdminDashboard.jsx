@@ -5,8 +5,8 @@ import TextArea from "../../components/atoms/Textarea/Textarea";
 import Input from "../../components/atoms/Input/Input";
 import Text from "../../components/atoms/Text/Text";
 import LoadingScreen from "../../components/molecules/LoadingScreen/LoadingScreen";
-import { createEBook } from "../../services/firebase/db";
-import { uploadFile } from "../../services/firebase/fileUpload";
+//import { createEBook } from "../../services/firebase/db";
+//import { uploadFile } from "../../services/firebase/fileUpload";
 
 const AdminDashboard = () => {
   const [currentForm, setCurrentForm] = useState(0);
@@ -44,13 +44,13 @@ const AdminDashboard = () => {
   const handleCreateEBook = async () => {
     try {
       setLoading(true);
-      const fileImgUrlPromise = uploadFile(form.img, "imgs");
-      const filePdfUrlPromise = uploadFile(form.pdf, "pdfs");
+      //const fileImgUrlPromise = uploadFile(form.img, "imgs");
+      //const filePdfUrlPromise = uploadFile(form.pdf, "pdfs");
       const [imgUrl, pdfUrl] = await Promise.all([
         fileImgUrlPromise,
         filePdfUrlPromise,
       ]);
-      await createEBook({ ...form, img: imgUrl, pdf: pdfUrl });
+      //await createEBook({ ...form, img: imgUrl, pdf: pdfUrl });
       alert("ebook creado!");
     } catch (error) {
       alert(error.message);

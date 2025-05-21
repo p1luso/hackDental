@@ -90,7 +90,7 @@ const DownloadForm = ({ modalOpened, pdfPath }) => {
     }
 
     navigate("/confirm_download", {
-      state: { pdfPath: ebook.pdfPath, title: ebook.title },
+      state: { pdfPath: ebook.pdfPath, title: ebook.title, email: form.email },
     });
   };
   useEffect(() => {

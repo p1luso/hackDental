@@ -1,35 +1,52 @@
 import styles from "./styles.module.css";
-import Nav from "../../components/organisms/Nav/Nav";
-import imgAcercaDe from "@assets/imagenEquipo.svg";
 import Text from "../../components/atoms/Text/Text";
 import IconTextButton from "../../components/molecules/IconTextButton/IconTextButton";
-import Icon from "../../components/atoms/Icon/Icon";
-import Link from "../../components/atoms/Link/Link";
 import CoberturaDental from "@assets/imagen_dentistLandind.svg";
 import DaysCounter from "../../components/organisms/DaysCounter/DaysCounter";
 import { useLocation, useNavigate } from "react-router-dom";
 import Medicos from "@assets/Medicos.svg";
 import Mark from "../../components/atoms/Mark/Mark";
 import Footer from "../../components/organisms/Footer/Footer";
+import { registerEbookDownload } from "../../services/api/sendContactForm";
 
 const ConfirmDownload = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { pdfPath, title } = location.state || {};
+  const { pdfPath, title, email } = location.state || {};
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     if (window.fbq) {
       window.fbq("trackCustom", "EbookDescargado", {
         content_name: title,
         content_category: "Ebook",
       });
     }
-    const link = document.createElement("a");
-    link.href = pdfPath;
-    link.download = pdfPath.split("/").pop();
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+
+    try {
+      const ebookMap = {
+        "7 secretos del marketing dental": "ebook_secrets",
+        "IA para Consultorios Dentales": "ebook_ia",
+        "WhatsApp para Consultorios en 5 minutos": "ebook_whatsapp",
+      };
+
+      const ebookKey = ebookMap[title];
+
+      if (ebookKey) {
+        await registerEbookDownload(ebookKey, email);
+      } else {
+        console.warn("No se encontró mapeo para el título:", title);
+      }
+
+      const link = document.createElement("a");
+      link.href = pdfPath;
+      link.download = pdfPath.split("/").pop();
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (err) {
+      alert("Hubo un error al registrar la descarga.");
+      console.error(err);
+    }
   };
 
   if (!pdfPath || !title) {
