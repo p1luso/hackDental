@@ -1,0 +1,12 @@
+# React-Router fallback (SPA)
+Options -MultiViews
+RewriteEngine On
+RewriteBase /
+
+# Sirve archivos reales si existen
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Todo lo demás → index.html
+RewriteRule ^ index.html [L]

@@ -13,10 +13,12 @@
   background-color: #01443a;
   display: flex;
   justify-content: center;
+  position: relative;
   align-items: center;
+  z-index: 1;
   gap: 78px;
   height: auto;
-  box-shadow: 0 12px 32px 0px rgba(0, 0, 0, 0.349);
+  box-shadow: 0 32px 32px 0px rgba(0, 0, 0, 0.288);
 }
 
 .imgAcerca {

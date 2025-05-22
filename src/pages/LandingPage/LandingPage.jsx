@@ -73,11 +73,11 @@ const LandingPage = () => {
       window.removeEventListener("resize", updateCardsPerPage);
     };
   }, []);
-  /*  useEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       setShowPopup(true);
-    }, 30 * 1000);
-  }, []); */
+    }, 5 * 1000);
+  }, []); 
 
   const [page, setPage] = useState(0);
   const totalPages = Math.ceil(books.length / cardsPerPage);

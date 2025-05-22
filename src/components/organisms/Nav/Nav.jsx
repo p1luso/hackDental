@@ -203,7 +203,7 @@ const Nav = ({ hideTopMenu = false, hideBottomMenu = false }) => {
               </Link>
               <div className={styles.separator}></div>
               <Link
-                to="/ebooks/7-secretos-marketing-dental"
+                to="/ebooks/ia-para-consultorios"
                 className={styles.cardLink}
               >
                 <div className={styles.card}>

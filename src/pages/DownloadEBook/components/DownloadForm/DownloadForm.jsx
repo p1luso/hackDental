@@ -6,7 +6,7 @@ import Input from "../../../../components/atoms/Input/Input";
 import Icon from "../../../../components/atoms/Icon/Icon";
 import Select from "../../../../components/atoms/Select/Select";
 import { isEmail, isEmpty } from "../../../../utils/inputValidators";
-import { sendContactFormDownloadEbook } from "../../../../services/api/sendContactForm";
+import { createUserIfNotExists, sendContactFormDownloadEbook } from "../../../../services/api/sendContactForm";
 import LoadingScreen from "../../../../components/molecules/LoadingScreen/LoadingScreen";
 import { useNavigate, useParams } from "react-router-dom";
 import ebookData from "../../../../services/api/ebookData";
@@ -82,17 +82,28 @@ const DownloadForm = ({ modalOpened, pdfPath }) => {
   const resetData = () => {
     setCurrentForm(1);
   };
-  const handleRedirectToConfirm = () => {
-    localStorage.setItem("ebookDownloaded", "true");
+  
+  const handleRedirectToConfirm = async () => {
+  try {
+    await createUserIfNotExists({
+      email: form.email,
+      firstName: form.firstName,
+      phone: form.phone,
+      howKnowAbout: form.howKnowAbout,
+    });
 
-    if (form.email) {
-      localStorage.setItem("email", form.email);
-    }
+    localStorage.setItem("ebookDownloaded", "true");
+    localStorage.setItem("email", form.email);
 
     navigate("/confirm_download", {
       state: { pdfPath: ebook.pdfPath, title: ebook.title, email: form.email },
     });
-  };
+  } catch (err) {
+    console.error("No se pudo crear el usuario:", err);
+    alert("Hubo un problema guardando tus datos. Intenta de nuevo.");
+  }
+};
+
   useEffect(() => {
     const alreadyDownloaded =
       localStorage.getItem("ebookDownloaded") === "true";

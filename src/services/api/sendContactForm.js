@@ -84,3 +84,33 @@ export const registerEbookDownload = async (ebookKey, email) => {
 
   return { status: "success" };
 };
+
+
+export const createUserIfNotExists = async ({
+  email,
+  firstName,
+  phone,
+  howKnowAbout,
+}) => {
+
+  const { data: existingUser, error: selectErr } = await supabase
+    .from("Hackdental")
+    .select("email")  
+    .eq("email", email)
+    .maybeSingle();
+
+  if (selectErr) throw selectErr;
+  if (existingUser) return;      
+
+  const { error: insertErr } = await supabase.from("Hackdental").insert([
+    {
+      email,
+      nombre: firstName,
+      telefono: phone,
+      fuente: howKnowAbout,       
+      fecha_interaccion: new Date().toISOString(),
+    },
+  ]);
+
+  if (insertErr) throw insertErr;
+};
