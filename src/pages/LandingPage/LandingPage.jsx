@@ -76,7 +76,7 @@ const LandingPage = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowPopup(true);
-    }, 5 * 1000);
+    }, 30 * 1000);
   }, []); 
 
   const [page, setPage] = useState(0);
