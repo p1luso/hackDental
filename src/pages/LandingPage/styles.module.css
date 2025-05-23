@@ -1419,7 +1419,10 @@ body:has(.popupContainer.show) {
 }
 @media screen and (max-width: 1024px) {
   .titlesContainerMobile {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .titlesContainerDesktop {
     display: none;

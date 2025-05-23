@@ -336,147 +336,7 @@ const LandingPage = () => {
       <section className={styles.prefooter}>
         <Founder />
       </section>
-      {/*  <section className={styles.contactBannerSection}>
-        <div className={styles.contactBanner__contents}>
-          <div className={styles.desc}>
-            <div className={styles.stickyContainer}>
-              <Text type="bigtitle" color="white" s={{ lineHeight: "1.15" }}>
-                5 Razones por las que pacientes{" "}
-                <Mark bold="medium" color="primary-bg-triangular-light">
-                  no eligen
-                </Mark>
-                <br />
-                tu consultorio
-              </Text>
 
-              <div className={styles.quieroHacerCrecerBtn}>
-                <IconTextButton colorVariant="white" size="100%">
-                  Ver el Método HackDental
-                </IconTextButton>
-              </div>
-              <div className={styles.footer__card}>
-                <img src={Medicos} className={styles.footer__img} />
-                <div className={styles.footer__desc}>
-                  <Text s={{ color: "#ebeced", lineHeight: "1.33" }}>
-                    Únete a los dentistas
-                  </Text>
-                  <Text
-                    bold="font-light"
-                    s={{ color: "#ebeced", lineHeight: "1.33" }}
-                  >
-                    que usan nuestro método.{" "}
-                    <Mark bold="regular" color="primary-light">
-                      Cupos limitados.
-                    </Mark>
-                  </Text>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={styles.details}>
-            <div className={styles.detail}>
-              <div className={styles.detail__header}>
-                <div className={styles.number}>
-                  <Text bold="semibold" size={"sm"} color="light">
-                    1
-                  </Text>
-                </div>
-                <Text type="subtitle" color="black">
-                  La publicidad de tu consultorio es genérica
-                </Text>
-              </div>
-              <hr />
-              <div className={styles.desc}>
-                <img className={styles.detail__img} src={imgPublicidadCard} />
-                <Text size="sm" color="black" bold="font-light">
-                  Aprende más sobre nuestro programa de 180 días y cómo puede
-                  cambiar tu práctica dental
-                </Text>
-              </div>
-            </div>
-            <div className={styles.detail}>
-              <div className={styles.detail__header}>
-                <div className={styles.number}>
-                  <Text bold="semibold" size={"sm"} color="light">
-                    2
-                  </Text>
-                </div>
-                <Text type="subtitle" color="black">
-                  El diseño de tu Sitio Web Dental es ineficiente
-                </Text>
-              </div>
-              <hr />
-              <div className={styles.desc}>
-                <img className={styles.detail__img} src={imgDiseñoCard} />
-                <Text size="sm" color="black" bold="font-light">
-                  Aprende más sobre nuestro programa de 180 días y cómo puede
-                  cambiar tu práctica dental
-                </Text>
-              </div>
-            </div>
-            <div className={styles.detail}>
-              <div className={styles.detail__header}>
-                <div className={styles.number}>
-                  <Text bold="semibold" size={"sm"} color="light">
-                    3
-                  </Text>
-                </div>
-                <Text type="subtitle" color="black">
-                  Tu estrategia de redes sociales es pobre
-                </Text>
-              </div>
-              <hr />
-              <div className={styles.desc}>
-                <img className={styles.detail__img} src={imgEstrategiaCard} />
-                <Text size="sm" color="black" bold="font-light">
-                  Aprende más sobre nuestro programa de 180 días y cómo puede
-                  cambiar tu práctica dental
-                </Text>
-              </div>
-            </div>
-            <div className={styles.detail}>
-              <div className={styles.detail__header}>
-                <div className={styles.number}>
-                  <Text bold="semibold" size={"sm"} color="light">
-                    4
-                  </Text>
-                </div>
-                <Text type="subtitle" color="black">
-                  Te faltan reseñas positivas online
-                </Text>
-              </div>
-              <hr />
-              <div className={styles.desc}>
-                <img className={styles.detail__img} src={imgReseñasCard} />
-                <Text size="sm" color="black" bold="font-light">
-                  Aprende más sobre nuestro programa de 180 días y cómo puede
-                  cambiar tu práctica dental
-                </Text>
-              </div>
-            </div>
-            <div className={styles.detail}>
-              <div className={styles.detail__header}>
-                <div className={styles.number}>
-                  <Text bold="semibold" size={"sm"} color="light">
-                    5
-                  </Text>
-                </div>
-                <Text type="subtitle" color="black">
-                  Tienes un mal sistema de recordatorio de citas
-                </Text>
-              </div>
-              <hr />
-              <div className={styles.desc}>
-                <img className={styles.detail__img} src={imgRecordatorioCard} />
-                <Text size="sm" color="black" bold="font-light">
-                  Aprende más sobre nuestro programa de 180 días y cómo puede
-                  cambiar tu práctica dental
-                </Text>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <section className={styles.spainLocation}>
         <div className={styles.darkLine}></div>
         <Text
@@ -598,6 +458,8 @@ const LandingPage = () => {
           <div className={styles.contentContainer_dental}>
             <div className={styles.founderText}>
               <div className={styles.titles}>
+                <div className={styles.darkLine}></div>
+
                 <Text
                   type="bigtitle"
                   textAlign="start"
@@ -605,7 +467,7 @@ const LandingPage = () => {
                   fontFamily="lexend"
                   fontSize="24px"
                   fontSizeMobile="18px"
-                  s={{ fontWeight: "400", lineHeight: "1" }}
+                  s={{ fontWeight: "500", lineHeight: "1.1", color: "#01443a"  }}
                 >
                   Dueño de Consultorio Dental
                 </Text>
@@ -613,17 +475,17 @@ const LandingPage = () => {
                   type="bigtitle"
                   fontFamily="lexend"
                   textAlign="start"
-                  color="black"
+                  color="white-secondary"
                   fontSize="30px"
                   fontSizeMobile="22px"
-                  s={{ lineHeight: "1", fontWeight: "600" }}
+                  s={{ lineHeight: "1.1", fontWeight: "600" }}
                 >
                   ¿Te interesa una auditoría gratuita?
                 </Text>
               </div>
               <Text
                 fontFamily="Lexend"
-                color="black-lighter"
+                color="white-secondary"
                 fontSize="18px"
                 fontSizeMobile="16px"
                 bold="font-light"
@@ -677,6 +539,7 @@ const LandingPage = () => {
       <section className={styles.mainContent}>
         <div className={styles.mainContent__desc}>
           <div className={styles.titlesContainerDesktop}>
+            <div className={styles.greenLine}></div>
             <Text
               type="bigtitle"
               textAlign="start"
@@ -686,7 +549,7 @@ const LandingPage = () => {
               bold="font-light"
               fontSize="24px"
               fontSizeMobile="18px"
-              s={{ lineHeight: "1", fontWeight: "400" }}
+              s={{ lineHeight: "1.1", fontWeight: "500", color: "#2a4d69" }}
             >
               Aprende sin costo
             </Text>
@@ -695,16 +558,17 @@ const LandingPage = () => {
               fontFamily="lexend"
               textAlign="start"
               textAlignMobile="center"
-              color="black"
+              color="white-secondary"
               bold="semi-bold"
               fontSize="30px"
               fontSizeMobile="22px"
-              s={{ lineHeight: "1", fontWeight: "600" }}
+              s={{ lineHeight: "1.1", fontWeight: "600" }}
             >
               Descargando nuestros ebooks
             </Text>
           </div>
           <div className={styles.titlesContainerMobile}>
+            <div className={styles.greenLine}></div>
             <Text
               type="bigtitle"
               textAlign="start"
@@ -714,7 +578,7 @@ const LandingPage = () => {
               bold="font-light"
               fontSize="24px"
               fontSizeMobile="21px"
-              s={{ lineHeight: "1", fontWeight: "400" }}
+              s={{ lineHeight: "1.1", fontWeight: "500", color: "#2a4d69" }}
             >
               Aprende sin costo
             </Text>
@@ -723,11 +587,11 @@ const LandingPage = () => {
               fontFamily="lexend"
               textAlign="start"
               textAlignMobile="center"
-              color="black"
+              color="white-secondary"
               bold="semi-bold"
               fontSize="30px"
               fontSizeMobile="24px"
-              s={{ lineHeight: "1", fontWeight: "700" }}
+              s={{ lineHeight: "1.1", fontWeight: "700" }}
             >
               Descargando nuestros ebooks
             </Text>
@@ -842,79 +706,6 @@ const LandingPage = () => {
           </IconTextButton>{" "}
         </div>
       </section>
-      {/* <section className={styles.consultorClass}>
-        <div className={styles.consultorClass_contents}>
-          <div className={styles.consultorContent}>
-            <Text
-              type="bigtitle"
-              textAlign="center"
-              color="white"
-              fontFamily="lexend"
-              bold="font-light"
-              fontSize="30px"
-              fontSizeMobile="21px"
-              s={{ lineHeight: "1", fontWeight: "500" }}
-            >
-              Pregunta para los dueños
-            </Text>
-            <Text
-              type="bigtitle"
-              fontFamily="lexend"
-              textAlign="center"
-              color="white"
-              bold="semi-bold"
-              fontSize="36px"
-              fontSizeMobile="24px"
-              s={{ lineHeight: "1", fontWeight: "600" }}
-            >
-              ¿Qué clase de consultorio tienes?
-            </Text>
-          </div>
-          <div className={styles.dentistImages}>
-            <div className={styles.happyDentist}>
-              <img src={CheckDentistIcon} alt="" className={styles.iconsDentist} />
-              <div className={styles.imgContainer_dentist}>
-                <div className={styles.dentistTitle}>
-                <Text
-                  type="title"
-                  fontFamily="Canva Sans"
-                  textAlign="center"
-                  color="black"
-                  bold="semi-bold"
-                  fontSize="28px"
-                  fontSizeMobile="21px"
-                  s={{ lineHeight: "1", fontWeight: "600" }}
-                >
-                  Consultorio con Marketing especializado
-                </Text>
-                </div>
-                <img src={HappyDentist} alt="happy dentist" />
-              </div>
-            </div>
-            <div className={styles.sadDentist}>
-              <img src={CrossIcon} alt="" className={styles.iconsDentist} />
-              <div className={styles.imgContainer_dentist_sad}>
-                <div className={styles.dentistTitle}>
-                <Text
-                  type="title"
-                  fontFamily="Canva Sans"
-                  textAlign="center"
-                  color="black"
-                  bold="semi-bold"
-                  fontSize="28px"
-                  fontSizeMobile="21px"
-                  s={{ lineHeight: "1", fontWeight: "600" }}
-                >
-                  Consultorio con Marketing generico
-                </Text>
-                </div>
-                <img src={SadDentist} alt="sad dentist" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <Footer />
     </div>
   );
