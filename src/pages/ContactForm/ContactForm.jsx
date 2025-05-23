@@ -15,6 +15,7 @@ import IconoWpp from "@assets/iconoWsp.svg";
 import IrregularFigure from "@assets/Figura_irregular.svg";
 import Footer from "../../components/organisms/Footer/Footer";
 import Select from "../../components/atoms/Select/Select";
+import { color } from "framer-motion";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -110,13 +111,14 @@ const ContactForm = () => {
         </div>
         <div className={styles.bgTransparentContact}>
           <div className={styles.desc}>
+            <div className={styles.line}></div>
             <Text
               type="title"
               fontSize="24px"
               fontSizeMobile="21px"
               textAlignMobile="start"
               color="white"
-              s={{ fontWeight: 400, lineHeight: "1" }}
+              s={{ fontWeight: 400, lineHeight: "1", color: "#cfe1df" }}
             >
               Dueño de consultorio
             </Text>
@@ -129,7 +131,7 @@ const ContactForm = () => {
               s={{ lineHeight: "1" }}
               bold="bold"
             >
-              Pide una auditoría gratis
+              Recibe una auditoría gratis
             </Text>
             <div className={styles.desc_text}>
               <Text
@@ -150,7 +152,7 @@ const ContactForm = () => {
                 fontSize="18px"
                 fontSizeMobile="14px"
               >
-                Que incluye:
+                Con la auditoría obtendrás:
               </Text>
             </div>
             <div className={styles.contactIcons}>

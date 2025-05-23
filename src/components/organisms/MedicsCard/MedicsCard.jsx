@@ -15,7 +15,7 @@ const MedicsCard = ({
       <img src={Medicos} className={styles.medicos} />
       <div className={styles.desc}>
         <Text
-          color="black"
+          color="white-secondary"
           fontSize="14px"
           fontSizeMobile="12px"
           s={{ lineHeight: "1.4" }}
@@ -25,7 +25,7 @@ const MedicsCard = ({
         <Text
           fontSize="14px"
           fontSizeMobile="12px"
-          color="black"
+          color="white-secondary"
           bold="font-light"
           s={{ lineHeight: "1.4" }}
           textAlign="center"

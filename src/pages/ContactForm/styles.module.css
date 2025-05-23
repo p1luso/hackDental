@@ -69,6 +69,13 @@
   width: 150px;
 }
 
+.line {
+  width: 48px; /* Largo de la barra, ajusta a gusto */
+  height: 10px; /* Grosor de la barra */
+  background: #0b8484; /* Verde, puedes usar tu variable si tienes */
+  border-radius: 30px;
+  margin-bottom: 8px;
+}
 .contactsDesktop {
   display: flex;
   justify-content: center;
@@ -159,7 +166,7 @@
 }
 
 .desc__incluye {
-  margin-bottom: 35px;
+  margin-bottom: 16px;
 }
 
 .contact .formContainer {
@@ -213,6 +220,10 @@
   .contact .form {
     margin-left: 0;
   }
+  .line {
+  width: 36px; /* Largo de la barra, ajusta a gusto */
+  height: 7px; /* Grosor de la barra */
+}
   .title {
     padding-bottom: 0px;
   }
@@ -287,7 +298,10 @@
   .iconsText {
     font-size: 14px;
   }
-
+.line {
+  width: 36px; /* Largo de la barra, ajusta a gusto */
+  height: 7px; /* Grosor de la barra */
+}
   .contact .form {
     margin-left: 0;
   }

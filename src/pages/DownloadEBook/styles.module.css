@@ -36,8 +36,14 @@
   align-items: center;
   background-color: var(--primary-transparent);
   flex-shrink: 0;
-  box-shadow: 0 16px 20px -8px rgba(0,0,0,.35);
+  box-shadow: 0 16px 20px -8px rgba(0, 0, 0, 0.35);
   position: relative;
+}
+.darkLine {
+  width: 48px; /* Largo de la barra, ajusta a gusto */
+  height: 10px; /* Grosor de la barra */
+  background: #0b8484; /* Verde, puedes usar tu variable si tienes */
+  border-radius: 30px;
 }
 
 .banner__desc {
@@ -45,16 +51,16 @@
   flex-direction: column;
   width: 600px;
 }
-.banner__desc > :nth-child(1) {
+.banner__desc > :nth-child(2) {
   margin-bottom: 16px;
 }
-.banner__desc > :nth-child(2) {
-  margin-bottom: 8px;
-}
 .banner__desc > :nth-child(3) {
-  margin-bottom: 12px;
+  margin-bottom: 0px;
 }
 .banner__desc > :nth-child(4) {
+  margin-bottom: 12px;
+}
+.banner__desc > :nth-child(5) {
   margin-bottom: 20px;
 }
 .downloadEBook {
@@ -262,6 +268,10 @@
   .freeGuide {
     width: 100%;
     height: 70px;
+  }
+  .darkLine {
+    width: 36px; /* Largo de la barra, ajusta a gusto */
+    height: 7px; /* Grosor de la barra */
   }
 
   .info__desc {

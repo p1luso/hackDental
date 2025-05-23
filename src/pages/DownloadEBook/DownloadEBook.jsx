@@ -34,14 +34,30 @@ const DownloadEBook = () => {
       <main className={styles.main}>
         <div className={styles.banner}>
           <section className={styles.banner__desc}>
-            <Text color="black-lighter" fontSize="20px" fontSizeMobile="16px">
+            <div className={styles.darkLine}></div>
+
+            <Text
+              color="black-lighter"
+              fontSize="20px"
+              fontSizeMobile="16px"
+              s={{ color: "#01443a", fontWeight: "500" }}
+            >
               Ebook escrito en el 2025
             </Text>
-            <Text color="black" type="title" bold>
+            <Text
+              color="white-secondary"
+              type="title"
+              s={{ fontWeight: "600" }}
+            >
               {ebook.title}
             </Text>
             <div className={styles.desc}>
-              <Text color="black" bold="font-light" fontSize="17px" fontSizeMobile="16px">
+              <Text
+                color="black"
+                bold="font-light"
+                fontSize="17px"
+                fontSizeMobile="16px"
+              >
                 {ebook.desc}
               </Text>
             </div>
@@ -89,9 +105,11 @@ const DownloadEBook = () => {
                 fontSizeMobile="16px"
                 textAlign="center"
               >
-                <em>"Los pacientes no van con el mejor dentista. Van con el que
-                responde primeros"</em>
-             </Text>
+                <em>
+                  "Los pacientes no van con el mejor dentista. Van con el que
+                  responde primeros"
+                </em>
+              </Text>
               <Text
                 bold="font-light"
                 color="white-secondary"
@@ -291,15 +309,15 @@ const DownloadEBook = () => {
                 </strong>{" "}
               </Text>
               </div> */}
-              <div className={styles.freeGuide}>
-                <IconTextButton
-                  colorVariant="white-green"
-                  size="100%"
-                  onClick={() => setModalOpened(true)}
-                >
-                  Obten tu Guía de WhatsApp Gratis
-                </IconTextButton>
-              </div>
+            <div className={styles.freeGuide}>
+              <IconTextButton
+                colorVariant="white-green"
+                size="100%"
+                onClick={() => setModalOpened(true)}
+              >
+                Obten tu Guía de WhatsApp Gratis
+              </IconTextButton>
+            </div>
           </div>
         </section>
       )}

@@ -16,6 +16,7 @@ import Footer from "../../components/organisms/Footer/Footer";
 import n1 from "@assets/n1.svg";
 import n2 from "@assets/n2.svg";
 import Logo from "@assets/Logo_Fondo_Oscuro.svg";
+import { color } from "framer-motion";
 
 const OurProgram = () => {
   const [showModalVideo, setShowModalVideo] = useState(false);
@@ -209,9 +210,10 @@ const OurProgram = () => {
       </nav>
       <header className={styles.banner}>
         <div className={styles.bgTransparent}>
-          
           <div className={styles.elements}>
             <div className={styles.onlyDesktop}>
+              <div className={styles.line}></div>
+
               <Text
                 type="bigtitle"
                 color="white"
@@ -224,6 +226,7 @@ const OurProgram = () => {
                   fontFamily: "lexend",
                   fontWeight: "400",
                   letterSpacing: "-0.5px",
+                  color: "#cfe1df",
                 }}
               >
                 Conoce nuestro método para <br></br>
@@ -319,6 +322,7 @@ const OurProgram = () => {
             </div>
 
             <div className={styles.onlyMobile}>
+              <div className={styles.line}></div>
               <Text
                 type="bigtitle"
                 color="white"
@@ -331,6 +335,7 @@ const OurProgram = () => {
                   fontFamily: "lexend",
                   fontWeight: "500",
                   letterSpacing: "-0.5px",
+                  color: "#cfe1df",
                 }}
               >
                 Conoce nuestro método para<br></br>
@@ -345,7 +350,7 @@ const OurProgram = () => {
                 fontSize="18px"
                 fontSizeMobile="16px"
                 s={{
-                    lineHeight: "1.7",
+                  lineHeight: "1.7",
                   fontFamily: "lexend",
                 }}
               >
@@ -365,7 +370,7 @@ const OurProgram = () => {
                     fontSize="18px"
                     fontSizeMobile="16px"
                     s={{
-                    lineHeight: "1.7",
+                      lineHeight: "1.7",
                       fontFamily: "lexend",
                     }}
                   >
@@ -383,7 +388,7 @@ const OurProgram = () => {
                     fontSize="18px"
                     fontSizeMobile="16px"
                     s={{
-                    lineHeight: "1.7",
+                      lineHeight: "1.7",
                       fontFamily: "lexend",
                     }}
                   >

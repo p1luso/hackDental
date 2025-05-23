@@ -22,6 +22,8 @@ const LandingEBooks = () => {
       <header className={styles.header}>
         <section className={styles.banner}>
           <div className={styles.educationText}>
+            <div className={styles.line}></div>
+
             <Text
               type="bigtitle"
               textAlign="center"
@@ -31,7 +33,7 @@ const LandingEBooks = () => {
               bold="font-light"
               fontSize="24px"
               fontSizeMobile="18px"
-              s={{ fontWeight: "400", lineHeight: 1 }}
+              s={{ fontWeight: "400", lineHeight: 1, color: "#cfe1df" }}
             >
               Educación para dueños de consultorios
             </Text>
@@ -186,15 +188,16 @@ const LandingEBooks = () => {
 
             <div className={styles.founderText}>
               <div className={styles.titles}>
+                <div className={styles.darkLine}></div>
                 <Text
                   type="bigtitle"
                   textAlign="start"
                   color="black"
                   fontFamily="lexend"
                   bold="font-light"
-                  fontSize="26px"
+                  fontSize="24px"
                   fontSizeMobile="21px"
-                  s={{ fontWeight: "500" }}
+                  s={{ fontWeight: "500", color: "#01443a"   }}
                 >
                   Dueño de Consultorio Dental
                 </Text>
@@ -202,9 +205,9 @@ const LandingEBooks = () => {
                   type="bigtitle"
                   fontFamily="lexend"
                   textAlign="start"
-                  color="black"
+                  color="white-secondary"
                   bold="semi-bold"
-                  fontSize="32px"
+                  fontSize="30px"
                   fontSizeMobile="24px"
                   s={{ lineHeight: "1", fontWeight: "600" }}
                 >

@@ -168,6 +168,7 @@
 .betterTreatment {
   font-size: 40px;
   font-weight: 700;
+  color: white;
 }
 
 .videoContainer {
@@ -957,6 +958,13 @@
   padding: 28px;
 }
 
+.line {
+  width: 48px; /* Largo de la barra, ajusta a gusto */
+  height: 10px; /* Grosor de la barra */
+  background: #0b8484; /* Verde, puedes usar tu variable si tienes */
+  border-radius: 30px;
+}
+
 .daysCounter {
   display: flex;
   justify-content: center;
@@ -978,7 +986,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   width: 50%;
 }
 
@@ -1052,6 +1060,10 @@
     font-size: 38px;
   }
 
+.line {
+  width: 36px;
+  height: 7px; 
+}
   .banner__btns > :first-child {
     height: 54px !important;
     width: 100%;
