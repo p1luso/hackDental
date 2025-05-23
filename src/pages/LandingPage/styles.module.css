@@ -998,7 +998,7 @@ body:has(.popupContainer.show) {
 }
 
 .paginationLine.active {
-  background-color: #008060;
+  background-color: #3e6363;
 }
 
 .mainContent__card__desc {

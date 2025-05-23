@@ -648,7 +648,8 @@ const LandingPage = () => {
                   bookType={false}
                   key={i}
                   {...book}
-                  textLinkColor="#005fa3"
+                  subtitleColor="white-secondary"
+                  textLinkColor="#213343"
                 />
               ))}
             </div>
