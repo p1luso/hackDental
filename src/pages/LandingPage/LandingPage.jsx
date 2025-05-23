@@ -22,11 +22,10 @@ import { useConfigStore } from "../../stores/useConfig";
 import Founder from "../../components/organisms/Founder/Founder";
 import EBookCard from "../../components/organisms/EBookCard/EBookCard";
 import WhoWeAreImage from "@assets/imagenSpain.svg";
-import checkIconSpain from "@assets/checkIconSpain.svg";
+import checkIconSpain from "@assets/checkGreyIcon.svg";
 import ModalPopUp from "../../components/organisms/ModalPopUp/ModalPopUp";
 import CoberturaDental from "@assets/imagen_dentistLandind.svg";
 import TextLink from "../../components/molecules/TextLink/TextLink";
-
 
 const books = [
   {
@@ -73,11 +72,11 @@ const LandingPage = () => {
       window.removeEventListener("resize", updateCardsPerPage);
     };
   }, []);
-  useEffect(() => {
-    setTimeout(() => {
-      setShowPopup(true);
-    }, 30 * 1000);
-  }, []); 
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setShowPopup(true);
+  //   }, 30 * 1000);
+  // }, []);
 
   const [page, setPage] = useState(0);
   const totalPages = Math.ceil(books.length / cardsPerPage);
@@ -245,11 +244,9 @@ const LandingPage = () => {
         </div>
         <div className={styles.whoAreWeContainer}>
           <div className={styles.contentContainer}>
-            <div className={styles.imageWrapper}>
-              <img id={styles.founderImg} src={WhoWeAreImage} />
-            </div>
-            <div className={styles.founderText}>
+            <div className={styles.leftContent}>
               <div className={styles.titles}>
+                <div className={styles.greenLine}></div>
                 <Text
                   type="bigtitle"
                   textAlign="start"
@@ -259,9 +256,9 @@ const LandingPage = () => {
                   bold="font-light"
                   fontSize="24px"
                   fontSizeMobile="18px"
-                  s={{ lineHeight: "1", fontWeight: "400" }}
+                  s={{ lineHeight: "1.1", fontWeight: "500", color: "#2a4d69" }}
                 >
-                  Solo trabajamos con
+                  Nos enfocamos en
                 </Text>
                 <div className={styles.desktTitl}>
                   <Text
@@ -269,91 +266,71 @@ const LandingPage = () => {
                     fontFamily="lexend"
                     textAlign="start"
                     textAlignMobile="start"
-                    color="black"
+                    color="white-secondary"
                     bold="semi-bold"
                     fontSize="30px"
                     fontSizeMobile="22px"
                     s={{
-                      lineHeight: "1",
+                      lineHeight: "1.1",
                       fontWeight: "600",
-                      letterSpacing: "-0.12px",
                     }}
                   >
                     Consultorios independientes en España
                   </Text>
                 </div>
-                <div className={styles.mobTitl}>
-                  <Text
-                    type="bigtitle"
-                    fontFamily="lexend"
-                    textAlign="start"
-                    textAlignMobile="start"
-                    color="black"
-                    bold="semi-bold"
-                    fontSize="30px"
-                    fontSizeMobile="22px"
-                    s={{ lineHeight: "1", fontWeight: "700" }}
-                  >
-                    Consultorios en España.
-                  </Text>
-                </div>
               </div>
               <div className={styles.whoAreWeText}>
-                <div className={styles.whoAreWe_upText}>
-                  <Text
-                    fontFamily="Lexend"
-                    color="black-lighter"
-                    fontSize="17px"
-                    fontSizeMobile="16px"
-                    bold="font-light"
-                    s={{ color: "#213343" }}
-                  >
-                    <span style={{ fontWeight: 500 }}>
-                      Solo conocemos el mercado español...
-                    </span>{" "}
-                    pero lo conocemos mejor que nadie. Somos especialistas en
-                    marketing para clínicas dentales en España
-                  </Text>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "start",
-                    gap: "0.5rem",
-                    marginBottom: "15px",
-                  }}
+                <Text
+                  fontFamily="Lexend"
+                  color="white-secondary"
+                  fontSize="17px"
+                  fontSizeMobile="16px"
+                  bold="font-light"
+                  s={{ color: "#213343" }}
                 >
-                  <img src={checkIconSpain} style={{ width: "25px" }} />
-                  <Text
-                    fontFamily="Lexend"
-                    color="black-lighter"
-                    fontSize="17px"
-                    fontSizeMobile="16px"
-                    bold="font-light"
-                    textAlign="start"
-                    textAlignMobile="start"
-                    s={{ color: "#213343" }}
-                  >
-                    Método de marketing acorde con el RGPD.
-                  </Text>
-                </div>
-                <div
-                  style={{
-                    width: "fit-content",
-                    display: "flex",
-                    justifyContent: "start",
-                    alignItems: "start",
-                  }}
+                  <span style={{ fontWeight: 500 }}>
+                    Solo conocemos el mercado español...
+                  </span>{" "}
+                  pero lo conocemos mejor que nadie. Somos especialistas en
+                  marketing para clínicas dentales en España
+                </Text>
+              </div>
+              <div className={styles.methodButton}>
+                <TextLink
+                  variant="primary-green"
+                  textProps={{ color: "#005fa3" }}
+                  to={OUR_PROGRAM}
                 >
-                  <TextLink
-                    variant="primary-green"
-                    textProps={{ color: "#005fa3" }}
-                    to={OUR_PROGRAM}
-                  >
-                    Ver Método →
-                  </TextLink>
-                </div>
+                  Ver Método →
+                </TextLink>
+              </div>
+            </div>
+
+            <div className={styles.rightContent}>
+              <div className={styles.imageWrapper}>
+                <img
+                  src={WhoWeAreImage}
+                  alt="España"
+                  className={styles.whoWeAreImage}
+                />
+              </div>
+              <div className={styles.rgpdContainer}>
+                <img
+                  src={checkIconSpain}
+                  alt="check"
+                  className={styles.checkIcon}
+                />
+                <Text
+                  fontFamily="Lexend"
+                  color="white-secondary"
+                  fontSize="15px"
+                  fontSizeMobile="14px"
+                  bold="font-light"
+                  textAlign="start"
+                  textAlignMobile="start"
+                >
+                  Marketing acorde con el RGPD.
+                </Text>
               </div>
             </div>
           </div>

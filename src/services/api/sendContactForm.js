@@ -39,6 +39,23 @@ export const sendContactForm = async (data) => {
     if (error) throw error;
   }
 
+  try {
+    await fetch("https://hook.us2.make.com/p8x3g5333x1ao9aj984l3lt967n835hw", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        firstName,
+        email,
+        phone,
+        location,
+        website,
+        fecha_interaccion: new Date().toISOString(),
+      }),
+    });
+  } catch (err) {
+    console.error("Error enviando webhook a Make:", err);
+  }
+
   return { status: "success" };
 };
 

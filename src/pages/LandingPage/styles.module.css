@@ -416,6 +416,7 @@ body:has(.popupContainer.show) {
   padding-bottom: 112px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   position: relative;
 }
@@ -435,8 +436,9 @@ body:has(.popupContainer.show) {
 .whoAreWeContainer {
   padding-top: 85px;
   padding-bottom: 0px;
-  padding-left: var(--width-unit2);
-  padding-right: var(--width-unit2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .partners {
@@ -464,13 +466,39 @@ body:has(.popupContainer.show) {
 .contentContainer {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
-  padding: 0;
-  width: 100%;
-  margin-top: 30px;
-  line-height: 0;
-  gap: 32px;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rgpdContainer {
+  display: flex;
+  align-items: center;
+}
+
+.checkIcon {
+  width: 25px;
+  height: auto;
+}
+
+.methodButton {
+  width: fit-content;
+}
+
+.leftContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rightContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 #founderImg {
@@ -966,7 +994,13 @@ body:has(.popupContainer.show) {
 .mainContent__card__desc {
   gap: 12px;
 }
-
+.greenLine {
+  width: 48px; /* Largo de la barra, ajusta a gusto */
+  height: 7px; /* Grosor de la barra */
+  background: #3e6363; /* Verde, puedes usar tu variable si tienes */
+  border-radius: 30px;
+  margin-bottom: 18px; /* Espacio debajo de la barra */
+}
 .mainContent__card__desc img {
   width: 220px;
   height: 220px;
@@ -1504,8 +1538,14 @@ body:has(.popupContainer.show) {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin-top: 0;
+  }
+
+  .whoWeAreImage {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
   }
 
   .desktTitl {
