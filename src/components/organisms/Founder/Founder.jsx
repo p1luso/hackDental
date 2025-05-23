@@ -73,7 +73,7 @@ const Founder = () => {
                   fontFamily="lexend"
                   fontSize="21px"
                   fontSizeMobile="21px"
-                  s={{ lineHeight: "1", fontWeight: "500", color: "#bcccdc" }}
+                  s={{ lineHeight: "1.1", fontWeight: "500", color: "#bcccdc" }}
                 >
                   Conoce a Jose Whittembury
                 </Text>
@@ -85,7 +85,7 @@ const Founder = () => {
                   bold="bold"
                   fontSize="30px"
                   fontSizeMobile="24px"
-                  s={{ lineHeight: "1", fontWeight: "700" }}
+                  s={{ lineHeight: "1.1", fontWeight: "700" }}
                 >
                   Fundador y CEO de HackDental
                 </Text>
