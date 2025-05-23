@@ -260,7 +260,6 @@ const LandingPage = () => {
                 >
                   Nos enfocamos en
                 </Text>
-                <div className={styles.desktTitl}>
                   <Text
                     type="bigtitle"
                     fontFamily="lexend"
@@ -277,7 +276,6 @@ const LandingPage = () => {
                   >
                     Consultorios independientes en España
                   </Text>
-                </div>
               </div>
               <div className={styles.whoAreWeText}>
                 <Text

@@ -472,6 +472,12 @@ body:has(.popupContainer.show) {
   margin: 0 auto;
 }
 
+.whoWeAreImage {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
 .rgpdContainer {
   display: flex;
   align-items: center;
@@ -490,7 +496,8 @@ body:has(.popupContainer.show) {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
+  max-width: 55%;
 }
 
 .rightContent {
@@ -499,6 +506,7 @@ body:has(.popupContainer.show) {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  max-width: 30%;
 }
 
 #founderImg {
@@ -996,10 +1004,10 @@ body:has(.popupContainer.show) {
 }
 .greenLine {
   width: 48px; /* Largo de la barra, ajusta a gusto */
-  height: 7px; /* Grosor de la barra */
+  height: 10px; /* Grosor de la barra */
   background: #3e6363; /* Verde, puedes usar tu variable si tienes */
   border-radius: 30px;
-  margin-bottom: 18px; /* Espacio debajo de la barra */
+  margin-bottom: 8px; /* Espacio debajo de la barra */
 }
 .mainContent__card__desc img {
   width: 220px;
@@ -1335,7 +1343,7 @@ body:has(.popupContainer.show) {
 }
 
 .imageWrapper img {
-  width: 210px;
+  width: 230px;
 }
 
 .imageWrapper {
@@ -1538,16 +1546,27 @@ body:has(.popupContainer.show) {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: var(--mobile-margin);
+    padding-right: var(--mobile-margin);
     flex-direction: column;
     margin-top: 0;
   }
 
-  .whoWeAreImage {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
+  .greenLine{
+    width: 36px;
+    height: 7px;
   }
 
+  .methodButton{
+    margin-bottom: 20px;
+  }
+
+  .rightContent {
+    max-width: 100%;
+  }
+  .leftContent {
+    max-width: 100%;
+  }
   .desktTitl {
     display: none;
   }

@@ -14,6 +14,7 @@ const Founder = () => {
         <div className={styles.founderContainer}>
           <div className={styles.contentContainer}>
             <div className={styles.mobileTitles}>
+              <div className={styles.line}></div>
               <Text
                 type="bigtitle"
                 textAlign="center"
@@ -21,7 +22,7 @@ const Founder = () => {
                 fontFamily="lexend"
                 fontSize="26px"
                 fontSizeMobile="18px"
-                s={{ lineHeight: "1", fontWeight: "400" }}
+                s={{ lineHeight: "1", fontWeight: "500" }}
               >
                 Conoce a Jose Whittembury
               </Text>
@@ -64,14 +65,15 @@ const Founder = () => {
             </div>
             <div className={styles.founderText}>
               <div className={styles.desktopTitles}>
+                <div className={styles.line}></div>
                 <Text
                   type="bigtitle"
                   textAlign="start"
                   color="light"
                   fontFamily="lexend"
-                  fontSize="26px"
+                  fontSize="21px"
                   fontSizeMobile="21px"
-                  s={{ lineHeight: "1", fontWeight: "400" }}
+                  s={{ lineHeight: "1", fontWeight: "500", color: "#bcccdc" }}
                 >
                   Conoce a Jose Whittembury
                 </Text>
@@ -81,7 +83,7 @@ const Founder = () => {
                   textAlign="start"
                   color="light"
                   bold="bold"
-                  fontSize="32px"
+                  fontSize="30px"
                   fontSizeMobile="24px"
                   s={{ lineHeight: "1", fontWeight: "700" }}
                 >
@@ -107,7 +109,8 @@ const Founder = () => {
                 fontSizeMobile="16px"
                 bold="font-light"
               >
-                <strong style={{fontWeight:"400"}}>Contáctame</strong> si te interesa lo siguiente:
+                <strong style={{ fontWeight: "400" }}>Contáctame</strong> si te
+                interesa lo siguiente:
               </Text>
               <div className={styles.beneficios}>
                 <div className={styles.beneficiosIcon}>
