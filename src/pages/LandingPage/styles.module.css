@@ -805,16 +805,18 @@ body:has(.popupContainer.show) {
 .spainLocation__items {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   gap: 12px;
 }
 
 .spainLocation__items__item {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 16px;
-  width: 100%;
+  width: 80%;
   background-color: #f6f9fc;
   border: 1px solid #7691ad;
   padding: 15px;
@@ -1006,6 +1008,13 @@ body:has(.popupContainer.show) {
   width: 48px; /* Largo de la barra, ajusta a gusto */
   height: 10px; /* Grosor de la barra */
   background: #3e6363; /* Verde, puedes usar tu variable si tienes */
+  border-radius: 30px;
+  margin-bottom: 8px; /* Espacio debajo de la barra */
+}
+.darkLine {
+  width: 48px; /* Largo de la barra, ajusta a gusto */
+  height: 10px; /* Grosor de la barra */
+  background: #0b8484; /* Verde, puedes usar tu variable si tienes */
   border-radius: 30px;
   margin-bottom: 8px; /* Espacio debajo de la barra */
 }
@@ -1553,6 +1562,11 @@ body:has(.popupContainer.show) {
   }
 
   .greenLine{
+    width: 36px;
+    height: 7px;
+  }
+
+  .darkLine{
     width: 36px;
     height: 7px;
   }

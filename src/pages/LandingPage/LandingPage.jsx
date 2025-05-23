@@ -260,22 +260,22 @@ const LandingPage = () => {
                 >
                   Nos enfocamos en
                 </Text>
-                  <Text
-                    type="bigtitle"
-                    fontFamily="lexend"
-                    textAlign="start"
-                    textAlignMobile="start"
-                    color="white-secondary"
-                    bold="semi-bold"
-                    fontSize="30px"
-                    fontSizeMobile="22px"
-                    s={{
-                      lineHeight: "1.1",
-                      fontWeight: "600",
-                    }}
-                  >
-                    Consultorios independientes en España
-                  </Text>
+                <Text
+                  type="bigtitle"
+                  fontFamily="lexend"
+                  textAlign="start"
+                  textAlignMobile="start"
+                  color="white-secondary"
+                  bold="semi-bold"
+                  fontSize="30px"
+                  fontSizeMobile="22px"
+                  s={{
+                    lineHeight: "1.1",
+                    fontWeight: "600",
+                  }}
+                >
+                  Consultorios independientes en España
+                </Text>
               </div>
               <div className={styles.whoAreWeText}>
                 <Text
@@ -284,7 +284,6 @@ const LandingPage = () => {
                   fontSize="17px"
                   fontSizeMobile="16px"
                   bold="font-light"
-                  s={{ color: "#213343" }}
                 >
                   <span style={{ fontWeight: 500 }}>
                     Solo conocemos el mercado español...
@@ -479,6 +478,7 @@ const LandingPage = () => {
         </div>
       </section> */}
       <section className={styles.spainLocation}>
+        <div className={styles.darkLine}></div>
         <Text
           type="bigtitle"
           textAlign="center"
@@ -486,7 +486,7 @@ const LandingPage = () => {
           fontFamily="lexend"
           fontSize="24px"
           fontSizeMobile="18px"
-          s={{ lineHeight: "1", fontWeight: "400" }}
+          s={{ lineHeight: "1", fontWeight: "500", color: "#01443a" }}
         >
           Ofreces servicios de calidad,{" "}
         </Text>
@@ -494,7 +494,7 @@ const LandingPage = () => {
           type="bigtitle"
           fontFamily="lexend"
           textAlign="center"
-          color="black"
+          color="white-secondary"
           fontSize="30px"
           fontSizeMobile="22px"
           s={{ lineHeight: "1", fontWeight: "600" }}
@@ -508,16 +508,14 @@ const LandingPage = () => {
           <div className={styles.spainLocation__card}>
             <div className={styles.spainLocation__card__elements}>
               <Text
-                fontSize="24px"
+                fontSize="20px"
                 fontSizeMobile="18px"
-                s={{ lineHeight: 1.3, color: "#213343" }}
+                s={{ lineHeight: 1.3, color: "#213343", fontWeight: "400" }}
               >
                 Contáctanos si tu consultorio cumple con lo siguiente:{" "}
               </Text>
               <div className={styles.spainLocation__items}>
                 <div className={styles.spainLocation__items__item}>
-                  <Icon size={"1.3rem"} color="#008060" type={"check"} />
-
                   <Text
                     color="black"
                     s={{ color: "#213343" }}
@@ -529,8 +527,6 @@ const LandingPage = () => {
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
-                  <Icon size={"1.3rem"} color="#008060" type={"check"} />
-
                   <Text
                     color="black"
                     s={{ color: "#213343" }}
@@ -542,8 +538,6 @@ const LandingPage = () => {
                   </Text>
                 </div>
                 <div className={styles.spainLocation__items__item}>
-                  <Icon size={"1.3rem"} color="#008060" type={"check"} />
-
                   <Text
                     color="black"
                     s={{ color: "#213343" }}

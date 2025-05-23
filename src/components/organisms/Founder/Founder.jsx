@@ -71,7 +71,7 @@ const Founder = () => {
                   textAlign="start"
                   color="light"
                   fontFamily="lexend"
-                  fontSize="21px"
+                  fontSize="24px"
                   fontSizeMobile="21px"
                   s={{ lineHeight: "1.1", fontWeight: "500", color: "#bcccdc" }}
                 >
@@ -117,7 +117,7 @@ const Founder = () => {
                   <Icon size={"1.2rem"} color="#008060" type={"check"} />
                 </div>
                 <Text
-                  color="white-lighter"
+                  color="white"
                   fontSize="17px"
                   fontSizeMobile="16px"
                   bold="font-light"
