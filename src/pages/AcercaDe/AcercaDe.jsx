@@ -27,25 +27,27 @@ const AcercaDe = () => {
 
         <div className={styles.desc}>
           <div className={styles.desc__texts}>
+            <div className={styles.titleLine}></div>
             <Text
               fontFamily="lexend"
               color="white"
-              fontSize="26px"
+              fontSize="24px"
               fontSizeMobile="18px"
               textAlignMobile="center"
               textAlign="start"
               s={{
                 lineHeight: "1",
                 fontFamily: "lexend",
-                fontWeight: "400",
+                fontWeight: "500",
                 letterSpacing: "-0.5px",
+                color: "#cfe1df",
               }}
             >
               Conoce a Jose Whittembury
             </Text>
             <Text
               fontFamily="lexend"
-              fontSize="32px"
+              fontSize="30px"
               fontSizeMobile="22px"
               textAlign="start"
               textAlignMobile="center"
@@ -90,34 +92,39 @@ const AcercaDe = () => {
         <section className={styles.moreInfo}>
           <div className={styles.info}>
             <div className={styles.titles}>
+              <div className={styles.subtitleLine}></div>
+
               <Text
                 fontFamily="lexend"
                 color="black"
-                fontSize="21px"
+                fontSize="20px"
                 fontSizeMobile="18px"
                 textAlignMobile="center"
                 textAlign="center"
                 s={{
                   lineHeight: "1",
                   fontFamily: "lexend",
-                  fontWeight: "400",
+                  fontWeight: "500",
+                  color: "#2a4d69",
                 }}
               >
                 Importancia de tener un fundador que
               </Text>
               <Text
                 fontFamily="lexend"
-                fontSize="28px"
+                fontSize="26px"
                 fontSizeMobile="22px"
                 textAlign="center"
                 textAlignMobile="center"
-                color="black"
-                s={{ lineHeight: "1", fontWeight: "700" }}
+                color="white-secondary"
+                s={{ lineHeight: "1", fontWeight: "600" }}
               >
                 Trabaje mano a mano con tu consultorio.
               </Text>
             </div>
             <div className={styles.mobileTitles}>
+              <div className={styles.subtitleLine}></div>
+
               <Text
                 fontFamily="lexend"
                 color="black"
@@ -128,7 +135,8 @@ const AcercaDe = () => {
                 s={{
                   lineHeight: "1",
                   fontFamily: "lexend",
-                  fontWeight: "400",
+                  fontWeight: "500",
+                  color: "#2a4d69",
                 }}
               >
                 Importancia de un fundador que
@@ -139,8 +147,8 @@ const AcercaDe = () => {
                 fontSizeMobile="22px"
                 textAlign="center"
                 textAlignMobile="center"
-                color="black"
-                s={{ lineHeight: "1", fontWeight: "700" }}
+                color="white-secondary"
+                s={{ lineHeight: "1", fontWeight: "600" }}
               >
                 Trabaje mano a mano con tu consultorio.
               </Text>

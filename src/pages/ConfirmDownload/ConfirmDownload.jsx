@@ -59,10 +59,11 @@ const ConfirmDownload = () => {
         <div className={styles.banner}>
           <div className={styles.desc}>
             <div className={styles.desc__texts}>
+              <div className={styles.line}></div>
               <Text
                 fontFamily="lexend"
                 color="white"
-                fontSize="26px"
+                fontSize="24px"
                 fontSizeMobile="18px"
                 textAlignMobile="center"
                 textAlign="center"
@@ -71,13 +72,14 @@ const ConfirmDownload = () => {
                   fontFamily: "lexend",
                   fontWeight: "500",
                   letterSpacing: "-0.5px",
+                  color: "#cfe1df",
                 }}
               >
                 Gracias por confiar en hackdental.com
               </Text>
               <Text
                 fontFamily="lexend"
-                fontSize="32px"
+                fontSize="40px"
                 fontSizeMobile="22px"
                 textAlign="center"
                 textAlignMobile="center"
@@ -129,9 +131,6 @@ const ConfirmDownload = () => {
                   s={{ color: "#d9d9d9", lineHeight: "1.33" }}
                 >
                   que usan nuestro método.{" "}
-                  <Mark bold="regular" color="green-lighter">
-                    Cupos limitados.
-                  </Mark>
                 </Text>
               </div>
             </div>
@@ -143,6 +142,7 @@ const ConfirmDownload = () => {
           <div className={styles.contentContainer_dental}>
             <div className={styles.founderText}>
               <div className={styles.titles}>
+                <div className={styles.darkLine}></div>
                 <Text
                   type="bigtitle"
                   textAlign="start"
@@ -151,7 +151,7 @@ const ConfirmDownload = () => {
                   bold="font-light"
                   fontSize="26px"
                   fontSizeMobile="18px"
-                  s={{ fontWeight: "500", lineHeight: "1.1" }}
+                  s={{ fontWeight: "500", lineHeight: "1.1", color: "#01443a" }}
                 >
                   Dueño de Consultorio Dental
                 </Text>
@@ -159,7 +159,7 @@ const ConfirmDownload = () => {
                   type="bigtitle"
                   fontFamily="lexend"
                   textAlign="start"
-                  color="black"
+                  color="white-secondary"
                   bold="semi-bold"
                   fontSize="32px"
                   fontSizeMobile="22px"

@@ -1,345 +1,365 @@
 .page {
-    position: relative;
-    background-color: var(--light-green);
-    min-height: 100vh;
-    width: 100%;
-    --banner-height: calc(var(--width-unit) * 2);
-    --yellow-line: calc(var(--width-unit) * 0.375);
-    --green-line: calc(var(--width-unit) * 0.25);
-    --mobile-margin: 32px;
-  }
-  .bg{
-    background-color: var(--primary-darker);
-  }
-  
-  .banner {
-    background-color: var(--dark-transparent-45);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    height: auto;
-    padding: 120px 0  5ch 0;
+  position: relative;
+  background-color: var(--light-green);
+  min-height: 100vh;
+  width: 100%;
+  --banner-height: calc(var(--width-unit) * 2);
+  --yellow-line: calc(var(--width-unit) * 0.375);
+  --green-line: calc(var(--width-unit) * 0.25);
+  --mobile-margin: 32px;
+}
+.bg {
+  background-color: var(--primary-darker);
+}
+.darkLine {
+  width: 48px; 
+  height: 10px;
+  background: #0b8484; 
+  border-radius: 30px;
+  margin-bottom: 8px; 
+}
+.line {
+  width: 48px;
+  height: 10px; 
+  background: #0b8484; 
+  border-radius: 30px;
+  margin-bottom: 8px; 
+}
+.banner {
+  background-color: var(--dark-transparent-45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  height: auto;
+  padding: 120px 0 5ch 0;
+}
 
-  }
+.spainLocation_footer__card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.spainLocation_footer__img {
+  width: 90px;
+}
 
-  .spainLocation_footer__card {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    padding-bottom: 30px;
-  
+.footer__desc > :nth-child(1),
+.footer__desc > :nth-child(2) {
+  font-size: 16px;
+}
+.imgAcerca {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  object-position: bottom;
+  display: block;
+}
+
+.desc__texts
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactBtn {
+  height: 60px;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.desc > :nth-child(1) {
+  margin-bottom: 5px;
+}
+.desc > :nth-child(2) {
+  font-size: 22px;
+  margin-bottom: 5px;
+  width: 80%;
+}
+
+.desc > :nth-child(3) {
+  font-size: 22px;
+  margin-bottom: 5px;
+  width: 80%;
+}
+
+.contactBtn > :first-child {
+  width: 216px !important;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 44px;
+  padding-bottom: 44px;
+  background-color: var(--light-green);
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+  flex-shrink: 0;
+  align-items: start;
+}
+.texts > * {
+  align-self: flex-start;
+  flex-shrink: 0 !important;
+}
+.spainLocation__items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.spainLocation__items__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 10px 0 10px 0;
+  border-radius: 10px;
+}
+
+.titleMob {
+  display: none;
+}
+
+.dentalCover {
+  background-color: rgba(216, 232, 230, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.dentalContainer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contentContainer_dental {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 0;
+  line-height: 0;
+  gap: 32px;
+}
+
+.imageWrapper img {
+  width: 280px;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.mobileTitles {
+  display: none;
+}
+
+.daysCounter {
+  display: flex;
+  border-radius: 5px;
+  background-color: rgba(0, 106, 90, 0.3);
+  width: fit-content;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.daysCounter span {
+  color: #006a5a;
+  font-size: 18px;
+  font-weight: 00;
+}
+
+.founderButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+.btn_founder {
+  width: 100%;
+  height: 60px;
+}
+
+.founderText {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: Lexend;
+  gap: 15px;
+}
+
+.founderButtonEbooks {
+  justify-self: left;
+  margin-top: 10px;
+}
+
+.founderButtonMobile {
+  display: none;
+}
+
+.founderButtonMob {
+  justify-self: left;
+  display: none;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--green-black);
+  padding-top: 32px;
+  gap: 6px;
+  padding-bottom: calc(var(--linea-amarilla) / 2);
+  height: 120px;
+}
+.footer .links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.separator {
+  height: 0.77rem;
+  border: 1px solid #d9d9d9;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    height: 100px;
   }
-  .spainLocation_footer__img {
-    width: 102px;
-  }
-  
-  .footer__desc > :nth-child(1),
-  .footer__desc > :nth-child(2) {
-    font-size: 16px;
-  }
-  .imgAcerca {
-    width: 300px;
-    height: 450px;
-    object-fit: cover;
-    object-position: bottom;
-    display: block;
-  }
-  
-  
-  .contactBtn{
-    width: 40%;
-    height: 60px;
-  }
-  
-  .desc {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-  }
-  .desc > :nth-child(1) {
-    margin-bottom: 5px;
-  }
-  .desc > :nth-child(2) {
-    font-size: 22px;
-    margin-bottom: 5px;
-    width: 80%;
-  }
-  
-  .desc > :nth-child(3) {
-    font-size: 22px;
-    margin-bottom: 5px;
-    width: 80%;
-  }
-  
-  .contactBtn > :first-child {
-    width: 216px !important;
-  }
-  .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 44px;
-    padding-bottom: 44px;
-    background-color: var(--light-green);
-  }
-  .texts {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 40%;
-    flex-shrink: 0;
-    align-items: start;
-  }
-  .texts > * {
-    align-self: flex-start;
-    flex-shrink: 0 !important;
-  }
-  .spainLocation__items {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 2px;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
-  .spainLocation__items__item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    padding: 10px 0 10px 0;
-    border-radius: 10px;
-  }
-  
-  .titleMob{
-    display: none;
-  }
-  
-  
-  .dentalCover {
-    background-color: rgba(216, 232, 230, 0.8);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding-top: 90px;
-    padding-bottom: 90px;
-  }
-  
-  .dentalContainer {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
-  }
-  
   .contentContainer_dental {
     display: flex;
-    justify-content: start;
-    align-items: flex-start;
-    flex-direction: row;
-    padding: 0;
-    line-height: 0;
-    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: 0 28px 0 28px;
   }
-  
-  .imageWrapper img {
-    width: 280px;
-  }
-  
-  .imageWrapper {
+  .dentalContainer {
     display: flex;
-    justify-content: start;
-    align-items: start;
-  }
-  .mobileTitles {
-    display: none;
-  }
-  
-  .daysCounter {
-    display: flex;
-    border-radius: 5px;
-    background-color: rgba(0, 106, 90, 0.3);
-    width: fit-content;
-    padding: 25px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    margin-top: 10px;
   }
-  
-  .daysCounter span{
-    color: #006a5a;
-    font-size: 18px;
-    font-weight: 00;
-  }
-  
-  .founderButton{
+  .contentContainer_dental {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50%;
-  }
-  .btn_founder{
     width: 100%;
-    height: 60px;
+    padding: 0 28px 0 28px;
   }
-  
   .founderText {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    font-family: Lexend;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
   }
-  
-  .founderButtonEbooks {
-    justify-self: left;
-    margin-top: 10px;
+
+  .desc {
+    margin: 28px;
+    gap: 25px;
   }
-  
+
+  .darkLine {
+    width: 36px; /* Largo de la barra, ajusta a gusto */
+    height: 7px; /* Grosor de la barra */
+  }
+  .line {
+    width: 36px; /* Largo de la barra, ajusta a gusto */
+    height: 7px; /* Grosor de la barra */
+  }
+
+  .founderButton {
+    display: none;
+  }
   .founderButtonMobile {
-    display: none;
-  }
-  
-  
-  
-  
-  .founderButtonMob {
-    justify-self: left;
-    display: none;
-  }
-  
-  .footer {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    align-items: center;
-    background-color: var(--green-black);
-    padding-top: 32px;
-    gap: 6px;
-    padding-bottom: calc(var(--linea-amarilla) / 2);
-    height: 120px;
   }
-  .footer .links {
+  .imageWrapper {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 8px;
   }
-  .separator {
-    height: 0.77rem;
-    border: 1px solid #d9d9d9;
+  .banner {
+    flex-direction: column-reverse;
+    padding-top: 52px;
+    gap: 16px;
   }
-  
-  @media screen and (max-width: 1024px) {
-    .footer {
-      height: 100px;
-    }
-    .contentContainer_dental {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column-reverse;
-      padding: 0 28px 0 28px;
-    }
-    .dentalContainer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      width: 100%;
-    }
-    .contentContainer_dental {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      width: 100%;
-      padding: 0 28px 0 28px;
-    }
-    .founderText {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .titleMob {
+    display: block;
+  }
 
-    .desc{
-        margin:28px;
-        gap: 25px;
-    }
-
-    .founderButton {
-      display: none;
-    }
-    .founderButtonMobile {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-    .imageWrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .banner {
-      flex-direction: column-reverse;
-      padding-top: 52px;
-      gap: 16px;
-    }
-    .titleMob{
-      display: block;
-    }
-  
-  
-    .titleDeskt{
-      display: none;
-    }
-    .spainLocation_footer__card {
-        gap: 6px;
-      }
-    .desc{
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .desc > :nth-child(1) {
-      margin-bottom: 0px;
-      font-size: 36px;
-    }
-    .desc > :nth-child(2) {
-      font-size: 17px;
-    }
-    .desc > :nth-child(3) {
-      font-size: 17px;
-      width: 100%;
-    }
-    .imgAcerca {
-      width: 225px;
-      height: 350px;
-    }
-    .main {
-      padding-left: 28px;
-      padding-right: 28px;
-    }
-    .texts {
-      width: 100%;
-      left: 0;
-    }
-    .contactBtn{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .titleDeskt {
+    display: none;
   }
-  
+  .spainLocation_footer__card {
+    gap: 6px;
+  }
+  .desc {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .desc > :nth-child(1) {
+    margin-bottom: 0px;
+    font-size: 36px;
+  }
+  .desc > :nth-child(2) {
+    font-size: 17px;
+  }
+  .desc > :nth-child(3) {
+    font-size: 17px;
+    width: 100%;
+  }
+  .imgAcerca {
+    width: 225px;
+    height: 350px;
+  }
+  .main {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .texts {
+    width: 100%;
+    left: 0;
+  }
+  .contactBtn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

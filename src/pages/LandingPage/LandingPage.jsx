@@ -369,7 +369,9 @@ const LandingPage = () => {
             <div className={styles.spainLocation__card__elements}>
               <Text
                 fontSize="20px"
-                fontSizeMobile="18px"
+                fontSizeMobile="16px"
+                textAlignMobile="center"
+                textAlign="center"
                 s={{ lineHeight: 1.3, color: "#213343", fontWeight: "400" }}
               >
                 Contáctanos si tu consultorio cumple con lo siguiente:{" "}
@@ -591,7 +593,7 @@ const LandingPage = () => {
               bold="semi-bold"
               fontSize="30px"
               fontSizeMobile="24px"
-              s={{ lineHeight: "1.1", fontWeight: "700" }}
+              s={{ lineHeight: "1.1", fontWeight: "600" }}
             >
               Descargando nuestros ebooks
             </Text>

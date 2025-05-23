@@ -21,6 +21,21 @@
   box-shadow: 0 32px 32px 0px rgba(0, 0, 0, 0.288);
 }
 
+.titleLine {
+  width: 48px;
+  height: 10px;
+  background: #0b8484;
+  border-radius: 30px;
+  margin-bottom: 8px;
+}
+.subtitleLine {
+  width: 48px;
+  height: 10px;
+  background: #7691ad;
+  border-radius: 30px;
+  margin-bottom: 8px;
+}
+
 .imgAcerca {
   width: 200px;
   height: 300px;
@@ -215,6 +230,10 @@
 
 .titles {
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .mobileTitles {
@@ -236,7 +255,7 @@
     padding: 0 0px;
   }
 
-  .line{
+  .line {
     width: 80%;
   }
 
@@ -300,6 +319,15 @@
   }
   .titleMob {
     display: block;
+  }
+
+  .titleLine {
+    width: 36px;
+    height: 7%;
+  }
+  .subtitleLine {
+    width: 36px;
+    height: 7px;
   }
 
   .titleDeskt {

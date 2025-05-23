@@ -21,6 +21,22 @@
   gap: 32px;
   padding: 50px 0;
 }
+
+.titleLine {
+  width: 48px;
+  height: 10px;
+  background: #0b8484;
+  border-radius: 30px;
+  margin-bottom: 8px;
+}
+.subtitleLine {
+  width: 48px;
+  height: 10px;
+  background: #7691ad;
+  border-radius: 30px;
+  margin-bottom: 8px;
+}
+
 .imgEspaña {
   width: 200px;
 }
@@ -148,6 +164,10 @@
 
 .titles {
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .mobileTitles {
@@ -284,6 +304,15 @@
     display: flex;
     text-align: center;
     gap: 20px;
+  }
+
+  .titleLine {
+    width: 36px;
+    height: 7%;
+  }
+  .subtitleLine {
+    width: 36px;
+    height: 7px;
   }
 
   .imageWrapper {
