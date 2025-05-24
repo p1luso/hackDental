@@ -515,6 +515,7 @@ const OurProgram = () => {
           <div className={styles.contentContainer_doubt}>
             <div className={styles.doubtText}>
               <div className={styles.doubtTitles}>
+                <div className={styles.darkLine}></div>
                 <Text
                   type="bigtitle"
                   textAlign="center"
@@ -523,7 +524,7 @@ const OurProgram = () => {
                   bold="font-light"
                   fontSize="26px"
                   fontSizeMobile="18px"
-                  s={{ fontWeight: "500" }}
+                  s={{ fontWeight: "500",  color: "#01443a"   }}
                 >
                   ¿Tienes alguna duda?
                 </Text>
@@ -531,7 +532,7 @@ const OurProgram = () => {
                   type="bigtitle"
                   fontFamily="lexend"
                   textAlign="center"
-                  color="black"
+                  color="white-secondary"
                   bold="semi-bold"
                   fontSize="32px"
                   fontSizeMobile="22px"

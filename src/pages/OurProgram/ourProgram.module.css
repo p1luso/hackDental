@@ -97,7 +97,7 @@
   justify-content: center;
 }
 
-.progressBarButton a{
+.progressBarButton a {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -126,7 +126,7 @@
   font-weight: 600;
 }
 
-.numberTexts{
+.numberTexts {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,7 +186,7 @@
   justify-content: center;
   align-items: center;
 }
-.banner__btns a{
+.banner__btns a {
   display: flex;
   height: 3.5rem;
   margin-top: 20px;
@@ -231,9 +231,6 @@
   object-fit: cover;
   display: block;
 }
-
-
-
 
 .videoPlayBtn {
   position: absolute;
@@ -964,6 +961,20 @@
   background: #0b8484; /* Verde, puedes usar tu variable si tienes */
   border-radius: 30px;
 }
+.darkLine {
+  width: 48px; /* Largo de la barra, ajusta a gusto */
+  height: 10px; /* Grosor de la barra */
+  background: #0b8484; /* Verde, puedes usar tu variable si tienes */
+  border-radius: 30px;
+  margin-bottom: 8px; /* Espacio debajo de la barra */
+}
+
+.doubtTitles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 .daysCounter {
   display: flex;
@@ -994,7 +1005,7 @@
   background-color: #21917b;
   border-radius: 50%;
   width: 25px;
-  height: auto; 
+  height: auto;
   color: #fff;
   display: flex;
   align-items: center;
@@ -1002,12 +1013,10 @@
   flex-direction: row;
 }
 
-
-
 @media screen and (max-width: 1024px) {
   .nav {
-  padding: 15px var(--mobile-margin);
-}
+    padding: 15px var(--mobile-margin);
+  }
 
   .logo > :first-child {
     width: 30vw;
@@ -1021,15 +1030,15 @@
   }
   .onlyMobile {
     display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  margin: 28px 28px 10px 28px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin: 28px 28px 10px 28px;
   }
   .banner__btns {
-    margin:0px 0px 22px 0px;
-    width:90%;
+    margin: 0px 0px 22px 0px;
+    width: 90%;
   }
   .onlyDesktop {
     display: none;
@@ -1060,10 +1069,14 @@
     font-size: 38px;
   }
 
-.line {
-  width: 36px;
-  height: 7px; 
-}
+  .line {
+    width: 36px;
+    height: 7px;
+  }
+  .darkLine {
+    width: 36px;
+    height: 7px;
+  }
   .banner__btns > :first-child {
     height: 54px !important;
     width: 100%;
@@ -1071,10 +1084,10 @@
     justify-content: center;
     align-items: center;
   }
-.reactPlayerContainer{
-  width: 100%;
-}
-  .doubtButton a{
+  .reactPlayerContainer {
+    width: 100%;
+  }
+  .doubtButton a {
     width: 100%;
     height: 100%;
     display: flex;
@@ -1143,13 +1156,12 @@
   .footer__desc {
     text-align: center;
   }
-.numberTexts {
+  .numberTexts {
     display: flex;
     justify-content: center;
     align-items: start;
     flex-direction: column;
   }
-
 
   .videoContainer {
     width: 100%;
@@ -1177,7 +1189,7 @@
     padding-left: 0;
     padding-right: 0;
   }
-  .doubtButtonMobile a{
+  .doubtButtonMobile a {
     width: 90%;
   }
 }
