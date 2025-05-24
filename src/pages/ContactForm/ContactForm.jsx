@@ -8,6 +8,7 @@ import { sendContactForm } from "../../services/api/sendContactForm";
 import EstudioMercado from "@assets/EstudioMercado.svg";
 import PlanMarketing from "@assets/PlanMarketing.svg";
 import LlamadaEstrategica from "@assets/LlamadaEstrategica.svg";
+import { parsePhoneNumberFromString } from "libphonenumber-js";
 
 import Finger from "@assets/3_dedo.svg";
 import IconoWpp from "@assets/iconoWsp.svg";
@@ -25,6 +26,7 @@ const ContactForm = () => {
     phone: localStorage.getItem("phone") ?? "",
     website: localStorage.getItem("website") ?? "",
   });
+  const [errors, setErrors] = useState({ phone: "" });
 
   const countryList = [
     "España",
@@ -54,6 +56,11 @@ const ContactForm = () => {
   };
 
   const handleSendFormData = async () => {
+    const phoneNumber = parsePhoneNumberFromString(formData.phone);
+    if (!phoneNumber || !phoneNumber.isValid()) {
+      setErrors((e) => ({ ...e, phone: "Número inválido para ese país" }));
+      return;
+    }
     try {
       await sendContactForm(formData);
       // Pixel Facebook
@@ -68,6 +75,20 @@ const ContactForm = () => {
       alert("Hubo un error al enviar los datos, por favor intente nuevamente");
       console.log(error);
     }
+  };
+
+  const handleChangePhone = (id, value) => {
+    setFormData((f) => ({ ...f, [id]: value }));
+    // Validación en el ContactForm
+    const phoneNumber = parsePhoneNumberFromString(value);
+    if (!phoneNumber || !phoneNumber.isValid()) {
+      setErrors((e) => ({ ...e, [id]: "Número inválido para ese país" }));
+    } else {
+      setErrors((e) => ({ ...e, [id]: "" }));
+    }
+  };
+  const handleError = (id, error) => {
+    setErrors((e) => ({ ...e, [id]: error }));
   };
 
   return (
@@ -222,16 +243,32 @@ const ContactForm = () => {
                 />
               </div>
 
-              <div className={styles.formLine}>
+              <div
+                className={styles.formLine}
+                style={{
+                  display: "flex",
+                  gap: "10px",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "column",
+                }}
+              >
                 <Input
-                  label="Teléfono*"
-                  placeholder="Teléfono"
                   id="phone"
+                  label="Teléfono*"
                   variant="greyLight"
                   labelColor="black-lighter"
-                  onChange={handleChange}
                   value={formData.phone}
+                  onChange={handleChangePhone}
+                  onError={(id, err) => setErrors((e) => ({ ...e, [id]: err }))}
+                  errorMsg={errors.phone}
+                  validators={[]}
                 />
+                {errors.phone && (
+                  <Text color="error" fontSize="12px" s={{ marginTop: "4px" }}>
+                    {errors.phone}
+                  </Text>
+                )}
               </div>
 
               <div className={styles.formLine}>

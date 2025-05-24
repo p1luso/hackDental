@@ -101,7 +101,66 @@
   position: relative;
   width: 100%;
 }
+/* Deja espacio para el botón */
+.inputWrapper .input {
+  padding-right: 120px;
+}
 
+/* Botón de país (prefijo + bandera + flecha) */
+.countryBtn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Código de marcación */
+.dialCode {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Lista desplegable */
+.countryList {
+  position: absolute;
+  font-family: "lexend";
+  top: calc(100% + 4px);
+  right: 10px;
+  width: 240px;
+  max-height: 200px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 20;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .countryList {
+    right: -10px;
+  }
+}
+
+.countryItem {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.countryItem:hover {
+  background: #f0f0f0;
+}
 .endIcon {
   position: absolute;
   right: 10px;
