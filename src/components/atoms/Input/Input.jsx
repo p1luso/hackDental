@@ -5,12 +5,21 @@ import Icon from "../Icon/Icon";
 import ReactCountryFlag from "react-country-flag";
 import { allCountries } from "country-telephone-data";
 
-const rawList = allCountries.map((c) => ({
-  name: c.name,
-  code: c.iso2,
-  dialCode: c.dialCode,
-}));
+const regionNames = new Intl.DisplayNames(["es"], { type: "region" });
 
+const rawList = allCountries.map((c) => {
+  // 2) Intentamos nombre en español
+  const espName = regionNames.of(c.iso2.toUpperCase());
+  // 3) Fallback limpiando paréntesis del name original
+  const fallback = c.name.replace(/\s*\(.*?\)/g, "").trim();
+  return {
+    name: espName || fallback,
+    code: c.iso2,
+    dialCode: c.dialCode,
+  };
+});
+
+// Ordenamos España primero como antes
 const countryList = (() => {
   const esp = rawList.find((c) => c.code === "es");
   const others = rawList.filter((c) => c.code !== "es");

@@ -145,7 +145,7 @@ const ContactForm = () => {
             </Text>
             <Text
               type="title"
-              fontSize="32px"
+              fontSize="30px"
               fontSizeMobile="23px"
               textAlignMobile="start"
               color="white"
