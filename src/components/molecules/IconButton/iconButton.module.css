@@ -8,17 +8,11 @@
 
 .primary {
   padding: 6px;
-  border: 1px solid var(--primary);
   border-radius: 8px;
   transition: all 0.3s ease-in;
-}
-.primary:hover {
-  background-color: var(--primary-transparent);
+  color: rgb(105, 105, 105);
 }
 
-.primary > * {
-  color: var(--primary);
-}
 
 .secondary {
   padding: 6px;

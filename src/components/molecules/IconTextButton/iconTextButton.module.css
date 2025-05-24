@@ -58,8 +58,8 @@
 .primary.iconTextButton:disabled:hover {
 }
 .primary.iconTextButton.full:hover {
-  background-color: transparent;
-  color: var(--primary);
+  background-color: #487194;
+  color: var(--white);
   border: 1px solid var(--primary);
 }
 

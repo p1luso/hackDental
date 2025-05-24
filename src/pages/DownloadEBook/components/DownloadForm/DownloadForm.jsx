@@ -6,7 +6,10 @@ import Input from "../../../../components/atoms/Input/Input";
 import Icon from "../../../../components/atoms/Icon/Icon";
 import Select from "../../../../components/atoms/Select/Select";
 import { isEmail, isEmpty } from "../../../../utils/inputValidators";
-import { createUserIfNotExists, sendContactFormDownloadEbook } from "../../../../services/api/sendContactForm";
+import {
+  createUserIfNotExists,
+  sendContactFormDownloadEbook,
+} from "../../../../services/api/sendContactForm";
 import LoadingScreen from "../../../../components/molecules/LoadingScreen/LoadingScreen";
 import { useNavigate, useParams } from "react-router-dom";
 import ebookData from "../../../../services/api/ebookData";
@@ -82,27 +85,31 @@ const DownloadForm = ({ modalOpened, pdfPath }) => {
   const resetData = () => {
     setCurrentForm(1);
   };
-  
+
   const handleRedirectToConfirm = async () => {
-  try {
-    await createUserIfNotExists({
-      email: form.email,
-      firstName: form.firstName,
-      phone: form.phone,
-      howKnowAbout: form.howKnowAbout,
-    });
+    try {
+      await createUserIfNotExists({
+        email: form.email,
+        firstName: form.firstName,
+        phone: form.phone,
+        howKnowAbout: form.howKnowAbout,
+      });
 
-    localStorage.setItem("ebookDownloaded", "true");
-    localStorage.setItem("email", form.email);
+      localStorage.setItem("ebookDownloaded", "true");
+      localStorage.setItem("email", form.email);
 
-    navigate("/confirm_download", {
-      state: { pdfPath: ebook.pdfPath, title: ebook.title, email: form.email },
-    });
-  } catch (err) {
-    console.error("No se pudo crear el usuario:", err);
-    alert("Hubo un problema guardando tus datos. Intenta de nuevo.");
-  }
-};
+      navigate("/confirm_download", {
+        state: {
+          pdfPath: ebook.pdfPath,
+          title: ebook.title,
+          email: form.email,
+        },
+      });
+    } catch (err) {
+      console.error("No se pudo crear el usuario:", err);
+      alert("Hubo un problema guardando tus datos. Intenta de nuevo.");
+    }
+  };
 
   useEffect(() => {
     const alreadyDownloaded =
@@ -146,26 +153,26 @@ const DownloadForm = ({ modalOpened, pdfPath }) => {
       {showFinalOnly ? (
         <>
           <main className={styles.main}>
-            <div className={styles.content}>
+            <div className={styles.contentAlreadyDownload}>
               <Text
                 bold
                 type="title"
                 fontSize="32px"
                 fontSizeMobile="24px"
-                color="black"
+                color="white-secondary"
                 textAlign="center"
               >
-                ¡Gracias por volver!
+                Descarga el Ebook Gratuito
               </Text>
               <Text
                 size="ty"
-                color="black"
+                color="white-secondary"
                 bold="font-light"
                 textAlign="center"
                 fontSize="16px"
                 fontSizeMobile="14px"
               >
-                Ya tenemos tus datos. Podés volver a descargar tu ebook aquí.
+                Todos los campos son obligatorios
               </Text>
               <Input
                 variant="blueLight"
@@ -181,7 +188,7 @@ const DownloadForm = ({ modalOpened, pdfPath }) => {
               />
 
               <div className={styles.privacy}>
-                <Text bold="font-light">
+                <Text bold="font-light" fontSize="16px" fontSizeMobile="14px">
                   Tu privacidad es importante para nosotros. HackDental utiliza
                   la información que proporcionas para ponerse en contacto
                   contigo en relación con contenido, productos y servicios
@@ -209,6 +216,7 @@ const DownloadForm = ({ modalOpened, pdfPath }) => {
           <footer className={styles.footer}>
             <div className={styles.alreadyDownloadBtn}>
               <IconTextButton
+                colorVariant="white-green"
                 onClick={() => {
                   handleRedirectToConfirm();
                   if (window.fbq) {
@@ -273,14 +281,14 @@ const DownloadForm = ({ modalOpened, pdfPath }) => {
                     type="title"
                     fontSize="32px"
                     fontSizeMobile="24px"
-                    color="black"
+                    color="white-secondary"
                     textAlign="center"
                   >
                     Descarga el Ebook Gratuito
                   </Text>
                   <Text
                     size="ty"
-                    color="black"
+                    color="white-secondary"
                     bold="font-light"
                     textAlign="center"
                     fontSize="16px"
@@ -311,14 +319,14 @@ const DownloadForm = ({ modalOpened, pdfPath }) => {
                     type="title"
                     fontSize="32px"
                     fontSizeMobile="24px"
-                    color="black"
+                    color="white-secondary"
                     textAlign="center"
                   >
                     Descarga el Ebook Gratuito
                   </Text>
                   <Text
                     size="ty"
-                    color="black"
+                    color="white-secondary"
                     bold="font-light"
                     textAlign="center"
                     fontSize="16px"
@@ -375,7 +383,7 @@ const DownloadForm = ({ modalOpened, pdfPath }) => {
                   />
                 </div>
                 <div className={styles.privacy}>
-                  <Text bold="font-light">
+                  <Text bold="font-light" fontSize="16px" fontSizeMobile="14px">
                     Tu privacidad es importante para nosotros. HackDental
                     utiliza la información que proporcionas para ponerse en
                     contacto contigo en relación con contenido, productos y
@@ -424,8 +432,9 @@ const DownloadForm = ({ modalOpened, pdfPath }) => {
                 currentForm == MAX_FORMS && styles.show
               }`}
             >
+              {/* Botón activo */}
               <IconTextButton
-                disabled={isAnFormError()}
+                colorVariant="white-green"
                 onClick={() => {
                   handleRedirectToConfirm();
                   if (window.fbq) {
@@ -434,6 +443,18 @@ const DownloadForm = ({ modalOpened, pdfPath }) => {
                       content_category: "Button",
                     });
                   }
+                }}
+                style={{
+                  display: !isAnFormError() ? "block" : "none",
+                }}
+              >
+                Descargar pdf
+              </IconTextButton>
+              {/* Botón deshabilitado */}
+              <IconTextButton
+                disabled={isAnFormError()}
+                style={{
+                  display: !isAnFormError() ? "none" : "block",
                 }}
               >
                 Descargar pdf

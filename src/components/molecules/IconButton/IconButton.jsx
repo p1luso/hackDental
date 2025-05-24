@@ -6,7 +6,7 @@ const IconButton = React.forwardRef(
   (
     {
       icon,
-      size = "16px",
+      size = "20px",
       color,
       onClick,
       variant = "primary",

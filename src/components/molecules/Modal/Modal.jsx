@@ -12,7 +12,7 @@ const Modal = ({ children, isOpen, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <header className={styles.header}>
-          <IconButton icon="close" size="1.5rem" onClick={onClose} />
+          <IconButton icon="close" size="2rem" onClick={onClose} />
         </header>
         <main>{children}</main>
       </div>
